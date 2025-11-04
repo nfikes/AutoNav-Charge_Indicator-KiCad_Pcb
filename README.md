@@ -1,13 +1,32 @@
-Battery Level Indication:
 
-The Purpose of this PCB is to be attached to the Power and Ground lines of the RBT245LFP battery but can be generalized to any battery as long as the voltage dividers are tuned.
+## AutoNav — Charge Indicator PCB
 
-PCB desired functionality:
-- Have over voltage protection up to about 30V.
-- Show the battery level as intervals 100%, 80%, 60%, 40%, 20%, and 0% with a buffer (1%)
-- Show the levels as LED with colors for quick and easy identification of the battery level.
-- Have a relatively small total footprint area.
-- Supports quick removal and installation.
-- Safe to use.
+This repository contains the KiCad project for a compact battery charge-level indicator board. It is designed to be attached across a battery's power and ground (the original target is an RBT245LFP pack) and displays charge state using a set of LEDs at roughly 100%, 80%, 60%, 40%, 20%, and 0% (with a small buffer).
 
-All PCB files will be generated in KiCad with the help of the Wavenumber LLC database.
+Key goals
+- Provide a small, removable indicator that shows battery level with color-coded LEDs.
+- Provide over-voltage protection (target ~30 V).
+- Use surface-mount components (0603/0805/1210 footprints) for compactness.
+- Make the project editable in KiCad and easy to generate artwork/BOMs.
+
+Files of interest
+- `Charge_Indicator/Charge_Indicator.kicad_pro` — KiCad project file.
+- `Charge_Indicator/Charge_Indicator.kicad_sch` — schematic (Eeschema) source.
+- `Charge_Indicator/Charge_Indicator.kicad_pcb` — PCB layout (pcbnew) source.
+- `Charge_Indicator-backups/` — KiCad automatic backups.
+
+Footprints & libraries
+- The project uses footprints from a Wavenumber footprint set (footprint names like `wavenumber:R0603_0.55MM_HD`, `wavenumber:C1210_2.70MM_MD`) and standard footprints for connectors (e.g. `wavenumber:1984617` Phoenix-style terminal block). Some STEP models are embedded for 3D preview.
+
+Opening the project (quick start)
+1. Open KiCad and choose File → Open Project. Select `Charge_Indicator/Charge_Indicator.kicad_pro`.
+2. From the project manager you can open the schematic (Eeschema) and PCB (pcbnew).
+3. To generate a BOM: open the schematic editor (Eeschema) and use Tools → Generate Bill of Materials (or the BOM exporter configured in the project — default filename is `${PROJECTNAME}.csv`).
+4. To create fabrication outputs: open the PCB editor (pcbnew) → File → Plot (Gerbers) and Fabrication Outputs → Drill Files.
+
+KiCad compatibility
+- Project files include generator_version `9.0` and a kicad_sch version dated 2025-01-14; if you have trouble opening them, try a recent KiCad release (KiCad 7/8 or newer). If you run into compatibility issues, please open an issue describing the KiCad version and error.
+
+Contact / Author
+- Repository owner: `nfikes` (GitHub).
+- Repository collaborator: `ehughes` (GitHub).
