@@ -483,27 +483,45 @@
         "GND"
       ],
       "Net-(C3-Pad1)": [
-        "INPUT 1+",
-        "INPUT 2+",
+        "INPUT 1-",
+        "INPUT 2-",
         "VCC"
       ],
+      "Net-(D2-PadA)": [
+        "OUTPUT 1"
+      ],
+      "Net-(D3-PadA)": [
+        "OUTPUT 1"
+      ],
+      "Net-(D4-PadA)": [
+        "OUTPUT 1"
+      ],
+      "Net-(D5-PadA)": [
+        "OUTPUT 2"
+      ],
+      "Net-(D6-PadA)": [
+        "OUTPUT 2"
+      ],
+      "Net-(D7-PadA)": [
+        "OUTPUT 2"
+      ],
       "unconnected-(R16-Pad2)": [
-        "INPUT 1-"
+        "INPUT 1+"
       ],
       "unconnected-(R17-Pad2)": [
-        "INPUT 2-"
+        "INPUT 2+"
       ],
       "unconnected-(R18-Pad2)": [
-        "INPUT 1-"
+        "INPUT 1+"
       ],
       "unconnected-(R19-Pad2)": [
-        "INPUT 2-"
+        "INPUT 2+"
       ],
       "unconnected-(R20-Pad2)": [
-        "INPUT 1-"
+        "INPUT 1+"
       ],
       "unconnected-(R21-Pad2)": [
-        "INPUT 2-"
+        "INPUT 2+"
       ],
       "unconnected-(R22-Pad2)": [
         "OUTPUT 1"
