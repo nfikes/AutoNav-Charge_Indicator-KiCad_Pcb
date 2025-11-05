@@ -30,3 +30,9 @@ KiCad compatibility
 Contact / Author
 - Repository owner: `nfikes` (GitHub).
 - Repository collaborator: `ehughes` (GitHub).
+
+Datasheets for the battery:
+
+https://github.com/nfikes/AutoNav-Charge_Indicator-KiCad_Pcb/blob/80e677aa5d561c7ffa7e2566f1dbaed0d212a4c6/Battery%20Datasheets/RBT2425LFP%20-%20Datasheet.pdf
+
+https://github.com/nfikes/AutoNav-Charge_Indicator-KiCad_Pcb/blob/80e677aa5d561c7ffa7e2566f1dbaed0d212a4c6/Battery%20Datasheets/RBT2425LFP%20-%20User%20Manual.pdf
