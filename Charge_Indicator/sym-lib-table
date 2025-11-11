@@ -1,0 +1,5 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "INA266")(type "KiCad")(uri "${KIPRJMOD}/project_libraries/INA266.kicad_sym")(options "")(descr ""))
+  (lib (name "SGM61410XN6G_TR")(type "KiCad")(uri "${KIPRJMOD}/project_libraries/SGM61410XN6G_TR.kicad_sym")(options "")(descr ""))
+)
