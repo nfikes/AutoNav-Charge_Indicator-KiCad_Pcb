@@ -1,4 +1,4 @@
-3718284972304431
+3670705015039219
 wavenumber
 651005136421
 USBmini Vert
@@ -483,13 +483,6 @@ SWITCH TAPE SEAL 3 POS SMD
 6
 6
 wavenumber
-219-3MSTR
-SWITCH TAPE SEAL 3 POS SMD
-
-0
-6
-6
-wavenumber
 219-4MST
 SWITCH TAPE SEAL 3 POS SMD
 
@@ -505,13 +498,6 @@ SWITCH TAPE SEAL 8 POS SMD
 12
 wavenumber
 219-8MST
-SWITCH TAPE SEAL 8 POS SMD
-
-0
-16
-16
-wavenumber
-219-8MSTR
 SWITCH TAPE SEAL 8 POS SMD
 
 0
@@ -1518,13 +1504,6 @@ Tactile Switch SPST-NO Top Actuated Surface Mount
 0
 2
 2
-wavenumber
-B3U-1100P
-Omron Ultra-small tactile switch B3U 3.0 x 2.5 x 1.2mm
-
-0
-3
-3
 wavenumber
 B04B-JWPF-SK-R
 
@@ -9835,13 +9814,6 @@ D2-PAK, 4-Pads, Body 7.80x8.63mm (max), IPC Medium Density
 4
 4
 wavenumber
-D_POWERDI-5
-Diode - POWERDI-5 - Polarized
-
-0
-3
-3
-wavenumber
 D_POWERDI-5_P
 Diode - POWERDI-5 - Polarized
 
@@ -9849,22 +9821,8 @@ Diode - POWERDI-5 - Polarized
 3
 3
 wavenumber
-D_POWERDI-123
-Diode POWERDI-123 - Polarized
-
-0
-2
-2
-wavenumber
 D_POWERDI-123_P
 Diode POWERDI-123 - Polarized
-
-0
-2
-2
-wavenumber
-D_SMA
-SMA Diode - Polarized
 
 0
 2
@@ -9884,13 +9842,6 @@ SMA Diode - Polarized
 2
 2
 wavenumber
-D_SMB
-SMB Diode - Polarized
-
-0
-2
-2
-wavenumber
 D_SMB_NP
 SMB Diode - Non-Polarized
 
@@ -9900,13 +9851,6 @@ SMB Diode - Non-Polarized
 wavenumber
 D_SMB_P
 SMB Diode - Polarized
-
-0
-2
-2
-wavenumber
-D_SMC
-Diode SMC - Polarized
 
 0
 2
@@ -9926,13 +9870,6 @@ Diode SMC - Polarized
 2
 2
 wavenumber
-D_SOD-123
-SOD-123 Diode - Polarized
-
-0
-2
-2
-wavenumber
 D_SOD-123_NP
 SOD-123 Diode - Non-Polarized
 
@@ -9941,13 +9878,6 @@ SOD-123 Diode - Non-Polarized
 2
 wavenumber
 D_SOD-123_P
-SOD-123 Diode - Polarized
-
-0
-2
-2
-wavenumber
-D_SOD-323
 SOD-123 Diode - Polarized
 
 0
@@ -9963,13 +9893,6 @@ SOD-123 Diode - Non-Polarized
 wavenumber
 D_SOD-323_P
 SOD-123 Diode - Polarized
-
-0
-2
-2
-wavenumber
-D_SOD-523
-SOD-523 - Polarized
 
 0
 2
@@ -9996,13 +9919,6 @@ SOD-523 - Polarized
 2
 2
 wavenumber
-D_SOT-23-3
-Diode - SOT-23-3 - Polarized
-
-0
-3
-3
-wavenumber
 D_SOT-23-3_P
 Diode - SOT-23-3 - Polarized
 
@@ -10010,22 +9926,8 @@ Diode - SOT-23-3 - Polarized
 3
 3
 wavenumber
-D_SOT-323
-SOT-323/SC-70; 3 Leads; Body 2.2 x 2.2 mm, inc. leads (LxW max)
-
-0
-3
-3
-wavenumber
 D_SOT-323_P
 SOT-323/SC-70; 3 Leads; Body 2.2 x 2.2 mm, inc. leads (LxW max)
-
-0
-3
-3
-wavenumber
-D_SOT-523
-SOT-523 Diode - Polarized
 
 0
 3
@@ -10150,13 +10052,6 @@ ER-TFT020-2-flex-bottom
 12
 12
 wavenumber
-ER-TFT020-2-full
-
-
-0
-12
-12
-wavenumber
 ER-TFTM0.96-1
 
 
@@ -10180,13 +10075,6 @@ SWITCH LT 6MM 260GF 5MM HEIGHT
 wavenumber
 F1206
 Fuse - 1206
-
-0
-2
-2
-wavenumber
-F2920
-LittleFuse 2920 SMT Fuse
 
 0
 2
@@ -10570,13 +10458,6 @@ LCC14P127_600X600X225L91X50N
 14
 14
 wavenumber
-LED T1-3_4 RED
-LED T1-3/4 RED
-
-0
-2
-2
-wavenumber
 LED-0603-BLUE
 LED_0603 - BLUE
 
@@ -10604,13 +10485,6 @@ LED_0603 - YELLOW
 0
 2
 2
-wavenumber
-LED-0606
-LED_0606
-
-0
-4
-4
 wavenumber
 LED-0805-BLUE
 LED_0805
@@ -10843,20 +10717,6 @@ LXM2-PH01-0070
 3
 3
 wavenumber
-L_0805
-Capacitor - 0805 - Medium Density
-
-0
-2
-2
-wavenumber
-L_1210
-0.126" L x 0.098" W (3.20mm x 2.50mm)
-
-0
-2
-2
-wavenumber
 L_ASPI-8040S
 
 
@@ -10873,13 +10733,6 @@ Coilcraft DO1608C SMT Inductor
 wavenumber
 L_DO3316H
 Coilcraft DO3316P
-
-0
-2
-2
-wavenumber
-L_DO5010H
-Coilcraft DO5010H SMT Inductor
 
 0
 2
@@ -11032,13 +10885,6 @@ Coilcraft SER2918H Series Inductors
 3
 3
 wavenumber
-L_XAL1510
-Coilcraft XAL1510-882
-
-0
-2
-2
-wavenumber
 L_XAL1510-103
 Coilcraft XAL1510-103
 
@@ -11083,13 +10929,6 @@ Coilcraft XAL1510-682
 wavenumber
 L_XAL1510-822
 Coilcraft XAL1510-882
-
-0
-2
-2
-wavenumber
-L_XAL5050
-Coilcraft XAL5050-822
 
 0
 2
@@ -11368,13 +11207,6 @@ M12
 33
 1
 wavenumber
-M12-Screw
-
-
-0
-33
-1
-wavenumber
 M12A-04PFFP-SF8001
 
 
@@ -11439,13 +11271,6 @@ SOIC, 18-Leads, Body 11.6x7.5mm (max), Pitch 1.27mm, IPC Medium Density
 18
 wavenumber
 MCXA156_LFBGA64
-
-
-0
-64
-64
-wavenumber
-MCXA156__VFBGA64
 
 
 0
@@ -13251,13 +13076,6 @@ SMT_TP-100
 1
 1
 wavenumber
-SNAPTRON-F-14
-
-
-0
-3
-2
-wavenumber
 SNAPTRON-F14
 
 
@@ -14762,10 +14580,3 @@ fiducial-1mm-2mm
 0
 1
 1
-wavenumber
-wn__inductor
-
-
-0
-4
-4
