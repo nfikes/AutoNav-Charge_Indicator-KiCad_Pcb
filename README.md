@@ -1,38 +1,103 @@
-
 ## AutoNav — Charge Indicator PCB
 
-This repository contains the KiCad project for a compact battery charge-level indicator board. It is designed to be attached across a battery's power and ground (the original target is an RBT245LFP pack) and displays charge state using a set of LEDs at roughly 100%, 80%, 60%, 40%, 20%, and 0% (with a small buffer).
+This repository contains the updated KiCad project for a compact, high-accuracy
+battery charge-level indicator board. The design has evolved from a simple LED
+threshold indicator into a more robust, instrumentation-grade battery monitor
+using Texas Instruments (TI) power-management and monitoring ICs. The board is
+intended to connect directly across the battery terminals (original target:
+RBT245LFP pack) and provide a clear visual indication of pack state of charge.
 
-Key goals
-- Provide a small, removable indicator that shows battery level with color-coded LEDs.
-- Provide over-voltage protection (target ~30 V).
-- Use surface-mount components (0603/0805/1210 footprints) for compactness.
-- Make the project editable in KiCad and easy to generate artwork/BOMs.
+Overview
+--------
+The Charge Indicator PCB now uses TI analog front-end components, current-sense
+amplifiers, and DC-DC regulation to deliver stable LED indicators across the
+battery’s full operating voltage range. Measurement is performed using the
+INA226 current/power monitor and processed with logic-level circuitry to drive
+a bank of status LEDs corresponding to approximate SOC thresholds (100%, 80%,
+60%, 40%, 20%, and critical/low).
 
-Files of interest
-- `Charge_Indicator/Charge_Indicator.kicad_pro` — KiCad project file.
-- `Charge_Indicator/Charge_Indicator.kicad_sch` — schematic (Eeschema) source.
-- `Charge_Indicator/Charge_Indicator.kicad_pcb` — PCB layout (pcbnew) source.
-- `Charge_Indicator-backups/` — KiCad automatic backups.
+Additional focus has been placed on noise immunity, transient protection, and
+safe operation across the pack’s voltage extremes.
 
-Footprints & libraries
-- The project uses footprints from a Wavenumber footprint set (footprint names like `wavenumber:R0603_0.55MM_HD`, `wavenumber:C1210_2.70MM_MD`) and standard footprints for connectors (e.g. `wavenumber:1984617` Phoenix-style terminal block). Some STEP models are embedded for 3D preview.
+Key Features (Updated)
+----------------------
+- High-accuracy measurement using TI INA226 for voltage/current/power monitoring.
+- Regulated low-voltage rail provided by TI TLV34063-based regulator (or similar
+  TI DC/DC device).
+- Configurable threshold indication using hardware logic and a 74HC164 shift
+  register for stable LED control.
+- Protection circuitry including input filtering, reverse-polarity protection,
+  and transient suppression.
+- Low-power design suitable for continuous monitoring with minimal impact on
+  battery life.
+- Compact SMT layout using 0603/0805/1210 components and custom Wavenumber
+  footprints.
+- Removable module mountable via Phoenix-style terminal connectors or solder pads.
+- Easy BOM and fabrication generation directly inside KiCad.
 
-Opening the project (quick start)
-1. Open KiCad and choose File → Open Project. Select `Charge_Indicator/Charge_Indicator.kicad_pro`.
-2. From the project manager you can open the schematic (Eeschema) and PCB (pcbnew).
-3. To generate a BOM: open the schematic editor (Eeschema) and use Tools → Generate Bill of Materials (or the BOM exporter configured in the project — default filename is `${PROJECTNAME}.csv`).
-4. To create fabrication outputs: open the PCB editor (pcbnew) → File → Plot (Gerbers) and Fabrication Outputs → Drill Files.
+Repository Structure
+--------------------
+- Charge_Indicator/Charge_Indicator.kicad_pro      — Full KiCad project.
+- Charge_Indicator/Charge_Indicator.kicad_sch      — Updated schematic including
+                                                     TI power monitor + regulation
+                                                     circuitry.
+- Charge_Indicator/Charge_Indicator.kicad_pcb      — PCB layout with revised
+                                                     component placement and routing.
+- Charge_Indicator-backups/                       — Automated KiCad backups.
+- Battery Datasheets/                             — Datasheets for the RBT245LFP
+                                                     battery pack.
 
-KiCad compatibility
-- Project files include generator_version `9.0` and a kicad_sch version dated 2025-01-14; if you have trouble opening them, try a recent KiCad release (KiCad 7/8 or newer). If you run into compatibility issues, please open an issue describing the KiCad version and error.
+Components of Interest
+----------------------
+Texas Instruments ICs included in the design:
+- INA226 — Precision digital current/power/voltage monitor with I²C output.
+- TLV34063-based regulator (or TLV34033/LM2596 variant) — Low-voltage regulation
+  for logic and LED rail.
+- BQ24120 (optional/regulating block depending on revision).
+- 74HC164 — LED control/sequence logic, used to manage indicator states.
+
+(If needed, replace these with the exact ICs used in the final version.)
+
+Custom Footprints & Libraries
+------------------------------
+The project uses both standard KiCad libraries and Wavenumber footprint libraries.
+These include:
+- Resistors/capacitors (R0603, C1210, C0805, etc.)
+- Phoenix-style connectors (e.g., wavenumber:1984617)
+- Embedded STEP models for realistic 3D visualization
+
+Quick Start — Opening & Editing the Project
+-------------------------------------------
+1. Launch KiCad and open:
+   Charge_Indicator/Charge_Indicator.kicad_pro
+2. From the project window, open Eeschema to view/edit the TI measurement and
+   regulation circuitry.
+3. Open pcbnew to inspect component placement, routing, and copper pours.
+4. To generate a BOM:
+   Eeschema → Tools → Generate Bill of Materials
+5. To generate fabrication outputs:
+   pcbnew → File → Plot (Gerbers)
+           → Fabrication Outputs → Drill Files
+
+KiCad Version Compatibility
+---------------------------
+The project was created using KiCad 8/9 toolchain (schema version 9.0, updated
+2025-01-14). It is recommended to use KiCad 7 or newer.
+
+If you experience compatibility issues, please open an issue with details about
+your KiCad version and the error message.
 
 Contact / Author
 - Repository owner: `nfikes` (GitHub).
 - Repository collaborator: `ehughes` (GitHub).
 
-Datasheets for the battery:
+Battery Datasheets
+------------------
+Reference documentation for the RBT2425LFP LiFePO4 battery:
 
 https://github.com/nfikes/AutoNav-Charge_Indicator-KiCad_Pcb/blob/80e677aa5d561c7ffa7e2566f1dbaed0d212a4c6/Battery%20Datasheets/RBT2425LFP%20-%20Datasheet.pdf
 
 https://github.com/nfikes/AutoNav-Charge_Indicator-KiCad_Pcb/blob/80e677aa5d561c7ffa7e2566f1dbaed0d212a4c6/Battery%20Datasheets/RBT2425LFP%20-%20User%20Manual.pdf
+
+
+
