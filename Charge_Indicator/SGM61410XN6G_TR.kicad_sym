@@ -1,234 +1,177 @@
 (kicad_symbol_lib
-	(version 20241209
-	)
-	(generator "kicad_symbol_editor"
-	)
-	(generator_version "9.0"
-	)
+	(version 20241209)
+	(generator "kicad_symbol_editor")
+	(generator_version "9.0")
 	(symbol "SGM61410XN6G_TR"
-		(exclude_from_sim no
-		)
-		(in_bom yes
-		)
-		(on_board yes
-		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
 		(property "Reference" ""
-			(at -1.27 1.27 0
-			)
+			(at -1.27 1.27 0)
 			(effects
 				(font
-					(face "Arial"
-					)
-					(size 2.1844 2.1844
-					)
-					(bold yes
-					)
+					(size 1.8288 1.8288)
 				)
 			)
 		)
-		(property "Value" ""
-			(at -1.27 -3.81 0
-			)
+		(property "Value" "*"
+			(at -1.27 -3.81 0)
 			(effects
 				(font
-					(face "Arial"
-					)
-					(size 1.524 1.524
-					)
+					(size 1.8288 1.8288)
 				)
-				(justify left bottom
-				)
+				(justify left bottom)
 			)
 		)
 		(property "Footprint" ""
-			(at 0 0 0
-			)
+			(at 0 0 0)
 			(effects
 				(font
-					(size 1.27 1.27
-					)
+					(size 1.27 1.27)
 				)
-				(hide yes
-				)
+				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 0
-			)
+			(at 0 0 0)
 			(effects
 				(font
-					(size 1.27 1.27
-					)
+					(size 1.27 1.27)
 				)
-				(hide yes
-				)
+				(hide yes)
 			)
 		)
 		(property "Description" ""
-			(at 0 0 0
-			)
+			(at 0 0 0)
 			(effects
 				(font
-					(size 1.27 1.27
-					)
+					(size 1.27 1.27)
 				)
-				(hide yes
-				)
+				(hide yes)
 			)
 		)
 		(symbol "SGM61410XN6G_TR_1_0"
 			(rectangle
-				(start 7.62 5.08
-				)
-				(end -7.62 -5.08
-				)
+				(start 7.62 5.08)
+				(end -7.62 -5.08)
 				(stroke
-					(width 0.0254
-					)
-					(type solid
-					)
-					(color 128 0 0 1
-					)
+					(width 0.0254)
+					(type solid)
+					(color 128 0 0 1)
 				)
 				(fill
-					(type background
-					)
+					(type background)
 				)
 			)
 			(pin passive line
-				(at -15.24 2.54 0
-				)
-				(length 7.62
-				)
+				(at -15.24 2.54 0)
+				(length 7.62)
 				(name "BOOT"
 					(effects
 						(font
-							(size 1.27 1.27
-							)
+							(size 1.27 1.27)
 						)
 					)
 				)
 				(number "1"
 					(effects
 						(font
-							(size 1.27 1.27
-							)
+							(size 1.27 1.27)
 						)
 					)
 				)
 			)
 			(pin passive line
-				(at -15.24 0 0
-				)
-				(length 7.62
-				)
+				(at -15.24 0 0)
+				(length 7.62)
 				(name "GND"
 					(effects
 						(font
-							(size 1.27 1.27
-							)
+							(size 1.27 1.27)
 						)
 					)
 				)
 				(number "2"
 					(effects
 						(font
-							(size 1.27 1.27
-							)
+							(size 1.27 1.27)
 						)
 					)
 				)
 			)
 			(pin passive line
-				(at -15.24 -2.54 0
-				)
-				(length 7.62
-				)
+				(at -15.24 -2.54 0)
+				(length 7.62)
 				(name "FB"
 					(effects
 						(font
-							(size 1.27 1.27
-							)
+							(size 1.27 1.27)
 						)
 					)
 				)
 				(number "3"
 					(effects
 						(font
-							(size 1.27 1.27
-							)
+							(size 1.27 1.27)
 						)
 					)
 				)
 			)
 			(pin passive line
-				(at 15.24 2.54 180
-				)
-				(length 7.62
-				)
+				(at 15.24 2.54 180)
+				(length 7.62)
 				(name "SW"
 					(effects
 						(font
-							(size 1.27 1.27
-							)
+							(size 1.27 1.27)
 						)
 					)
 				)
 				(number "6"
 					(effects
 						(font
-							(size 1.27 1.27
-							)
+							(size 1.27 1.27)
 						)
 					)
 				)
 			)
 			(pin passive line
-				(at 15.24 0 180
-				)
-				(length 7.62
-				)
+				(at 15.24 0 180)
+				(length 7.62)
 				(name "VIN"
 					(effects
 						(font
-							(size 1.27 1.27
-							)
+							(size 1.27 1.27)
 						)
 					)
 				)
 				(number "5"
 					(effects
 						(font
-							(size 1.27 1.27
-							)
+							(size 1.27 1.27)
 						)
 					)
 				)
 			)
 			(pin passive line
-				(at 15.24 -2.54 180
-				)
-				(length 7.62
-				)
+				(at 15.24 -2.54 180)
+				(length 7.62)
 				(name "EN"
 					(effects
 						(font
-							(size 1.27 1.27
-							)
+							(size 1.27 1.27)
 						)
 					)
 				)
 				(number "4"
 					(effects
 						(font
-							(size 1.27 1.27
-							)
+							(size 1.27 1.27)
 						)
 					)
 				)
 			)
 		)
-		(embedded_fonts no
-		)
+		(embedded_fonts no)
 	)
 )
