@@ -1,0 +1,322 @@
+(kicad_symbol_lib
+	(version 20241209
+	)
+	(generator "kicad_symbol_editor"
+	)
+	(generator_version "9.0"
+	)
+	(symbol "INA226"
+		(exclude_from_sim no
+		)
+		(in_bom yes
+		)
+		(on_board yes
+		)
+		(property "Reference" ""
+			(at -1.27 1.27 0
+			)
+			(effects
+				(font
+					(face "Arial"
+					)
+					(size 2.1844 2.1844
+					)
+					(bold yes
+					)
+				)
+			)
+		)
+		(property "Value" ""
+			(at -1.27 -3.81 0
+			)
+			(effects
+				(font
+					(face "Arial"
+					)
+					(size 1.524 1.524
+					)
+				)
+				(justify left bottom
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0
+			)
+			(effects
+				(font
+					(size 1.27 1.27
+					)
+				)
+				(hide yes
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0
+			)
+			(effects
+				(font
+					(size 1.27 1.27
+					)
+				)
+				(hide yes
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0
+			)
+			(effects
+				(font
+					(size 1.27 1.27
+					)
+				)
+				(hide yes
+				)
+			)
+		)
+		(symbol "INA226_1_0"
+			(rectangle
+				(start 7.62 7.62
+				)
+				(end -7.62 -7.62
+				)
+				(stroke
+					(width 0.0254
+					)
+					(type solid
+					)
+					(color 128 0 0 1
+					)
+				)
+				(fill
+					(type background
+					)
+				)
+			)
+			(pin passive line
+				(at -15.24 5.08 0
+				)
+				(length 7.62
+				)
+				(name "A1"
+					(effects
+						(font
+							(size 1.27 1.27
+							)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27
+							)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -15.24 2.54 0
+				)
+				(length 7.62
+				)
+				(name "A0"
+					(effects
+						(font
+							(size 1.27 1.27
+							)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27
+							)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -15.24 0 0
+				)
+				(length 7.62
+				)
+				(name "Alert"
+					(effects
+						(font
+							(size 1.27 1.27
+							)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27
+							)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -15.24 -2.54 0
+				)
+				(length 7.62
+				)
+				(name "SDA"
+					(effects
+						(font
+							(size 1.27 1.27
+							)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27
+							)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -15.24 -5.08 0
+				)
+				(length 7.62
+				)
+				(name "SCL"
+					(effects
+						(font
+							(size 1.27 1.27
+							)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27
+							)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 15.24 5.08 180
+				)
+				(length 7.62
+				)
+				(name "IN+"
+					(effects
+						(font
+							(size 1.27 1.27
+							)
+						)
+					)
+				)
+				(number "10"
+					(effects
+						(font
+							(size 1.27 1.27
+							)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 15.24 2.54 180
+				)
+				(length 7.62
+				)
+				(name "IN-"
+					(effects
+						(font
+							(size 1.27 1.27
+							)
+						)
+					)
+				)
+				(number "9"
+					(effects
+						(font
+							(size 1.27 1.27
+							)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 15.24 0 180
+				)
+				(length 7.62
+				)
+				(name "VBUS"
+					(effects
+						(font
+							(size 1.27 1.27
+							)
+						)
+					)
+				)
+				(number "8"
+					(effects
+						(font
+							(size 1.27 1.27
+							)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 15.24 -2.54 180
+				)
+				(length 7.62
+				)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27
+							)
+						)
+					)
+				)
+				(number "7"
+					(effects
+						(font
+							(size 1.27 1.27
+							)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 15.24 -5.08 180
+				)
+				(length 7.62
+				)
+				(name "VS"
+					(effects
+						(font
+							(size 1.27 1.27
+							)
+						)
+					)
+				)
+				(number "6"
+					(effects
+						(font
+							(size 1.27 1.27
+							)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no
+		)
+	)
+)

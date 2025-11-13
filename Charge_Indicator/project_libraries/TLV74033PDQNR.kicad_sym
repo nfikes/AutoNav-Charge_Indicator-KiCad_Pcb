@@ -1,0 +1,20 @@
+(kicad_symbol_lib
+  (version 20241209
+  )
+  (generator kicad_symbol_editor
+  )
+  (generator_version 9.0
+  )
+  (symbol "TLV74033PDQNR"
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "U" (at 6.35 3.81 0)  (effects (font (face "Arial")  (size 2.1844 2.1844)  (bold yes) ) ) )
+    (property "Value" "" (at 5.08 -12.7 0)  (effects (font (face "Arial")  (size 1.524 1.524) )  (justify left bottom) ) )
+    (property "Footprint" "" (at 0 0 0)  (effects (font (size 1.27 1.27) )  (hide yes) ) )
+    (property "Datasheet" "" (at 0 0 0)  (effects (font (size 1.27 1.27) )  (hide yes) ) )
+    (property "Description" "" (at 0 0 0)  (effects (font (size 1.27 1.27) )  (hide yes) ) )
+    (symbol TLV74033PDQNR_1_0 (rectangle (start 5.08 2.54)  (end 22.86 -10.16)  (stroke (width 0)  (type solid)  (color 0 0 0 1) )  (fill (type color)  (color 255 255 255 1) ) )  (pin passive line (at 0 0 0)  (length 5.08)  (name "IN" (effects (font (size 1.27 1.27) ) ) )  (number "4" (effects (font (size 1.27 1.27) ) ) ) )  (pin passive line (at 0 -2.54 0)  (length 5.08)  (name "EN" (effects (font (size 1.27 1.27) ) ) )  (number "3" (effects (font (size 1.27 1.27) ) ) ) )  (pin passive line (at 0 -7.62 0)  (length 5.08)  (name "GND" (effects (font (size 1.27 1.27) ) ) )  (number "2" (effects (font (size 1.27 1.27) ) ) ) )  (pin passive line (at 27.94 0 180)  (length 5.08)  (name "OUT" (effects (font (size 1.27 1.27) ) ) )  (number "1" (effects (font (size 1.27 1.27) ) ) ) )  (pin passive line (at 27.94 -7.62 180)  (length 5.08)  (name "GND" (effects (font (size 1.27 1.27) ) ) )  (number "5" (effects (font (size 1.27 1.27) ) ) ) ) )
+    (embedded_fonts no)
+  )
+)
