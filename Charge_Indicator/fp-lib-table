@@ -1,4 +1,7 @@
 (fp_lib_table
   (version 7)
   (lib (name "autonav_fp")(type "KiCad")(uri "${KIPRJMOD}/project_libraries/autonav_fp")(options "")(descr ""))
+  (lib (name "BQ34Z100-R2.kicad_mod")(type "KiCad")(uri "${KIPRJMOD}/project_libraries/autonav_fp/BQ34Z100-R2.kicad_mod.pretty")(options "")(descr ""))
+  (lib (name "TLV74033PDQNR")(type "KiCad")(uri "${KIPRJMOD}/project_libraries/autonav_fp/TLV74033PDQNR.pretty")(options "")(descr ""))
+  (lib (name "Library")(type "KiCad")(uri "${KIPRJMOD}/project_libraries/autonav_fp/Library.pretty")(options "")(descr ""))
 )

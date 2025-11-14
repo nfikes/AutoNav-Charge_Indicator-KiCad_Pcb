@@ -12332,7 +12332,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "autonav_fp:TLV74033PDQNR"
 			(at 153.67 62.23 0)
 			(effects
 				(font
