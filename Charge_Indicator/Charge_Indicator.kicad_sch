@@ -7399,6 +7399,12 @@
 		(uuid "343ad63b-fcd0-4453-9fb7-8f5d48fa0148")
 	)
 	(junction
+		(at 78.74 140.97)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3729202a-e2fe-4d6a-b00b-33065853b51b")
+	)
+	(junction
 		(at 181.61 43.18)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -7511,12 +7517,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "8f190157-48e4-49c5-9803-9f2f6002a9c4")
-	)
-	(junction
-		(at 78.74 142.24)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "934ff9e3-cb2d-4788-9bca-d80827cc2f48")
 	)
 	(junction
 		(at 125.73 52.07)
@@ -7708,6 +7708,16 @@
 	)
 	(wire
 		(pts
+			(xy 44.45 142.24) (xy 68.58 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "09dc5fc0-0b5b-4b14-84e6-de06391d3125")
+	)
+	(wire
+		(pts
 			(xy 222.25 116.84) (xy 224.79 116.84)
 		)
 		(stroke
@@ -7858,6 +7868,16 @@
 	)
 	(wire
 		(pts
+			(xy 44.45 152.4) (xy 45.72 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1ca272d2-095b-49f4-9719-e975f334811a")
+	)
+	(wire
+		(pts
 			(xy 111.76 115.57) (xy 113.03 115.57)
 		)
 		(stroke
@@ -7875,16 +7895,6 @@
 			(type default)
 		)
 		(uuid "1e9d0add-52f7-4e65-a75a-8764046c77cc")
-	)
-	(wire
-		(pts
-			(xy 33.02 148.59) (xy 45.72 148.59)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1ea7301c-b55d-41c9-85f0-1084eefc1d44")
 	)
 	(wire
 		(pts
@@ -7975,6 +7985,16 @@
 			(type default)
 		)
 		(uuid "279c6788-a515-431a-8e34-2ccf35e8182e")
+	)
+	(wire
+		(pts
+			(xy 39.37 147.32) (xy 45.72 147.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "298013e3-feb0-405a-be84-81ddd63a27b8")
 	)
 	(wire
 		(pts
@@ -8168,17 +8188,7 @@
 	)
 	(wire
 		(pts
-			(xy 78.74 142.24) (xy 78.74 139.7)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3aaba2fc-df3e-4248-a206-aa595cb9bccc")
-	)
-	(wire
-		(pts
-			(xy 43.18 166.37) (xy 43.18 158.75)
+			(xy 41.91 166.37) (xy 41.91 158.75)
 		)
 		(stroke
 			(width 0)
@@ -8218,7 +8228,7 @@
 	)
 	(wire
 		(pts
-			(xy 43.18 158.75) (xy 34.29 158.75)
+			(xy 41.91 158.75) (xy 34.29 158.75)
 		)
 		(stroke
 			(width 0)
@@ -8245,16 +8255,6 @@
 			(type default)
 		)
 		(uuid "46f745c5-2e84-4086-ac71-9104bb093da3")
-	)
-	(wire
-		(pts
-			(xy 78.74 153.67) (xy 78.74 142.24)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "48acd7d3-dc1d-4b20-89f8-de971e86b88a")
 	)
 	(wire
 		(pts
@@ -8345,6 +8345,16 @@
 			(type default)
 		)
 		(uuid "5468fe82-763c-4adf-bac0-6aeaa5b51553")
+	)
+	(wire
+		(pts
+			(xy 66.04 152.4) (xy 66.04 154.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "567d69c9-f0ec-4be3-acce-b5355fe291cf")
 	)
 	(wire
 		(pts
@@ -8548,6 +8558,16 @@
 	)
 	(wire
 		(pts
+			(xy 78.74 139.7) (xy 78.74 140.97)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6ae3aa12-57c6-4418-8547-570241a2da51")
+	)
+	(wire
+		(pts
 			(xy 162.56 121.92) (xy 170.18 121.92)
 		)
 		(stroke
@@ -8588,16 +8608,6 @@
 	)
 	(wire
 		(pts
-			(xy 66.04 153.67) (xy 68.58 153.67)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6f324252-ce11-4bfd-b90e-71d555e376f5")
-	)
-	(wire
-		(pts
 			(xy 31.75 129.54) (xy 40.64 129.54)
 		)
 		(stroke
@@ -8618,7 +8628,7 @@
 	)
 	(wire
 		(pts
-			(xy 33.02 124.46) (xy 33.02 148.59)
+			(xy 39.37 124.46) (xy 39.37 147.32)
 		)
 		(stroke
 			(width 0)
@@ -8725,6 +8735,16 @@
 			(type default)
 		)
 		(uuid "7c8692d0-7b04-49b1-9836-8e7996d67aa2")
+	)
+	(wire
+		(pts
+			(xy 44.45 142.24) (xy 44.45 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7d579bc6-ad06-4e1d-8bf2-15640b16e181")
 	)
 	(wire
 		(pts
@@ -8975,6 +8995,16 @@
 			(type default)
 		)
 		(uuid "981f2aff-59ca-42bc-aa32-0d2d906592d3")
+	)
+	(wire
+		(pts
+			(xy 78.74 140.97) (xy 78.74 153.67)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9a95ce02-aa12-4daa-b6e0-9f1e339b4755")
 	)
 	(wire
 		(pts
@@ -9268,7 +9298,7 @@
 	)
 	(wire
 		(pts
-			(xy 78.74 142.24) (xy 40.64 142.24)
+			(xy 78.74 140.97) (xy 40.64 140.97)
 		)
 		(stroke
 			(width 0)
@@ -9278,7 +9308,7 @@
 	)
 	(wire
 		(pts
-			(xy 48.26 166.37) (xy 43.18 166.37)
+			(xy 48.26 166.37) (xy 41.91 166.37)
 		)
 		(stroke
 			(width 0)
@@ -9398,7 +9428,7 @@
 	)
 	(wire
 		(pts
-			(xy 33.02 124.46) (xy 40.64 124.46)
+			(xy 39.37 124.46) (xy 40.64 124.46)
 		)
 		(stroke
 			(width 0)
@@ -9538,7 +9568,7 @@
 	)
 	(wire
 		(pts
-			(xy 40.64 137.16) (xy 40.64 142.24)
+			(xy 40.64 137.16) (xy 40.64 140.97)
 		)
 		(stroke
 			(width 0)
@@ -9675,6 +9705,16 @@
 			(type default)
 		)
 		(uuid "e971839d-3efc-4165-bbdf-ae2172343744")
+	)
+	(wire
+		(pts
+			(xy 68.58 142.24) (xy 68.58 153.67)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eafec893-2295-4d32-974f-bfdd81df1dd4")
 	)
 	(wire
 		(pts
@@ -17358,7 +17398,7 @@
 	)
 	(symbol
 		(lib_id "wn__wavenumber:SSSS811101")
-		(at 53.34 153.67 0)
+		(at 53.34 152.4 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -17366,7 +17406,7 @@
 		(dnp no)
 		(uuid "af1a2143-6814-4c8b-bf71-0f1508b04f45")
 		(property "Reference" "SW1"
-			(at 63.5 144.78 0)
+			(at 63.5 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17374,7 +17414,7 @@
 			)
 		)
 		(property "Value" "SSSS811101"
-			(at 55.88 145.034 0)
+			(at 55.88 143.764 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17382,7 +17422,7 @@
 			)
 		)
 		(property "Footprint" "wavenumber:SSSS811101"
-			(at 53.34 153.67 0)
+			(at 53.34 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17391,7 +17431,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 53.34 153.67 0)
+			(at 53.34 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17400,7 +17440,7 @@
 			)
 		)
 		(property "Description" "300mA Surface Mount, Right Angle SPDT 5V 10,000 Cycles SMD Slide Switches ROHS"
-			(at 53.34 153.67 0)
+			(at 53.34 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17409,7 +17449,7 @@
 			)
 		)
 		(property "Symbol" "SSSS811101"
-			(at 53.34 153.67 0)
+			(at 53.34 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17419,7 +17459,7 @@
 			)
 		)
 		(property "Device" "SSSS811101"
-			(at 53.34 153.67 0)
+			(at 53.34 152.4 0)
 			(effects
 				(font
 					(size 1.8288 1.8288)
@@ -17429,7 +17469,7 @@
 			)
 		)
 		(property "LCSC Part Name" "SSSS811101"
-			(at 53.34 153.67 0)
+			(at 53.34 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17439,7 +17479,7 @@
 			)
 		)
 		(property "Supplier Part" "C109335"
-			(at 53.34 153.67 0)
+			(at 53.34 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17449,7 +17489,7 @@
 			)
 		)
 		(property "Manufacturer" "Alps Alpine"
-			(at 53.34 153.67 0)
+			(at 53.34 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17459,7 +17499,7 @@
 			)
 		)
 		(property "Manufacturer Part" "SSSS811101"
-			(at 53.34 153.67 0)
+			(at 53.34 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17469,7 +17509,7 @@
 			)
 		)
 		(property "Supplier Footprint" "SMD"
-			(at 53.34 153.67 0)
+			(at 53.34 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17479,7 +17519,7 @@
 			)
 		)
 		(property "JLCPCB Part Class" "Extended Part"
-			(at 53.34 153.67 0)
+			(at 53.34 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17489,7 +17529,7 @@
 			)
 		)
 		(property "Datasheet_1" "https://item.szlcsc.com/datasheet/SSSS811101/110556.html"
-			(at 53.34 153.67 0)
+			(at 53.34 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17499,7 +17539,7 @@
 			)
 		)
 		(property "Supplier" "LCSC"
-			(at 53.34 153.67 0)
+			(at 53.34 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17509,7 +17549,7 @@
 			)
 		)
 		(property "Add into BOM" "yes"
-			(at 53.34 153.67 0)
+			(at 53.34 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17519,7 +17559,7 @@
 			)
 		)
 		(property "Convert to PCB" "yes"
-			(at 53.34 153.67 0)
+			(at 53.34 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17529,7 +17569,7 @@
 			)
 		)
 		(property "Circuit" "SPDT"
-			(at 53.34 153.67 0)
+			(at 53.34 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17539,7 +17579,7 @@
 			)
 		)
 		(property "Actuator Style" "Rectangular Columnar"
-			(at 53.34 153.67 0)
+			(at 53.34 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17549,7 +17589,7 @@
 			)
 		)
 		(property "Termination Style" "SMD(SMT) Tab"
-			(at 53.34 153.67 0)
+			(at 53.34 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17559,7 +17599,7 @@
 			)
 		)
 		(property "Switch Height" "4.1mm"
-			(at 53.34 153.67 0)
+			(at 53.34 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17569,7 +17609,7 @@
 			)
 		)
 		(property "Mounting Type" "Surface Mount, Right Angle"
-			(at 53.34 153.67 0)
+			(at 53.34 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17579,7 +17619,7 @@
 			)
 		)
 		(property "Current Rating" "300mA"
-			(at 53.34 153.67 0)
+			(at 53.34 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17589,7 +17629,7 @@
 			)
 		)
 		(property "Voltage Rating" "5V"
-			(at 53.34 153.67 0)
+			(at 53.34 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17599,7 +17639,7 @@
 			)
 		)
 		(property "Life" "10,000 Cycles"
-			(at 53.34 153.67 0)
+			(at 53.34 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17609,7 +17649,7 @@
 			)
 		)
 		(property "Operating Temperature" "-40℃~+85℃"
-			(at 53.34 153.67 0)
+			(at 53.34 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17619,7 +17659,7 @@
 			)
 		)
 		(property "Internal Part Number" ""
-			(at 53.34 153.67 0)
+			(at 53.34 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17628,7 +17668,7 @@
 			)
 		)
 		(property "Manufacturer Part Number" "SSSS811101"
-			(at 53.34 153.67 0)
+			(at 53.34 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17637,7 +17677,7 @@
 			)
 		)
 		(property "cad-reference" "SSSS811101"
-			(at 53.34 153.67 0)
+			(at 53.34 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17646,7 +17686,7 @@
 			)
 		)
 		(property "flags" ""
-			(at 53.34 153.67 0)
+			(at 53.34 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19266,6 +19306,77 @@
 			(project ""
 				(path "/ce5a45ab-8fc2-45f1-907f-8e7f414ac528"
 					(reference "R2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "wn_pwr:GND")
+		(at 66.04 154.94 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e8a93c63-b315-4348-8a16-6fea5b530f08")
+		(property "Reference" "#PWR023"
+			(at 66.04 158.94 0)
+			(do_not_autoplace yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 66.04 158.94 0)
+			(do_not_autoplace yes)
+			(effects
+				(font
+					(face "Arial")
+					(size 1.905 1.905)
+					(thickness 0.254)
+					(bold yes)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 66.04 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 66.04 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , Ground"
+			(at 66.802 145.288 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "41c61301-c7ac-4bca-a3cd-2624d06528aa")
+		)
+		(instances
+			(project "Charge_Indicator"
+				(path "/ce5a45ab-8fc2-45f1-907f-8e7f414ac528"
+					(reference "#PWR023")
 					(unit 1)
 				)
 			)
