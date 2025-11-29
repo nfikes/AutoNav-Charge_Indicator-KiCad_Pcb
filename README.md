@@ -9,13 +9,18 @@ RBT245LFP pack) and provide a clear visual indication of pack state of charge.
 
 ## Images:
 
-Physical PCB:
+# Physical PCB:
+
 <img width="743" height="658" alt="Screenshot 2025-11-28 at 23 55 34" src="https://github.com/user-attachments/assets/18826243-7f9d-4236-8b8b-fdca2c30d851" />
 
-Routing:
+
+# Routing:
+
 <img width="703" height="703" alt="Screenshot 2025-11-28 at 23 56 09" src="https://github.com/user-attachments/assets/d0569d03-93f6-4175-a271-8092422319dd" />
 
-Schematic:
+
+# Schematic:
+
 <img width="1004" height="693" alt="Screenshot 2025-11-28 at 23 56 23" src="https://github.com/user-attachments/assets/734c572a-19bc-43d5-9108-25eee76cf57e" />
 
 Overview
