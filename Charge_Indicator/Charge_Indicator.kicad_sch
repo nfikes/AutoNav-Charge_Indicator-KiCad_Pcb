@@ -7624,7 +7624,7 @@
 	)
 	(text "Peripheral Connections Block"
 		(exclude_from_sim no)
-		(at 24.892 172.212 0)
+		(at 27.178 171.958 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7635,7 +7635,7 @@
 	)
 	(text "LED Driver Block"
 		(exclude_from_sim no)
-		(at 141.732 110.998 0)
+		(at 143.002 110.744 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7646,7 +7646,7 @@
 	)
 	(text "5V DC-DC Buck Block"
 		(exclude_from_sim no)
-		(at 143.764 57.912 0)
+		(at 146.05 57.912 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7693,7 +7693,7 @@
 	)
 	(text "Battery Gauge Block"
 		(exclude_from_sim no)
-		(at 21.336 77.978 0)
+		(at 23.622 78.232 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7715,7 +7715,7 @@
 	)
 	(text "Front End Current, Voltage, Power Sensor Block"
 		(exclude_from_sim no)
-		(at 32.766 14.986 0)
+		(at 36.576 14.986 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7726,7 +7726,7 @@
 	)
 	(text "3.3V DC-DC Regulator Block"
 		(exclude_from_sim no)
-		(at 93.218 169.672 0)
+		(at 95.758 169.418 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7834,6 +7834,12 @@
 		(uuid "484a7c29-88c7-448e-a3f4-3efc39bbc71c")
 	)
 	(junction
+		(at 24.13 93.98)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4a97a68f-7b6e-43e7-8959-54a7883e6c08")
+	)
+	(junction
 		(at 52.07 50.8)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -7874,12 +7880,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "75a57a0e-82df-4664-8313-042efb69f6b1")
-	)
-	(junction
-		(at 24.13 95.25)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "7cb9a90e-4a76-4752-8a7d-2ca119b24e6c")
 	)
 	(junction
 		(at 67.31 27.94)
@@ -8197,7 +8197,7 @@
 	)
 	(wire
 		(pts
-			(xy 17.78 87.63) (xy 24.13 87.63)
+			(xy 17.78 86.36) (xy 24.13 86.36)
 		)
 		(stroke
 			(width 0)
@@ -8314,6 +8314,16 @@
 			(type default)
 		)
 		(uuid "17559936-c7b6-49e4-b2a4-9a7cf9fd5032")
+	)
+	(wire
+		(pts
+			(xy 24.13 93.98) (xy 24.13 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "19fad09f-9d09-450e-abc2-b7595ad5dc05")
 	)
 	(wire
 		(pts
@@ -8504,6 +8514,16 @@
 			(type default)
 		)
 		(uuid "2bd6eac2-851f-4619-86b4-c994f1569949")
+	)
+	(wire
+		(pts
+			(xy 17.78 93.98) (xy 17.78 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2bfc8116-9f95-48c0-a51b-42a6f21035e9")
 	)
 	(wire
 		(pts
@@ -8737,6 +8757,16 @@
 	)
 	(wire
 		(pts
+			(xy 24.13 114.3) (xy 24.13 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "47fe8950-ee38-452f-b89d-dde22cea4ba7")
+	)
+	(wire
+		(pts
 			(xy 17.78 113.03) (xy 24.13 113.03)
 		)
 		(stroke
@@ -8797,7 +8827,7 @@
 	)
 	(wire
 		(pts
-			(xy 17.78 88.9) (xy 17.78 87.63)
+			(xy 17.78 87.63) (xy 17.78 86.36)
 		)
 		(stroke
 			(width 0)
@@ -9004,6 +9034,16 @@
 			(type default)
 		)
 		(uuid "727df0bb-2d39-4f7e-89a4-ade8025ac8be")
+	)
+	(wire
+		(pts
+			(xy 24.13 110.49) (xy 24.13 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7560ddab-0a95-4514-a98c-c05b9d1b4421")
 	)
 	(wire
 		(pts
@@ -9317,16 +9357,6 @@
 	)
 	(wire
 		(pts
-			(xy 17.78 102.87) (xy 17.78 113.03)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9e102a75-eb41-4ee8-9be9-01edb7e89807")
-	)
-	(wire
-		(pts
 			(xy 88.9 92.71) (xy 97.79 92.71)
 		)
 		(stroke
@@ -9537,6 +9567,16 @@
 	)
 	(wire
 		(pts
+			(xy 24.13 123.19) (xy 24.13 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "af7deb2b-0d2b-4765-a044-8c1055325bc8")
+	)
+	(wire
+		(pts
 			(xy 180.34 74.93) (xy 180.34 76.2)
 		)
 		(stroke
@@ -9547,7 +9587,7 @@
 	)
 	(wire
 		(pts
-			(xy 17.78 102.87) (xy 24.13 102.87)
+			(xy 16.51 102.87) (xy 24.13 102.87)
 		)
 		(stroke
 			(width 0)
@@ -9747,7 +9787,7 @@
 	)
 	(wire
 		(pts
-			(xy 24.13 87.63) (xy 24.13 95.25)
+			(xy 24.13 86.36) (xy 24.13 93.98)
 		)
 		(stroke
 			(width 0)
@@ -9827,7 +9867,7 @@
 	)
 	(wire
 		(pts
-			(xy 17.78 95.25) (xy 24.13 95.25)
+			(xy 17.78 93.98) (xy 24.13 93.98)
 		)
 		(stroke
 			(width 0)
@@ -10217,7 +10257,7 @@
 		(uuid "39d81af6-0dfc-4b96-839e-6dea5be1d42d")
 	)
 	(label "Battery_Input_25.6V"
-		(at 25.4 36.83 0)
+		(at 25.4 34.29 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10297,16 +10337,6 @@
 		)
 		(uuid "938f005d-30c9-4866-b9de-7d7ac83e4903")
 	)
-	(label "BAT+"
-		(at 17.78 102.87 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "9f025047-a794-4fb6-85fc-18fe2b867252")
-	)
 	(label "SRP"
 		(at 74.93 113.03 0)
 		(effects
@@ -10316,6 +10346,16 @@
 			(justify left bottom)
 		)
 		(uuid "a1ba4d62-9593-4a36-9795-a872eedefdc8")
+	)
+	(label "VTRANS"
+		(at 16.51 102.87 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "abc1d4d9-381c-48d5-8173-9839c6751464")
 	)
 	(label "SCL"
 		(at 118.11 92.71 0)
@@ -13353,7 +13393,7 @@
 	)
 	(symbol
 		(lib_id "wn_pwr:GND")
-		(at 17.78 88.9 0)
+		(at 17.78 87.63 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -13362,7 +13402,7 @@
 		(fields_autoplaced yes)
 		(uuid "57ffb348-1ad1-4c9c-a4fd-4f41d66626fc")
 		(property "Reference" "#PWR028"
-			(at 17.78 92.9 0)
+			(at 17.78 91.63 0)
 			(do_not_autoplace yes)
 			(effects
 				(font
@@ -13372,7 +13412,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 17.78 92.9 0)
+			(at 17.78 91.63 0)
 			(do_not_autoplace yes)
 			(effects
 				(font
@@ -13384,7 +13424,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 17.78 88.9 0)
+			(at 17.78 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13393,7 +13433,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 17.78 88.9 0)
+			(at 17.78 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13402,7 +13442,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , Ground"
-			(at 18.542 79.248 0)
+			(at 18.542 77.978 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13763,7 +13803,7 @@
 	)
 	(symbol
 		(lib_id "wn__wavenumber:C_2P_NP")
-		(at 24.13 113.03 270)
+		(at 24.13 114.3 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -13772,7 +13812,7 @@
 		(fields_autoplaced yes)
 		(uuid "69170c0b-9938-4212-a7aa-f2738e44bbaf")
 		(property "Reference" "C10"
-			(at 26.67 115.697 90)
+			(at 26.67 116.967 90)
 			(effects
 				(font
 					(face "Arial")
@@ -13783,7 +13823,7 @@
 			)
 		)
 		(property "Value" "0.1µF"
-			(at 26.67 118.872 90)
+			(at 26.67 120.142 90)
 			(effects
 				(font
 					(face "Arial")
@@ -13793,7 +13833,7 @@
 			)
 		)
 		(property "Footprint" "wavenumber:C0603_0.90MM_MD"
-			(at 24.13 113.03 0)
+			(at 24.13 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13802,7 +13842,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 24.13 113.03 0)
+			(at 24.13 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13811,7 +13851,7 @@
 			)
 		)
 		(property "Description" "CAP CER 0.1UF 16V X7R 0603"
-			(at 24.13 113.03 0)
+			(at 24.13 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13820,7 +13860,7 @@
 			)
 		)
 		(property "Internal Part Number" ""
-			(at 24.13 113.03 0)
+			(at 24.13 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13829,7 +13869,7 @@
 			)
 		)
 		(property "Manufacturer" "Murata Electronics"
-			(at 24.13 113.03 0)
+			(at 24.13 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13838,7 +13878,7 @@
 			)
 		)
 		(property "Manufacturer Part Number" "GCJ188R71C104KA01D"
-			(at 24.13 113.03 0)
+			(at 24.13 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13847,7 +13887,7 @@
 			)
 		)
 		(property "cad-reference" "GCJ188R71C104KA01D"
-			(at 24.13 113.03 0)
+			(at 24.13 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13856,7 +13896,7 @@
 			)
 		)
 		(property "flags" ""
-			(at 24.13 113.03 0)
+			(at 24.13 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17179,6 +17219,77 @@
 		)
 	)
 	(symbol
+		(lib_id "wn_pwr:+5v")
+		(at 24.13 110.49 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a993e8d3-d812-4c65-9f4c-f5639344631e")
+		(property "Reference" "#PWR07"
+			(at 24.13 106.69 0)
+			(do_not_autoplace yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5v"
+			(at 24.13 106.69 0)
+			(do_not_autoplace yes)
+			(effects
+				(font
+					(face "Arial")
+					(size 1.905 1.905)
+					(thickness 0.254)
+					(bold yes)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 24.13 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 24.13 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5v\" , 5V power rail"
+			(at 24.892 100.838 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a62abce1-54f3-4cf0-b302-b654b549953a")
+		)
+		(instances
+			(project "Charge_Indicator"
+				(path "/ce5a45ab-8fc2-45f1-907f-8e7f414ac528"
+					(reference "#PWR07")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_name "R_2P_5")
 		(lib_id "wn__wavenumber:R_2P")
 		(at 168.91 132.08 0)
@@ -18101,7 +18212,7 @@
 	)
 	(symbol
 		(lib_id "wn_pwr:AGND")
-		(at 24.13 120.65 0)
+		(at 24.13 123.19 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -18110,7 +18221,7 @@
 		(fields_autoplaced yes)
 		(uuid "b960832b-32d8-41a1-8770-6fa1d85b44f2")
 		(property "Reference" "#PWR019"
-			(at 24.13 124.65 0)
+			(at 24.13 127.19 0)
 			(do_not_autoplace yes)
 			(effects
 				(font
@@ -18120,7 +18231,7 @@
 			)
 		)
 		(property "Value" "AGND"
-			(at 24.13 124.65 0)
+			(at 24.13 127.19 0)
 			(do_not_autoplace yes)
 			(effects
 				(font
@@ -18132,7 +18243,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 24.13 120.65 0)
+			(at 24.13 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18141,7 +18252,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 24.13 120.65 0)
+			(at 24.13 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18150,7 +18261,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"AGND\" , Analog ground"
-			(at 24.892 110.998 0)
+			(at 24.892 113.538 0)
 			(effects
 				(font
 					(size 1.27 1.27)
