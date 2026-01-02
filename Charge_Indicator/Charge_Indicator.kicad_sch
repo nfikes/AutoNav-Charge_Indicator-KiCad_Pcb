@@ -1318,203 +1318,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "DZ_1A_2C_1"
-			(pin_names
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "D"
-				(at 312.166 164.592 0)
-				(effects
-					(font
-						(face "Arial")
-						(size 2.1844 2.1844)
-						(bold yes)
-					)
-				)
-			)
-			(property "Value" "BZT52C5V1-7-F"
-				(at -0.254 -0.254 0)
-				(effects
-					(font
-						(face "Arial")
-						(size 1.524 1.524)
-					)
-					(justify left bottom)
-				)
-			)
-			(property "Footprint" "wavenumber:D_SOD-123_P"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "DIODE ZENER 5.1V 500MW SOD123"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Internal Part Number" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Manufacturer" "Diodes Inc"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Manufacturer Part Number" "BZT52C5V1-7-F"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "cad-reference" "BZT52C5V1-7-F"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "flags" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "DZ_1A_2C"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "DZ_1A_2C_1_1_0"
-				(polyline
-					(pts
-						(xy -2.54 -1.27) (xy 0 0) (xy -2.54 1.27) (xy -2.54 -1.27)
-					)
-					(stroke
-						(width -0.0001)
-						(type solid)
-						(color 0 0 0 1)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 1.524) (xy -1.016 2.54)
-					)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 1.524) (xy 0 -1.524)
-					)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 -1.524) (xy 1.016 -2.54)
-					)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin passive line
-					(at -5.08 0 0)
-					(length 2.54)
-					(name "A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 2.54 0 180)
-					(length 2.54)
-					(name "K"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "INA226:INA226"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -1946,7 +1749,7 @@
 					)
 				)
 			)
-			(property "Value" "100kΩ"
+			(property "Value" "200kΩ"
 				(at 2.54 -3.81 0)
 				(effects
 					(font
@@ -1974,7 +1777,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "RES 100K OHM 1/10W 1% 0603 SMD"
+			(property "Description" "RES 200K OHM 1/10W 1% 0603 SMD"
 				(at 0 0 0)
 				(effects
 					(font
@@ -2001,7 +1804,7 @@
 					(hide yes)
 				)
 			)
-			(property "Manufacturer Part Number" "ERJ-3EKF1003V"
+			(property "Manufacturer Part Number" "ERJ-3EKF2003V"
 				(at 0 0 0)
 				(effects
 					(font
@@ -2010,7 +1813,7 @@
 					(hide yes)
 				)
 			)
-			(property "cad-reference" "ERJ-3EKF1003V"
+			(property "cad-reference" "ERJ-3EKF2003V"
 				(at 0 0 0)
 				(effects
 					(font
@@ -3258,7 +3061,7 @@
 					)
 				)
 			)
-			(property "Value" "499kΩ"
+			(property "Value" "1MΩ"
 				(at 2.54 -3.81 0)
 				(effects
 					(font
@@ -3286,7 +3089,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "RES 499K OHM 1/10W 1% 0603 SMD"
+			(property "Description" "RES 1M OHM 1/10W 1% 0603 SMD"
 				(at 0 0 0)
 				(effects
 					(font
@@ -3313,7 +3116,7 @@
 					(hide yes)
 				)
 			)
-			(property "Manufacturer Part Number" "ERJ-3EKF4993V"
+			(property "Manufacturer Part Number" "ERJ-3EKF1004V"
 				(at 0 0 0)
 				(effects
 					(font
@@ -3322,7 +3125,7 @@
 					(hide yes)
 				)
 			)
-			(property "cad-reference" "ERJ-3EKF4993V"
+			(property "cad-reference" "ERJ-3EKF1004V"
 				(at 0 0 0)
 				(effects
 					(font
@@ -3350,6 +3153,170 @@
 				)
 			)
 			(symbol "R_2P_8_1_0"
+				(polyline
+					(pts
+						(xy 7.62 0) (xy 6.604 0) (xy 6.35 -0.508) (xy 5.842 0.508) (xy 5.334 -0.508) (xy 4.826 0.508)
+						(xy 4.318 -0.508) (xy 3.81 0.508) (xy 3.556 0) (xy 2.54 0)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at 0 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 10.16 0 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "R_2P_9"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "R"
+				(at 2.54 1.27 0)
+				(effects
+					(font
+						(face "Arial")
+						(size 2.1844 2.1844)
+						(bold yes)
+					)
+				)
+			)
+			(property "Value" "34.8kΩ"
+				(at 2.54 -3.81 0)
+				(effects
+					(font
+						(face "Arial")
+						(size 1.524 1.524)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Footprint" "wavenumber:R0603_0.55MM_HD"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "RES 34.8K OHM 1/10W 1% 0603 SMD"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Internal Part Number" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Manufacturer" "Panasonic Electronic Components"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Manufacturer Part Number" "ERJ-3EKF3482V"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "cad-reference" "ERJ-3EKF3482V"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "flags" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "R_2P"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "R_2P_9_1_0"
 				(polyline
 					(pts
 						(xy 7.62 0) (xy 6.604 0) (xy 6.35 -0.508) (xy 5.842 0.508) (xy 5.334 -0.508) (xy 4.826 0.508)
@@ -4870,6 +4837,203 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "wn__wavenumber:DZ_1A_3C"
+			(pin_names
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "D"
+				(at 312.166 164.592 0)
+				(effects
+					(font
+						(face "Arial")
+						(size 2.1844 2.1844)
+						(bold yes)
+					)
+				)
+			)
+			(property "Value" "BZX84B16-7-F"
+				(at -0.254 -0.254 0)
+				(effects
+					(font
+						(face "Arial")
+						(size 1.524 1.524)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Footprint" "wavenumber:D_SOT-23-3_P"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "DIODE ZENER 16V 300MW SOT23"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Internal Part Number" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Manufacturer" "Diodes Inc"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Manufacturer Part Number" "BZX84B16-7-F"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "cad-reference" "BZX84B16-7-F"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "flags" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "DZ_1A_3C"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "DZ_1A_3C_1_0"
+				(polyline
+					(pts
+						(xy 2.54 -3.81) (xy 5.08 -2.54) (xy 2.54 -1.27) (xy 2.54 -3.81)
+					)
+					(stroke
+						(width -0.0001)
+						(type solid)
+						(color 0 0 0 1)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.08 -1.016) (xy 4.064 0)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.08 -1.016) (xy 5.08 -4.064)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.08 -4.064) (xy 6.096 -5.08)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at 0 -2.54 0)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 -2.54 180)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "wn__wavenumber:LED-GREEN"
 			(pin_numbers
 				(hide yes)
@@ -5789,6 +5953,784 @@
 					(at 15.24 0 180)
 					(length 2.54)
 					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "wn__wavenumber:MOSFET-N-CH-SOT23-1G2S3D"
+			(pin_names
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "Q"
+				(at 5.08 0 0)
+				(effects
+					(font
+						(face "Arial")
+						(size 2.1844 2.1844)
+						(bold yes)
+					)
+				)
+			)
+			(property "Value" "2N7002P,215"
+				(at 5.08 -2.54 0)
+				(effects
+					(font
+						(face "Arial")
+						(size 1.524 1.524)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Footprint" "wavenumber:SOT-23"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "MOSFET N-CH 60V 0.36A SOT-23"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Internal Part Number" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Manufacturer" "Nexperia"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Manufacturer Part Number" "2N7002P,215"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "cad-reference" "2N7002P,215"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "flags" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "MOSFET-N-CH-SOT23-1G2S3D"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "MOSFET-N-CH-SOT23-1G2S3D_1_0"
+				(polyline
+					(pts
+						(xy -5.08 0) (xy -3.048 0)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.048 2.286) (xy -3.048 -2.286)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 2.286) (xy -2.54 1.27)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 -0.508) (xy -2.54 0.508)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 -2.286) (xy -2.54 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.778 0) (xy -0.762 0.762) (xy -0.762 -0.762) (xy -1.778 0)
+					)
+					(stroke
+						(width -0.0001)
+						(type solid)
+						(color 0 0 0 1)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 2.54 2.54)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 1.778) (xy -2.54 1.778)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 1.778) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 1.778) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy -2.54 0)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 0 0)
+					(radius 4.481)
+					(stroke
+						(width 0)
+						(type solid)
+						(color 0 0 0 1)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -1.778) (xy -2.54 -1.778)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -2.54) (xy 2.54 -2.54) (xy 2.54 -1.016)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 2.54) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 2.54) (xy 2.54 0.762)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.302 0.762) (xy 1.778 0.762)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.302 -1.016) (xy 1.778 -1.016) (xy 2.54 0.762) (xy 3.302 -1.016)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -7.62 0 0)
+					(length 2.54)
+					(name "G"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 5.08 270)
+					(length 2.54)
+					(name "D"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -5.08 90)
+					(length 2.54)
+					(name "S"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "wn__wavenumber:MOSFET-P-CH-1G2S3D"
+			(pin_names
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "Q"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(face "Arial")
+						(size 2.1844 2.1844)
+						(bold yes)
+					)
+				)
+			)
+			(property "Value" "BSS84-7-F"
+				(at 0 0 0)
+				(effects
+					(font
+						(face "Arial")
+						(size 1.524 1.524)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Footprint" "wavenumber:SOT-23"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "MOSFET P-CH 50V 130MA SOT23-3"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Internal Part Number" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Manufacturer" "Diodes Incorporated"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Manufacturer Part Number" "BSS84-7-F"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "cad-reference" "BSS84-7-F"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "flags" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "MOSFET-P-CH-1G2S3D"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "MOSFET-P-CH-1G2S3D_1_0"
+				(polyline
+					(pts
+						(xy -3.048 2.286) (xy -3.048 -2.286)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 2.286) (xy -2.54 1.27)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 -0.508) (xy -2.54 0.508)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 -2.286) (xy -2.54 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.508 0) (xy -1.524 -0.762) (xy -1.524 0.762) (xy -0.508 0)
+					)
+					(stroke
+						(width -0.0001)
+						(type solid)
+						(color 0 0 0 1)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 2.54 2.54)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 1.778) (xy -2.54 1.778)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 1.778) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 1.778) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy -2.54 0)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 0 0)
+					(radius 4.481)
+					(stroke
+						(width 0)
+						(type solid)
+						(color 0 0 0 1)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -1.778) (xy -2.54 -1.778)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -2.54) (xy 2.54 -2.54) (xy 2.54 -1.016)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.778 0.762) (xy 3.302 0.762) (xy 2.54 -1.016) (xy 1.778 0.762)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 2.54) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 2.54) (xy 2.54 0.762)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.302 -1.016) (xy 1.778 -1.016)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 1.905)
+					(name "G"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 5.08 270)
+					(length 2.54)
+					(name "D"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -5.08 90)
+					(length 2.54)
+					(name "S"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -7056,6 +7998,299 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "wn__wavenumber:opamp-sot23-5"
+			(pin_names
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at 0 0 0)
+				(effects
+					(font
+						(face "Arial")
+						(size 2.1844 2.1844)
+						(bold yes)
+					)
+				)
+			)
+			(property "Value" "TLV271CW5-7"
+				(at 0 0 0)
+				(effects
+					(font
+						(face "Arial")
+						(size 1.524 1.524)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Footprint" "wavenumber:SOT23-5"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Single 1pA 2V/us 1.9MHz SOT-25 Operational Amplifier ROHS"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Internal Part Number" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Manufacturer" "Diodes Inc"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Manufacturer Part Number" "TLV271CW5-7"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "cad-reference" "TLV271CW5-7"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "flags" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "opamp-sot23-5"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "opamp-sot23-5_1_0"
+				(polyline
+					(pts
+						(xy -5.08 7.62) (xy -5.08 -7.62) (xy 7.62 0) (xy -5.08 7.62)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+						(color 0 0 0 1)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy -4.318 2.54) (xy -2.794 2.54)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -4.064 -2.54) (xy -2.54 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.556 3.302) (xy -3.556 1.778)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 5.08) (xy 0 4.572)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -5.08) (xy 0 -4.572)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(text "V+"
+					(at 0.508 4.064 0)
+					(effects
+						(font
+							(size 1.8288 1.8288)
+						)
+						(justify left bottom)
+					)
+				)
+				(text "V-"
+					(at 0.508 -6.35 0)
+					(effects
+						(font
+							(size 1.8288 1.8288)
+						)
+						(justify left bottom)
+					)
+				)
+				(pin passive line
+					(at -7.62 2.54 0)
+					(length 2.54)
+					(name "+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 -2.54 0)
+					(length 2.54)
+					(name "-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 7.62 270)
+					(length 2.54)
+					(name "VCC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -7.62 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 10.16 0 180)
+					(length 2.54)
+					(name "OUT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "wn__wavenumber:screw-hole"
 			(pin_numbers
 				(hide yes)
@@ -7876,7 +9111,7 @@
 	)
 	(rectangle
 		(start 134.62 12.7)
-		(end 193.04 53.34)
+		(end 215.9 73.66)
 		(stroke
 			(width 0)
 			(type solid)
@@ -7888,8 +9123,8 @@
 		(uuid 277c0fb1-fc33-4518-a8f6-ee7c2aef548d)
 	)
 	(rectangle
-		(start 134.62 109.22)
-		(end 241.3 165.1)
+		(start 134.62 76.2)
+		(end 241.3 127)
 		(stroke
 			(width 0)
 			(type solid)
@@ -7927,8 +9162,8 @@
 		(uuid bd42d6aa-aef7-4672-b0a7-aa1b72203fcf)
 	)
 	(rectangle
-		(start 134.62 55.88)
-		(end 248.92 106.68)
+		(start 134.62 129.54)
+		(end 241.3 165.1)
 		(stroke
 			(width 0)
 			(type solid)
@@ -7952,9 +9187,9 @@
 		)
 		(uuid f6fcfa1c-bdce-4b7f-9c80-bb4b5f156655)
 	)
-	(text "Voltage Translation 20V-30V to 3.3V-5.0V"
+	(text "Voltage Translation Togglable"
 		(exclude_from_sim no)
-		(at 153.416 14.732 0)
+		(at 147.066 14.986 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7987,7 +9222,7 @@
 	)
 	(text "LED Driver Block"
 		(exclude_from_sim no)
-		(at 143.002 110.744 0)
+		(at 143.002 77.724 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7998,7 +9233,7 @@
 	)
 	(text "5V DC-DC Buck Block"
 		(exclude_from_sim no)
-		(at 146.05 57.912 0)
+		(at 144.526 131.826 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8056,7 +9291,7 @@
 	)
 	(text "5V Fully Regulated"
 		(exclude_from_sim no)
-		(at 237.236 78.232 0)
+		(at 234.188 155.702 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8097,30 +9332,8 @@
 		)
 		(uuid "eb00f244-e6f0-4dd8-8229-ee46e31e0e02")
 	)
-	(text_box "Collaboration with Wavenumber LLC Ensure WN logo is on PCB silk layer"
-		(exclude_from_sim no)
-		(at 195.58 45.72 0)
-		(size 38.1 7.62)
-		(margins 0.9525 0.9525 0.9525 0.9525)
-		(stroke
-			(width 0)
-			(type solid)
-			(color 255 232 188 1)
-		)
-		(fill
-			(type color)
-			(color 255 242 154 1)
-		)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left top)
-		)
-		(uuid "680333fd-d07e-48c7-bbeb-1a0d8015fa23")
-	)
 	(junction
-		(at 220.98 76.2)
+		(at 220.98 147.32)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "00411118-a130-41e3-ae3b-5f6a7497a0b7")
@@ -8130,6 +9343,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "00ef1c74-94bc-4f21-a1d5-d4e4191d03c0")
+	)
+	(junction
+		(at 34.29 92.71)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0835ecb1-9b1f-4d2c-8305-f8d87481d453")
 	)
 	(junction
 		(at 46.99 160.02)
@@ -8150,13 +9369,31 @@
 		(uuid "1470e6f7-9cbd-4ccb-bc85-16e89c9fd96e")
 	)
 	(junction
-		(at 212.09 76.2)
+		(at 212.09 147.32)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "172dcc22-d959-4d56-bac5-70b3a4e0315e")
 	)
 	(junction
-		(at 138.43 137.16)
+		(at 146.05 19.05)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "18368951-2123-4553-8ad2-486fe2a24085")
+	)
+	(junction
+		(at 146.05 55.88)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1912f8c6-b023-4df1-8446-033dd9912ba7")
+	)
+	(junction
+		(at 200.66 58.42)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1915a18e-333c-4894-9293-75a1e7c5a105")
+	)
+	(junction
+		(at 138.43 104.14)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "1ec44cac-d456-45b4-8cf9-9d9abdbdce2b")
@@ -8198,12 +9435,6 @@
 		(uuid "4a97a68f-7b6e-43e7-8959-54a7883e6c08")
 	)
 	(junction
-		(at 157.48 33.02)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "56eda7a6-012a-43c5-802c-9b404faf63d3")
-	)
-	(junction
 		(at 60.96 54.61)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -8228,13 +9459,25 @@
 		(uuid "6b3769ba-504e-43ea-97f3-78c0044e3562")
 	)
 	(junction
-		(at 168.91 33.02)
+		(at 190.5 38.1)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "6bdcfee9-a6b9-4dc9-a188-9adbdc3ab9d8")
+		(uuid "6f3ca9a4-3454-4210-b65f-5686702d8603")
 	)
 	(junction
-		(at 184.15 121.92)
+		(at 201.93 156.21)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "705c3b76-3c6e-49ef-9d90-51a6109c17db")
+	)
+	(junction
+		(at 201.93 147.32)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "756102c0-c50a-4c83-8425-350e9b36dc2b")
+	)
+	(junction
+		(at 184.15 88.9)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "75a57a0e-82df-4664-8313-042efb69f6b1")
@@ -8252,19 +9495,25 @@
 		(uuid "7ffb1a50-cff6-4a35-a88a-27b4f481bd6c")
 	)
 	(junction
-		(at 203.2 85.09)
+		(at 165.1 19.05)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "8d5730eb-3030-4a67-803f-bedf9a0660e3")
+		(uuid "84ca06b1-5742-422a-a53b-1c04f29d62d0")
 	)
 	(junction
-		(at 180.34 76.2)
+		(at 180.34 147.32)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "96cf84e8-3141-4314-b0a7-634323ab4989")
 	)
 	(junction
-		(at 138.43 132.08)
+		(at 165.1 30.48)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "98712b34-7647-4432-b210-f9ef7a2df805")
+	)
+	(junction
+		(at 138.43 99.06)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "9ddfde15-47ab-4423-ae4d-35495f9c8f05")
@@ -8288,13 +9537,13 @@
 		(uuid "acaa523f-dc19-4a79-a1be-d4952bf55005")
 	)
 	(junction
-		(at 138.43 142.24)
+		(at 138.43 109.22)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "af6ec553-5a85-48be-a86f-9a41aa22b680")
 	)
 	(junction
-		(at 222.25 121.92)
+		(at 222.25 88.9)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "b2b8adb9-9d71-4535-b967-6a4e76a3c455")
@@ -8304,12 +9553,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "b3bc136f-6c45-4c5e-b25d-dc5c65106ffc")
-	)
-	(junction
-		(at 146.05 33.02)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "b5688367-9b10-42a9-9f09-4389b37afa30")
 	)
 	(junction
 		(at 24.13 102.87)
@@ -8336,7 +9579,7 @@
 		(uuid "c61b1eac-a51c-4c6c-9672-26b3e1ad7d97")
 	)
 	(junction
-		(at 138.43 147.32)
+		(at 138.43 114.3)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c93f6934-357e-4bc7-8bd8-d54225855811")
@@ -8366,13 +9609,7 @@
 		(uuid "e60baf89-307e-4421-8020-68de35ca56bf")
 	)
 	(junction
-		(at 203.2 76.2)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "e8cfa32e-05b1-4669-9090-5f387670f3ea")
-	)
-	(junction
-		(at 179.07 85.09)
+		(at 179.07 156.21)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "eb18cb98-99e4-47a9-b483-8c532d2a716e")
@@ -8408,13 +9645,19 @@
 		(uuid "fca1dcaf-537d-4184-9356-e6ef4a216f18")
 	)
 	(junction
+		(at 173.99 38.1)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "fe8dd472-939a-466e-a493-c7254169a454")
+	)
+	(junction
 		(at 116.84 25.4)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ff83f1a7-bede-417a-9d30-dd4bc0ca1b41")
 	)
 	(junction
-		(at 144.78 67.31)
+		(at 144.78 138.43)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ffb96f4c-fcc9-4f2c-95c4-0e8d37d5a048")
@@ -8435,7 +9678,7 @@
 	)
 	(wire
 		(pts
-			(xy 217.17 147.32) (xy 222.25 147.32)
+			(xy 217.17 114.3) (xy 222.25 114.3)
 		)
 		(stroke
 			(width 0)
@@ -8455,7 +9698,7 @@
 	)
 	(wire
 		(pts
-			(xy 180.34 76.2) (xy 177.8 76.2)
+			(xy 180.34 147.32) (xy 177.8 147.32)
 		)
 		(stroke
 			(width 0)
@@ -8472,6 +9715,36 @@
 			(type default)
 		)
 		(uuid "02c239ec-9c23-4b4f-abc9-74d01158c08a")
+	)
+	(wire
+		(pts
+			(xy 201.93 147.32) (xy 212.09 147.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "03ae8bdd-01de-45e8-974b-38ce012ca7b7")
+	)
+	(wire
+		(pts
+			(xy 201.93 156.21) (xy 201.93 158.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "04a2cfae-30d1-44b4-ad39-ce836115e593")
+	)
+	(wire
+		(pts
+			(xy 154.94 33.02) (xy 165.1 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0533a502-1ff7-4c2e-815e-9d0207121f9a")
 	)
 	(wire
 		(pts
@@ -8522,6 +9795,26 @@
 			(type default)
 		)
 		(uuid "0adb966c-378d-48ab-99db-83e898a9cf39")
+	)
+	(wire
+		(pts
+			(xy 154.94 31.75) (xy 154.94 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0b018586-3800-4714-8da7-9fa0c1806541")
+	)
+	(wire
+		(pts
+			(xy 151.13 30.48) (xy 165.1 30.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0bfa19fd-bd9e-44db-97e7-983029ba85ec")
 	)
 	(wire
 		(pts
@@ -8605,6 +9898,16 @@
 	)
 	(wire
 		(pts
+			(xy 212.09 158.75) (xy 212.09 157.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1385b32a-d963-4ebd-8538-fa630ddb7663")
+	)
+	(wire
+		(pts
 			(xy 39.37 107.95) (xy 36.83 107.95)
 		)
 		(stroke
@@ -8615,7 +9918,27 @@
 	)
 	(wire
 		(pts
-			(xy 180.34 76.2) (xy 187.96 76.2)
+			(xy 173.99 38.1) (xy 190.5 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "13dea79b-5487-406a-be14-4b4036f74e3f")
+	)
+	(wire
+		(pts
+			(xy 146.05 19.05) (xy 165.1 19.05)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "14418ec3-b471-42fa-8f16-117a320b6d1f")
+	)
+	(wire
+		(pts
+			(xy 180.34 147.32) (xy 186.69 147.32)
 		)
 		(stroke
 			(width 0)
@@ -8645,7 +9968,7 @@
 	)
 	(wire
 		(pts
-			(xy 161.29 137.16) (xy 168.91 137.16)
+			(xy 161.29 104.14) (xy 168.91 104.14)
 		)
 		(stroke
 			(width 0)
@@ -8655,7 +9978,7 @@
 	)
 	(wire
 		(pts
-			(xy 217.17 152.4) (xy 222.25 152.4)
+			(xy 217.17 119.38) (xy 222.25 119.38)
 		)
 		(stroke
 			(width 0)
@@ -8705,7 +10028,7 @@
 	)
 	(wire
 		(pts
-			(xy 222.25 147.32) (xy 222.25 121.92)
+			(xy 222.25 114.3) (xy 222.25 88.9)
 		)
 		(stroke
 			(width 0)
@@ -8715,33 +10038,23 @@
 	)
 	(wire
 		(pts
-			(xy 138.43 121.92) (xy 138.43 132.08)
+			(xy 190.5 38.1) (xy 196.85 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1db4a938-f4ee-405d-99ae-20f4709c13da")
+	)
+	(wire
+		(pts
+			(xy 138.43 88.9) (xy 138.43 99.06)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "1e9d0add-52f7-4e65-a75a-8764046c77cc")
-	)
-	(wire
-		(pts
-			(xy 157.48 33.02) (xy 168.91 33.02)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1ecf6cc9-5029-4156-9a10-0430795f68f1")
-	)
-	(wire
-		(pts
-			(xy 39.37 118.11) (xy 36.83 118.11)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1ff51d2d-ea82-444b-a9ed-de2425968979")
 	)
 	(wire
 		(pts
@@ -8752,6 +10065,16 @@
 			(type default)
 		)
 		(uuid "209b7506-81ca-446e-83b1-13d85760daef")
+	)
+	(wire
+		(pts
+			(xy 146.05 25.4) (xy 146.05 19.05)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "21390047-da40-46dd-842a-ebe9aec75411")
 	)
 	(wire
 		(pts
@@ -8775,13 +10098,23 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 85.09) (xy 144.78 96.52)
+			(xy 146.05 156.21) (xy 146.05 158.75)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "2349ecd0-bdb7-490a-bda3-49a350ff5862")
+	)
+	(wire
+		(pts
+			(xy 190.5 50.8) (xy 190.5 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "245f0d7a-da39-47a4-a87c-404369b9d11c")
 	)
 	(wire
 		(pts
@@ -8795,7 +10128,7 @@
 	)
 	(wire
 		(pts
-			(xy 138.43 147.32) (xy 138.43 152.4)
+			(xy 138.43 114.3) (xy 138.43 119.38)
 		)
 		(stroke
 			(width 0)
@@ -8805,23 +10138,13 @@
 	)
 	(wire
 		(pts
-			(xy 138.43 137.16) (xy 138.43 142.24)
+			(xy 138.43 104.14) (xy 138.43 109.22)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "25d2cddc-2571-47b0-816e-9a0f5ffc091f")
-	)
-	(wire
-		(pts
-			(xy 146.05 33.02) (xy 146.05 34.29)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "268f9bd7-575f-4c37-8eac-157e5119a4e6")
 	)
 	(wire
 		(pts
@@ -8835,7 +10158,7 @@
 	)
 	(wire
 		(pts
-			(xy 184.15 127) (xy 186.69 127)
+			(xy 184.15 93.98) (xy 186.69 93.98)
 		)
 		(stroke
 			(width 0)
@@ -8855,7 +10178,7 @@
 	)
 	(wire
 		(pts
-			(xy 184.15 121.92) (xy 186.69 121.92)
+			(xy 184.15 88.9) (xy 186.69 88.9)
 		)
 		(stroke
 			(width 0)
@@ -8905,13 +10228,43 @@
 	)
 	(wire
 		(pts
-			(xy 138.43 132.08) (xy 153.67 132.08)
+			(xy 190.5 66.04) (xy 190.5 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2d56a9a8-8a1e-45bc-aa65-bc20868bc7b6")
+	)
+	(wire
+		(pts
+			(xy 27.94 92.71) (xy 34.29 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2dfd42ba-8208-4aec-a7f8-09e63a8bad23")
+	)
+	(wire
+		(pts
+			(xy 138.43 99.06) (xy 153.67 99.06)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "2f137bb9-10aa-4f72-9e26-15e260cb5d67")
+	)
+	(wire
+		(pts
+			(xy 176.53 20.32) (xy 176.53 19.05)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "306f8258-778f-41ab-93ff-e9591e3b2b7b")
 	)
 	(wire
 		(pts
@@ -9005,27 +10358,7 @@
 	)
 	(wire
 		(pts
-			(xy 146.05 31.75) (xy 146.05 33.02)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3c0f7a10-b548-43dc-a0f0-b5a7739200f0")
-	)
-	(wire
-		(pts
-			(xy 139.7 48.26) (xy 146.05 48.26)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3d0d7872-cdf1-461d-bdf0-b6d0aa311e59")
-	)
-	(wire
-		(pts
-			(xy 222.25 121.92) (xy 229.87 121.92)
+			(xy 222.25 88.9) (xy 229.87 88.9)
 		)
 		(stroke
 			(width 0)
@@ -9065,7 +10398,7 @@
 	)
 	(wire
 		(pts
-			(xy 161.29 147.32) (xy 168.91 147.32)
+			(xy 161.29 114.3) (xy 168.91 114.3)
 		)
 		(stroke
 			(width 0)
@@ -9085,7 +10418,7 @@
 	)
 	(wire
 		(pts
-			(xy 147.32 85.09) (xy 144.78 85.09)
+			(xy 147.32 156.21) (xy 146.05 156.21)
 		)
 		(stroke
 			(width 0)
@@ -9095,7 +10428,7 @@
 	)
 	(wire
 		(pts
-			(xy 179.07 86.36) (xy 179.07 85.09)
+			(xy 179.07 157.48) (xy 179.07 156.21)
 		)
 		(stroke
 			(width 0)
@@ -9105,7 +10438,7 @@
 	)
 	(wire
 		(pts
-			(xy 231.14 76.2) (xy 233.68 76.2)
+			(xy 231.14 147.32) (xy 233.68 147.32)
 		)
 		(stroke
 			(width 0)
@@ -9135,26 +10468,6 @@
 	)
 	(wire
 		(pts
-			(xy 168.91 33.02) (xy 170.18 33.02)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "49981545-c728-46e1-a700-c8b23d167423")
-	)
-	(wire
-		(pts
-			(xy 157.48 41.91) (xy 157.48 48.26)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "49c3b1ea-2c4a-45a8-b7a7-4c6d439ae9e1")
-	)
-	(wire
-		(pts
 			(xy 17.78 113.03) (xy 24.13 113.03)
 		)
 		(stroke
@@ -9165,13 +10478,43 @@
 	)
 	(wire
 		(pts
-			(xy 179.07 152.4) (xy 181.61 152.4)
+			(xy 173.99 38.1) (xy 173.99 39.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4b6a5dfa-86de-40ec-8aa3-3fdc91d0803f")
+	)
+	(wire
+		(pts
+			(xy 146.05 55.88) (xy 146.05 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4ba226b8-a57d-418c-a4a3-c4b047351742")
+	)
+	(wire
+		(pts
+			(xy 179.07 119.38) (xy 181.61 119.38)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "4c38e9c9-42e9-4a7c-b78c-5b77add4d6d1")
+	)
+	(wire
+		(pts
+			(xy 189.23 157.48) (xy 189.23 158.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4ed28213-a88b-42f4-84b5-6fb96075a3d7")
 	)
 	(wire
 		(pts
@@ -9205,17 +10548,7 @@
 	)
 	(wire
 		(pts
-			(xy 168.91 41.91) (xy 168.91 48.26)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "543eda53-0c8f-474a-9111-ff6386b2e4bb")
-	)
-	(wire
-		(pts
-			(xy 177.8 85.09) (xy 179.07 85.09)
+			(xy 177.8 156.21) (xy 179.07 156.21)
 		)
 		(stroke
 			(width 0)
@@ -9285,13 +10618,33 @@
 	)
 	(wire
 		(pts
-			(xy 137.16 67.31) (xy 144.78 67.31)
+			(xy 176.53 30.48) (xy 165.1 30.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "61515583-f0bc-4a4c-8a2a-aa6345c558f8")
+	)
+	(wire
+		(pts
+			(xy 137.16 138.43) (xy 144.78 138.43)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "6284462b-ad34-4d57-9287-67ec4260c06d")
+	)
+	(wire
+		(pts
+			(xy 181.61 60.96) (xy 182.88 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "63d9d579-3e0d-4053-a8ce-d91fd44c78fc")
 	)
 	(wire
 		(pts
@@ -9345,7 +10698,17 @@
 	)
 	(wire
 		(pts
-			(xy 161.29 132.08) (xy 168.91 132.08)
+			(xy 165.1 30.48) (xy 165.1 31.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6b446bd3-07c6-4ce8-bf67-822dedeb4be2")
+	)
+	(wire
+		(pts
+			(xy 161.29 99.06) (xy 168.91 99.06)
 		)
 		(stroke
 			(width 0)
@@ -9355,7 +10718,17 @@
 	)
 	(wire
 		(pts
-			(xy 212.09 76.2) (xy 220.98 76.2)
+			(xy 181.61 46.99) (xy 200.66 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6c06fdc2-6eeb-40de-80cd-ef694884e823")
+	)
+	(wire
+		(pts
+			(xy 212.09 147.32) (xy 220.98 147.32)
 		)
 		(stroke
 			(width 0)
@@ -9365,7 +10738,7 @@
 	)
 	(wire
 		(pts
-			(xy 138.43 142.24) (xy 153.67 142.24)
+			(xy 138.43 109.22) (xy 153.67 109.22)
 		)
 		(stroke
 			(width 0)
@@ -9395,7 +10768,7 @@
 	)
 	(wire
 		(pts
-			(xy 179.07 121.92) (xy 184.15 121.92)
+			(xy 179.07 88.9) (xy 184.15 88.9)
 		)
 		(stroke
 			(width 0)
@@ -9425,6 +10798,16 @@
 	)
 	(wire
 		(pts
+			(xy 165.1 29.21) (xy 165.1 30.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "762a1fb2-a854-4379-b613-5b64dac6bd88")
+	)
+	(wire
+		(pts
 			(xy 90.17 156.21) (xy 90.17 153.67)
 		)
 		(stroke
@@ -9445,7 +10828,7 @@
 	)
 	(wire
 		(pts
-			(xy 138.43 142.24) (xy 138.43 147.32)
+			(xy 138.43 109.22) (xy 138.43 114.3)
 		)
 		(stroke
 			(width 0)
@@ -9455,7 +10838,7 @@
 	)
 	(wire
 		(pts
-			(xy 203.2 76.2) (xy 203.2 77.47)
+			(xy 201.93 147.32) (xy 201.93 148.59)
 		)
 		(stroke
 			(width 0)
@@ -9472,16 +10855,6 @@
 			(type default)
 		)
 		(uuid "7c8692d0-7b04-49b1-9836-8e7996d67aa2")
-	)
-	(wire
-		(pts
-			(xy 135.89 21.59) (xy 146.05 21.59)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7cdbd4b2-6f47-42d7-a24c-05bbee7b74d1")
 	)
 	(wire
 		(pts
@@ -9565,16 +10938,6 @@
 	)
 	(wire
 		(pts
-			(xy 146.05 33.02) (xy 157.48 33.02)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "870233f1-b720-4cab-83a0-88497545cae6")
-	)
-	(wire
-		(pts
 			(xy 72.39 43.18) (xy 74.93 43.18)
 		)
 		(stroke
@@ -9585,17 +10948,17 @@
 	)
 	(wire
 		(pts
-			(xy 168.91 34.29) (xy 168.91 33.02)
+			(xy 165.1 43.18) (xy 165.1 49.53)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "877b2d54-3efe-4d59-97de-0f1697e3e037")
+		(uuid "87a819a2-75de-474c-8c3c-9c3c55c55f28")
 	)
 	(wire
 		(pts
-			(xy 184.15 152.4) (xy 186.69 152.4)
+			(xy 184.15 119.38) (xy 186.69 119.38)
 		)
 		(stroke
 			(width 0)
@@ -9615,7 +10978,7 @@
 	)
 	(wire
 		(pts
-			(xy 229.87 129.54) (xy 229.87 154.94)
+			(xy 229.87 96.52) (xy 229.87 120.65)
 		)
 		(stroke
 			(width 0)
@@ -9625,7 +10988,17 @@
 	)
 	(wire
 		(pts
-			(xy 220.98 83.82) (xy 220.98 96.52)
+			(xy 200.66 46.99) (xy 200.66 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8dfd24cc-384f-40eb-bfac-b43333635072")
+	)
+	(wire
+		(pts
+			(xy 220.98 154.94) (xy 220.98 158.75)
 		)
 		(stroke
 			(width 0)
@@ -9685,16 +11058,6 @@
 	)
 	(wire
 		(pts
-			(xy 146.05 44.45) (xy 146.05 48.26)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9467499c-0999-4bb5-b1b6-8f1fb5eb854f")
-	)
-	(wire
-		(pts
 			(xy 39.37 130.81) (xy 34.29 130.81)
 		)
 		(stroke
@@ -9735,23 +11098,23 @@
 	)
 	(wire
 		(pts
-			(xy 180.34 33.02) (xy 182.88 33.02)
+			(xy 182.88 55.88) (xy 146.05 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "995be83c-8606-4133-821b-b180cd490235")
+	)
+	(wire
+		(pts
+			(xy 200.66 58.42) (xy 203.2 58.42)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "9aaa0f3d-4deb-4700-92f9-dd990ae5eb22")
-	)
-	(wire
-		(pts
-			(xy 157.48 34.29) (xy 157.48 33.02)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9acd41f6-a450-4e4f-83de-9c1abb8632d8")
 	)
 	(wire
 		(pts
@@ -9785,6 +11148,16 @@
 	)
 	(wire
 		(pts
+			(xy 36.83 123.19) (xy 64.77 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9e74ae92-6af5-474b-adae-a4a8469747cc")
+	)
+	(wire
+		(pts
 			(xy 88.9 92.71) (xy 97.79 92.71)
 		)
 		(stroke
@@ -9795,7 +11168,7 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 67.31) (xy 144.78 76.2)
+			(xy 144.78 138.43) (xy 144.78 147.32)
 		)
 		(stroke
 			(width 0)
@@ -9815,16 +11188,6 @@
 	)
 	(wire
 		(pts
-			(xy 203.2 76.2) (xy 212.09 76.2)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a20c3ae0-eeb7-431e-b78b-fc86e2e0b091")
-	)
-	(wire
-		(pts
 			(xy 74.93 87.63) (xy 78.74 87.63)
 		)
 		(stroke
@@ -9835,7 +11198,7 @@
 	)
 	(wire
 		(pts
-			(xy 222.25 121.92) (xy 217.17 121.92)
+			(xy 222.25 88.9) (xy 217.17 88.9)
 		)
 		(stroke
 			(width 0)
@@ -9905,13 +11268,23 @@
 	)
 	(wire
 		(pts
-			(xy 177.8 67.31) (xy 180.34 67.31)
+			(xy 177.8 138.43) (xy 180.34 138.43)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "a58e2363-e308-4d59-a141-fccd5113ad2f")
+	)
+	(wire
+		(pts
+			(xy 146.05 55.88) (xy 146.05 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a5e355b7-a2f9-48f9-b217-0bca4d9d67d1")
 	)
 	(wire
 		(pts
@@ -9925,6 +11298,16 @@
 	)
 	(wire
 		(pts
+			(xy 165.1 19.05) (xy 176.53 19.05)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a7157e98-544a-456a-8278-a89c11ac2704")
+	)
+	(wire
+		(pts
 			(xy 62.23 135.89) (xy 59.69 135.89)
 		)
 		(stroke
@@ -9932,16 +11315,6 @@
 			(type default)
 		)
 		(uuid "a784ff7e-6144-4d76-ba89-a0b0a3b30a4d")
-	)
-	(wire
-		(pts
-			(xy 36.83 123.19) (xy 64.77 123.19)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a80e8688-a22b-4972-9c72-3e7117e4c265")
 	)
 	(wire
 		(pts
@@ -9975,7 +11348,7 @@
 	)
 	(wire
 		(pts
-			(xy 184.15 121.92) (xy 184.15 127)
+			(xy 184.15 88.9) (xy 184.15 93.98)
 		)
 		(stroke
 			(width 0)
@@ -9985,7 +11358,7 @@
 	)
 	(wire
 		(pts
-			(xy 161.29 152.4) (xy 168.91 152.4)
+			(xy 161.29 119.38) (xy 168.91 119.38)
 		)
 		(stroke
 			(width 0)
@@ -10005,7 +11378,7 @@
 	)
 	(wire
 		(pts
-			(xy 180.34 74.93) (xy 180.34 76.2)
+			(xy 180.34 146.05) (xy 180.34 147.32)
 		)
 		(stroke
 			(width 0)
@@ -10035,17 +11408,7 @@
 	)
 	(wire
 		(pts
-			(xy 62.23 133.35) (xy 62.23 125.73)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b3a9d0ea-1667-4384-bf6f-cbca86812ac5")
-	)
-	(wire
-		(pts
-			(xy 179.07 142.24) (xy 186.69 142.24)
+			(xy 179.07 109.22) (xy 186.69 109.22)
 		)
 		(stroke
 			(width 0)
@@ -10055,7 +11418,7 @@
 	)
 	(wire
 		(pts
-			(xy 138.43 152.4) (xy 153.67 152.4)
+			(xy 138.43 119.38) (xy 153.67 119.38)
 		)
 		(stroke
 			(width 0)
@@ -10115,7 +11478,7 @@
 	)
 	(wire
 		(pts
-			(xy 138.43 132.08) (xy 138.43 137.16)
+			(xy 138.43 99.06) (xy 138.43 104.14)
 		)
 		(stroke
 			(width 0)
@@ -10135,7 +11498,7 @@
 	)
 	(wire
 		(pts
-			(xy 179.07 147.32) (xy 186.69 147.32)
+			(xy 179.07 114.3) (xy 186.69 114.3)
 		)
 		(stroke
 			(width 0)
@@ -10195,7 +11558,7 @@
 	)
 	(wire
 		(pts
-			(xy 179.07 132.08) (xy 186.69 132.08)
+			(xy 179.07 99.06) (xy 186.69 99.06)
 		)
 		(stroke
 			(width 0)
@@ -10255,6 +11618,16 @@
 	)
 	(wire
 		(pts
+			(xy 64.77 123.19) (xy 64.77 125.73)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cb139028-8d5d-4ac4-8dbc-6b87de1c6f84")
+	)
+	(wire
+		(pts
 			(xy 107.95 147.32) (xy 113.03 147.32)
 		)
 		(stroke
@@ -10265,7 +11638,7 @@
 	)
 	(wire
 		(pts
-			(xy 138.43 147.32) (xy 153.67 147.32)
+			(xy 138.43 114.3) (xy 153.67 114.3)
 		)
 		(stroke
 			(width 0)
@@ -10285,7 +11658,7 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 76.2) (xy 147.32 76.2)
+			(xy 144.78 147.32) (xy 147.32 147.32)
 		)
 		(stroke
 			(width 0)
@@ -10305,6 +11678,16 @@
 	)
 	(wire
 		(pts
+			(xy 143.51 19.05) (xy 146.05 19.05)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d08aad02-a60b-426a-8611-edac05f387cd")
+	)
+	(wire
+		(pts
 			(xy 271.78 25.4) (xy 271.78 44.45)
 		)
 		(stroke
@@ -10315,7 +11698,7 @@
 	)
 	(wire
 		(pts
-			(xy 222.25 116.84) (xy 222.25 121.92)
+			(xy 222.25 83.82) (xy 222.25 88.9)
 		)
 		(stroke
 			(width 0)
@@ -10355,23 +11738,13 @@
 	)
 	(wire
 		(pts
-			(xy 179.07 85.09) (xy 203.2 85.09)
+			(xy 179.07 156.21) (xy 201.93 156.21)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "d905247a-435b-40c8-8b00-ac167409156a")
-	)
-	(wire
-		(pts
-			(xy 36.83 118.11) (xy 36.83 123.19)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d9276ea5-e825-4dbb-be76-febb368d2437")
 	)
 	(wire
 		(pts
@@ -10385,23 +11758,23 @@
 	)
 	(wire
 		(pts
-			(xy 161.29 142.24) (xy 168.91 142.24)
+			(xy 176.53 30.48) (xy 176.53 27.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dbb9dbb6-6353-4926-b877-4a1fe0a59ca0")
+	)
+	(wire
+		(pts
+			(xy 161.29 109.22) (xy 168.91 109.22)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "dc91f5bd-a96e-4f44-a257-61deca52cd50")
-	)
-	(wire
-		(pts
-			(xy 203.2 96.52) (xy 212.09 96.52)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "dcc8777c-562a-458e-b71c-effbd2fe0a22")
 	)
 	(wire
 		(pts
@@ -10422,6 +11795,16 @@
 			(type default)
 		)
 		(uuid "e0409804-085d-4970-80fe-88c73ece6c07")
+	)
+	(wire
+		(pts
+			(xy 146.05 35.56) (xy 146.05 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e3aeaedb-b34a-4724-b47f-5ce5a2c30dba")
 	)
 	(wire
 		(pts
@@ -10455,7 +11838,7 @@
 	)
 	(wire
 		(pts
-			(xy 138.43 137.16) (xy 153.67 137.16)
+			(xy 138.43 104.14) (xy 153.67 104.14)
 		)
 		(stroke
 			(width 0)
@@ -10465,7 +11848,7 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 67.31) (xy 147.32 67.31)
+			(xy 144.78 138.43) (xy 147.32 138.43)
 		)
 		(stroke
 			(width 0)
@@ -10495,16 +11878,6 @@
 	)
 	(wire
 		(pts
-			(xy 64.77 133.35) (xy 62.23 133.35)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ecd100f1-7ebd-405b-b86a-f93ff29fb5b8")
-	)
-	(wire
-		(pts
 			(xy 99.06 182.88) (xy 96.52 182.88)
 		)
 		(stroke
@@ -10515,13 +11888,33 @@
 	)
 	(wire
 		(pts
-			(xy 62.23 125.73) (xy 36.83 125.73)
+			(xy 54.61 125.73) (xy 36.83 125.73)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "ee59601b-d1c3-436b-9c99-ca550fdb8ca8")
+	)
+	(wire
+		(pts
+			(xy 172.72 38.1) (xy 173.99 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eec5241f-1387-4c62-acc2-8f47aca7b490")
+	)
+	(wire
+		(pts
+			(xy 181.61 60.96) (xy 181.61 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f00ac18a-7210-4ae0-9066-b514113fe95b")
 	)
 	(wire
 		(pts
@@ -10565,7 +11958,7 @@
 	)
 	(wire
 		(pts
-			(xy 184.15 154.94) (xy 184.15 152.4)
+			(xy 184.15 120.65) (xy 184.15 119.38)
 		)
 		(stroke
 			(width 0)
@@ -10575,7 +11968,7 @@
 	)
 	(wire
 		(pts
-			(xy 179.07 137.16) (xy 186.69 137.16)
+			(xy 179.07 104.14) (xy 186.69 104.14)
 		)
 		(stroke
 			(width 0)
@@ -10583,18 +11976,8 @@
 		)
 		(uuid "fbccaccb-7b0f-45b2-a94e-81eac365add0")
 	)
-	(wire
-		(pts
-			(xy 203.2 85.09) (xy 203.2 96.52)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ffff2fcd-5021-4030-af86-151978d93e0d")
-	)
 	(label "BAT+"
-		(at 135.89 21.59 0)
+		(at 143.51 19.05 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10604,7 +11987,7 @@
 		(uuid "00ab0a44-d815-479c-b0bd-121677041838")
 	)
 	(label "REGIN"
-		(at 138.43 121.92 90)
+		(at 138.43 88.9 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10614,7 +11997,7 @@
 		(uuid "0df96832-f771-4de7-be1c-06d6b092f56d")
 	)
 	(label "BAT+"
-		(at 137.16 67.31 0)
+		(at 137.16 138.43 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10634,7 +12017,7 @@
 		(uuid "1339c675-6d31-4f24-9ff0-c801b6932ffd")
 	)
 	(label "VTRANS"
-		(at 182.88 33.02 0)
+		(at 203.2 58.42 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10694,6 +12077,16 @@
 		)
 		(uuid "25aaa711-0d78-4f9b-a6f2-46e672316977")
 	)
+	(label "ENABLE"
+		(at 196.85 38.1 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "334714b0-29d2-421b-a75b-7998a50c25fe")
+	)
 	(label "BAT-"
 		(at 34.29 160.02 0)
 		(effects
@@ -10746,7 +12139,7 @@
 		(uuid "5e631a95-35f0-46be-a9dd-40b793354553")
 	)
 	(label "QE"
-		(at 217.17 142.24 0)
+		(at 217.17 109.22 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10756,7 +12149,7 @@
 		(uuid "67ee8105-706c-47bf-8781-aeb0051de994")
 	)
 	(label "P2"
-		(at 222.25 152.4 0)
+		(at 222.25 119.38 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10775,8 +12168,18 @@
 		)
 		(uuid "704303e3-46f2-4cb5-bc25-197c1d1587e3")
 	)
+	(label "ENABLE"
+		(at 27.94 92.71 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "8132cd8f-4f08-45ef-8b30-1ef7b9220513")
+	)
 	(label "REGIN"
-		(at 222.25 116.84 90)
+		(at 222.25 83.82 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10866,7 +12269,7 @@
 		(uuid "ee0c4663-8102-4f68-a37f-9af0bbc96f3d")
 	)
 	(label "P1"
-		(at 179.07 121.92 0)
+		(at 179.07 88.9 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10896,7 +12299,7 @@
 		(uuid "f642d7ea-043c-4682-bff9-7f31ab1cbf43")
 	)
 	(label "QE"
-		(at 181.61 152.4 0)
+		(at 181.61 119.38 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10916,18 +12319,18 @@
 		(uuid "fc2676ef-f437-401c-9f38-687170880c0c")
 	)
 	(symbol
-		(lib_name "R_2P_2")
+		(lib_name "R_2P_9")
 		(lib_id "wn__wavenumber:R_2P")
-		(at 170.18 33.02 0)
+		(at 165.1 31.75 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "01e190cf-d2dc-4ccf-ad5a-7cce5f52e20a")
-		(property "Reference" "R28"
-			(at 175.26 26.67 0)
+		(uuid "043fb65c-62f2-4d3c-9a7b-ac012e245436")
+		(property "Reference" "R30"
+			(at 160.02 25.4 0)
 			(effects
 				(font
 					(face "Arial")
@@ -10936,8 +12339,8 @@
 				)
 			)
 		)
-		(property "Value" "10kΩ"
-			(at 175.26 30.48 0)
+		(property "Value" "34.8kΩ"
+			(at 160.02 29.21 0)
 			(effects
 				(font
 					(face "Arial")
@@ -10946,7 +12349,7 @@
 			)
 		)
 		(property "Footprint" "wavenumber:R0603_0.55MM_HD"
-			(at 170.18 33.02 0)
+			(at 165.1 31.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10955,7 +12358,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 170.18 33.02 0)
+			(at 165.1 31.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10963,8 +12366,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "RES 10K OHM 1/10W 1% 0603 SMD"
-			(at 170.18 33.02 0)
+		(property "Description" "RES 34.8K OHM 1/10W 1% 0603 SMD"
+			(at 165.1 31.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10973,7 +12376,7 @@
 			)
 		)
 		(property "Internal Part Number" ""
-			(at 170.18 33.02 0)
+			(at 165.1 31.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10982,7 +12385,7 @@
 			)
 		)
 		(property "Manufacturer" "Panasonic Electronic Components"
-			(at 170.18 33.02 0)
+			(at 165.1 31.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10990,8 +12393,8 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer Part Number" "ERJ-3EKF1002V"
-			(at 170.18 33.02 0)
+		(property "Manufacturer Part Number" "ERJ-3EKF3482V"
+			(at 165.1 31.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10999,8 +12402,8 @@
 				(hide yes)
 			)
 		)
-		(property "cad-reference" "ERJ-3EKF1002V"
-			(at 170.18 33.02 0)
+		(property "cad-reference" "ERJ-3EKF3482V"
+			(at 165.1 31.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11009,7 +12412,7 @@
 			)
 		)
 		(property "flags" ""
-			(at 170.18 33.02 0)
+			(at 165.1 31.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11017,16 +12420,16 @@
 				(hide yes)
 			)
 		)
-		(pin "2"
-			(uuid "897e6986-b211-4518-ae6c-438a867d176d")
-		)
 		(pin "1"
-			(uuid "beb712de-9987-4d69-8d87-3762c079e8ae")
+			(uuid "c5a0019c-85c9-4950-8f2d-d8257aaca583")
+		)
+		(pin "2"
+			(uuid "caa0913f-071d-4a17-9e40-366edd31c463")
 		)
 		(instances
 			(project "Charge_Indicator"
 				(path "/ce5a45ab-8fc2-45f1-907f-8e7f414ac528"
-					(reference "R28")
+					(reference "R30")
 					(unit 1)
 				)
 			)
@@ -11152,6 +12555,77 @@
 		)
 	)
 	(symbol
+		(lib_id "wn_pwr:GND")
+		(at 165.1 49.53 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0b501d2a-486c-48ce-9f9a-0ff5da4f8a2c")
+		(property "Reference" "#PWR035"
+			(at 165.1 53.53 0)
+			(do_not_autoplace yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 165.1 53.53 0)
+			(do_not_autoplace yes)
+			(effects
+				(font
+					(face "Arial")
+					(size 1.905 1.905)
+					(thickness 0.254)
+					(bold yes)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 165.1 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 165.1 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , Ground"
+			(at 165.862 39.878 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5c50f897-f359-4948-8d32-521fc9ee2008")
+		)
+		(instances
+			(project "Charge_Indicator"
+				(path "/ce5a45ab-8fc2-45f1-907f-8e7f414ac528"
+					(reference "#PWR035")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "wn_pwr:+3v3")
 		(at 127 25.4 0)
 		(unit 1)
@@ -11225,37 +12699,34 @@
 	(symbol
 		(lib_name "R_2P_6")
 		(lib_id "wn__wavenumber:R_2P")
-		(at 64.77 133.35 90)
+		(at 54.61 125.73 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "0d2a8696-a137-40e6-a451-3a2bc9f87b12")
 		(property "Reference" "R17"
-			(at 66.04 127 90)
+			(at 64.516 129.54 0)
 			(effects
 				(font
 					(face "Arial")
 					(size 2.1844 2.1844)
 					(bold yes)
 				)
-				(justify right)
 			)
 		)
 		(property "Value" "1kΩ"
-			(at 66.04 130.175 90)
+			(at 63.246 127.254 0)
 			(effects
 				(font
 					(face "Arial")
 					(size 1.524 1.524)
 				)
-				(justify right)
 			)
 		)
 		(property "Footprint" "wavenumber:R0603_0.55MM_HD"
-			(at 64.77 133.35 0)
+			(at 54.61 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11264,7 +12735,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 64.77 133.35 0)
+			(at 54.61 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11273,7 +12744,7 @@
 			)
 		)
 		(property "Description" "RES 1K OHM 1/10W 1% 0603 SMD"
-			(at 64.77 133.35 0)
+			(at 54.61 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11282,7 +12753,7 @@
 			)
 		)
 		(property "Internal Part Number" ""
-			(at 64.77 133.35 0)
+			(at 54.61 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11291,7 +12762,7 @@
 			)
 		)
 		(property "Manufacturer" "Panasonic Electronic Components"
-			(at 64.77 133.35 0)
+			(at 54.61 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11300,7 +12771,7 @@
 			)
 		)
 		(property "Manufacturer Part Number" "ERJ-3EKF1001V"
-			(at 64.77 133.35 0)
+			(at 54.61 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11309,7 +12780,7 @@
 			)
 		)
 		(property "cad-reference" "ERJ-3EKF1001V"
-			(at 64.77 133.35 0)
+			(at 54.61 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11318,7 +12789,7 @@
 			)
 		)
 		(property "flags" ""
-			(at 64.77 133.35 0)
+			(at 54.61 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11720,7 +13191,7 @@
 	)
 	(symbol
 		(lib_id "wn_pwr:GND")
-		(at 220.98 96.52 0)
+		(at 220.98 158.75 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11729,7 +13200,7 @@
 		(fields_autoplaced yes)
 		(uuid "114f68f6-bf60-4e7e-b636-83b124584db4")
 		(property "Reference" "#PWR05"
-			(at 220.98 100.52 0)
+			(at 220.98 162.75 0)
 			(do_not_autoplace yes)
 			(effects
 				(font
@@ -11739,7 +13210,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 220.98 100.52 0)
+			(at 220.98 162.75 0)
 			(do_not_autoplace yes)
 			(effects
 				(font
@@ -11751,7 +13222,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 220.98 96.52 0)
+			(at 220.98 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11760,7 +13231,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 220.98 96.52 0)
+			(at 220.98 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11769,7 +13240,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , Ground"
-			(at 221.742 86.868 0)
+			(at 221.742 149.098 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11907,7 +13378,7 @@
 	)
 	(symbol
 		(lib_id "wn__wavenumber:LED-GREEN")
-		(at 158.75 132.08 0)
+		(at 158.75 99.06 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11915,7 +13386,7 @@
 		(dnp no)
 		(uuid "11cdd6d8-605f-4e20-bc1a-387697fd8bcb")
 		(property "Reference" "D5"
-			(at 159.766 130.556 0)
+			(at 159.766 97.536 0)
 			(effects
 				(font
 					(face "Arial")
@@ -11926,7 +13397,7 @@
 			)
 		)
 		(property "Value" "APT2012CGCK"
-			(at 140.462 130.556 0)
+			(at 140.462 97.536 0)
 			(effects
 				(font
 					(face "Arial")
@@ -11936,7 +13407,7 @@
 			)
 		)
 		(property "Footprint" "wavenumber:LED-0805-GREEN"
-			(at 158.75 132.08 0)
+			(at 158.75 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11945,7 +13416,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 158.75 132.08 0)
+			(at 158.75 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11954,7 +13425,7 @@
 			)
 		)
 		(property "Description" "0805 Green 570nm LED Indication - Discrete 2.1V 0805 (2012 Metric)"
-			(at 158.75 132.08 0)
+			(at 158.75 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11963,7 +13434,7 @@
 			)
 		)
 		(property "Internal Part Number" ""
-			(at 158.75 132.08 0)
+			(at 158.75 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11972,7 +13443,7 @@
 			)
 		)
 		(property "Manufacturer" "Kingbright"
-			(at 158.75 132.08 0)
+			(at 158.75 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11981,7 +13452,7 @@
 			)
 		)
 		(property "Manufacturer Part Number" "APT2012CGCK"
-			(at 158.75 132.08 0)
+			(at 158.75 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11990,7 +13461,7 @@
 			)
 		)
 		(property "cad-reference" "APT2012CGCK"
-			(at 158.75 132.08 0)
+			(at 158.75 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11999,7 +13470,7 @@
 			)
 		)
 		(property "flags" ""
-			(at 158.75 132.08 0)
+			(at 158.75 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12024,7 +13495,7 @@
 	)
 	(symbol
 		(lib_id "wn__wavenumber:LED-YELLOW")
-		(at 158.75 142.24 0)
+		(at 158.75 109.22 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -12032,7 +13503,7 @@
 		(dnp no)
 		(uuid "12178b9c-0fec-44b6-9e55-422a3e02ddef")
 		(property "Reference" "D6"
-			(at 159.766 140.97 0)
+			(at 159.766 107.95 0)
 			(effects
 				(font
 					(face "Arial")
@@ -12043,7 +13514,7 @@
 			)
 		)
 		(property "Value" "APT2012YC"
-			(at 144.018 140.97 0)
+			(at 144.018 107.95 0)
 			(effects
 				(font
 					(face "Arial")
@@ -12053,7 +13524,7 @@
 			)
 		)
 		(property "Footprint" "wavenumber:LED-0805-YELLOW"
-			(at 158.75 142.24 0)
+			(at 158.75 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12062,7 +13533,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 158.75 142.24 0)
+			(at 158.75 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12071,7 +13542,7 @@
 			)
 		)
 		(property "Description" "0805 Yellow 588nm LED Indication - Discrete 2.1V 0805 (2012 Metric)"
-			(at 158.75 142.24 0)
+			(at 158.75 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12080,7 +13551,7 @@
 			)
 		)
 		(property "Internal Part Number" ""
-			(at 158.75 142.24 0)
+			(at 158.75 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12089,7 +13560,7 @@
 			)
 		)
 		(property "Manufacturer" "Kingbright"
-			(at 158.75 142.24 0)
+			(at 158.75 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12098,7 +13569,7 @@
 			)
 		)
 		(property "Manufacturer Part Number" "APT2012YCdef"
-			(at 158.75 142.24 0)
+			(at 158.75 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12107,7 +13578,7 @@
 			)
 		)
 		(property "cad-reference" "APT2012YC"
-			(at 158.75 142.24 0)
+			(at 158.75 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12116,7 +13587,7 @@
 			)
 		)
 		(property "flags" ""
-			(at 158.75 142.24 0)
+			(at 158.75 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12134,6 +13605,125 @@
 			(project "Charge_Indicator"
 				(path "/ce5a45ab-8fc2-45f1-907f-8e7f414ac528"
 					(reference "D6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_name "R_2P_9")
+		(lib_id "wn__wavenumber:R_2P")
+		(at 146.05 57.15 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "171a86b3-3555-4196-9a65-c8d495d2a849")
+		(property "Reference" "R22"
+			(at 147.32 60.96 90)
+			(effects
+				(font
+					(face "Arial")
+					(size 2.1844 2.1844)
+					(bold yes)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "34.8kΩ"
+			(at 147.32 64.135 90)
+			(effects
+				(font
+					(face "Arial")
+					(size 1.524 1.524)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "wavenumber:R0603_0.55MM_HD"
+			(at 146.05 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 146.05 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "RES 34.8K OHM 1/10W 1% 0603 SMD"
+			(at 146.05 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Internal Part Number" ""
+			(at 146.05 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Panasonic Electronic Components"
+			(at 146.05 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Part Number" "ERJ-3EKF3482V"
+			(at 146.05 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "cad-reference" "ERJ-3EKF3482V"
+			(at 146.05 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "flags" ""
+			(at 146.05 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e0c1bc55-24a4-4f2f-93b7-d58d20b84b09")
+		)
+		(pin "2"
+			(uuid "f803ee18-e9bc-459e-8d52-61b29348da8d")
+		)
+		(instances
+			(project ""
+				(path "/ce5a45ab-8fc2-45f1-907f-8e7f414ac528"
+					(reference "R22")
 					(unit 1)
 				)
 			)
@@ -12237,7 +13827,7 @@
 	(symbol
 		(lib_name "R_2P_5")
 		(lib_id "wn__wavenumber:R_2P")
-		(at 168.91 147.32 0)
+		(at 168.91 114.3 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -12245,7 +13835,7 @@
 		(dnp no)
 		(uuid "1fb7cd1e-5301-4d82-afdc-eebc2104a3f9")
 		(property "Reference" "R15"
-			(at 169.672 146.05 0)
+			(at 169.672 113.03 0)
 			(effects
 				(font
 					(face "Arial")
@@ -12255,7 +13845,7 @@
 			)
 		)
 		(property "Value" "470Ω"
-			(at 177.546 146.304 0)
+			(at 177.546 113.284 0)
 			(effects
 				(font
 					(face "Arial")
@@ -12264,7 +13854,7 @@
 			)
 		)
 		(property "Footprint" "wavenumber:R0603_0.55MM_HD"
-			(at 168.91 147.32 0)
+			(at 168.91 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12273,7 +13863,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 168.91 147.32 0)
+			(at 168.91 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12282,7 +13872,7 @@
 			)
 		)
 		(property "Description" "RES 470 OHM 1/10W 1% 0603 SMD"
-			(at 168.91 147.32 0)
+			(at 168.91 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12291,7 +13881,7 @@
 			)
 		)
 		(property "Internal Part Number" ""
-			(at 168.91 147.32 0)
+			(at 168.91 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12300,7 +13890,7 @@
 			)
 		)
 		(property "Manufacturer" "Panasonic Electronic Components"
-			(at 168.91 147.32 0)
+			(at 168.91 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12309,7 +13899,7 @@
 			)
 		)
 		(property "Manufacturer Part Number" "ERJ-3EKF4700V"
-			(at 168.91 147.32 0)
+			(at 168.91 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12318,7 +13908,7 @@
 			)
 		)
 		(property "cad-reference" "ERJ-3EKF4700V"
-			(at 168.91 147.32 0)
+			(at 168.91 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12327,7 +13917,7 @@
 			)
 		)
 		(property "flags" ""
-			(at 168.91 147.32 0)
+			(at 168.91 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12353,7 +13943,7 @@
 	(symbol
 		(lib_name "R_2P_11")
 		(lib_id "wn__wavenumber:R_2P")
-		(at 220.98 76.2 0)
+		(at 220.98 147.32 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -12362,7 +13952,7 @@
 		(fields_autoplaced yes)
 		(uuid "21dcecc8-f84c-46c5-9bee-8cf99124d99d")
 		(property "Reference" "R23"
-			(at 226.06 69.85 0)
+			(at 226.06 140.97 0)
 			(effects
 				(font
 					(face "Arial")
@@ -12372,7 +13962,7 @@
 			)
 		)
 		(property "Value" "0Ω"
-			(at 226.06 73.66 0)
+			(at 226.06 144.78 0)
 			(effects
 				(font
 					(face "Arial")
@@ -12381,7 +13971,7 @@
 			)
 		)
 		(property "Footprint" "wavenumber:R1206_0.70MM_HD"
-			(at 220.98 76.2 0)
+			(at 220.98 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12390,7 +13980,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 220.98 76.2 0)
+			(at 220.98 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12399,7 +13989,7 @@
 			)
 		)
 		(property "Description" "RES 0.0 OHM 1/4W JUMP 1206 SMD"
-			(at 220.98 76.2 0)
+			(at 220.98 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12408,7 +13998,7 @@
 			)
 		)
 		(property "Internal Part Number" ""
-			(at 220.98 76.2 0)
+			(at 220.98 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12417,7 +14007,7 @@
 			)
 		)
 		(property "Manufacturer" "Panasonic Electronic Components"
-			(at 220.98 76.2 0)
+			(at 220.98 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12426,7 +14016,7 @@
 			)
 		)
 		(property "Manufacturer Part Number" "ERJ-8GEY0R00V"
-			(at 220.98 76.2 0)
+			(at 220.98 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12435,7 +14025,7 @@
 			)
 		)
 		(property "cad-reference" "ERJ-8GEY0R00V"
-			(at 220.98 76.2 0)
+			(at 220.98 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12444,7 +14034,7 @@
 			)
 		)
 		(property "flags" ""
-			(at 220.98 76.2 0)
+			(at 220.98 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12468,8 +14058,79 @@
 		)
 	)
 	(symbol
+		(lib_id "wn_pwr:GND")
+		(at 173.99 49.53 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "23150772-84f3-4eb0-9a38-27482bc5d01f")
+		(property "Reference" "#PWR033"
+			(at 173.99 53.53 0)
+			(do_not_autoplace yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 173.99 53.53 0)
+			(do_not_autoplace yes)
+			(effects
+				(font
+					(face "Arial")
+					(size 1.905 1.905)
+					(thickness 0.254)
+					(bold yes)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 173.99 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 173.99 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , Ground"
+			(at 174.752 39.878 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8a910caf-66e7-44e2-97d7-6e52126d64c7")
+		)
+		(instances
+			(project "Charge_Indicator"
+				(path "/ce5a45ab-8fc2-45f1-907f-8e7f414ac528"
+					(reference "#PWR033")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "wn__wavenumber:C_2P_NP")
-		(at 229.87 121.92 270)
+		(at 229.87 88.9 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -12478,7 +14139,7 @@
 		(fields_autoplaced yes)
 		(uuid "2337cd3a-92e8-432e-8400-90039c7c0018")
 		(property "Reference" "C8"
-			(at 232.41 124.587 90)
+			(at 232.41 91.567 90)
 			(effects
 				(font
 					(face "Arial")
@@ -12489,7 +14150,7 @@
 			)
 		)
 		(property "Value" "0.1µF"
-			(at 232.41 127.762 90)
+			(at 232.41 94.742 90)
 			(effects
 				(font
 					(face "Arial")
@@ -12499,7 +14160,7 @@
 			)
 		)
 		(property "Footprint" "wavenumber:C0603_0.90MM_MD"
-			(at 229.87 121.92 0)
+			(at 229.87 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12508,7 +14169,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 229.87 121.92 0)
+			(at 229.87 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12517,7 +14178,7 @@
 			)
 		)
 		(property "Description" "CAP CER 0.1UF 16V X7R 0603"
-			(at 229.87 121.92 0)
+			(at 229.87 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12526,7 +14187,7 @@
 			)
 		)
 		(property "Internal Part Number" ""
-			(at 229.87 121.92 0)
+			(at 229.87 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12535,7 +14196,7 @@
 			)
 		)
 		(property "Manufacturer" "Murata Electronics"
-			(at 229.87 121.92 0)
+			(at 229.87 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12544,7 +14205,7 @@
 			)
 		)
 		(property "Manufacturer Part Number" "GCJ188R71C104KA01D"
-			(at 229.87 121.92 0)
+			(at 229.87 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12553,7 +14214,7 @@
 			)
 		)
 		(property "cad-reference" "GCJ188R71C104KA01D"
-			(at 229.87 121.92 0)
+			(at 229.87 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12562,7 +14223,7 @@
 			)
 		)
 		(property "flags" ""
-			(at 229.87 121.92 0)
+			(at 229.87 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12580,124 +14241,6 @@
 			(project "Charge_Indicator"
 				(path "/ce5a45ab-8fc2-45f1-907f-8e7f414ac528"
 					(reference "C8")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "wn__wavenumber:C_2P_NP")
-		(at 168.91 34.29 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "275f4b2e-aa79-41a1-b906-b82cab063f10")
-		(property "Reference" "C15"
-			(at 171.45 36.957 90)
-			(effects
-				(font
-					(face "Arial")
-					(size 2.1844 2.1844)
-					(bold yes)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "0.1µF"
-			(at 171.45 40.132 90)
-			(effects
-				(font
-					(face "Arial")
-					(size 1.524 1.524)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "wavenumber:C0603_0.90MM_MD"
-			(at 168.91 34.29 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 168.91 34.29 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "CAP CER 0.1UF 16V X7R 0603"
-			(at 168.91 34.29 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Internal Part Number" ""
-			(at 168.91 34.29 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" "Murata Electronics"
-			(at 168.91 34.29 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer Part Number" "GCJ188R71C104KA01D"
-			(at 168.91 34.29 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "cad-reference" "GCJ188R71C104KA01D"
-			(at 168.91 34.29 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "flags" ""
-			(at 168.91 34.29 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "245c964e-b30a-448d-8d76-6dba53552481")
-		)
-		(pin "1"
-			(uuid "a7385ab5-75ee-4a6c-8b0e-01c5dc697bea")
-		)
-		(instances
-			(project "Charge_Indicator"
-				(path "/ce5a45ab-8fc2-45f1-907f-8e7f414ac528"
-					(reference "C15")
 					(unit 1)
 				)
 			)
@@ -12821,6 +14364,196 @@
 			(project ""
 				(path "/ce5a45ab-8fc2-45f1-907f-8e7f414ac528"
 					(reference "J1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_name "R_2P_8")
+		(lib_id "wn__wavenumber:R_2P")
+		(at 173.99 39.37 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2a731e39-5d32-4af6-84dc-ef50620c3f26")
+		(property "Reference" "R19"
+			(at 175.26 43.18 90)
+			(effects
+				(font
+					(face "Arial")
+					(size 2.1844 2.1844)
+					(bold yes)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1MΩ"
+			(at 175.26 46.355 90)
+			(effects
+				(font
+					(face "Arial")
+					(size 1.524 1.524)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "wavenumber:R0603_0.55MM_HD"
+			(at 173.99 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 173.99 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "RES 1M OHM 1/10W 1% 0603 SMD"
+			(at 173.99 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Internal Part Number" ""
+			(at 173.99 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Panasonic Electronic Components"
+			(at 173.99 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Part Number" "ERJ-3EKF1004V"
+			(at 173.99 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "cad-reference" "ERJ-3EKF1004V"
+			(at 173.99 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "flags" ""
+			(at 173.99 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "39d3da32-34e9-458d-9c8a-f5d2290f9f64")
+		)
+		(pin "1"
+			(uuid "88f6778b-b612-4a1a-ab81-4ae5886b64c5")
+		)
+		(instances
+			(project ""
+				(path "/ce5a45ab-8fc2-45f1-907f-8e7f414ac528"
+					(reference "R19")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "wn_pwr:GND")
+		(at 190.5 67.31 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3018c1a8-bd21-48cb-a5c8-7afede735896")
+		(property "Reference" "#PWR030"
+			(at 190.5 71.31 0)
+			(do_not_autoplace yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 190.5 71.31 0)
+			(do_not_autoplace yes)
+			(effects
+				(font
+					(face "Arial")
+					(size 1.905 1.905)
+					(thickness 0.254)
+					(bold yes)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 190.5 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 190.5 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , Ground"
+			(at 191.262 57.658 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b75d97ea-10ee-438d-a31d-59d34cf01e4e")
+		)
+		(instances
+			(project ""
+				(path "/ce5a45ab-8fc2-45f1-907f-8e7f414ac528"
+					(reference "#PWR030")
 					(unit 1)
 				)
 			)
@@ -13172,125 +14905,6 @@
 		)
 	)
 	(symbol
-		(lib_name "R_2P_8")
-		(lib_id "wn__wavenumber:R_2P")
-		(at 146.05 21.59 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "379bbe88-36c0-4dad-bc22-fa8e3f7dabf4")
-		(property "Reference" "R19"
-			(at 147.32 25.4 90)
-			(effects
-				(font
-					(face "Arial")
-					(size 2.1844 2.1844)
-					(bold yes)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "499kΩ"
-			(at 147.32 28.575 90)
-			(effects
-				(font
-					(face "Arial")
-					(size 1.524 1.524)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "wavenumber:R0603_0.55MM_HD"
-			(at 146.05 21.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 146.05 21.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "RES 499K OHM 1/10W 1% 0603 SMD"
-			(at 146.05 21.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Internal Part Number" ""
-			(at 146.05 21.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" "Panasonic Electronic Components"
-			(at 146.05 21.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer Part Number" "ERJ-3EKF4993V"
-			(at 146.05 21.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "cad-reference" "ERJ-3EKF4993V"
-			(at 146.05 21.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "flags" ""
-			(at 146.05 21.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "780a2403-5017-4877-ba99-70226b71ffca")
-		)
-		(pin "2"
-			(uuid "08b63f0d-b49c-467f-84c9-f88f50d0b2ce")
-		)
-		(instances
-			(project ""
-				(path "/ce5a45ab-8fc2-45f1-907f-8e7f414ac528"
-					(reference "R19")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "wn_pwr:GND")
 		(at 53.34 190.5 90)
 		(unit 1)
@@ -13487,6 +15101,130 @@
 		)
 	)
 	(symbol
+		(lib_id "wn__wavenumber:opamp-sot23-5")
+		(at 190.5 58.42 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "3bf44c01-2b63-4d6d-98f2-4b4ad736b3de")
+		(property "Reference" "U6"
+			(at 197.104 64.262 0)
+			(effects
+				(font
+					(face "Arial")
+					(size 2.1844 2.1844)
+					(bold yes)
+				)
+			)
+		)
+		(property "Value" "TLV271CW5-7"
+			(at 201.676 61.976 0)
+			(effects
+				(font
+					(face "Arial")
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "wavenumber:SOT23-5"
+			(at 190.5 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 190.5 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Single 1pA 2V/us 1.9MHz SOT-25 Operational Amplifier ROHS"
+			(at 190.5 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Internal Part Number" ""
+			(at 190.5 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Diodes Inc"
+			(at 190.5 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Part Number" "TLV271CW5-7"
+			(at 190.5 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "cad-reference" "TLV271CW5-7"
+			(at 190.5 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "flags" ""
+			(at 190.5 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "cc817f7e-074a-4af1-94b0-cab587664b4f")
+		)
+		(pin "2"
+			(uuid "5b34eb84-bdf6-4417-b3a8-e2748c6f21fe")
+		)
+		(pin "3"
+			(uuid "b672cb4a-beb6-4d1b-bed3-8db1ee354eaa")
+		)
+		(pin "4"
+			(uuid "e0fa49f6-013b-4943-bd12-e364331d31a7")
+		)
+		(pin "5"
+			(uuid "d23faacb-ff63-4585-9b0c-7c012275c6a6")
+		)
+		(instances
+			(project ""
+				(path "/ce5a45ab-8fc2-45f1-907f-8e7f414ac528"
+					(reference "U6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "wn__wavenumber:1711725")
 		(at 19.05 67.31 0)
 		(unit 1)
@@ -13597,6 +15335,77 @@
 			(project "Charge_Indicator"
 				(path "/ce5a45ab-8fc2-45f1-907f-8e7f414ac528"
 					(reference "J2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "wn_pwr:GND")
+		(at 146.05 67.31 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3f1a9526-193f-40ab-9bec-21070a5c65f3")
+		(property "Reference" "#PWR020"
+			(at 146.05 71.31 0)
+			(do_not_autoplace yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 146.05 71.31 0)
+			(do_not_autoplace yes)
+			(effects
+				(font
+					(face "Arial")
+					(size 1.905 1.905)
+					(thickness 0.254)
+					(bold yes)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 146.05 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 146.05 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , Ground"
+			(at 146.812 57.658 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3d96dd43-24ef-4dbf-bb0e-c9c7859e981a")
+		)
+		(instances
+			(project "Charge_Indicator"
+				(path "/ce5a45ab-8fc2-45f1-907f-8e7f414ac528"
+					(reference "#PWR020")
 					(unit 1)
 				)
 			)
@@ -13726,39 +15535,37 @@
 		)
 	)
 	(symbol
-		(lib_id "wn_pwr:GND")
-		(at 168.91 48.26 0)
+		(lib_id "wn__wavenumber:MOSFET-P-CH-1G2S3D")
+		(at 146.05 30.48 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "444dec4d-5315-4024-b0c7-4a8aa0645dc7")
-		(property "Reference" "#PWR033"
-			(at 168.91 52.26 0)
-			(do_not_autoplace yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 168.91 52.26 0)
-			(do_not_autoplace yes)
+		(uuid "43b65253-5fd3-4f2d-9576-259e3fd76a7d")
+		(property "Reference" "Q1"
+			(at 139.7 29.21 0)
 			(effects
 				(font
 					(face "Arial")
-					(size 1.905 1.905)
-					(thickness 0.254)
+					(size 2.1844 2.1844)
 					(bold yes)
 				)
+				(justify left)
 			)
 		)
-		(property "Footprint" ""
-			(at 168.91 48.26 0)
+		(property "Value" "BSS84-7-F"
+			(at 138.43 30.988 90)
+			(effects
+				(font
+					(face "Arial")
+					(size 1.524 1.524)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "wavenumber:SOT-23"
+			(at 146.05 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13767,7 +15574,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 168.91 48.26 0)
+			(at 146.05 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13775,22 +15582,73 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , Ground"
-			(at 169.672 38.608 0)
+		(property "Description" "MOSFET P-CH 50V 130MA SOT23-3"
+			(at 146.05 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
+		)
+		(property "Internal Part Number" ""
+			(at 146.05 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Diodes Incorporated"
+			(at 146.05 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Part Number" "BSS84-7-F"
+			(at 146.05 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "cad-reference" "BSS84-7-F"
+			(at 146.05 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "flags" ""
+			(at 146.05 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "32304457-4df8-4dd2-a724-79b2a14cb510")
+		)
+		(pin "2"
+			(uuid "77ad7695-25f8-4775-b73a-2b656998453d")
 		)
 		(pin "1"
-			(uuid "14f5362a-fe90-444d-8a1e-096d83e44973")
+			(uuid "d148f66d-7ab1-4908-9e87-2c0df2b59bc9")
 		)
 		(instances
-			(project "Charge_Indicator"
+			(project ""
 				(path "/ce5a45ab-8fc2-45f1-907f-8e7f414ac528"
-					(reference "#PWR033")
+					(reference "Q1")
 					(unit 1)
 				)
 			)
@@ -14335,7 +16193,7 @@
 	)
 	(symbol
 		(lib_id "SN74HC164PWR:SN74HC164PWR")
-		(at 201.93 137.16 0)
+		(at 201.93 104.14 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -14344,7 +16202,7 @@
 		(fields_autoplaced yes)
 		(uuid "659048f2-5bd7-4481-9bf0-c8d8c98dc335")
 		(property "Reference" "U4"
-			(at 201.93 114.3 0)
+			(at 201.93 81.28 0)
 			(effects
 				(font
 					(face "Arial")
@@ -14354,7 +16212,7 @@
 			)
 		)
 		(property "Value" "SN74HC164PWR"
-			(at 201.93 116.84 0)
+			(at 201.93 83.82 0)
 			(effects
 				(font
 					(face "Arial")
@@ -14363,7 +16221,7 @@
 			)
 		)
 		(property "Footprint" "autonav_fp:SN74HC164PWR"
-			(at 201.93 137.16 0)
+			(at 201.93 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14372,7 +16230,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 201.93 137.16 0)
+			(at 201.93 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14381,7 +16239,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 201.93 137.16 0)
+			(at 201.93 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14560,7 +16418,7 @@
 	)
 	(symbol
 		(lib_id "wn__wavenumber:C_2P_NP")
-		(at 180.34 67.31 270)
+		(at 180.34 138.43 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -14568,7 +16426,7 @@
 		(dnp no)
 		(uuid "6ab3232e-5181-4979-86e2-1e1a620a9710")
 		(property "Reference" "C2"
-			(at 186.69 71.12 0)
+			(at 186.69 142.24 0)
 			(effects
 				(font
 					(face "Arial")
@@ -14578,7 +16436,7 @@
 			)
 		)
 		(property "Value" "0.47µF"
-			(at 184.15 71.247 0)
+			(at 184.15 142.367 0)
 			(effects
 				(font
 					(face "Arial")
@@ -14587,7 +16445,7 @@
 			)
 		)
 		(property "Footprint" "wavenumber:C0805_1.45MM_MD"
-			(at 180.34 67.31 0)
+			(at 180.34 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14596,7 +16454,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 180.34 67.31 0)
+			(at 180.34 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14605,7 +16463,7 @@
 			)
 		)
 		(property "Description" "CAP CER 0.47UF 50V X7R 0805"
-			(at 180.34 67.31 0)
+			(at 180.34 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14614,7 +16472,7 @@
 			)
 		)
 		(property "Internal Part Number" ""
-			(at 180.34 67.31 0)
+			(at 180.34 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14623,7 +16481,7 @@
 			)
 		)
 		(property "Manufacturer" "Murata Electronics"
-			(at 180.34 67.31 0)
+			(at 180.34 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14632,7 +16490,7 @@
 			)
 		)
 		(property "Manufacturer Part Number" "GCJ21BR71H474KA12L"
-			(at 180.34 67.31 0)
+			(at 180.34 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14641,7 +16499,7 @@
 			)
 		)
 		(property "cad-reference" "GCJ21BR71H474KA12L"
-			(at 180.34 67.31 0)
+			(at 180.34 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14650,7 +16508,7 @@
 			)
 		)
 		(property "flags" ""
-			(at 180.34 67.31 0)
+			(at 180.34 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14675,7 +16533,7 @@
 	)
 	(symbol
 		(lib_id "wn__wavenumber:L_2P")
-		(at 187.96 76.2 0)
+		(at 186.69 147.32 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -14683,7 +16541,7 @@
 		(dnp no)
 		(uuid "6d1c0f67-cb4b-4e36-8dfb-e10ccf8d17ce")
 		(property "Reference" "L2"
-			(at 197.358 69.85 0)
+			(at 196.088 140.97 0)
 			(effects
 				(font
 					(face "Arial")
@@ -14694,7 +16552,7 @@
 			)
 		)
 		(property "Value" "22 uH 7A"
-			(at 200.152 72.898 0)
+			(at 198.882 144.018 0)
 			(effects
 				(font
 					(face "Arial")
@@ -14704,7 +16562,7 @@
 			)
 		)
 		(property "Footprint" "wavenumber:L_DO5010H_800"
-			(at 187.96 76.2 0)
+			(at 186.69 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14713,7 +16571,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 187.96 76.2 0)
+			(at 186.69 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14722,7 +16580,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 187.96 76.2 0)
+			(at 186.69 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14731,7 +16589,7 @@
 			)
 		)
 		(property "Internal Part Number" ""
-			(at 187.96 76.2 0)
+			(at 186.69 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14740,7 +16598,7 @@
 			)
 		)
 		(property "Manufacturer" "Coilcraft"
-			(at 187.96 76.2 0)
+			(at 186.69 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14749,7 +16607,7 @@
 			)
 		)
 		(property "Manufacturer Part Number" "DO5010H-223ML"
-			(at 187.96 76.2 0)
+			(at 186.69 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14758,7 +16616,7 @@
 			)
 		)
 		(property "cad-reference" "DO5010H-223ML"
-			(at 187.96 76.2 0)
+			(at 186.69 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14767,7 +16625,7 @@
 			)
 		)
 		(property "flags" ""
-			(at 187.96 76.2 0)
+			(at 186.69 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14793,7 +16651,7 @@
 	(symbol
 		(lib_name "R_2P_5")
 		(lib_id "wn__wavenumber:R_2P")
-		(at 168.91 137.16 0)
+		(at 168.91 104.14 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -14801,7 +16659,7 @@
 		(dnp no)
 		(uuid "6d32beb5-76d0-4023-8fc6-20a721fe01b5")
 		(property "Reference" "R13"
-			(at 169.672 135.89 0)
+			(at 169.672 102.87 0)
 			(effects
 				(font
 					(face "Arial")
@@ -14811,7 +16669,7 @@
 			)
 		)
 		(property "Value" "470Ω"
-			(at 177.546 136.144 0)
+			(at 177.546 103.124 0)
 			(effects
 				(font
 					(face "Arial")
@@ -14820,7 +16678,7 @@
 			)
 		)
 		(property "Footprint" "wavenumber:R0603_0.55MM_HD"
-			(at 168.91 137.16 0)
+			(at 168.91 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14829,7 +16687,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 168.91 137.16 0)
+			(at 168.91 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14838,7 +16696,7 @@
 			)
 		)
 		(property "Description" "RES 470 OHM 1/10W 1% 0603 SMD"
-			(at 168.91 137.16 0)
+			(at 168.91 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14847,7 +16705,7 @@
 			)
 		)
 		(property "Internal Part Number" ""
-			(at 168.91 137.16 0)
+			(at 168.91 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14856,7 +16714,7 @@
 			)
 		)
 		(property "Manufacturer" "Panasonic Electronic Components"
-			(at 168.91 137.16 0)
+			(at 168.91 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14865,7 +16723,7 @@
 			)
 		)
 		(property "Manufacturer Part Number" "ERJ-3EKF4700V"
-			(at 168.91 137.16 0)
+			(at 168.91 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14874,7 +16732,7 @@
 			)
 		)
 		(property "cad-reference" "ERJ-3EKF4700V"
-			(at 168.91 137.16 0)
+			(at 168.91 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14883,7 +16741,7 @@
 			)
 		)
 		(property "flags" ""
-			(at 168.91 137.16 0)
+			(at 168.91 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15049,7 +16907,7 @@
 	)
 	(symbol
 		(lib_id "wn__wavenumber:LED-GREEN")
-		(at 158.75 137.16 0)
+		(at 158.75 104.14 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -15057,7 +16915,7 @@
 		(dnp no)
 		(uuid "6f2c78df-8b66-493b-9ebb-5401e70ac78c")
 		(property "Reference" "D4"
-			(at 159.766 135.636 0)
+			(at 159.766 102.616 0)
 			(effects
 				(font
 					(face "Arial")
@@ -15068,7 +16926,7 @@
 			)
 		)
 		(property "Value" "APT2012CGCK"
-			(at 140.462 135.636 0)
+			(at 140.462 102.616 0)
 			(effects
 				(font
 					(face "Arial")
@@ -15078,7 +16936,7 @@
 			)
 		)
 		(property "Footprint" "wavenumber:LED-0805-GREEN"
-			(at 158.75 137.16 0)
+			(at 158.75 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15087,7 +16945,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 158.75 137.16 0)
+			(at 158.75 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15096,7 +16954,7 @@
 			)
 		)
 		(property "Description" "0805 Green 570nm LED Indication - Discrete 2.1V 0805 (2012 Metric)"
-			(at 158.75 137.16 0)
+			(at 158.75 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15105,7 +16963,7 @@
 			)
 		)
 		(property "Internal Part Number" ""
-			(at 158.75 137.16 0)
+			(at 158.75 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15114,7 +16972,7 @@
 			)
 		)
 		(property "Manufacturer" "Kingbright"
-			(at 158.75 137.16 0)
+			(at 158.75 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15123,7 +16981,7 @@
 			)
 		)
 		(property "Manufacturer Part Number" "APT2012CGCK"
-			(at 158.75 137.16 0)
+			(at 158.75 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15132,7 +16990,7 @@
 			)
 		)
 		(property "cad-reference" "APT2012CGCK"
-			(at 158.75 137.16 0)
+			(at 158.75 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15141,7 +16999,7 @@
 			)
 		)
 		(property "flags" ""
-			(at 158.75 137.16 0)
+			(at 158.75 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15159,6 +17017,125 @@
 			(project "Charge_Indicator"
 				(path "/ce5a45ab-8fc2-45f1-907f-8e7f414ac528"
 					(reference "D4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_name "R_2P_10")
+		(lib_id "wn__wavenumber:R_2P")
+		(at 165.1 29.21 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "700c57f2-4c87-4e4f-80ed-73778a4f8d15")
+		(property "Reference" "R28"
+			(at 166.37 22.86 90)
+			(effects
+				(font
+					(face "Arial")
+					(size 2.1844 2.1844)
+					(bold yes)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "200kΩ"
+			(at 166.37 26.035 90)
+			(effects
+				(font
+					(face "Arial")
+					(size 1.524 1.524)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "wavenumber:R0603_0.55MM_HD"
+			(at 165.1 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 165.1 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "RES 200K OHM 1/10W 1% 0603 SMD"
+			(at 165.1 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Internal Part Number" ""
+			(at 165.1 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Panasonic Electronic Components"
+			(at 165.1 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Part Number" "ERJ-3EKF2003V"
+			(at 165.1 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "cad-reference" "ERJ-3EKF2003V"
+			(at 165.1 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "flags" ""
+			(at 165.1 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9418501c-dc73-412b-b447-42d400c65fdc")
+		)
+		(pin "2"
+			(uuid "624b061d-1c7a-4504-92d8-112640aeae36")
+		)
+		(instances
+			(project "Charge_Indicator"
+				(path "/ce5a45ab-8fc2-45f1-907f-8e7f414ac528"
+					(reference "R28")
 					(unit 1)
 				)
 			)
@@ -15401,7 +17378,7 @@
 	)
 	(symbol
 		(lib_id "wn__wavenumber:LED-YELLOW")
-		(at 158.75 147.32 0)
+		(at 158.75 114.3 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -15409,7 +17386,7 @@
 		(dnp no)
 		(uuid "7341b1ab-a6bc-4d6e-8bd0-7a4b2690c21a")
 		(property "Reference" "D2"
-			(at 159.766 146.05 0)
+			(at 159.766 113.03 0)
 			(effects
 				(font
 					(face "Arial")
@@ -15420,7 +17397,7 @@
 			)
 		)
 		(property "Value" "APT2012YC"
-			(at 144.018 146.05 0)
+			(at 144.018 113.03 0)
 			(effects
 				(font
 					(face "Arial")
@@ -15430,7 +17407,7 @@
 			)
 		)
 		(property "Footprint" "wavenumber:LED-0805-YELLOW"
-			(at 158.75 147.32 0)
+			(at 158.75 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15439,7 +17416,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 158.75 147.32 0)
+			(at 158.75 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15448,7 +17425,7 @@
 			)
 		)
 		(property "Description" "0805 Yellow 588nm LED Indication - Discrete 2.1V 0805 (2012 Metric)"
-			(at 158.75 147.32 0)
+			(at 158.75 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15457,7 +17434,7 @@
 			)
 		)
 		(property "Internal Part Number" ""
-			(at 158.75 147.32 0)
+			(at 158.75 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15466,7 +17443,7 @@
 			)
 		)
 		(property "Manufacturer" "Kingbright"
-			(at 158.75 147.32 0)
+			(at 158.75 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15475,7 +17452,7 @@
 			)
 		)
 		(property "Manufacturer Part Number" "APT2012YCdef"
-			(at 158.75 147.32 0)
+			(at 158.75 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15484,7 +17461,7 @@
 			)
 		)
 		(property "cad-reference" "APT2012YC"
-			(at 158.75 147.32 0)
+			(at 158.75 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15493,7 +17470,7 @@
 			)
 		)
 		(property "flags" ""
-			(at 158.75 147.32 0)
+			(at 158.75 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15519,7 +17496,7 @@
 	(symbol
 		(lib_name "C_2P_NP_2")
 		(lib_id "wn__wavenumber:C_2P_NP")
-		(at 220.98 76.2 270)
+		(at 220.98 147.32 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -15528,7 +17505,7 @@
 		(fields_autoplaced yes)
 		(uuid "73eab8eb-9d2a-49c6-ac96-d35f4ebf9b23")
 		(property "Reference" "C3"
-			(at 223.52 78.867 90)
+			(at 223.52 149.987 90)
 			(effects
 				(font
 					(face "Arial")
@@ -15539,7 +17516,7 @@
 			)
 		)
 		(property "Value" "22µF"
-			(at 223.52 82.042 90)
+			(at 223.52 153.162 90)
 			(effects
 				(font
 					(face "Arial")
@@ -15549,7 +17526,7 @@
 			)
 		)
 		(property "Footprint" "wavenumber:C1210_2.80MM_MD"
-			(at 220.98 76.2 0)
+			(at 220.98 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15558,7 +17535,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 220.98 76.2 0)
+			(at 220.98 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15567,7 +17544,7 @@
 			)
 		)
 		(property "Description" "CAP CER 22UF 16V X7R 1210"
-			(at 220.98 76.2 0)
+			(at 220.98 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15576,7 +17553,7 @@
 			)
 		)
 		(property "Internal Part Number" ""
-			(at 220.98 76.2 0)
+			(at 220.98 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15585,7 +17562,7 @@
 			)
 		)
 		(property "Manufacturer" "Murata Electronics"
-			(at 220.98 76.2 0)
+			(at 220.98 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15594,7 +17571,7 @@
 			)
 		)
 		(property "Manufacturer Part Number" "GCJ32ER71C226KE01L"
-			(at 220.98 76.2 0)
+			(at 220.98 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15603,7 +17580,7 @@
 			)
 		)
 		(property "cad-reference" "GCJ32ER71C226KE01L"
-			(at 220.98 76.2 0)
+			(at 220.98 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15612,7 +17589,7 @@
 			)
 		)
 		(property "flags" ""
-			(at 220.98 76.2 0)
+			(at 220.98 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15637,7 +17614,7 @@
 	)
 	(symbol
 		(lib_id "wn_pwr:GND")
-		(at 229.87 154.94 0)
+		(at 229.87 120.65 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -15646,7 +17623,7 @@
 		(fields_autoplaced yes)
 		(uuid "747a62b8-c56d-4cfd-adc5-81691c02a6e6")
 		(property "Reference" "#PWR017"
-			(at 229.87 158.94 0)
+			(at 229.87 124.65 0)
 			(do_not_autoplace yes)
 			(effects
 				(font
@@ -15656,7 +17633,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 229.87 158.94 0)
+			(at 229.87 124.65 0)
 			(do_not_autoplace yes)
 			(effects
 				(font
@@ -15668,7 +17645,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 229.87 154.94 0)
+			(at 229.87 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15677,7 +17654,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 229.87 154.94 0)
+			(at 229.87 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15686,7 +17663,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , Ground"
-			(at 230.632 145.288 0)
+			(at 230.632 110.998 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16178,7 +18155,7 @@
 	(symbol
 		(lib_name "C_2P_NP_3")
 		(lib_id "wn__wavenumber:C_2P_NP")
-		(at 203.2 77.47 270)
+		(at 201.93 148.59 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -16186,7 +18163,7 @@
 		(dnp no)
 		(uuid "8552a27d-d8c1-481a-8256-0cc694ecf250")
 		(property "Reference" "C4"
-			(at 204.216 78.74 90)
+			(at 202.946 149.86 90)
 			(effects
 				(font
 					(face "Arial")
@@ -16197,7 +18174,7 @@
 			)
 		)
 		(property "Value" "330pF"
-			(at 204.216 84.074 90)
+			(at 202.946 155.194 90)
 			(effects
 				(font
 					(face "Arial")
@@ -16207,7 +18184,7 @@
 			)
 		)
 		(property "Footprint" "wavenumber:C0805_1.00MM_MD"
-			(at 203.2 77.47 0)
+			(at 201.93 148.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16216,7 +18193,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 203.2 77.47 0)
+			(at 201.93 148.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16225,7 +18202,7 @@
 			)
 		)
 		(property "Description" "CAP CER 330PF 250V U2J 0805"
-			(at 203.2 77.47 0)
+			(at 201.93 148.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16234,7 +18211,7 @@
 			)
 		)
 		(property "Internal Part Number" ""
-			(at 203.2 77.47 0)
+			(at 201.93 148.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16243,7 +18220,7 @@
 			)
 		)
 		(property "Manufacturer" "Murata Electronics"
-			(at 203.2 77.47 0)
+			(at 201.93 148.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16252,7 +18229,7 @@
 			)
 		)
 		(property "Manufacturer Part Number" "GCM21A7U2E331JX01D"
-			(at 203.2 77.47 0)
+			(at 201.93 148.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16261,7 +18238,7 @@
 			)
 		)
 		(property "cad-reference" "GCM21A7U2E331JX01D"
-			(at 203.2 77.47 0)
+			(at 201.93 148.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16270,7 +18247,7 @@
 			)
 		)
 		(property "flags" ""
-			(at 203.2 77.47 0)
+			(at 201.93 148.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16414,7 +18391,7 @@
 	(symbol
 		(lib_name "R_2P_5")
 		(lib_id "wn__wavenumber:R_2P")
-		(at 168.91 152.4 0)
+		(at 168.91 119.38 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -16422,7 +18399,7 @@
 		(dnp no)
 		(uuid "87226ada-d90c-444e-a153-4d6f0c9db3e6")
 		(property "Reference" "R16"
-			(at 169.672 151.13 0)
+			(at 169.672 118.11 0)
 			(effects
 				(font
 					(face "Arial")
@@ -16432,7 +18409,7 @@
 			)
 		)
 		(property "Value" "470Ω"
-			(at 177.546 151.384 0)
+			(at 177.546 118.364 0)
 			(effects
 				(font
 					(face "Arial")
@@ -16441,7 +18418,7 @@
 			)
 		)
 		(property "Footprint" "wavenumber:R0603_0.55MM_HD"
-			(at 168.91 152.4 0)
+			(at 168.91 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16450,7 +18427,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 168.91 152.4 0)
+			(at 168.91 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16459,7 +18436,7 @@
 			)
 		)
 		(property "Description" "RES 470 OHM 1/10W 1% 0603 SMD"
-			(at 168.91 152.4 0)
+			(at 168.91 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16468,7 +18445,7 @@
 			)
 		)
 		(property "Internal Part Number" ""
-			(at 168.91 152.4 0)
+			(at 168.91 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16477,7 +18454,7 @@
 			)
 		)
 		(property "Manufacturer" "Panasonic Electronic Components"
-			(at 168.91 152.4 0)
+			(at 168.91 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16486,7 +18463,7 @@
 			)
 		)
 		(property "Manufacturer Part Number" "ERJ-3EKF4700V"
-			(at 168.91 152.4 0)
+			(at 168.91 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16495,7 +18472,7 @@
 			)
 		)
 		(property "cad-reference" "ERJ-3EKF4700V"
-			(at 168.91 152.4 0)
+			(at 168.91 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16504,7 +18481,7 @@
 			)
 		)
 		(property "flags" ""
-			(at 168.91 152.4 0)
+			(at 168.91 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16529,7 +18506,7 @@
 	)
 	(symbol
 		(lib_id "wn_pwr:GND")
-		(at 184.15 154.94 0)
+		(at 184.15 120.65 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -16538,7 +18515,7 @@
 		(fields_autoplaced yes)
 		(uuid "8f7b114c-28f9-45da-a2fb-5ea69d50513c")
 		(property "Reference" "#PWR016"
-			(at 184.15 158.94 0)
+			(at 184.15 124.65 0)
 			(do_not_autoplace yes)
 			(effects
 				(font
@@ -16548,7 +18525,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 184.15 158.94 0)
+			(at 184.15 124.65 0)
 			(do_not_autoplace yes)
 			(effects
 				(font
@@ -16560,7 +18537,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 184.15 154.94 0)
+			(at 184.15 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16569,7 +18546,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 184.15 154.94 0)
+			(at 184.15 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16578,7 +18555,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , Ground"
-			(at 184.912 145.288 0)
+			(at 184.912 110.998 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16717,7 +18694,7 @@
 	(symbol
 		(lib_name "R_2P_5")
 		(lib_id "wn__wavenumber:R_2P")
-		(at 168.91 142.24 0)
+		(at 168.91 109.22 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -16725,7 +18702,7 @@
 		(dnp no)
 		(uuid "95c5e320-7334-4164-b472-4c0ddd0a20fc")
 		(property "Reference" "R14"
-			(at 169.672 140.97 0)
+			(at 169.672 107.95 0)
 			(effects
 				(font
 					(face "Arial")
@@ -16735,7 +18712,7 @@
 			)
 		)
 		(property "Value" "470Ω"
-			(at 177.546 141.224 0)
+			(at 177.546 108.204 0)
 			(effects
 				(font
 					(face "Arial")
@@ -16744,7 +18721,7 @@
 			)
 		)
 		(property "Footprint" "wavenumber:R0603_0.55MM_HD"
-			(at 168.91 142.24 0)
+			(at 168.91 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16753,7 +18730,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 168.91 142.24 0)
+			(at 168.91 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16762,7 +18739,7 @@
 			)
 		)
 		(property "Description" "RES 470 OHM 1/10W 1% 0603 SMD"
-			(at 168.91 142.24 0)
+			(at 168.91 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16771,7 +18748,7 @@
 			)
 		)
 		(property "Internal Part Number" ""
-			(at 168.91 142.24 0)
+			(at 168.91 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16780,7 +18757,7 @@
 			)
 		)
 		(property "Manufacturer" "Panasonic Electronic Components"
-			(at 168.91 142.24 0)
+			(at 168.91 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16789,7 +18766,7 @@
 			)
 		)
 		(property "Manufacturer Part Number" "ERJ-3EKF4700V"
-			(at 168.91 142.24 0)
+			(at 168.91 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16798,7 +18775,7 @@
 			)
 		)
 		(property "cad-reference" "ERJ-3EKF4700V"
-			(at 168.91 142.24 0)
+			(at 168.91 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16807,7 +18784,7 @@
 			)
 		)
 		(property "flags" ""
-			(at 168.91 142.24 0)
+			(at 168.91 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16966,6 +18943,127 @@
 			(project ""
 				(path "/ce5a45ab-8fc2-45f1-907f-8e7f414ac528"
 					(reference "#PWR014")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "wn__wavenumber:MOSFET-N-CH-SOT23-1G2S3D")
+		(at 165.1 38.1 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "9a1d89b6-f151-4681-b9fb-10494fa1853d")
+		(property "Reference" "Q2"
+			(at 158.75 36.83 0)
+			(effects
+				(font
+					(face "Arial")
+					(size 2.1844 2.1844)
+					(bold yes)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2N7002P,215"
+			(at 157.988 51.562 90)
+			(effects
+				(font
+					(face "Arial")
+					(size 1.524 1.524)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "wavenumber:SOT-23"
+			(at 165.1 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 165.1 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "MOSFET N-CH 60V 0.36A SOT-23"
+			(at 165.1 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Internal Part Number" ""
+			(at 165.1 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Nexperia"
+			(at 165.1 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Part Number" "2N7002P,215"
+			(at 165.1 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "cad-reference" "2N7002P,215"
+			(at 165.1 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "flags" ""
+			(at 165.1 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "19d344f9-bef2-4cfb-8e36-d5b42328e481")
+		)
+		(pin "1"
+			(uuid "6b8a0621-4c13-44f0-849c-b4234792126d")
+		)
+		(pin "2"
+			(uuid "814662a5-2097-48fa-a22f-74c5a6f19581")
+		)
+		(instances
+			(project ""
+				(path "/ce5a45ab-8fc2-45f1-907f-8e7f414ac528"
+					(reference "Q2")
 					(unit 1)
 				)
 			)
@@ -17234,7 +19332,7 @@
 	)
 	(symbol
 		(lib_id "SGM61410XN6G_TR:SGM61410XN6G_TR")
-		(at 162.56 76.2 0)
+		(at 162.56 147.32 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -17243,7 +19341,7 @@
 		(fields_autoplaced yes)
 		(uuid "9d5c1dc6-022c-43ab-a13a-b6e12fd1894a")
 		(property "Reference" "U2"
-			(at 162.56 60.96 0)
+			(at 162.56 132.08 0)
 			(effects
 				(font
 					(face "Arial")
@@ -17253,7 +19351,7 @@
 			)
 		)
 		(property "Value" "SGM61410XN6G_TR"
-			(at 162.56 63.5 0)
+			(at 162.56 134.62 0)
 			(effects
 				(font
 					(face "Arial")
@@ -17262,7 +19360,7 @@
 			)
 		)
 		(property "Footprint" "autonav_fp:SGM61410XN6G_TR"
-			(at 162.56 76.2 0)
+			(at 162.56 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17271,7 +19369,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 162.56 76.2 0)
+			(at 162.56 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17280,7 +19378,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 162.56 76.2 0)
+			(at 162.56 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17310,6 +19408,125 @@
 			(project ""
 				(path "/ce5a45ab-8fc2-45f1-907f-8e7f414ac528"
 					(reference "U2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_name "R_2P_10")
+		(lib_id "wn__wavenumber:R_2P")
+		(at 146.05 54.61 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9f511c05-f0ae-4402-8cfa-da8cb51be196")
+		(property "Reference" "R27"
+			(at 147.32 48.26 90)
+			(effects
+				(font
+					(face "Arial")
+					(size 2.1844 2.1844)
+					(bold yes)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "200kΩ"
+			(at 147.32 51.435 90)
+			(effects
+				(font
+					(face "Arial")
+					(size 1.524 1.524)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "wavenumber:R0603_0.55MM_HD"
+			(at 146.05 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 146.05 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "RES 200K OHM 1/10W 1% 0603 SMD"
+			(at 146.05 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Internal Part Number" ""
+			(at 146.05 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Panasonic Electronic Components"
+			(at 146.05 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Part Number" "ERJ-3EKF2003V"
+			(at 146.05 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "cad-reference" "ERJ-3EKF2003V"
+			(at 146.05 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "flags" ""
+			(at 146.05 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1217abea-658e-4ad4-8675-216672e00855")
+		)
+		(pin "2"
+			(uuid "3c1cdec3-d967-4077-bc19-ee4ad3b07696")
+		)
+		(instances
+			(project ""
+				(path "/ce5a45ab-8fc2-45f1-907f-8e7f414ac528"
+					(reference "R27")
 					(unit 1)
 				)
 			)
@@ -17555,7 +19772,7 @@
 	)
 	(symbol
 		(lib_id "wn_pwr:GND")
-		(at 144.78 96.52 0)
+		(at 146.05 158.75 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -17563,7 +19780,7 @@
 		(dnp no)
 		(uuid "a70d780f-81e0-4ff9-8525-f94301bd0f21")
 		(property "Reference" "#PWR04"
-			(at 144.78 100.52 0)
+			(at 146.05 162.75 0)
 			(do_not_autoplace yes)
 			(effects
 				(font
@@ -17573,7 +19790,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 144.78 100.52 0)
+			(at 146.05 162.75 0)
 			(do_not_autoplace yes)
 			(effects
 				(font
@@ -17585,7 +19802,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 144.78 96.52 0)
+			(at 146.05 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17594,7 +19811,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 144.78 96.52 0)
+			(at 146.05 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17603,7 +19820,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , Ground"
-			(at 145.542 86.868 0)
+			(at 146.812 149.098 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18048,7 +20265,7 @@
 	(symbol
 		(lib_name "R_2P_5")
 		(lib_id "wn__wavenumber:R_2P")
-		(at 168.91 132.08 0)
+		(at 168.91 99.06 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -18056,7 +20273,7 @@
 		(dnp no)
 		(uuid "ad5a628b-bef6-40b7-9d6d-f871447e5393")
 		(property "Reference" "R12"
-			(at 169.672 130.81 0)
+			(at 169.672 97.79 0)
 			(effects
 				(font
 					(face "Arial")
@@ -18066,7 +20283,7 @@
 			)
 		)
 		(property "Value" "470Ω"
-			(at 177.546 131.064 0)
+			(at 177.546 98.044 0)
 			(effects
 				(font
 					(face "Arial")
@@ -18075,7 +20292,7 @@
 			)
 		)
 		(property "Footprint" "wavenumber:R0603_0.55MM_HD"
-			(at 168.91 132.08 0)
+			(at 168.91 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18084,7 +20301,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 168.91 132.08 0)
+			(at 168.91 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18093,7 +20310,7 @@
 			)
 		)
 		(property "Description" "RES 470 OHM 1/10W 1% 0603 SMD"
-			(at 168.91 132.08 0)
+			(at 168.91 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18102,7 +20319,7 @@
 			)
 		)
 		(property "Internal Part Number" ""
-			(at 168.91 132.08 0)
+			(at 168.91 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18111,7 +20328,7 @@
 			)
 		)
 		(property "Manufacturer" "Panasonic Electronic Components"
-			(at 168.91 132.08 0)
+			(at 168.91 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18120,7 +20337,7 @@
 			)
 		)
 		(property "Manufacturer Part Number" "ERJ-3EKF4700V"
-			(at 168.91 132.08 0)
+			(at 168.91 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18129,7 +20346,7 @@
 			)
 		)
 		(property "cad-reference" "ERJ-3EKF4700V"
-			(at 168.91 132.08 0)
+			(at 168.91 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18138,7 +20355,7 @@
 			)
 		)
 		(property "flags" ""
-			(at 168.91 132.08 0)
+			(at 168.91 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18358,7 +20575,7 @@
 		(dnp no)
 		(uuid "af1a2143-6814-4c8b-bf71-0f1508b04f45")
 		(property "Reference" "SW1"
-			(at 57.15 127 0)
+			(at 56.896 129.032 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18785,7 +21002,7 @@
 	)
 	(symbol
 		(lib_id "wn__wavenumber:SMT_TEST")
-		(at 212.09 71.12 270)
+		(at 212.09 142.24 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -18793,7 +21010,7 @@
 		(dnp no)
 		(uuid "b23a52f3-45b3-45f0-afd4-d09f69148ac1")
 		(property "Reference" "TP2"
-			(at 212.344 69.85 0)
+			(at 212.344 140.97 0)
 			(effects
 				(font
 					(size 2.0066 2.0066)
@@ -18802,7 +21019,7 @@
 			)
 		)
 		(property "Value" "5V SMT Testpoint 1MM"
-			(at 213.614 69.596 0)
+			(at 213.614 140.716 0)
 			(effects
 				(font
 					(size 1.8288 1.8288)
@@ -18812,7 +21029,7 @@
 			)
 		)
 		(property "Footprint" "wavenumber:SMT_TP-1MM"
-			(at 212.09 71.12 0)
+			(at 212.09 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18821,7 +21038,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 212.09 71.12 0)
+			(at 212.09 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18830,7 +21047,7 @@
 			)
 		)
 		(property "Description" "SMT Testpoint 1MM"
-			(at 212.09 71.12 0)
+			(at 212.09 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18839,7 +21056,7 @@
 			)
 		)
 		(property "Internal Part Number" ""
-			(at 212.09 71.12 0)
+			(at 212.09 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18848,7 +21065,7 @@
 			)
 		)
 		(property "Manufacturer" "Wavenumber"
-			(at 212.09 71.12 0)
+			(at 212.09 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18857,7 +21074,7 @@
 			)
 		)
 		(property "Manufacturer Part Number" "SMT_TP-1MM"
-			(at 212.09 71.12 0)
+			(at 212.09 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18866,7 +21083,7 @@
 			)
 		)
 		(property "cad-reference" "SMT_TP-1MM"
-			(at 212.09 71.12 0)
+			(at 212.09 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18875,7 +21092,7 @@
 			)
 		)
 		(property "flags" "NO_BOM"
-			(at 212.09 71.12 0)
+			(at 212.09 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19039,7 +21256,7 @@
 	)
 	(symbol
 		(lib_id "wn_pwr:GND")
-		(at 179.07 96.52 0)
+		(at 189.23 158.75 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -19047,7 +21264,7 @@
 		(dnp no)
 		(uuid "b98d2c83-9709-448f-a356-100da28b8c83")
 		(property "Reference" "#PWR06"
-			(at 179.07 100.52 0)
+			(at 189.23 162.75 0)
 			(do_not_autoplace yes)
 			(effects
 				(font
@@ -19057,7 +21274,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 179.07 100.52 0)
+			(at 189.23 162.75 0)
 			(do_not_autoplace yes)
 			(effects
 				(font
@@ -19069,7 +21286,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 179.07 96.52 0)
+			(at 189.23 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19078,7 +21295,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 179.07 96.52 0)
+			(at 189.23 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19087,7 +21304,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , Ground"
-			(at 179.832 86.868 0)
+			(at 189.992 149.098 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19179,39 +21396,38 @@
 		)
 	)
 	(symbol
-		(lib_name "R_2P_10")
-		(lib_id "wn__wavenumber:R_2P")
-		(at 146.05 34.29 270)
+		(lib_id "wn__wavenumber:DZ_1A_3C")
+		(at 173.99 27.94 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "c8ff8353-e6c2-46b3-936c-1f2c4aec5431")
-		(property "Reference" "R27"
-			(at 147.32 38.1 90)
+		(uuid "c59377ba-0f11-4b1a-ab9e-171a2c953d50")
+		(property "Reference" "D1"
+			(at 180.34 22.352 90)
 			(effects
 				(font
 					(face "Arial")
 					(size 2.1844 2.1844)
 					(bold yes)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
-		(property "Value" "100kΩ"
-			(at 147.32 41.275 90)
+		(property "Value" "BZX84B16-7-F"
+			(at 180.34 25.527 90)
 			(effects
 				(font
 					(face "Arial")
 					(size 1.524 1.524)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
-		(property "Footprint" "wavenumber:R0603_0.55MM_HD"
-			(at 146.05 34.29 0)
+		(property "Footprint" "wavenumber:D_SOT-23-3_P"
+			(at 173.99 27.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19220,7 +21436,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 146.05 34.29 0)
+			(at 173.99 27.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19228,8 +21444,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "RES 100K OHM 1/10W 1% 0603 SMD"
-			(at 146.05 34.29 0)
+		(property "Description" "DIODE ZENER 16V 300MW SOT23"
+			(at 173.99 27.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19238,7 +21454,7 @@
 			)
 		)
 		(property "Internal Part Number" ""
-			(at 146.05 34.29 0)
+			(at 173.99 27.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19246,8 +21462,8 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer" "Panasonic Electronic Components"
-			(at 146.05 34.29 0)
+		(property "Manufacturer" "Diodes Inc"
+			(at 173.99 27.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19255,8 +21471,8 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer Part Number" "ERJ-3EKF1003V"
-			(at 146.05 34.29 0)
+		(property "Manufacturer Part Number" "BZX84B16-7-F"
+			(at 173.99 27.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19264,8 +21480,8 @@
 				(hide yes)
 			)
 		)
-		(property "cad-reference" "ERJ-3EKF1003V"
-			(at 146.05 34.29 0)
+		(property "cad-reference" "BZX84B16-7-F"
+			(at 173.99 27.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19274,7 +21490,7 @@
 			)
 		)
 		(property "flags" ""
-			(at 146.05 34.29 0)
+			(at 173.99 27.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19283,15 +21499,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "a38464a7-3191-4ad7-b510-dbe23eb70b1a")
+			(uuid "598420e5-9ed9-4ead-8715-776e1943a4df")
 		)
-		(pin "2"
-			(uuid "25a99b5f-252f-492d-a048-eacabaa136b1")
+		(pin "3"
+			(uuid "baf7ebf2-1535-4c16-99fd-1eda070cc5ff")
 		)
 		(instances
 			(project ""
 				(path "/ce5a45ab-8fc2-45f1-907f-8e7f414ac528"
-					(reference "R27")
+					(reference "D1")
 					(unit 1)
 				)
 			)
@@ -19299,7 +21515,7 @@
 	)
 	(symbol
 		(lib_id "wn_pwr:+5v")
-		(at 233.68 76.2 0)
+		(at 233.68 147.32 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -19308,7 +21524,7 @@
 		(fields_autoplaced yes)
 		(uuid "caab9b84-5e17-49ae-8556-93e2be6576b4")
 		(property "Reference" "#PWR026"
-			(at 233.68 72.4 0)
+			(at 233.68 143.52 0)
 			(do_not_autoplace yes)
 			(effects
 				(font
@@ -19318,7 +21534,7 @@
 			)
 		)
 		(property "Value" "+5v"
-			(at 233.68 72.4 0)
+			(at 233.68 143.52 0)
 			(do_not_autoplace yes)
 			(effects
 				(font
@@ -19330,7 +21546,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 233.68 76.2 0)
+			(at 233.68 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19339,7 +21555,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 233.68 76.2 0)
+			(at 233.68 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19348,7 +21564,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5v\" , 5V power rail"
-			(at 234.442 66.548 0)
+			(at 234.442 137.668 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19484,77 +21700,6 @@
 		)
 	)
 	(symbol
-		(lib_id "wn_pwr:GND")
-		(at 139.7 48.26 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "cf41fd7b-0a35-481d-8a55-0eb53d3bffa3")
-		(property "Reference" "#PWR020"
-			(at 139.7 52.26 0)
-			(do_not_autoplace yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 139.7 52.26 0)
-			(do_not_autoplace yes)
-			(effects
-				(font
-					(face "Arial")
-					(size 1.905 1.905)
-					(thickness 0.254)
-					(bold yes)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 139.7 48.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 139.7 48.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , Ground"
-			(at 140.462 38.608 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "3e4e9a8c-e0e3-4e77-b90e-3e46cdb287bc")
-		)
-		(instances
-			(project ""
-				(path "/ce5a45ab-8fc2-45f1-907f-8e7f414ac528"
-					(reference "#PWR020")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "wn__wavenumber:screw-hole")
 		(at 276.86 25.4 0)
 		(unit 1)
@@ -19669,77 +21814,6 @@
 			(project ""
 				(path "/ce5a45ab-8fc2-45f1-907f-8e7f414ac528"
 					(reference "M1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "wn_pwr:GND")
-		(at 157.48 48.26 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "d11165ea-6c73-434c-ac7d-bca9f6a00a33")
-		(property "Reference" "#PWR030"
-			(at 157.48 52.26 0)
-			(do_not_autoplace yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 157.48 52.26 0)
-			(do_not_autoplace yes)
-			(effects
-				(font
-					(face "Arial")
-					(size 1.905 1.905)
-					(thickness 0.254)
-					(bold yes)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 157.48 48.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 157.48 48.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , Ground"
-			(at 158.242 38.608 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "a237b1ab-b95d-4e7b-aae8-f08876ef6fad")
-		)
-		(instances
-			(project "Charge_Indicator"
-				(path "/ce5a45ab-8fc2-45f1-907f-8e7f414ac528"
-					(reference "#PWR030")
 					(unit 1)
 				)
 			)
@@ -20573,7 +22647,7 @@
 	(symbol
 		(lib_name "R_2P_2")
 		(lib_id "wn__wavenumber:R_2P")
-		(at 179.07 86.36 270)
+		(at 179.07 157.48 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -20582,28 +22656,26 @@
 		(fields_autoplaced yes)
 		(uuid "e559b7d7-0949-4c8e-9ec6-d071e44faf6c")
 		(property "Reference" "R3"
-			(at 180.34 90.17 90)
+			(at 184.15 151.13 0)
 			(effects
 				(font
 					(face "Arial")
 					(size 2.1844 2.1844)
 					(bold yes)
 				)
-				(justify left)
 			)
 		)
 		(property "Value" "10kΩ"
-			(at 180.34 93.345 90)
+			(at 184.15 154.94 0)
 			(effects
 				(font
 					(face "Arial")
 					(size 1.524 1.524)
 				)
-				(justify left)
 			)
 		)
 		(property "Footprint" "wavenumber:R0603_0.55MM_HD"
-			(at 179.07 86.36 0)
+			(at 179.07 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20612,7 +22684,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 179.07 86.36 0)
+			(at 179.07 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20621,7 +22693,7 @@
 			)
 		)
 		(property "Description" "RES 10K OHM 1/10W 1% 0603 SMD"
-			(at 179.07 86.36 0)
+			(at 179.07 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20630,7 +22702,7 @@
 			)
 		)
 		(property "Internal Part Number" ""
-			(at 179.07 86.36 0)
+			(at 179.07 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20639,7 +22711,7 @@
 			)
 		)
 		(property "Manufacturer" "Panasonic Electronic Components"
-			(at 179.07 86.36 0)
+			(at 179.07 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20648,7 +22720,7 @@
 			)
 		)
 		(property "Manufacturer Part Number" "ERJ-3EKF1002V"
-			(at 179.07 86.36 0)
+			(at 179.07 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20657,7 +22729,7 @@
 			)
 		)
 		(property "cad-reference" "ERJ-3EKF1002V"
-			(at 179.07 86.36 0)
+			(at 179.07 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20666,7 +22738,7 @@
 			)
 		)
 		(property "flags" ""
-			(at 179.07 86.36 0)
+			(at 179.07 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20692,7 +22764,7 @@
 	(symbol
 		(lib_name "R_2P_1")
 		(lib_id "wn__wavenumber:R_2P")
-		(at 212.09 86.36 270)
+		(at 212.09 158.75 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -20700,7 +22772,7 @@
 		(dnp no)
 		(uuid "e6e292fd-2737-49db-a27d-72004a0fb206")
 		(property "Reference" "R2"
-			(at 212.598 88.392 90)
+			(at 206.248 162.814 0)
 			(effects
 				(font
 					(face "Arial")
@@ -20711,7 +22783,7 @@
 			)
 		)
 		(property "Value" "200Ω"
-			(at 212.852 93.98 90)
+			(at 207.772 160.528 0)
 			(effects
 				(font
 					(face "Arial")
@@ -20721,7 +22793,7 @@
 			)
 		)
 		(property "Footprint" "wavenumber:R0603_0.55MM_HD"
-			(at 212.09 86.36 0)
+			(at 212.09 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20730,7 +22802,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 212.09 86.36 0)
+			(at 212.09 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20739,7 +22811,7 @@
 			)
 		)
 		(property "Description" "RES 200 OHM 1/10W 1% 0603 SMD"
-			(at 212.09 86.36 0)
+			(at 212.09 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20748,7 +22820,7 @@
 			)
 		)
 		(property "Internal Part Number" ""
-			(at 212.09 86.36 0)
+			(at 212.09 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20757,7 +22829,7 @@
 			)
 		)
 		(property "Manufacturer" "Panasonic Electronic Components"
-			(at 212.09 86.36 0)
+			(at 212.09 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20766,7 +22838,7 @@
 			)
 		)
 		(property "Manufacturer Part Number" "ERJ-3EKF2000V"
-			(at 212.09 86.36 0)
+			(at 212.09 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20775,7 +22847,7 @@
 			)
 		)
 		(property "cad-reference" "ERJ-3EKF2000V"
-			(at 212.09 86.36 0)
+			(at 212.09 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20784,7 +22856,7 @@
 			)
 		)
 		(property "flags" ""
-			(at 212.09 86.36 0)
+			(at 212.09 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20880,7 +22952,7 @@
 	)
 	(symbol
 		(lib_id "wn__wavenumber:R_2P")
-		(at 212.09 76.2 270)
+		(at 212.09 147.32 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -20888,7 +22960,7 @@
 		(dnp no)
 		(uuid "eb2d31cb-ed1d-481c-809b-055954bc2bb6")
 		(property "Reference" "R1"
-			(at 212.852 78.486 90)
+			(at 212.852 149.606 90)
 			(effects
 				(font
 					(face "Arial")
@@ -20899,7 +22971,7 @@
 			)
 		)
 		(property "Value" "52.3kΩ"
-			(at 212.852 83.566 90)
+			(at 212.852 154.686 90)
 			(effects
 				(font
 					(face "Arial")
@@ -20909,7 +22981,7 @@
 			)
 		)
 		(property "Footprint" "wavenumber:R0603_0.55MM_HD"
-			(at 212.09 76.2 0)
+			(at 212.09 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20918,7 +22990,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 212.09 76.2 0)
+			(at 212.09 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20927,7 +22999,7 @@
 			)
 		)
 		(property "Description" "RES 52.3K OHM 1/10W 1% 0603 SMD"
-			(at 212.09 76.2 0)
+			(at 212.09 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20936,7 +23008,7 @@
 			)
 		)
 		(property "Internal Part Number" ""
-			(at 212.09 76.2 0)
+			(at 212.09 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20945,7 +23017,7 @@
 			)
 		)
 		(property "Manufacturer" "Panasonic Electronic Components"
-			(at 212.09 76.2 0)
+			(at 212.09 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20954,7 +23026,7 @@
 			)
 		)
 		(property "Manufacturer Part Number" "ERJ-3EKF5232V"
-			(at 212.09 76.2 0)
+			(at 212.09 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20963,7 +23035,7 @@
 			)
 		)
 		(property "cad-reference" "ERJ-3EKF5232V"
-			(at 212.09 76.2 0)
+			(at 212.09 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20972,7 +23044,7 @@
 			)
 		)
 		(property "flags" ""
-			(at 212.09 76.2 0)
+			(at 212.09 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21185,38 +23257,39 @@
 		)
 	)
 	(symbol
-		(lib_name "DZ_1A_2C_1")
-		(lib_id "wn__wavenumber:DZ_1A_2C")
-		(at 157.48 36.83 90)
+		(lib_id "wn_pwr:+5v")
+		(at 36.83 123.19 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "f3d9ffa5-1f4f-4023-8698-0ece69bf25e6")
-		(property "Reference" "D10"
-			(at 161.29 36.322 90)
+		(fields_autoplaced yes)
+		(uuid "f2296365-588e-44a6-b84c-e565987a8921")
+		(property "Reference" "#PWR034"
+			(at 36.83 119.39 0)
+			(do_not_autoplace yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5v"
+			(at 36.83 119.39 0)
+			(do_not_autoplace yes)
 			(effects
 				(font
 					(face "Arial")
-					(size 2.1844 2.1844)
+					(size 1.905 1.905)
+					(thickness 0.254)
 					(bold yes)
 				)
-				(justify right)
 			)
 		)
-		(property "Value" "BZT52C5V1-7-F"
-			(at 162.306 37.592 0)
-			(effects
-				(font
-					(face "Arial")
-					(size 1.524 1.524)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "wavenumber:D_SOD-123_P"
-			(at 157.48 36.83 0)
+		(property "Footprint" ""
+			(at 36.83 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21225,7 +23298,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 157.48 36.83 0)
+			(at 36.83 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21233,53 +23306,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "DIODE ZENER 5.1V 500MW SOD123"
-			(at 157.48 36.83 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Internal Part Number" ""
-			(at 157.48 36.83 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" "Diodes Inc"
-			(at 157.48 36.83 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer Part Number" "BZT52C5V1-7-F"
-			(at 157.48 36.83 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "cad-reference" "BZT52C5V1-7-F"
-			(at 157.48 36.83 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "flags" ""
-			(at 157.48 36.83 0)
+		(property "Description" "Power symbol creates a global label with name \"+5v\" , 5V power rail"
+			(at 37.592 113.538 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21288,15 +23316,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "4e5ff207-ae2a-4b00-b766-5d946e0e71b2")
-		)
-		(pin "2"
-			(uuid "f6cda5ba-4cda-400b-90b2-5170c6473021")
+			(uuid "0aa1a1cc-6597-4c87-9910-52086df13733")
 		)
 		(instances
-			(project ""
+			(project "Charge_Indicator"
 				(path "/ce5a45ab-8fc2-45f1-907f-8e7f414ac528"
-					(reference "D10")
+					(reference "#PWR034")
 					(unit 1)
 				)
 			)
@@ -21724,7 +23749,7 @@
 	)
 	(symbol
 		(lib_id "wn__wavenumber:LED-RED")
-		(at 158.75 152.4 0)
+		(at 158.75 119.38 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -21732,7 +23757,7 @@
 		(dnp no)
 		(uuid "fdbe6159-f5a6-4bb4-b76c-25b85e73b4a0")
 		(property "Reference" "D3"
-			(at 159.766 151.13 0)
+			(at 159.766 118.11 0)
 			(effects
 				(font
 					(face "Arial")
@@ -21743,7 +23768,7 @@
 			)
 		)
 		(property "Value" "APT2012SURCK"
-			(at 139.446 151.13 0)
+			(at 139.446 118.11 0)
 			(effects
 				(font
 					(face "Arial")
@@ -21753,7 +23778,7 @@
 			)
 		)
 		(property "Footprint" "wavenumber:LED-0805-RED"
-			(at 158.75 152.4 0)
+			(at 158.75 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21762,7 +23787,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 158.75 152.4 0)
+			(at 158.75 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21771,7 +23796,7 @@
 			)
 		)
 		(property "Description" "0805 Red 630nm LED Indication - Discrete 1.95V 0805 (2012 Metric)"
-			(at 158.75 152.4 0)
+			(at 158.75 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21780,7 +23805,7 @@
 			)
 		)
 		(property "Internal Part Number" ""
-			(at 158.75 152.4 0)
+			(at 158.75 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21789,7 +23814,7 @@
 			)
 		)
 		(property "Manufacturer" "Kingbright"
-			(at 158.75 152.4 0)
+			(at 158.75 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21798,7 +23823,7 @@
 			)
 		)
 		(property "Manufacturer Part Number" "APT2012SURCK"
-			(at 158.75 152.4 0)
+			(at 158.75 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21807,7 +23832,7 @@
 			)
 		)
 		(property "cad-reference" "APT2012SURCK"
-			(at 158.75 152.4 0)
+			(at 158.75 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21816,7 +23841,7 @@
 			)
 		)
 		(property "flags" ""
-			(at 158.75 152.4 0)
+			(at 158.75 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
