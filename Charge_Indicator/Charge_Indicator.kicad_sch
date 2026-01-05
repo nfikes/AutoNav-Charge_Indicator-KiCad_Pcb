@@ -9189,7 +9189,7 @@
 	)
 	(text "Voltage Translation Togglable"
 		(exclude_from_sim no)
-		(at 147.066 14.986 0)
+		(at 150.622 15.24 0)
 		(effects
 			(font
 				(size 1.27 1.27)
