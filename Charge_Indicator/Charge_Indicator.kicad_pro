@@ -490,7 +490,7 @@
       "plot": "Project Output Files REV2/",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "Charge_Indicator.step",
       "svg": "",
       "vrml": ""
     },
