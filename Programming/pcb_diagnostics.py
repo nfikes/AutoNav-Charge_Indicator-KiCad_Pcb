@@ -9,12 +9,14 @@ BQ34Z100-R2 TRM:   https://www.ti.com/lit/pdf/sluuco5
 Hardware:
   - INA226 (U3) at slave address 0x40
   - BQ34Z100-R2 (U1) at slave address 0x55
-  - Shunt resistor R4 = 12 mOhm (RL1206FR-070R012L)
+  - Shunt resistor R4 = 12 mOhm (RL1206FR-070R012L) — INA226 current sense
+  - Shunt resistor R26 = 5 mOhm (CSR2512B0R005F) — BQ34Z100-R2 low-side sense
 """
 
 import sys
 import time
 from array import array
+import struct
 
 try:
     from aardvark_py import *
@@ -61,9 +63,27 @@ BQ_CMD_FLAGS_B           = 0x12
 BQ_CMD_CURRENT           = 0x14  # mA  (signed, instantaneous)
 
 # ---------------------------------------------------------------------------
-# Shunt resistor value (R4 on schematic, CSR2512B0R005F / RL1206FR-070R012L)
+# BQ34Z100-R2 Data Flash access registers and subclass IDs
+# ---------------------------------------------------------------------------
+BQ_BLOCK_DATA_CONTROL = 0x61
+BQ_DATA_FLASH_CLASS   = 0x3E
+BQ_DATA_FLASH_BLOCK   = 0x3F
+BQ_BLOCK_DATA_BASE    = 0x40
+BQ_BLOCK_DATA_CKSUM   = 0x60
+BQ_SUBCLASS_PACK_CFG  = 64    # Pack Configuration (RSNS bit)
+BQ_SUBCLASS_CC_CAL    = 104   # CC Gain and CC Delta
+BQ_UNSEAL_KEY1        = 0x0414
+BQ_UNSEAL_KEY2        = 0x3672
+BQ_FULL_ACCESS_KEY1   = 0xFFFF
+BQ_FULL_ACCESS_KEY2   = 0xFFFF
+BQ_SUBCMD_SEALED      = 0x0020
+BQ_SUBCMD_CONTROL_STATUS = 0x0000
+
+# ---------------------------------------------------------------------------
+# Shunt resistor value (R4 on schematic, RL1206FR-070R012L — INA226)
 # ---------------------------------------------------------------------------
 R_SHUNT = 0.012  # 12 mOhm
+BQ_SENSE_R_MOHM = 5  # R26: CSR2512B0R005F, 5 mOhm (low-side sense for BQ34Z100-R2)
 
 # INA226 calibration constants (Section 7.5, datasheet)
 # Current_LSB chosen so max measurable current ~ 8 A with headroom
@@ -374,6 +394,413 @@ def _decode_bq_flags(flags):
 
 
 # ===========================================================================
+#  BQ34Z100-R2 calibration helpers
+# ===========================================================================
+
+def bq_wake(handle):
+    """Wake BQ34Z100-R2 from SLEEP by sending repeated dummy writes.
+
+    The BQ NACKs the first I2C transaction after sleeping and needs a
+    second write + delay before it starts ACKing reads.  This function
+    retries until the device responds or gives up after several attempts.
+
+    NOTE: This writes to register 0x00 (Control) and reads Voltage.
+    Do NOT use before Data Flash access — use bq_wake_for_df() instead.
+    """
+    for attempt in range(4):
+        data_out = array('B', [0x00])
+        aa_i2c_write(handle, BQ34Z100_ADDR, AA_I2C_NO_FLAGS, data_out)
+        aa_sleep_ms(50 * (attempt + 1))
+
+        # Check if the device is responding by reading Voltage (0x0A)
+        data_out = array('B', [BQ_CMD_VOLTAGE])
+        aa_i2c_write(handle, BQ34Z100_ADDR, AA_I2C_NO_STOP, data_out)
+        (count, _) = aa_i2c_read(handle, BQ34Z100_ADDR, AA_I2C_NO_FLAGS, 2)
+        if count == 2:
+            print(f"  BQ34Z100-R2 awake (after {attempt + 1} pulse(s)).")
+            return True
+
+    print("  WARNING: BQ34Z100-R2 did not respond after wake attempts.")
+    return False
+
+
+def bq_wake_for_df(handle):
+    """Wake BQ34Z100-R2 without touching the Control register (0x00).
+
+    Uses BlockDataControl (0x61) as the wake target to avoid switching
+    the BQ out of block-data mode.  Returns True if device responds.
+    """
+    for attempt in range(4):
+        # Write 0x00 to BlockDataControl (0x61) — both wakes and sets up DF mode
+        data_out = array('B', [BQ_BLOCK_DATA_CONTROL, 0x00])
+        count = aa_i2c_write(handle, BQ34Z100_ADDR, AA_I2C_NO_FLAGS, data_out)
+        aa_sleep_ms(30 * (attempt + 1))
+
+        if count >= 0:
+            # Verify device responds by reading the checksum register
+            ck = i2c_write_read(handle, BQ34Z100_ADDR, BQ_BLOCK_DATA_CKSUM, 1)
+            if ck is not None and len(ck) == 1:
+                return True
+
+    print("  WARNING: BQ34Z100-R2 did not respond (DF wake).")
+    return False
+
+
+def bq_write_control(handle, subcmd):
+    """Write a 16-bit sub-command to BQ Control register (0x00), little-endian."""
+    lsb = subcmd & 0xFF
+    msb = (subcmd >> 8) & 0xFF
+    data_out = array('B', [0x00, lsb, msb])
+    count = aa_i2c_write(handle, BQ34Z100_ADDR, AA_I2C_NO_FLAGS, data_out)
+    if count < 0:
+        print(f"  ERROR: Control write 0x{subcmd:04X} failed (error {count})")
+        return False
+    return True
+
+
+def bq_read_control_status(handle):
+    """Read Control Status word and decode seal state.
+
+    Returns (status_word, is_sealed, is_full_access) or (None, None, None) on failure.
+    """
+    bq_write_control(handle, BQ_SUBCMD_CONTROL_STATUS)
+    aa_sleep_ms(5)
+    data = i2c_write_read(handle, BQ34Z100_ADDR, 0x00, 2)
+    if data is None or len(data) < 2:
+        print("  ERROR: Could not read Control Status.")
+        return None, None, None
+    status = bytes_to_uint16_le(data)
+    is_sealed = bool(status & (1 << 13))   # SS bit
+    is_full_access = bool(status & (1 << 14))  # FAS bit
+    print(f"  Control Status  : 0x{status:04X}  "
+          f"(sealed={is_sealed}, full_access={not is_full_access})")
+    return status, is_sealed, is_full_access
+
+
+def bq_unseal(handle):
+    """Unseal the BQ34Z100-R2 using default unseal keys."""
+    bq_write_control(handle, BQ_UNSEAL_KEY1)
+    aa_sleep_ms(5)
+    bq_write_control(handle, BQ_UNSEAL_KEY2)
+    aa_sleep_ms(5)
+    status, is_sealed, _ = bq_read_control_status(handle)
+    if status is not None and not is_sealed:
+        print("  Unseal: OK")
+        return True
+    print("  Unseal: FAILED (device may use non-default keys)")
+    return False
+
+
+def bq_full_access(handle):
+    """Enter Full Access mode using default keys."""
+    bq_write_control(handle, BQ_FULL_ACCESS_KEY1)
+    aa_sleep_ms(5)
+    bq_write_control(handle, BQ_FULL_ACCESS_KEY2)
+    aa_sleep_ms(5)
+    status, _, fas = bq_read_control_status(handle)
+    if status is not None and not fas:
+        print("  Full Access: OK")
+        return True
+    print("  Full Access: FAILED (device may use non-default keys)")
+    return False
+
+
+def bq_seal(handle):
+    """Re-seal the BQ34Z100-R2."""
+    bq_write_control(handle, BQ_SUBCMD_SEALED)
+    aa_sleep_ms(5)
+    status, is_sealed, _ = bq_read_control_status(handle)
+    if status is not None and is_sealed:
+        print("  Seal: OK")
+        return True
+    print("  Seal: FAILED")
+    return False
+
+
+def bq_read_df_block(handle, subclass, block=0, retries=4):
+    """Read a 32-byte Data Flash block via BlockDataControl protocol.
+
+    Returns 32-byte list or None on failure.  Validates the block
+    checksum (register 0x60) to confirm read integrity.  Only wakes
+    the device on retries (the caller must ensure device is awake for
+    the first attempt — writing to reg 0x00 during wake interferes
+    with DF block context).
+    """
+    for attempt in range(retries):
+        if attempt > 0:
+            # Wake and retry — the device may have gone to sleep
+            wait_ms = 200 * attempt
+            print(f"  DF read retry {attempt}/{retries} "
+                  f"(subclass {subclass}), waiting {wait_ms} ms...")
+            bq_wake_for_df(handle)
+            aa_sleep_ms(wait_ms)
+
+        # Step 1: enable block data access
+        data_out = array('B', [BQ_BLOCK_DATA_CONTROL, 0x00])
+        aa_i2c_write(handle, BQ34Z100_ADDR, AA_I2C_NO_FLAGS, data_out)
+        aa_sleep_ms(5)
+
+        # Step 2: set subclass
+        data_out = array('B', [BQ_DATA_FLASH_CLASS, subclass])
+        aa_i2c_write(handle, BQ34Z100_ADDR, AA_I2C_NO_FLAGS, data_out)
+        aa_sleep_ms(5)
+
+        # Step 3: set block index — triggers 32-byte transfer inside the BQ
+        data_out = array('B', [BQ_DATA_FLASH_BLOCK, block])
+        aa_i2c_write(handle, BQ34Z100_ADDR, AA_I2C_NO_FLAGS, data_out)
+        aa_sleep_ms(50)  # BQ needs time to load the block into RAM
+
+        # Step 4: read 32 bytes from BlockData base
+        data = i2c_write_read(handle, BQ34Z100_ADDR, BQ_BLOCK_DATA_BASE, 32)
+        if data is None or len(data) != 32:
+            continue
+
+        # Step 5: read and validate checksum
+        cksum_data = i2c_write_read(handle, BQ34Z100_ADDR, BQ_BLOCK_DATA_CKSUM, 1)
+        if cksum_data is not None:
+            expected_cksum = (255 - (sum(data) & 0xFF)) & 0xFF
+            if cksum_data[0] != expected_cksum:
+                print(f"  DF checksum mismatch (subclass {subclass}): "
+                      f"read 0x{cksum_data[0]:02X}, expected 0x{expected_cksum:02X}")
+                # Check if data is the telltale stale pattern (zeros + FFs)
+                if all(b == 0 for b in data[:16]):
+                    print(f"  (stale/uninitialized data detected)")
+                    continue
+                if attempt < retries - 1:
+                    continue
+                print(f"  WARNING: Using data despite checksum mismatch")
+
+        return data
+
+    print(f"  ERROR: Failed to read DF subclass {subclass} block {block} "
+          f"after {retries} attempts")
+    return None
+
+
+def bq_write_df_bytes(handle, subclass, offset, new_bytes, block=0,
+                      existing_block=None):
+    """Write bytes to a Data Flash block and verify.
+
+    If existing_block is provided, uses that as the base (avoids a
+    re-read that may fail due to BQ sleep).  Otherwise reads the current
+    block first.
+
+    Wakes the device, issues the full setup sequence, writes the entire
+    32-byte modified block, then commits with checksum.
+
+    offset is byte position within the 32-byte block (0-31).
+    new_bytes is a list/bytes of values to write starting at offset.
+
+    Returns True on success, False on failure.
+    """
+    if existing_block is not None:
+        old_block = list(existing_block)
+    else:
+        old_block = bq_read_df_block(handle, subclass, block)
+        if old_block is None:
+            return False
+
+    # Build modified block
+    modified = list(old_block)
+    for i, b in enumerate(new_bytes):
+        modified[offset + i] = b
+
+    print(f"  DF write: subclass {subclass}, offset {offset}, "
+          f"{len(new_bytes)} byte(s)")
+
+    # Full setup sequence before writing (don't call bq_wake — it writes
+    # to reg 0x00 which can interfere with DF block context)
+    data_out = array('B', [BQ_BLOCK_DATA_CONTROL, 0x00])
+    aa_i2c_write(handle, BQ34Z100_ADDR, AA_I2C_NO_FLAGS, data_out)
+    aa_sleep_ms(5)
+
+    data_out = array('B', [BQ_DATA_FLASH_CLASS, subclass])
+    aa_i2c_write(handle, BQ34Z100_ADDR, AA_I2C_NO_FLAGS, data_out)
+    aa_sleep_ms(5)
+
+    data_out = array('B', [BQ_DATA_FLASH_BLOCK, block])
+    aa_i2c_write(handle, BQ34Z100_ADDR, AA_I2C_NO_FLAGS, data_out)
+    aa_sleep_ms(50)  # wait for block to load into RAM
+
+    # Write the full 32-byte block in a single I2C transaction
+    data_out = array('B', [BQ_BLOCK_DATA_BASE] + modified)
+    count = aa_i2c_write(handle, BQ34Z100_ADDR, AA_I2C_NO_FLAGS, data_out)
+    if count < 0:
+        print(f"  ERROR: Block write failed (error {count})")
+        return False
+    aa_sleep_ms(10)
+
+    # Compute and write checksum over the full 32-byte modified block
+    cksum = (255 - (sum(modified) & 0xFF)) & 0xFF
+    data_out = array('B', [BQ_BLOCK_DATA_CKSUM, cksum])
+    count = aa_i2c_write(handle, BQ34Z100_ADDR, AA_I2C_NO_FLAGS, data_out)
+    if count < 0:
+        print(f"  ERROR: Checksum write failed (error {count})")
+        return False
+    print(f"  Flash commit... (checksum 0x{cksum:02X})")
+    aa_sleep_ms(500)  # generous delay for flash commit
+
+    # The BQ auto-seals after every flash commit.  Re-unseal + full access
+    # before the verification read, otherwise DF reads return stale data.
+    bq_wake(handle)
+    bq_unseal(handle)
+    bq_full_access(handle)
+
+    # Verify by re-reading the block
+    verify = bq_read_df_block(handle, subclass, block)
+    if verify is None:
+        print("  ERROR: Verification read failed after DF write.")
+        return False
+    for i, b in enumerate(new_bytes):
+        if verify[offset + i] != b:
+            print(f"  ERROR: Verify mismatch at offset {offset + i}: "
+                  f"wrote 0x{b:02X}, read 0x{verify[offset + i]:02X}")
+            print(f"         Block hex: {' '.join(f'{x:02X}' for x in verify)}")
+            return False
+    return True
+
+
+def float_to_bytes_be(value):
+    """Convert a Python float to 4 bytes, IEEE 754 big-endian."""
+    return list(struct.pack('>f', value))
+
+
+def bytes_to_float_be(data):
+    """Convert 4 bytes (big-endian) to a Python float (IEEE 754)."""
+    return struct.unpack('>f', bytes(data))[0]
+
+
+def _hex_dump(data, prefix="  "):
+    """Print a hex dump of a data block."""
+    for i in range(0, len(data), 16):
+        chunk = data[i:i+16]
+        hex_str = ' '.join(f'{b:02X}' for b in chunk)
+        print(f"{prefix}[{i:2d}] {hex_str}")
+
+
+def bq34z100_calibrate(handle):
+    """Calibrate CC Gain, CC Delta, and RSNS for the R26 sense resistor.
+
+    Reads current Data Flash values and only writes if they need changing.
+    The BQ34Z100-R2 silently blocks all Data Flash writes when the
+    measured cell voltage on BAT (pin 4) is below the Flash Update OK
+    Voltage threshold (default 2800 mV).  If the BQ reports 0 mV, a
+    battery or power supply must be connected to the BAT pin.
+
+    Returns True if calibration was performed, False if already correct.
+    """
+    calibrated = False
+    print("\n  --- BQ34Z100-R2 Calibration ---")
+
+    # Check battery voltage — Flash Update OK Voltage (default 2800 mV)
+    # blocks all DF writes if cell voltage is below threshold.
+    # NOTE: The Voltage() command may report 0 mV on an unconfigured gauge
+    # even when the BAT pin physically has voltage.  The BQ's internal
+    # flash-write protection uses the raw ADC, not this processed value.
+    # We warn but still attempt writes if the gauge reports 0 mV, since
+    # the actual pin voltage may be above the threshold.
+    data = i2c_write_read(handle, BQ34Z100_ADDR, BQ_CMD_VOLTAGE, 2)
+    bq_voltage_mv = 0
+    if data:
+        bq_voltage_mv = bytes_to_uint16_le(data)
+        print(f"  BQ Voltage      : {bq_voltage_mv} mV  (reported by gauge)")
+        if bq_voltage_mv < 2800:
+            print(f"  NOTE: Reported voltage ({bq_voltage_mv} mV) is below 2800 mV.")
+            print(f"        Writes will proceed — verify BAT pin has >2.8V physically.")
+
+    # Read Control Status to determine seal state
+    status, is_sealed, fas = bq_read_control_status(handle)
+    if status is None:
+        print("  ERROR: Cannot read Control Status, aborting calibration.")
+        return False
+
+    # Unseal and enter Full Access if needed
+    if is_sealed:
+        if not bq_unseal(handle):
+            return False
+    if fas:  # FAS=1 means NOT in full access mode
+        if not bq_full_access(handle):
+            return False
+
+    # ---- Pack Configuration: RSNS bit (subclass 64) ----
+    pack_cfg_block = bq_read_df_block(handle, BQ_SUBCLASS_PACK_CFG, 0)
+    if pack_cfg_block is not None:
+        pack_cfg = (pack_cfg_block[0] << 8) | pack_cfg_block[1]
+        rsns_bit = bool(pack_cfg & 0x0080)  # bit 7
+        print(f"  Pack Config     : 0x{pack_cfg:04X}  (RSNS={'HIGH' if rsns_bit else 'LOW'} side)")
+        _hex_dump(pack_cfg_block[:8], "    ")
+
+        if rsns_bit:
+            new_cfg = pack_cfg & ~0x0080
+            new_bytes = [(new_cfg >> 8) & 0xFF, new_cfg & 0xFF]
+            print(f"  Fixing RSNS: 0x{pack_cfg:04X} -> 0x{new_cfg:04X} (LOW side)...")
+            if bq_write_df_bytes(handle, BQ_SUBCLASS_PACK_CFG, 0, new_bytes, 0,
+                                 existing_block=pack_cfg_block):
+                print("  RSNS fix: OK")
+                calibrated = True
+            else:
+                print("  RSNS fix: FAILED")
+        else:
+            print("  RSNS already LOW side — no change needed.")
+
+    # ---- CC Gain and CC Delta (subclass 104) ----
+    # Re-unseal (writes to Control reg 0x00 interfere with DF block context,
+    # and flash commits auto-seal the device)
+    bq_wake(handle)
+    bq_unseal(handle)
+    bq_full_access(handle)
+    cc_block = bq_read_df_block(handle, BQ_SUBCLASS_CC_CAL, 0)
+    if cc_block is not None:
+        print("  CC Cal block (subclass 104) raw data:")
+        _hex_dump(cc_block[:16], "    ")
+        cc_gain_raw = bytes_to_float_be(cc_block[0:4])
+        cc_delta_raw = bytes_to_float_be(cc_block[4:8])
+        print(f"  CC Gain (raw)   : {cc_gain_raw:.6g}  "
+              f"(hex: {cc_block[0]:02X} {cc_block[1]:02X} {cc_block[2]:02X} {cc_block[3]:02X})")
+        print(f"  CC Delta (raw)  : {cc_delta_raw:.6g}  "
+              f"(hex: {cc_block[4]:02X} {cc_block[5]:02X} {cc_block[6]:02X} {cc_block[7]:02X})")
+
+        # Expected values for R26 = 5 mOhm
+        expected_gain = 4.768 / BQ_SENSE_R_MOHM    # 0.9536
+        expected_delta = 5677445.3 / BQ_SENSE_R_MOHM  # 1135489.06
+
+        # Zero values or wildly wrong values are always bad
+        gain_ok = (cc_gain_raw != 0 and
+                   abs(cc_gain_raw - expected_gain) / expected_gain < 0.005)
+        delta_ok = (cc_delta_raw != 0 and
+                    abs(cc_delta_raw - expected_delta) / expected_delta < 0.005)
+
+        if not gain_ok or not delta_ok:
+            print(f"  Expected Gain   : {expected_gain:.6g}")
+            print(f"  Expected Delta  : {expected_delta:.6g}")
+
+            gain_bytes = float_to_bytes_be(expected_gain)
+            delta_bytes = float_to_bytes_be(expected_delta)
+            new_cc_bytes = gain_bytes + delta_bytes
+            print("  Writing corrected CC Gain and CC Delta...")
+            if bq_write_df_bytes(handle, BQ_SUBCLASS_CC_CAL, 0, new_cc_bytes, 0,
+                                 existing_block=cc_block):
+                print("  CC calibration: OK")
+                calibrated = True
+            else:
+                print("  CC calibration: FAILED")
+        else:
+            print("  CC Gain and CC Delta already correct — no change needed.")
+    else:
+        print("  WARNING: Could not read CC calibration data.")
+
+    # Re-seal the device
+    bq_wake(handle)
+    bq_seal(handle)
+
+    if calibrated:
+        print("  Calibration COMPLETE — values were updated.")
+    else:
+        print("  Calibration check passed — no changes needed.")
+    return calibrated
+
+
+# ===========================================================================
 #  Main diagnostic routine
 # ===========================================================================
 
@@ -413,8 +840,12 @@ def run_diagnostics():
     # --- BQ34Z100-R2 ---
     print(separator)
     print(f"  BQ34Z100-R2 (U1) @ I2C 0x{BQ34Z100_ADDR:02X}")
+    print(f"  Sense Resistor R26 = {BQ_SENSE_R_MOHM} mOhm")
     print(separator)
 
+    bq_wake(handle)
+    bq_calibrated = bq34z100_calibrate(handle)
+    print("\n  --- Measurements ---")
     bq_results = bq34z100_read_all(handle)
     print()
 
@@ -444,6 +875,11 @@ def run_diagnostics():
         full = bq_results['full_charge_mAh']
         print(f"  Capacity            : {rem} / {full} mAh")
 
+    if bq_calibrated:
+        print(f"  BQ Calibration      : VALUES UPDATED (re-run to verify)")
+    else:
+        print(f"  BQ Calibration      : OK (no changes needed)")
+
     # Basic sanity checks
     print()
     issues = []
@@ -453,9 +889,11 @@ def run_diagnostics():
         issues.append("INA226 bus voltage very low - check VBUS connection")
     if 'soc_pct' in bq_results and bq_results['soc_pct'] == 0:
         issues.append("BQ34Z100 reports 0% SOC - battery may be depleted or gauge uncalibrated")
-    # No thermistor on PCB - temperature reading is not valid
     if 'voltage_mV' in bq_results and bq_results['voltage_mV'] == 0:
-        issues.append("BQ34Z100 reports 0 mV - no battery connected (gauge data may be defaults)")
+        issues.append("BQ34Z100 reports 0 mV — gauge unconfigured (CHEM_ID=0, no chemistry loaded)")
+        issues.append("  -> Voltage reading may be wrong; verify BAT pin physically with multimeter")
+    if bq_calibrated:
+        issues.append("BQ34Z100 calibration was applied — run again to confirm values stick")
 
     if issues:
         print("  ISSUES DETECTED:")

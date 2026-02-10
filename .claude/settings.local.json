@@ -2,7 +2,15 @@
   "permissions": {
     "allow": [
       "WebFetch(domain:github.com)",
-      "Bash(mdfind:*)"
+      "Bash(mdfind:*)",
+      "Bash(source:*)",
+      "Bash(python3:*)",
+      "WebSearch",
+      "WebFetch(domain:www.ti.com)",
+      "WebFetch(domain:e2e.ti.com)",
+      "WebFetch(domain:os.mbed.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(curl:*)"
     ]
   }
 }
