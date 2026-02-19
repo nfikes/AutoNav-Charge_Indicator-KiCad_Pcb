@@ -2907,7 +2907,7 @@
 					(justify left bottom)
 				)
 			)
-			(property "Footprint" "wavenumber:R1206_0.70MM_HD"
+			(property "Footprint" "wavenumber:R0603_0.55MM_HD"
 				(at 0 0 0)
 				(effects
 					(font
@@ -2925,7 +2925,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "RES 10K OHM 1/4W 1% 1206 SMD"
+			(property "Description" "RES 10K OHM 1/10W 1% 0603 SMD"
 				(at 0 0 0)
 				(effects
 					(font
@@ -2952,7 +2952,7 @@
 					(hide yes)
 				)
 			)
-			(property "Manufacturer Part Number" "ERJ-8ENF1002V"
+			(property "Manufacturer Part Number" "ERJ-3EKF1002V"
 				(at 0 0 0)
 				(effects
 					(font
@@ -2961,7 +2961,7 @@
 					(hide yes)
 				)
 			)
-			(property "cad-reference" "ERJ-8ENF1002V"
+			(property "cad-reference" "ERJ-3EKF1002V"
 				(at 0 0 0)
 				(effects
 					(font
@@ -9198,18 +9198,6 @@
 		)
 		(uuid "007866fb-75b0-4503-9f0d-1853887b6dc0")
 	)
-	(text "Notes:	\nREG25 even though \nunused needs to be \ndecoupled to VSS\n  Or else bad stuff happens"
-		(exclude_from_sim no)
-		(at 63.246 137.414 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-				(color 0 16 255 1)
-			)
-			(justify left)
-		)
-		(uuid "04b015bc-e7b6-451c-a0ec-49577c17b34c")
-	)
 	(text "3.3V Fully Regulated"
 		(exclude_from_sim no)
 		(at 152.146 182.626 0)
@@ -9221,7 +9209,7 @@
 		)
 		(uuid "10f7456a-cfe1-4a62-9748-1d5d7b59a91e")
 	)
-	(text "Notes:	\nR18 is now a Thermistor.\nR4 is now a 0.01Ω Pulse Resistor\nR26 is now a 0.005Ω Pulse Resistor"
+	(text "Notes:	\nR18 is now a Thermistor.\nR4 is now a 0.01Ω Pulse Resistor\nR26 is now a 0.005Ω Pulse Resistor\n[Components not created yet]"
 		(exclude_from_sim no)
 		(at 90.17 130.048 0)
 		(effects
@@ -9301,6 +9289,18 @@
 			)
 		)
 		(uuid "63bf3e4c-1430-4e6e-b34a-6ea86fd04251")
+	)
+	(text "Star Ground"
+		(exclude_from_sim no)
+		(at 117.094 116.078 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(color 0 16 255 1)
+			)
+			(justify left)
+		)
+		(uuid "6701340e-b764-454f-ac1a-e3fbda06c948")
 	)
 	(text "Battery Gauge Block"
 		(exclude_from_sim no)
@@ -9387,6 +9387,12 @@
 		(uuid "1470e6f7-9cbd-4ccb-bc85-16e89c9fd96e")
 	)
 	(junction
+		(at 39.37 124.46)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "14b93012-ca61-459e-b0cd-dcdbeb080636")
+	)
+	(junction
 		(at 212.09 147.32)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -9435,22 +9441,16 @@
 		(uuid "27042bf7-cd8a-4789-a7d2-75e743154111")
 	)
 	(junction
+		(at 74.93 124.46)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3cf29d83-bd17-46c4-8a53-11d98d781a1a")
+	)
+	(junction
 		(at 271.78 44.45)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "4519ade3-2764-4d8d-b981-ba150fdeecdc")
-	)
-	(junction
-		(at 24.13 93.98)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "4a97a68f-7b6e-43e7-8959-54a7883e6c08")
-	)
-	(junction
-		(at 74.93 123.19)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "4ee49e55-ab6f-46e2-a3ec-5a531422331d")
 	)
 	(junction
 		(at 60.96 54.61)
@@ -9680,16 +9680,6 @@
 	)
 	(wire
 		(pts
-			(xy 74.93 133.35) (xy 74.93 132.08)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "004343b4-8710-4f98-8bae-130aeccfd94e")
-	)
-	(wire
-		(pts
 			(xy 217.17 114.3) (xy 222.25 114.3)
 		)
 		(stroke
@@ -9800,7 +9790,7 @@
 	)
 	(wire
 		(pts
-			(xy 74.93 123.19) (xy 81.28 123.19)
+			(xy 74.93 124.46) (xy 81.28 124.46)
 		)
 		(stroke
 			(width 0)
@@ -9857,16 +9847,6 @@
 			(type default)
 		)
 		(uuid "0edd93a8-960f-4709-a9a2-cf27ba8bc8f1")
-	)
-	(wire
-		(pts
-			(xy 17.78 86.36) (xy 24.13 86.36)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0faeb16a-9a7e-4320-aa67-a55a339c017a")
 	)
 	(wire
 		(pts
@@ -10000,16 +9980,6 @@
 	)
 	(wire
 		(pts
-			(xy 24.13 93.98) (xy 24.13 95.25)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "19fad09f-9d09-450e-abc2-b7595ad5dc05")
-	)
-	(wire
-		(pts
 			(xy 31.75 69.85) (xy 60.96 69.85)
 		)
 		(stroke
@@ -10060,6 +10030,16 @@
 	)
 	(wire
 		(pts
+			(xy 118.11 116.84) (xy 118.11 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1f92708d-65c5-4ad9-87d9-5415176c0b36")
+	)
+	(wire
+		(pts
 			(xy 107.95 158.75) (xy 113.03 158.75)
 		)
 		(stroke
@@ -10077,16 +10057,6 @@
 			(type default)
 		)
 		(uuid "21390047-da40-46dd-842a-ebe9aec75411")
-	)
-	(wire
-		(pts
-			(xy 74.93 124.46) (xy 74.93 123.19)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2290839e-60e4-4e55-828a-abc0bb8f17e2")
 	)
 	(wire
 		(pts
@@ -10390,6 +10360,16 @@
 	)
 	(wire
 		(pts
+			(xy 125.73 119.38) (xy 125.73 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "40d78e78-d61b-4bd1-9b2b-37e7c3ed595e")
+	)
+	(wire
+		(pts
 			(xy 161.29 114.3) (xy 168.91 114.3)
 		)
 		(stroke
@@ -10500,6 +10480,16 @@
 	)
 	(wire
 		(pts
+			(xy 34.29 92.71) (xy 39.37 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4e59c771-b85e-406b-9043-11f6ca2f562e")
+	)
+	(wire
+		(pts
 			(xy 189.23 157.48) (xy 189.23 158.75)
 		)
 		(stroke
@@ -10550,23 +10540,13 @@
 	)
 	(wire
 		(pts
-			(xy 26.67 135.89) (xy 22.86 135.89)
+			(xy 24.13 135.89) (xy 39.37 135.89)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "551fde43-7bd8-4681-9f2e-b3e1da10c6fa")
-	)
-	(wire
-		(pts
-			(xy 17.78 87.63) (xy 17.78 86.36)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "554e6050-3308-487d-84c0-6837fab9d1ca")
 	)
 	(wire
 		(pts
@@ -10640,7 +10620,7 @@
 	)
 	(wire
 		(pts
-			(xy 39.37 123.19) (xy 74.93 123.19)
+			(xy 39.37 124.46) (xy 74.93 124.46)
 		)
 		(stroke
 			(width 0)
@@ -11030,7 +11010,7 @@
 	)
 	(wire
 		(pts
-			(xy 81.28 115.57) (xy 81.28 123.19)
+			(xy 81.28 115.57) (xy 81.28 124.46)
 		)
 		(stroke
 			(width 0)
@@ -11280,6 +11260,16 @@
 	)
 	(wire
 		(pts
+			(xy 17.78 93.98) (xy 24.13 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a6fcfb52-0f5c-4003-80b6-4deb13306a83")
+	)
+	(wire
+		(pts
 			(xy 165.1 19.05) (xy 176.53 19.05)
 		)
 		(stroke
@@ -11320,6 +11310,16 @@
 	)
 	(wire
 		(pts
+			(xy 118.11 116.84) (xy 125.73 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ac0d3e3f-c1f8-4562-b179-eda16922835a")
+	)
+	(wire
+		(pts
 			(xy 48.26 187.96) (xy 49.53 187.96)
 		)
 		(stroke
@@ -11347,6 +11347,16 @@
 			(type default)
 		)
 		(uuid "ae9e5212-2cf7-45dc-b803-fa118f4e47a4")
+	)
+	(wire
+		(pts
+			(xy 34.29 114.3) (xy 34.29 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aec1b061-92b3-4652-b03c-8f7b7bd86205")
 	)
 	(wire
 		(pts
@@ -11500,6 +11510,16 @@
 	)
 	(wire
 		(pts
+			(xy 34.29 124.46) (xy 39.37 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c03a2973-3cae-4b54-b741-61753c5c739b")
+	)
+	(wire
+		(pts
 			(xy 105.41 97.79) (xy 105.41 100.33)
 		)
 		(stroke
@@ -11557,16 +11577,6 @@
 			(type default)
 		)
 		(uuid "c777e23b-2150-48fb-974f-08869a25819d")
-	)
-	(wire
-		(pts
-			(xy 24.13 86.36) (xy 24.13 93.98)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c829c376-81b2-4608-9ca0-af958f98771f")
 	)
 	(wire
 		(pts
@@ -11640,16 +11650,6 @@
 	)
 	(wire
 		(pts
-			(xy 17.78 93.98) (xy 24.13 93.98)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cff44fdd-46f4-4acf-8046-5aca2b98f119")
-	)
-	(wire
-		(pts
 			(xy 143.51 19.05) (xy 146.05 19.05)
 		)
 		(stroke
@@ -11710,7 +11710,7 @@
 	)
 	(wire
 		(pts
-			(xy 39.37 118.11) (xy 39.37 123.19)
+			(xy 39.37 118.11) (xy 39.37 124.46)
 		)
 		(stroke
 			(width 0)
@@ -11830,6 +11830,16 @@
 	)
 	(wire
 		(pts
+			(xy 24.13 93.98) (xy 24.13 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e766e716-1fec-4be8-96de-27cd8b902ca7")
+	)
+	(wire
+		(pts
 			(xy 105.41 38.1) (xy 116.84 38.1)
 		)
 		(stroke
@@ -11837,16 +11847,6 @@
 			(type default)
 		)
 		(uuid "e8ab9ffa-ba6d-490b-9647-61e3415e6662")
-	)
-	(wire
-		(pts
-			(xy 36.83 135.89) (xy 39.37 135.89)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "eb4ca610-17bf-4148-b7bd-44832be1a191")
 	)
 	(wire
 		(pts
@@ -11907,6 +11907,16 @@
 			(type default)
 		)
 		(uuid "f0b97a46-8ab3-4880-97ef-96aefc49e1ac")
+	)
+	(wire
+		(pts
+			(xy 74.93 125.73) (xy 74.93 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f5c66aba-2668-49f6-b02a-ea5e13a75575")
 	)
 	(wire
 		(pts
@@ -12663,122 +12673,6 @@
 			(project ""
 				(path "/ce5a45ab-8fc2-45f1-907f-8e7f414ac528"
 					(reference "#PWR024")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_name "R_2P_6")
-		(lib_id "wn__wavenumber:R_2P")
-		(at 36.83 135.89 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "0d2a8696-a137-40e6-a451-3a2bc9f87b12")
-		(property "Reference" "R17"
-			(at 29.464 133.858 0)
-			(effects
-				(font
-					(face "Arial")
-					(size 2.1844 2.1844)
-					(bold yes)
-				)
-			)
-		)
-		(property "Value" "1kΩ"
-			(at 34.29 134.112 0)
-			(effects
-				(font
-					(face "Arial")
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Footprint" "wavenumber:R0603_0.55MM_HD"
-			(at 36.83 135.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 36.83 135.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "RES 1K OHM 1/10W 1% 0603 SMD"
-			(at 36.83 135.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Internal Part Number" ""
-			(at 36.83 135.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" "Panasonic Electronic Components"
-			(at 36.83 135.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer Part Number" "ERJ-3EKF1001V"
-			(at 36.83 135.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "cad-reference" "ERJ-3EKF1001V"
-			(at 36.83 135.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "flags" ""
-			(at 36.83 135.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "8e48d903-4c8a-4191-a472-508cbbfe9a52")
-		)
-		(pin "2"
-			(uuid "2417036f-990a-41cf-a332-446cabe3374c")
-		)
-		(instances
-			(project ""
-				(path "/ce5a45ab-8fc2-45f1-907f-8e7f414ac528"
-					(reference "R17")
 					(unit 1)
 				)
 			)
@@ -14534,7 +14428,7 @@
 	(symbol
 		(lib_name "C_2P_NP_5")
 		(lib_id "wn__wavenumber:C_2P_NP")
-		(at 74.93 132.08 90)
+		(at 74.93 133.35 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -14543,7 +14437,7 @@
 		(fields_autoplaced yes)
 		(uuid "313d689e-2e95-487a-9a86-09a304ce139e")
 		(property "Reference" "C11"
-			(at 77.47 126.873 90)
+			(at 77.47 128.143 90)
 			(effects
 				(font
 					(face "Arial")
@@ -14554,7 +14448,7 @@
 			)
 		)
 		(property "Value" "1µF"
-			(at 77.47 130.048 90)
+			(at 77.47 131.318 90)
 			(effects
 				(font
 					(face "Arial")
@@ -14564,7 +14458,7 @@
 			)
 		)
 		(property "Footprint" "wavenumber:C0603_0.90MM_MD"
-			(at 74.93 132.08 0)
+			(at 74.93 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14573,7 +14467,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 74.93 132.08 0)
+			(at 74.93 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14582,7 +14476,7 @@
 			)
 		)
 		(property "Description" "CAP CER 1UF 25V X7R 0603"
-			(at 74.93 132.08 0)
+			(at 74.93 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14591,7 +14485,7 @@
 			)
 		)
 		(property "Internal Part Number" ""
-			(at 74.93 132.08 0)
+			(at 74.93 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14600,7 +14494,7 @@
 			)
 		)
 		(property "Manufacturer" "Murata Electronics"
-			(at 74.93 132.08 0)
+			(at 74.93 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14609,7 +14503,7 @@
 			)
 		)
 		(property "Manufacturer Part Number" "GCJ188R71E105KA01D"
-			(at 74.93 132.08 0)
+			(at 74.93 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14618,7 +14512,7 @@
 			)
 		)
 		(property "cad-reference" "GCJ188R71E105KA01D"
-			(at 74.93 132.08 0)
+			(at 74.93 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14627,7 +14521,7 @@
 			)
 		)
 		(property "flags" ""
-			(at 74.93 132.08 0)
+			(at 74.93 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14896,7 +14790,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "GND"
+		(property "Value" "AGND"
 			(at 57.34 190.5 0)
 			(do_not_autoplace yes)
 			(effects
@@ -15743,6 +15637,125 @@
 		)
 	)
 	(symbol
+		(lib_name "R_2P_7")
+		(lib_id "wn__wavenumber:R_2P")
+		(at 81.28 115.57 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4833ff7e-781c-4940-a302-44d12c78ed5c")
+		(property "Reference" "R17"
+			(at 82.55 109.22 90)
+			(effects
+				(font
+					(face "Arial")
+					(size 2.1844 2.1844)
+					(bold yes)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "10kΩ"
+			(at 82.55 112.395 90)
+			(effects
+				(font
+					(face "Arial")
+					(size 1.524 1.524)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "wavenumber:R0603_0.55MM_HD"
+			(at 81.28 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 81.28 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "RES 10K OHM 1/10W 1% 0603 SMD"
+			(at 81.28 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Internal Part Number" ""
+			(at 81.28 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Panasonic Electronic Components"
+			(at 81.28 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Part Number" "ERJ-3EKF1002V"
+			(at 81.28 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "cad-reference" "ERJ-3EKF1002V"
+			(at 81.28 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "flags" ""
+			(at 81.28 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "bb000e88-681f-4505-8be1-456e53bef886")
+		)
+		(pin "2"
+			(uuid "2e673cc3-e527-4c7b-b7e3-eccc31fceb71")
+		)
+		(instances
+			(project ""
+				(path "/ce5a45ab-8fc2-45f1-907f-8e7f414ac528"
+					(reference "R17")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_name "R_2P_4")
 		(lib_id "wn__wavenumber:R_2P")
 		(at 60.96 151.13 0)
@@ -15853,6 +15866,122 @@
 			(project "Charge_Indicator"
 				(path "/ce5a45ab-8fc2-45f1-907f-8e7f414ac528"
 					(reference "R20")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_name "R_2P_6")
+		(lib_id "wn__wavenumber:R_2P")
+		(at 34.29 124.46 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "521c72a9-8347-4dc5-9573-21dfd29c67c6")
+		(property "Reference" "R31"
+			(at 36.322 117.094 0)
+			(effects
+				(font
+					(face "Arial")
+					(size 2.1844 2.1844)
+					(bold yes)
+				)
+			)
+		)
+		(property "Value" "1kΩ"
+			(at 36.068 121.92 0)
+			(effects
+				(font
+					(face "Arial")
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "wavenumber:R0603_0.55MM_HD"
+			(at 34.29 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 34.29 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "RES 1K OHM 1/10W 1% 0603 SMD"
+			(at 34.29 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Internal Part Number" ""
+			(at 34.29 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Panasonic Electronic Components"
+			(at 34.29 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Part Number" "ERJ-3EKF1001V"
+			(at 34.29 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "cad-reference" "ERJ-3EKF1001V"
+			(at 34.29 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "flags" ""
+			(at 34.29 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7e7ca5f2-e0b6-41c7-8371-63c4798efe96")
+		)
+		(pin "2"
+			(uuid "b2ba5f31-64c4-4905-976e-fc8fad8396ee")
+		)
+		(instances
+			(project "Charge_Indicator"
+				(path "/ce5a45ab-8fc2-45f1-907f-8e7f414ac528"
+					(reference "R31")
 					(unit 1)
 				)
 			)
@@ -15971,77 +16100,6 @@
 			(project "Charge_Indicator"
 				(path "/ce5a45ab-8fc2-45f1-907f-8e7f414ac528"
 					(reference "C9")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "wn_pwr:GND")
-		(at 17.78 87.63 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "57ffb348-1ad1-4c9c-a4fd-4f41d66626fc")
-		(property "Reference" "#PWR028"
-			(at 17.78 91.63 0)
-			(do_not_autoplace yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 17.78 91.63 0)
-			(do_not_autoplace yes)
-			(effects
-				(font
-					(face "Arial")
-					(size 1.905 1.905)
-					(thickness 0.254)
-					(bold yes)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 17.78 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 17.78 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , Ground"
-			(at 18.542 77.978 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "4067719e-c19a-41a9-8780-9a019b0eeadd")
-		)
-		(instances
-			(project "Charge_Indicator"
-				(path "/ce5a45ab-8fc2-45f1-907f-8e7f414ac528"
-					(reference "#PWR028")
 					(unit 1)
 				)
 			)
@@ -18237,124 +18295,6 @@
 			(project ""
 				(path "/ce5a45ab-8fc2-45f1-907f-8e7f414ac528"
 					(reference "C4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_name "R_2P_7")
-		(lib_id "wn__wavenumber:R_2P")
-		(at 81.28 115.57 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "8610769b-c666-4355-a214-3ee289ed99da")
-		(property "Reference" "R18"
-			(at 81.534 107.95 90)
-			(effects
-				(font
-					(face "Arial")
-					(size 2.1844 2.1844)
-					(bold yes)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "10kΩ"
-			(at 81.534 112.522 90)
-			(effects
-				(font
-					(face "Arial")
-					(size 1.524 1.524)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "wavenumber:R1206_0.70MM_HD"
-			(at 81.28 115.57 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 81.28 115.57 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "RES 10K OHM 1/4W 1% 1206 SMD"
-			(at 81.28 115.57 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Internal Part Number" ""
-			(at 81.28 115.57 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" "Panasonic Electronic Components"
-			(at 81.28 115.57 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer Part Number" "ERJ-8ENF1002V"
-			(at 81.28 115.57 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "cad-reference" "ERJ-8ENF1002V"
-			(at 81.28 115.57 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "flags" ""
-			(at 81.28 115.57 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "5be474b2-034b-4f13-892b-d0ae29f155d5")
-		)
-		(pin "2"
-			(uuid "41d6cb49-73ce-4c0a-8d71-5e284f10699a")
-		)
-		(instances
-			(project ""
-				(path "/ce5a45ab-8fc2-45f1-907f-8e7f414ac528"
-					(reference "R18")
 					(unit 1)
 				)
 			)
@@ -21085,6 +21025,77 @@
 		)
 	)
 	(symbol
+		(lib_id "wn_pwr:AGND")
+		(at 118.11 119.38 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b7cd839b-7e46-45d7-8916-f70dd2559089")
+		(property "Reference" "#PWR036"
+			(at 118.11 123.38 0)
+			(do_not_autoplace yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "AGND"
+			(at 118.11 123.38 0)
+			(do_not_autoplace yes)
+			(effects
+				(font
+					(face "Arial")
+					(size 1.905 1.905)
+					(thickness 0.254)
+					(bold yes)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 118.11 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 118.11 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"AGND\" , Analog ground"
+			(at 118.872 109.728 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1fa15253-b5f5-4308-b9c7-140606a86f4a")
+		)
+		(instances
+			(project "Charge_Indicator"
+				(path "/ce5a45ab-8fc2-45f1-907f-8e7f414ac528"
+					(reference "#PWR036")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "wn_pwr:+3v3")
 		(at 147.32 180.34 0)
 		(unit 1)
@@ -22307,6 +22318,77 @@
 		)
 	)
 	(symbol
+		(lib_id "wn_pwr:GND")
+		(at 125.73 119.38 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ddd5e5cf-2a43-46fe-b3d8-2df4daa901ea")
+		(property "Reference" "#PWR028"
+			(at 125.73 123.38 0)
+			(do_not_autoplace yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 125.73 123.38 0)
+			(do_not_autoplace yes)
+			(effects
+				(font
+					(face "Arial")
+					(size 1.905 1.905)
+					(thickness 0.254)
+					(bold yes)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 125.73 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 125.73 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , Ground"
+			(at 126.492 109.728 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6e3aadc4-e354-4eac-9605-933fc64eadff")
+		)
+		(instances
+			(project "Charge_Indicator"
+				(path "/ce5a45ab-8fc2-45f1-907f-8e7f414ac528"
+					(reference "#PWR028")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "wn_pwr:+5v")
 		(at 20.32 182.88 90)
 		(unit 1)
@@ -23230,7 +23312,7 @@
 	)
 	(symbol
 		(lib_id "wn_pwr:+5v")
-		(at 22.86 135.89 0)
+		(at 24.13 135.89 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -23239,7 +23321,7 @@
 		(fields_autoplaced yes)
 		(uuid "f2296365-588e-44a6-b84c-e565987a8921")
 		(property "Reference" "#PWR034"
-			(at 22.86 132.09 0)
+			(at 24.13 132.09 0)
 			(do_not_autoplace yes)
 			(effects
 				(font
@@ -23249,7 +23331,7 @@
 			)
 		)
 		(property "Value" "+5v"
-			(at 22.86 132.09 0)
+			(at 24.13 132.09 0)
 			(do_not_autoplace yes)
 			(effects
 				(font
@@ -23261,7 +23343,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 22.86 135.89 0)
+			(at 24.13 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23270,7 +23352,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 22.86 135.89 0)
+			(at 24.13 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23279,7 +23361,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5v\" , 5V power rail"
-			(at 23.622 126.238 0)
+			(at 24.892 126.238 0)
 			(effects
 				(font
 					(size 1.27 1.27)
