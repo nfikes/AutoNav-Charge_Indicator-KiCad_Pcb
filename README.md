@@ -107,6 +107,92 @@ Contact / Author
 - Repository owner: `nfikes` (GitHub).
 - Repository collaborator: `ehughes` (GitHub).
 
+Initial Board Programming (BQ34Z100-R2)
+----------------------------------------
+
+The BQ34Z100-R2 fuel gauge (U1) must be programmed once before the board will
+report battery voltage, SOC, or current. All configuration is stored in
+non-volatile Data Flash and persists across power cycles — you do not need to
+reprogram the chip after removing power.
+
+### Hardware required
+
+- Total Phase Aardvark I2C adapter (connected to the board's I2C header)
+- 24V power supply or the Renogy RBT2425LFP battery pack
+
+### Safety: VOLTSEL and the BAT pin
+
+The BQ34Z100-R2 has an internal 5:1 voltage divider on the BAT pin (pin 4).
+The board's external resistor divider (R27 = 200 k / R22 = 34.8 k) steps the
+~25.6 V pack voltage down to ~3.8 V at the BAT pin. The internal divider
+further reduces this to ~0.76 V, safely within the ADC's 1 V limit.
+
+If **VOLTSEL** (bit 3 of Pack Configuration, SC 64) is set to 1, the internal
+divider is bypassed and the full ~3.8 V reaches the ADC, **permanently
+damaging the analog front-end**. VOLTSEL must always be 0 on this board.
+
+SW1 (SPDT slide switch) disconnects the external voltage divider from the BAT
+pin. Use it to protect the ADC when the chip's VOLTSEL state is unknown.
+
+### Programming procedure
+
+1. **Switch SW1 OFF** — disconnects the voltage divider so no voltage is
+   present on the BAT pin.
+2. **Connect the Aardvark** to the board's I2C header and apply power.
+3. **Verify / clear VOLTSEL** — run `bq_clear_voltsel.py` and confirm
+   VOLTSEL = 0 (INT):
+   ```
+   cd Programming/scripts
+   python bq_clear_voltsel.py
+   ```
+4. **Switch SW1 ON** — the BAT pin now receives the divided pack voltage
+   safely through the internal 5:1 divider.
+5. **Run board diagnostics** to confirm I2C communication with both the
+   INA226 and BQ34Z100-R2:
+   ```
+   python pcb_diagnostics.py
+   ```
+6. **Program battery parameters** (cell count, capacity, voltage divider
+   ratio, QMax):
+   ```
+   python bq_program_battery.py
+   ```
+7. **Program the LiFePO4 chemistry profile** (R_a resistance tables, design
+   parameters, voltage calibration using the INA226 as ground truth):
+   ```
+   python bq_program_chemistry.py
+   ```
+8. **Verify final readings** — re-run diagnostics and confirm that
+   `Voltage()`, SOC, and temperature are reporting sensible values:
+   ```
+   python pcb_diagnostics.py
+   ```
+
+### After programming
+
+- The chip seals itself automatically after each flash commit. Normal
+  operation does not require the device to be unsealed.
+- Configuration survives power cycles indefinitely — no reprogramming is
+  needed unless you want to change parameters.
+- SW1 can be left ON during normal operation; it only needs to be OFF as a
+  safety precaution when VOLTSEL state is unknown (e.g., on a brand-new or
+  factory-reset chip).
+- If voltage reads 0 mV after programming, run `bq_fix_vdivider.py` to
+  recalibrate the voltage divider using the INA226 as a reference.
+
+### Programming scripts reference
+
+| Script                    | Purpose                                          |
+|---------------------------|--------------------------------------------------|
+| `bq_clear_voltsel.py`    | Safety-clear VOLTSEL bit (run first on new chips)|
+| `pcb_diagnostics.py`     | Full I2C diagnostics for INA226 + BQ34Z100-R2    |
+| `bq_program_battery.py`  | Write design capacity, cell count, VD, QMax      |
+| `bq_program_chemistry.py`| LiFePO4 R_a tables + voltage calibration         |
+| `bq_fix_vdivider.py`     | Recalibrate voltage divider via INA226            |
+| `bq_calibrate.py`        | CC Gain / CC Delta calibration                   |
+| `bq_debug_voltage.py`    | Dump all registers for voltage debugging         |
+| `bq_full_reset.py`       | Factory reset the gauge                          |
+
 Battery Datasheets
 ------------------
 Reference documentation for the RBT2425LFP LiFePO4 battery:
