@@ -1,0 +1,25 @@
+** Drc report for Charge_Indicator.kicad_pcb **
+** Created on 2026-02-18T23:45:47-0500 **
+
+** Found 4 DRC violations **
+[shorting_items]: ２つのネットを短絡するアイテム (ネット GND と )
+    ローカル オーバーライド; error
+    @(160.0000 mm, 96.5000 mm): ビア [GND] (F.Cu - B.Cu 上)
+    @(160.0000 mm, 95.5000 mm): セグメント [<no net>] of NT1 、F.Cu 上
+[clearance]: クリアランス違反 (ネットクラス 'Default' クリアランス 0.2000 mm; 現状 0.0000 mm)
+    ルール: ネットクラス 'Default'; error
+    @(160.0000 mm, 96.5000 mm): パッド 2 [GND] - NT1 ( F.Cu 上)
+    @(160.0000 mm, 95.5000 mm): セグメント [<no net>] of NT1 、F.Cu 上
+[shorting_items]: ２つのネットを短絡するアイテム
+    ローカル オーバーライド; error
+    @(160.0000 mm, 95.5000 mm): セグメント [<no net>] of NT1 、F.Cu 上
+    @(160.0000 mm, 95.5000 mm): パッド 1 [AGND] - NT1 ( F.Cu 上)
+[footprint]: フットプリントが無効 (ネットタイのグループに未知のパッド番号 0 が含まれています)
+    ローカル オーバーライド; error
+    @(160.0000 mm, 96.0000 mm): フットプリント NT1
+
+** Found 0 unconnected pads **
+
+** Found 0 Footprint errors **
+
+** End of Report **

@@ -1565,6 +1565,127 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "NetTie_StarGround:NetTie_StarGround"
+			(exclude_from_sim yes)
+			(in_bom no)
+			(on_board yes)
+			(property "Reference" "NT"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "NetTie_StarGround"
+				(at 0 -5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "autonav_fp:NetTie_StarGround"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Net tie for star ground — joins two ground nets at a single point"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "net tie star ground AGND GND"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "NetTie_StarGround_0_1"
+				(polyline
+					(pts
+						(xy -2.54 0) (xy 2.54 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 0 0)
+					(radius 0.508)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "NetTie_StarGround_1_1"
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "R_2P_1"
 			(pin_numbers
 				(hide yes)
@@ -9292,7 +9413,7 @@
 	)
 	(text "Star Ground"
 		(exclude_from_sim no)
-		(at 117.094 116.078 0)
+		(at 117.094 112.268 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10400,6 +10521,16 @@
 	)
 	(wire
 		(pts
+			(xy 116.84 109.22) (xy 116.84 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "42fdb681-af7d-42a2-9f30-e07b00194a76")
+	)
+	(wire
+		(pts
 			(xy 179.07 157.48) (xy 179.07 156.21)
 		)
 		(stroke
@@ -10417,6 +10548,16 @@
 			(type default)
 		)
 		(uuid "459c5ff1-0fd4-4fd3-81c8-8af6e0757a1b")
+	)
+	(wire
+		(pts
+			(xy 127 116.84) (xy 127 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4628fbe4-ad69-4b6c-bc76-94938ee5bebe")
 	)
 	(wire
 		(pts
@@ -10617,6 +10758,26 @@
 			(type default)
 		)
 		(uuid "63d9d579-3e0d-4053-a8ce-d91fd44c78fc")
+	)
+	(wire
+		(pts
+			(xy 125.73 116.84) (xy 127 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6480a48a-b444-4ff7-b017-0c04fb373529")
+	)
+	(wire
+		(pts
+			(xy 118.11 116.84) (xy 116.84 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "650dcc75-282e-4d20-a3ac-18fec2584233")
 	)
 	(wire
 		(pts
@@ -11307,16 +11468,6 @@
 			(type default)
 		)
 		(uuid "aa92bb15-cce1-41c2-a9bd-6cbe6f7d1dc1")
-	)
-	(wire
-		(pts
-			(xy 118.11 116.84) (xy 125.73 116.84)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ac0d3e3f-c1f8-4562-b179-eda16922835a")
 	)
 	(wire
 		(pts
@@ -21491,6 +21642,74 @@
 			(project ""
 				(path "/ce5a45ab-8fc2-45f1-907f-8e7f414ac528"
 					(reference "D1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "NetTie_StarGround:NetTie_StarGround")
+		(at 121.92 109.22 0)
+		(unit 1)
+		(exclude_from_sim yes)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c876fe17-4282-47ac-8283-8b03348edbae")
+		(property "Reference" "NT1"
+			(at 121.92 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "NetTie_StarGround"
+			(at 121.92 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "autonav_fp:NetTie_StarGround"
+			(at 121.92 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 121.92 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Net tie for star ground — joins two ground nets at a single point"
+			(at 121.92 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "4a12b51c-f4c8-48b0-b465-e71cf29164a6")
+		)
+		(pin "1"
+			(uuid "af1b19f1-f63e-4d31-84f8-7243f46db6b2")
+		)
+		(instances
+			(project ""
+				(path "/ce5a45ab-8fc2-45f1-907f-8e7f414ac528"
+					(reference "NT1")
 					(unit 1)
 				)
 			)

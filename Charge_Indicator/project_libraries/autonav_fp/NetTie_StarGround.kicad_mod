@@ -1,0 +1,110 @@
+(footprint "NetTie_StarGround"
+	(version 20241229
+	)
+	(generator "pcbnew"
+	)
+	(generator_version "9.0"
+	)
+	(layer "F.Cu"
+	)
+	(descr "Net tie for star ground — two tiny SMD pads joined by copper trace on F.Cu"
+	)
+	(tags "net tie star ground"
+	)
+	(net_tie_pad_groups "1,2"
+	)
+	(attr smd exclude_from_pos_files exclude_from_bom)
+	(fp_text reference "NT1"
+		(at 0 -1.5 0)
+		(layer "F.SilkS"
+		)
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.15)
+			)
+		)
+		(uuid "a1b2c3d4-0001-0001-0001-000000000001")
+	)
+	(fp_text value "NetTie_StarGround"
+		(at 0 1.5 0)
+		(layer "F.Fab"
+		)
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.15)
+			)
+		)
+		(uuid "a1b2c3d4-0001-0001-0001-000000000002")
+	)
+	(fp_line
+		(start -1.0 -0.5)
+		(end 1.0 -0.5)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd"
+		)
+		(uuid "a1b2c3d4-0001-0001-0001-000000000003")
+	)
+	(fp_line
+		(start 1.0 -0.5)
+		(end 1.0 0.5)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd"
+		)
+		(uuid "a1b2c3d4-0001-0001-0001-000000000004")
+	)
+	(fp_line
+		(start 1.0 0.5)
+		(end -1.0 0.5)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd"
+		)
+		(uuid "a1b2c3d4-0001-0001-0001-000000000005")
+	)
+	(fp_line
+		(start -1.0 0.5)
+		(end -1.0 -0.5)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd"
+		)
+		(uuid "a1b2c3d4-0001-0001-0001-000000000006")
+	)
+	(pad "1" smd rect
+		(at -0.5 0)
+		(size 0.1 0.1)
+		(layers "F.Cu")
+		(clearance 0)
+		(uuid "a1b2c3d4-0001-0001-0001-000000000007")
+	)
+	(pad "2" smd rect
+		(at 0.5 0)
+		(size 0.1 0.1)
+		(layers "F.Cu")
+		(clearance 0)
+		(uuid "a1b2c3d4-0001-0001-0001-000000000008")
+	)
+	(fp_line
+		(start -0.5 0)
+		(end 0.5 0)
+		(stroke
+			(width 0.2)
+			(type default)
+		)
+		(layer "F.Cu"
+		)
+		(uuid "a1b2c3d4-0001-0001-0001-000000000009")
+	)
+)
