@@ -2178,6 +2178,164 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "R_2P_12"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "R"
+				(at 2.54 1.27 0)
+				(effects
+					(font
+						(face "Arial")
+						(size 2.1844 2.1844)
+						(thickness 0.15)
+						(bold yes)
+					)
+				)
+			)
+			(property "Value" "6.49kΩ"
+				(at 2.54 -3.81 0)
+				(effects
+					(font
+						(face "Arial")
+						(size 1.524 1.524)
+						(thickness 0.15)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Footprint" "wavenumber:R0603_0.55MM_HD"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(thickness 0.15)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(thickness 0.15)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(thickness 0.15)
+					)
+				)
+			)
+			(property "Internal Part Number" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Manufacturer" "Panasonic Electronic Components"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Manufacturer Part Number" "ERJ-3EKF6491V"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "cad-reference" "ERJ-3EKF6491V"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "flags" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "R_2P_12_1_0"
+				(polyline
+					(pts
+						(xy 7.62 0) (xy 6.604 0) (xy 6.35 -0.508) (xy 5.842 0.508) (xy 5.334 -0.508) (xy 4.826 0.508)
+						(xy 4.318 -0.508) (xy 3.81 0.508) (xy 3.556 0) (xy 2.54 0)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at 0 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 10.16 0 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "R_2P_2"
 			(pin_numbers
 				(hide yes)
@@ -3274,170 +3432,6 @@
 				)
 			)
 			(symbol "R_2P_8_1_0"
-				(polyline
-					(pts
-						(xy 7.62 0) (xy 6.604 0) (xy 6.35 -0.508) (xy 5.842 0.508) (xy 5.334 -0.508) (xy 4.826 0.508)
-						(xy 4.318 -0.508) (xy 3.81 0.508) (xy 3.556 0) (xy 2.54 0)
-					)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin passive line
-					(at 0 0 0)
-					(length 2.54)
-					(name "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 10.16 0 180)
-					(length 2.54)
-					(name "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "R_2P_9"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "R"
-				(at 2.54 1.27 0)
-				(effects
-					(font
-						(face "Arial")
-						(size 2.1844 2.1844)
-						(bold yes)
-					)
-				)
-			)
-			(property "Value" "34.8kΩ"
-				(at 2.54 -3.81 0)
-				(effects
-					(font
-						(face "Arial")
-						(size 1.524 1.524)
-					)
-					(justify left bottom)
-				)
-			)
-			(property "Footprint" "wavenumber:R0603_0.55MM_HD"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "RES 34.8K OHM 1/10W 1% 0603 SMD"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Internal Part Number" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Manufacturer" "Panasonic Electronic Components"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Manufacturer Part Number" "ERJ-3EKF3482V"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "cad-reference" "ERJ-3EKF3482V"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "flags" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "R_2P"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "R_2P_9_1_0"
 				(polyline
 					(pts
 						(xy 7.62 0) (xy 6.604 0) (xy 6.35 -0.508) (xy 5.842 0.508) (xy 5.334 -0.508) (xy 4.826 0.508)
@@ -12452,123 +12446,6 @@
 		(uuid "fc2676ef-f437-401c-9f38-687170880c0c")
 	)
 	(symbol
-		(lib_name "R_2P_9")
-		(lib_id "wn__wavenumber:R_2P")
-		(at 165.1 31.75 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "043fb65c-62f2-4d3c-9a7b-ac012e245436")
-		(property "Reference" "R30"
-			(at 160.02 25.4 0)
-			(effects
-				(font
-					(face "Arial")
-					(size 2.1844 2.1844)
-					(bold yes)
-				)
-			)
-		)
-		(property "Value" "34.8kΩ"
-			(at 160.02 29.21 0)
-			(effects
-				(font
-					(face "Arial")
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Footprint" "wavenumber:R0603_0.55MM_HD"
-			(at 165.1 31.75 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 165.1 31.75 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "RES 34.8K OHM 1/10W 1% 0603 SMD"
-			(at 165.1 31.75 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Internal Part Number" ""
-			(at 165.1 31.75 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" "Panasonic Electronic Components"
-			(at 165.1 31.75 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer Part Number" "ERJ-3EKF3482V"
-			(at 165.1 31.75 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "cad-reference" "ERJ-3EKF3482V"
-			(at 165.1 31.75 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "flags" ""
-			(at 165.1 31.75 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "c5a0019c-85c9-4950-8f2d-d8257aaca583")
-		)
-		(pin "2"
-			(uuid "caa0913f-071d-4a17-9e40-366edd31c463")
-		)
-		(instances
-			(project "Charge_Indicator"
-				(path "/ce5a45ab-8fc2-45f1-907f-8e7f414ac528"
-					(reference "R30")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "wn__wavenumber:fiducial")
 		(at 224.79 33.02 0)
 		(unit 1)
@@ -13628,125 +13505,6 @@
 		)
 	)
 	(symbol
-		(lib_name "R_2P_9")
-		(lib_id "wn__wavenumber:R_2P")
-		(at 146.05 57.15 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "171a86b3-3555-4196-9a65-c8d495d2a849")
-		(property "Reference" "R22"
-			(at 147.32 60.96 90)
-			(effects
-				(font
-					(face "Arial")
-					(size 2.1844 2.1844)
-					(bold yes)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "34.8kΩ"
-			(at 147.32 64.135 90)
-			(effects
-				(font
-					(face "Arial")
-					(size 1.524 1.524)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "wavenumber:R0603_0.55MM_HD"
-			(at 146.05 57.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 146.05 57.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "RES 34.8K OHM 1/10W 1% 0603 SMD"
-			(at 146.05 57.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Internal Part Number" ""
-			(at 146.05 57.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" "Panasonic Electronic Components"
-			(at 146.05 57.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer Part Number" "ERJ-3EKF3482V"
-			(at 146.05 57.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "cad-reference" "ERJ-3EKF3482V"
-			(at 146.05 57.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "flags" ""
-			(at 146.05 57.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "e0c1bc55-24a4-4f2f-93b7-d58d20b84b09")
-		)
-		(pin "2"
-			(uuid "f803ee18-e9bc-459e-8d52-61b29348da8d")
-		)
-		(instances
-			(project ""
-				(path "/ce5a45ab-8fc2-45f1-907f-8e7f414ac528"
-					(reference "R22")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "INA226:INA226")
 		(at 90.17 40.64 180)
 		(unit 1)
@@ -14500,6 +14258,126 @@
 			(project ""
 				(path "/ce5a45ab-8fc2-45f1-907f-8e7f414ac528"
 					(reference "R19")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_name "R_2P_12")
+		(lib_id "wn__wavenumber:R_2P")
+		(at 154.94 31.75 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2d9b2569-22d1-4dbd-88c4-2658a8a969b5")
+		(property "Reference" "R30"
+			(at 160.02 25.4 0)
+			(effects
+				(font
+					(face "Arial")
+					(size 2.1844 2.1844)
+					(thickness 0.15)
+					(bold yes)
+				)
+			)
+		)
+		(property "Value" "6.49kΩ"
+			(at 160.02 29.21 0)
+			(effects
+				(font
+					(face "Arial")
+					(size 1.524 1.524)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Footprint" "wavenumber:R0603_0.55MM_HD"
+			(at 154.94 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 154.94 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 154.94 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Internal Part Number" ""
+			(at 154.94 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Panasonic Electronic Components"
+			(at 154.94 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Part Number" "ERJ-3EKF6491V"
+			(at 154.94 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "cad-reference" "ERJ-3EKF6491V"
+			(at 154.94 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "flags" ""
+			(at 154.94 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c000b4a9-5eb1-410a-b263-b937e08fd246")
+		)
+		(pin "2"
+			(uuid "ecfe2815-bd12-4e9f-a642-cb897ce5b957")
+		)
+		(instances
+			(project "Charge_Indicator"
+				(path "/ce5a45ab-8fc2-45f1-907f-8e7f414ac528"
+					(reference "R30")
 					(unit 1)
 				)
 			)
@@ -16017,6 +15895,128 @@
 			(project "Charge_Indicator"
 				(path "/ce5a45ab-8fc2-45f1-907f-8e7f414ac528"
 					(reference "R20")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_name "R_2P_12")
+		(lib_id "wn__wavenumber:R_2P")
+		(at 146.05 57.15 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "517346b4-9d36-4569-ba81-fc352d73c08b")
+		(property "Reference" "R22"
+			(at 147.32 60.96 90)
+			(effects
+				(font
+					(face "Arial")
+					(size 2.1844 2.1844)
+					(thickness 0.15)
+					(bold yes)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "6.49kΩ"
+			(at 147.32 64.135 90)
+			(effects
+				(font
+					(face "Arial")
+					(size 1.524 1.524)
+					(thickness 0.15)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "wavenumber:R0603_0.55MM_HD"
+			(at 146.05 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 146.05 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 146.05 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Internal Part Number" ""
+			(at 146.05 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Panasonic Electronic Components"
+			(at 146.05 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Part Number" "ERJ-3EKF6491V"
+			(at 146.05 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "cad-reference" "ERJ-3EKF6491V"
+			(at 146.05 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "flags" ""
+			(at 146.05 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "863d4cbd-f1e2-4d6a-aba0-2be76e307912")
+		)
+		(pin "2"
+			(uuid "71d71fd2-d39c-445e-a032-b28ca93f8392")
+		)
+		(instances
+			(project ""
+				(path "/ce5a45ab-8fc2-45f1-907f-8e7f414ac528"
+					(reference "R22")
 					(unit 1)
 				)
 			)
