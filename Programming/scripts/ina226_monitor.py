@@ -1,8 +1,14 @@
 """INA226 Real-Time Monitor GUI
 Displays bus voltage, current, and power from the INA226 (U3)
 using the Aardvark I2C adapter with oscilloscope-style rolling plots.
+
+Sampling runs in a dedicated thread at maximum I2C speed (~500+ Hz at
+400 kHz fast-mode).  The GUI refreshes at 20 Hz and shows the last
+HISTORY samples.  Every sample is logged to a timestamped CSV in
+the outputs/ folder.
 """
-import sys, os
+import sys, os, csv, time, threading
+from datetime import datetime
 sys.path.insert(0, os.path.join(os.path.dirname(__file__),
                                 "aardvark-api-macos-arm64-v6.00", "python"))
 from aardvark_py import *
@@ -12,18 +18,23 @@ from collections import deque
 
 # --- INA226 constants ---
 INA  = 0x40
+REG_CONFIG  = 0x00
 REG_BUS_V   = 0x02
 REG_POWER   = 0x03
 REG_CURRENT = 0x04
 REG_CAL     = 0x05
 
-R_SHUNT      = 0.010        # 10 mΩ
-CURRENT_LSB  = 0.00025      # 250 µA/bit
+R_SHUNT      = 0.010        # 10 mOhm
+CURRENT_LSB  = 0.00025      # 250 uA/bit
 POWER_LSB    = 25 * CURRENT_LSB  # 6.25 mW/bit
 CAL_VALUE    = int(0.00512 / (CURRENT_LSB * R_SHUNT))  # 2048
 
-POLL_MS    = 250   # refresh interval (ms)
-HISTORY    = 200   # number of samples visible on screen
+# INA226 config: AVG=1, VBUSCT=140us, VSHCT=140us, continuous shunt+bus
+# Bits: 0 100 000 000 000 111 = 0x4007
+CONFIG_FAST  = 0x4007
+
+GUI_MS     = 50    # GUI refresh interval (ms) — 20 Hz display
+HISTORY    = 500   # samples shown on plot (~1 s at 500 Hz)
 PLOT_W     = 600   # plot canvas width (px)
 PLOT_H     = 120   # plot canvas height (px)
 GRID_LINES = 4     # horizontal grid divisions
@@ -58,14 +69,88 @@ if handle <= 0:
     print(f"ERROR: Cannot open Aardvark (error {handle})")
     sys.exit(1)
 aa_configure(handle, AA_CONFIG_SPI_I2C)
-aa_i2c_bitrate(handle, 100)
+actual_bitrate = aa_i2c_bitrate(handle, 400)   # 400 kHz fast-mode
+print(f"I2C bitrate set to {actual_bitrate} kHz")
 aa_target_power(handle, AA_TARGET_POWER_BOTH)
 aa_sleep_ms(200)
+
+# Configure for fastest conversion (140us bus + shunt, no averaging)
+cfg_msb = (CONFIG_FAST >> 8) & 0xFF
+cfg_lsb = CONFIG_FAST & 0xFF
+aa_i2c_write(handle, INA, AA_I2C_NO_FLAGS,
+             array('B', [REG_CONFIG, cfg_msb, cfg_lsb]))
 
 cal_msb = (CAL_VALUE >> 8) & 0xFF
 cal_lsb = CAL_VALUE & 0xFF
 aa_i2c_write(handle, INA, AA_I2C_NO_FLAGS,
              array('B', [REG_CAL, cal_msb, cal_lsb]))
+
+# --- CSV logging (deferred until sample rate is measured) ---
+out_base = os.path.join(os.path.dirname(__file__), "..", "outputs")
+csv_file   = None
+csv_writer = None
+csv_path   = None
+t_start    = time.time()
+
+# --- Shared state between sampling thread and GUI ---
+buf_lock   = threading.Lock()
+buf_samples = []        # list of (v, i, p) accumulated between GUI frames
+sample_count = 0        # total samples taken (for rate calc)
+sampling   = True       # flag to stop the thread
+
+
+def _open_csv(rate_hz):
+    """Create the rate-named subfolder and open the CSV file."""
+    global csv_file, csv_writer, csv_path
+    folder = os.path.join(out_base, f"{rate_hz}hz")
+    os.makedirs(folder, exist_ok=True)
+    csv_name = datetime.now().strftime("ina226_%Y%m%d_%H%M%S.csv")
+    csv_path = os.path.join(folder, csv_name)
+    csv_file = open(csv_path, "w", newline="")
+    csv_writer = csv.writer(csv_file)
+    csv_writer.writerow(["timestamp", "voltage_V", "current_A", "power_W"])
+    print(f"Logging to {csv_path}")
+
+
+def sample_loop():
+    """Tight loop — reads all 3 registers back-to-back, writes CSV."""
+    global sample_count
+    warmup_start = time.time()
+    warmup_count = 0
+    csv_ready = False
+    pending_rows = []      # buffer rows during warm-up
+
+    while sampling:
+        raw_v = read_u16(handle, INA, REG_BUS_V)
+        raw_i = read_s16(handle, INA, REG_CURRENT)
+        raw_p = read_u16(handle, INA, REG_POWER)
+
+        v = raw_v * 1.25e-3 if raw_v is not None else None
+        i = raw_i * CURRENT_LSB if raw_i is not None else None
+        p = raw_p * POWER_LSB if raw_p is not None else None
+
+        ts = time.time() - t_start
+        row = [f"{ts:.4f}",
+               f"{v:.4f}" if v is not None else "",
+               f"{i:.5f}" if i is not None else "",
+               f"{p:.3f}" if p is not None else ""]
+
+        if not csv_ready:
+            pending_rows.append(row)
+            warmup_count += 1
+            if time.time() - warmup_start >= 1.0:
+                rate = int(round(warmup_count / (time.time() - warmup_start)))
+                _open_csv(rate)
+                for r in pending_rows:
+                    csv_writer.writerow(r)
+                pending_rows = None
+                csv_ready = True
+        else:
+            csv_writer.writerow(row)
+
+        with buf_lock:
+            buf_samples.append((v, i, p))
+            sample_count += 1
 
 
 # --- GUI ---
@@ -80,6 +165,7 @@ FGDM     = "#888888"
 FONT_LBL = ("Menlo", 12)
 FONT_VAL = ("Menlo", 22, "bold")
 FONT_AX  = ("Menlo", 9)
+FONT_RATE = ("Menlo", 10)
 
 PAD   = 40   # left margin for axis labels
 PAD_R = 10   # right margin
@@ -122,7 +208,7 @@ class Trace:
             c.create_line(PAD, y, PAD + PLOT_W, y, fill=GRID_CLR)
             val = self.y_max - i * (self.y_max - self.y_min) / GRID_LINES
             c.create_text(PAD - 4, y, text=f"{val:{self.fmt}}",
-                          anchor="e", fill=FGDM, font=FONT_AX)
+                          anchor="e", fill=FGDM, font=FONT_AX, tags="axlbl")
         # vertical border
         c.create_line(PAD, 0, PAD, PLOT_H, fill=GRID_CLR)
 
@@ -177,29 +263,63 @@ tr_v = Trace(frame, 0, "Voltage", "V",  "#4fc3f7", 20.0, 30.0, ".2f")
 tr_i = Trace(frame, 1, "Current", "A",  "#aed581",  0.0,  3.0, ".3f")
 tr_p = Trace(frame, 2, "Power",   "W",  "#ffb74d",  0.0, 80.0, ".1f")
 
+# sample-rate label at the bottom
+rate_lbl = tk.Label(frame, text="0 Hz", font=FONT_RATE, fg=FGDM, bg=BG)
+rate_lbl.grid(row=6, column=0, sticky="e", padx=(0, 18), pady=(6, 0))
 
-def poll():
-    raw_v = read_u16(handle, INA, REG_BUS_V)
-    raw_i = read_s16(handle, INA, REG_CURRENT)
-    raw_p = read_u16(handle, INA, REG_POWER)
+last_rate_time  = time.time()
+last_rate_count = 0
 
-    tr_v.push(raw_v * 1.25e-3 if raw_v is not None else None)
-    tr_i.push(raw_i * CURRENT_LSB if raw_i is not None else None)
-    tr_p.push(raw_p * POWER_LSB if raw_p is not None else None)
+
+def update_gui():
+    """Drain sample buffer into traces and redraw (called at 20 Hz)."""
+    global last_rate_time, last_rate_count
+
+    with buf_lock:
+        new_samples = list(buf_samples)
+        buf_samples.clear()
+        total = sample_count
+
+    for v, i, p in new_samples:
+        tr_v.push(v)
+        tr_i.push(i)
+        tr_p.push(p)
 
     tr_v.redraw()
     tr_i.redraw()
     tr_p.redraw()
 
-    root.after(POLL_MS, poll)
+    # Update rate display every ~1 s
+    now = time.time()
+    dt = now - last_rate_time
+    if dt >= 1.0:
+        rate = (total - last_rate_count) / dt
+        rate_lbl.config(text=f"{rate:.0f} Hz")
+        last_rate_time  = now
+        last_rate_count = total
+
+    root.after(GUI_MS, update_gui)
 
 
 def on_close():
+    global sampling
+    sampling = False
+    sample_thread.join(timeout=1.0)
+    elapsed = time.time() - t_start
+    if csv_file is not None:
+        csv_file.close()
+        print(f"CSV saved: {csv_path}")
+        print(f"  {sample_count} samples in {elapsed:.1f}s "
+              f"({sample_count/elapsed:.0f} Hz avg)")
     aa_target_power(handle, AA_TARGET_POWER_NONE)
     aa_close(handle)
     root.destroy()
 
 
 root.protocol("WM_DELETE_WINDOW", on_close)
-poll()
+
+# Start sampling thread, then GUI loop
+sample_thread = threading.Thread(target=sample_loop, daemon=True)
+sample_thread.start()
+update_gui()
 root.mainloop()
