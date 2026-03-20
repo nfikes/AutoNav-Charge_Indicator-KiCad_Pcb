@@ -19,6 +19,9 @@ Parameters programmed:
   SC 82  offset 0-1:   QMax Cell 0      = 25000 mAh
   SC 104 offset 14-15: Voltage Divider  = 5000 (calibrate with Ralim method)
 """
+import sys, os
+sys.path.insert(0, os.path.join(os.path.dirname(__file__),
+                                "aardvark-api-macos-arm64-v6.00", "python"))
 from aardvark_py import *
 from array import array
 import struct

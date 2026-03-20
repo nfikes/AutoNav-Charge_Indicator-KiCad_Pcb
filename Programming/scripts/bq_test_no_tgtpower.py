@@ -5,6 +5,9 @@ through internal protection diodes, overriding the 2.5V regulator
 and corrupting the ADC reference. Running with target power OFF lets
 the IC power itself from BAT alone.
 """
+import sys, os
+sys.path.insert(0, os.path.join(os.path.dirname(__file__),
+                                "aardvark-api-macos-arm64-v6.00", "python"))
 from aardvark_py import *
 from array import array
 

@@ -1092,6 +1092,25 @@ def main():
     # Phase 6: Final verification
     all_ok = phase6_verify(handle)
 
+    # Restore Flash Update OK Voltage to 2800 mV (Phase 3 Step 2 may have set it to 0)
+    print("Restoring Flash Update OK Voltage to 2800 mV...")
+    unseal_fa(handle)
+    blk68 = read_block(handle, 68)
+    if blk68:
+        fuv = (blk68[0] << 8) | blk68[1]
+        if fuv != 2800:
+            ok = write_and_verify(handle, 68, [(0, u16_be(2800))])
+            if ok:
+                print(f"  Restored: {fuv} -> 2800 mV")
+            else:
+                print(f"  WARNING: Failed to restore Flash Update OK Voltage!")
+                all_ok = False
+        else:
+            print(f"  Already 2800 mV.")
+    else:
+        print("  WARNING: Could not read SC 68!")
+        all_ok = False
+
     # Seal and close
     print("Sealing gauge...")
     unseal_fa(handle)  # need to be unsealed to send seal command

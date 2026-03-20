@@ -19,6 +19,9 @@ Recovery strategies attempted here (in order):
 IMPORTANT: Before running, disconnect ALL power (supply + Aardvark USB) for
 60+ seconds to drain all capacitors, then reconnect.
 """
+import sys, os
+sys.path.insert(0, os.path.join(os.path.dirname(__file__),
+                                "aardvark-api-macos-arm64-v6.00", "python"))
 from aardvark_py import *
 from array import array
 import struct
@@ -316,8 +319,8 @@ if not recovered:
         if recovered:
             print("\n  *** RECOVERED via Flash Update OK Voltage = 0! ***")
 
-        # Restore Flash Update OK Voltage to 2800 regardless
-        if fu_v != 0 and not recovered:
+        # Always restore Flash Update OK Voltage to 2800 mV
+        if fu_v != 0:
             print("\n  Restoring Flash Update OK Voltage to 2800 mV...")
             unseal_fa()
             blk68 = read_block(68)

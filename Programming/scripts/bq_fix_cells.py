@@ -3,6 +3,9 @@
 All SC 64 writes enforce VOLTSEL=1, which is the correct setting for the
 Rev 4+ voltage divider (R22=6.49kOhm, BAT pin stays below 1V at 30V max).
 """
+import sys, os
+sys.path.insert(0, os.path.join(os.path.dirname(__file__),
+                                "aardvark-api-macos-arm64-v6.00", "python"))
 from aardvark_py import *
 from array import array
 import struct

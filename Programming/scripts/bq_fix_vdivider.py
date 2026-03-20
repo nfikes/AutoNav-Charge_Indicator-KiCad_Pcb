@@ -4,6 +4,9 @@ The VD=844 value caused per-cell voltage below gauge minimum threshold.
 Need to find the correct VD empirically using the Ralim calibration approach:
   newVD = (actualVoltage / reportedVoltage) * currentVD
 """
+import sys, os
+sys.path.insert(0, os.path.join(os.path.dirname(__file__),
+                                "aardvark-api-macos-arm64-v6.00", "python"))
 from aardvark_py import *
 from array import array
 import struct
