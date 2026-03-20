@@ -34,11 +34,9 @@ DESIGN_CAPACITY  = 25000   # mAh
 DESIGN_ENERGY    = 64000   # mWh (with EnergyScale=10 -> 640 Wh)
 QMAX             = 25000   # mAh
 
-# Voltage divider: R27=200k (top), R22=34.8k (bottom)
-# Full ratio = (200+34.8)/34.8 = 6.7471
-# BQ34Z100-R2 VD = ratio * 1000 / NumCells = 6747 / 8 = 843
-# BUT: the /NumCells is ONLY correct when the gauge multiplies
-# Voltage() by cells internally.  We'll calibrate empirically.
+# Voltage divider: R27=200k (top), R22=6.49k (bottom)
+# Full ratio = (200+6.49)/6.49 = 31.82
+# VD must be calibrated empirically (Ralim method), not calculated.
 VD_INITIAL       = 5000    # Start with this (known to give readings)
 
 # LiFePO4 R_a resistance tables (milliohms per cell at 15 SOC grid points)
@@ -231,10 +229,11 @@ def hex_dump(data, n=32):
 
 
 def write_sc64_safe(handle, extra_mods):
-    """Write SC 64 with VOLTSEL=0 unconditionally enforced.
+    """Write SC 64 with VOLTSEL=1 unconditionally enforced.
 
     extra_mods: list of (offset, [bytes]) for fields OTHER than Pack Config.
-    Pack Config (offsets 0-1) is always read, bit 3 cleared, and written back.
+    Pack Config (offsets 0-1) is always read, bit 3 set, and written back.
+    VOLTSEL=1 is the correct setting for the Rev 4+ divider (R22=6.49kOhm).
     Returns True on success.
     """
     unseal_fa(handle)
@@ -243,7 +242,7 @@ def write_sc64_safe(handle, extra_mods):
         print("    SC 64 read failed")
         return False
     pc = (blk[0] << 8) | blk[1]
-    pc_safe = pc & ~0x0008  # Clear VOLTSEL (bit 3) — ALWAYS
+    pc_safe = pc | 0x0008  # Set VOLTSEL (bit 3) — ALWAYS
     mods = [(0, [(pc_safe >> 8) & 0xFF, pc_safe & 0xFF])] + list(extra_mods)
 
     modified = list(blk)
@@ -281,8 +280,8 @@ def write_sc64_safe(handle, extra_mods):
                 return False
     # Final paranoid VOLTSEL check
     pc_v = (verify[0] << 8) | verify[1]
-    if pc_v & 0x0008:
-        print("    CRITICAL: VOLTSEL=1 after verified write — aborting!")
+    if not (pc_v & 0x0008):
+        print("    WARNING: VOLTSEL=0 after verified write — suboptimal resolution.")
         return False
     return True
 
@@ -563,11 +562,11 @@ def phase3_voltage_recovery(handle):
     print()
     print("  STEP 1: Set cells=1, VD=5000 (safe defaults)...")
 
-    # Write cells=1 (VOLTSEL=0 enforced)
+    # Write cells=1 (VOLTSEL=1 enforced via write_sc64_safe)
     unseal_fa(handle)
     blk64 = read_block(handle, 64)
     if blk64 and blk64[7] != 1:
-        print(f"    Setting cells: {blk64[7]} -> 1 (VOLTSEL=0 enforced)")
+        print(f"    Setting cells: {blk64[7]} -> 1 (VOLTSEL=1 enforced)")
         write_sc64_safe(handle, [(7, [1])])
     elif blk64:
         print(f"    Cells already 1")
@@ -693,20 +692,19 @@ def phase3_voltage_recovery(handle):
         print(f"    Voltage recovered via BAT_INSERT!")
         return v, ina_v
 
-    # ----- STEP 6: Verify VOLTSEL=0 (SAFETY) -----
-    # VOLTSEL must NEVER be set to 1 on this board — it bypasses the
-    # internal 5:1 divider and exposes the ADC to >1 V, destroying
-    # analog front-end measurements.
+    # ----- STEP 6: Verify VOLTSEL=1 -----
+    # VOLTSEL=1 is the correct setting for the Rev 4+ voltage divider.
+    # With R22=6.49kOhm, BAT pin stays below 1V at 30V max.
     print()
-    print("  STEP 6: Verify VOLTSEL=0 and reset...")
-    # Use safe helper — always enforces VOLTSEL=0 regardless of current state
+    print("  STEP 6: Verify VOLTSEL=1 and reset...")
+    # Use safe helper — always enforces VOLTSEL=1
     ok = write_sc64_safe(handle, [])
     if ok:
         unseal_fa(handle)
         blk64_check = read_block(handle, 64)
         if blk64_check:
             pc = (blk64_check[0] << 8) | blk64_check[1]
-            print(f"    VOLTSEL=0 enforced (PackConfig=0x{pc:04X})")
+            print(f"    VOLTSEL=1 enforced (PackConfig=0x{pc:04X})")
 
         reset_and_wake(handle, 5)
         v_int = read_std(handle, 0x0A)
@@ -931,11 +929,11 @@ def phase5_cells_and_vd(handle, bq_v, ina_v):
                 return False
     else:
         print(f"  No valid voltage reading available for calibration.")
-        print(f"  Setting cells={NUM_CELLS} and VD=844 (calculated)...")
+        print(f"  Setting cells={NUM_CELLS} and VD={VD_INITIAL} (default)...")
         unseal_fa(handle)
         write_sc64_safe(handle, [(7, [NUM_CELLS])])
         unseal_fa(handle)
-        write_and_verify(handle, 104, [(14, u16_be(844))])
+        write_and_verify(handle, 104, [(14, u16_be(VD_INITIAL))])
         unseal_fa(handle)
         send_control(handle, 0x0021)  # IT_ENABLE
         aa_sleep_ms(1000)

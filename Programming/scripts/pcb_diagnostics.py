@@ -753,15 +753,14 @@ def bq34z100_calibrate(handle):
               f"VOLTSEL={'EXT' if voltsel_bit else 'INT'})")
         _hex_dump(pack_cfg_block[:8], "    ")
 
-        # SAFETY: VOLTSEL must NEVER be 1 on this board.
-        # With VOLTSEL=1 the internal 5:1 divider is bypassed and the
-        # external divider puts ~3.8V on the ADC (max 1V), killing it.
+        # VOLTSEL=1 is the correct setting for the Rev 4+ voltage divider.
+        # With R22=6.49kOhm, BAT pin stays below 1V at 30V max, so
+        # bypassing the internal 5:1 divider gives best ADC resolution.
         needs_fix = False
         new_cfg = pack_cfg
-        if voltsel_bit:
-            new_cfg = new_cfg & ~0x0008  # Clear VOLTSEL
-            print(f"  WARNING: VOLTSEL=1 detected — DANGEROUS on this board!")
-            print(f"  Clearing VOLTSEL to protect ADC...")
+        if not voltsel_bit:
+            new_cfg = new_cfg | 0x0008  # Set VOLTSEL
+            print(f"  VOLTSEL=0 detected — setting to 1 for best ADC resolution.")
             needs_fix = True
         if rsns_bit:
             new_cfg = new_cfg & ~0x0080  # Clear RSNS
@@ -778,7 +777,7 @@ def bq34z100_calibrate(handle):
             else:
                 print("  Pack Config fix: FAILED")
         else:
-            print("  RSNS=LOW, VOLTSEL=INT — no change needed.")
+            print("  RSNS=LOW, VOLTSEL=EXT — no change needed.")
 
     # ---- CC Gain and CC Delta (subclass 104) ----
     # Re-unseal (writes to Control reg 0x00 interfere with DF block context,

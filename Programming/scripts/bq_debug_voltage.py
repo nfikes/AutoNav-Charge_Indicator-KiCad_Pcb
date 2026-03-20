@@ -154,11 +154,8 @@ if blk64:
     pc = (blk64[0] << 8) | blk64[1]
     cells = blk64[7]
     voltsel = bool(pc & 0x0008)
-    print(f"  Pack Config: 0x{pc:04X} (VOLTSEL={voltsel})")
-    if voltsel:
-        print(f"  *** WARNING: VOLTSEL=1 is DANGEROUS on this board! ***")
-        print(f"  *** It bypasses the internal 5:1 divider, exposing ADC to >1V. ***")
-        print(f"  *** Run pcb_diagnostics.py to auto-correct this. ***")
+    print(f"  Pack Config: 0x{pc:04X} (VOLTSEL={int(voltsel)} "
+          f"{'EXT — correct' if voltsel else 'INT — suboptimal'})")
     print(f"  Cell Count : {cells}")
     print(f"  Block: {' '.join(f'{b:02X}' for b in blk64[:16])}")
 

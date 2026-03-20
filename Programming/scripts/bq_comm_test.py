@@ -1,8 +1,16 @@
-"""BQ34Z100-R2 Communication Test + VOLTSEL Safety Check — Rev 3 PCB
+"""BQ34Z100-R2 Communication Test + Config Verification
 
 Phase 1: Read standard SBS registers to verify I2C communication.
-Phase 2: Unseal, read Pack Config (SC 64), verify VOLTSEL=0.
-         If VOLTSEL=1, automatically clear it to protect the ADC.
+Phase 2: Unseal, read Pack Config (SC 64), verify VOLTSEL=1 and RSNS=LOW.
+         If config is wrong, automatically correct it.
+Phase 3: RESET + power cycle to ensure running firmware loads new config.
+         Re-verify from flash after reboot.
+
+Rev 4+ voltage divider (R27=200kOhm, R22=6.49kOhm, ratio=31.82) keeps
+BAT pin below 1V at maximum pack voltage (30V), so both VOLTSEL states
+are safe. VOLTSEL=1 (factory default) is the correct setting — it
+bypasses the internal 5:1 divider for best ADC resolution.
+
 Does NOT calibrate or modify any other parameters.
 """
 import sys, os
@@ -142,6 +150,37 @@ def write_df_block_and_verify(handle, subclass, original, modifications, block=0
     return True
 
 
+def reset_and_power_cycle(handle):
+    """Send RESET command + power cycle to force firmware to reload from flash.
+
+    Flash commits do NOT update running firmware. A RESET is required
+    after changing Pack Config so the new values take effect.
+    """
+    print("  Sending RESET command (Control 0x0041)...")
+    aa_i2c_write(handle, BQ, AA_I2C_NO_FLAGS, array('B', [0x00, 0x41, 0x00]))
+    aa_sleep_ms(1000)
+
+    print("  Power cycling (target power off/on)...")
+    aa_target_power(handle, AA_TARGET_POWER_NONE)
+    aa_sleep_ms(2000)
+    aa_target_power(handle, AA_TARGET_POWER_BOTH)
+    aa_sleep_ms(2000)
+
+    # Wait for chip to come back
+    print("  Waiting for chip to reboot...")
+    for attempt in range(10):
+        aa_i2c_write(handle, BQ, AA_I2C_NO_FLAGS, array('B', [0x61, 0x00]))
+        aa_sleep_ms(500)
+        aa_i2c_write(handle, BQ, AA_I2C_NO_STOP, array('B', [0x0A]))
+        (rc, _) = aa_i2c_read(handle, BQ, AA_I2C_NO_FLAGS, 2)
+        if rc == 2:
+            print(f"  Chip back online (attempt {attempt + 1})")
+            return True
+
+    print("  WARNING: Chip did not respond after reset + power cycle")
+    return False
+
+
 def seal(handle):
     """Send Seal command (Control 0x0020)."""
     aa_i2c_write(handle, BQ, AA_I2C_NO_FLAGS, array('B', [0x00, 0x20, 0x00]))
@@ -156,9 +195,9 @@ def cleanup(handle):
 # ==================================================================
 #  PHASE 1 — Basic I2C Communication Check
 # ==================================================================
-print("=" * 58)
-print("  BQ34Z100-R2 Comm Test + VOLTSEL Safety — Rev 3 PCB")
-print("=" * 58)
+print("=" * 62)
+print("  BQ34Z100-R2 Comm Test + Config Verification")
+print("=" * 62)
 
 handle = aa_open(0)
 if handle <= 0:
@@ -227,7 +266,7 @@ if any_ack:
             print("    (no flags set)")
 
 if not any_ack:
-    print("\n" + "=" * 58)
+    print("\n" + "=" * 62)
     print("RESULT: BQ34Z100-R2 NOT responding — no ACK at 0x55")
     print("  Check: Is BAT pin powered? Solder joints OK?")
     aa_target_power(handle, AA_TARGET_POWER_NONE)
@@ -237,9 +276,9 @@ if not any_ack:
 print("\n  Phase 1 PASS — communication OK")
 
 # ==================================================================
-#  PHASE 2 — VOLTSEL Safety Check (unseal + read SC 64)
+#  PHASE 2 — Config Verification (unseal + read SC 64)
 # ==================================================================
-print(f"\n--- Phase 2: VOLTSEL Safety Check ---")
+print(f"\n--- Phase 2: Config Verification (VOLTSEL + RSNS) ---")
 
 print("  Waking (DF-safe)...")
 if not wake(handle):
@@ -260,7 +299,7 @@ if blk64 is None:
 
 if blk64 is None:
     print("  SC 64 read FAILED on retry — cannot verify VOLTSEL")
-    print("  *** PROCEED WITH EXTREME CAUTION ***")
+    print("  *** DO NOT ENABLE VOLTAGE DIVIDER ***")
     cleanup(handle)
     sys.exit(1)
 
@@ -269,39 +308,119 @@ voltsel = bool(pack_config & 0x0008)   # bit 3
 cell_count = blk64[7]
 
 print(f"  Pack Config : 0x{pack_config:04X}")
-print(f"  VOLTSEL     : {int(voltsel)} ({'EXT — DANGEROUS!' if voltsel else 'INT — safe'})")
+rsns = bool(pack_config & 0x0080)   # bit 7
+print(f"  VOLTSEL     : {int(voltsel)} ({'EXT (correct)' if voltsel else 'INT (not optimal)'})")
+print(f"  RSNS        : {'HIGH' if rsns else 'LOW'} side")
 print(f"  Cell Count  : {cell_count}")
 
-if voltsel:
+config_was_changed = False
+new_config = pack_config
+
+# VOLTSEL=1 is the correct setting for the Rev 4+ voltage divider.
+# With R22=6.49kOhm, BAT pin stays below 1V at 30V max, so bypassing
+# the internal 5:1 divider (VOLTSEL=1) gives the best ADC resolution.
+if not voltsel:
     print()
-    print("  !!! VOLTSEL=1 DETECTED — AUTO-CLEARING TO PROTECT ADC !!!")
-    pc_safe = pack_config & ~0x0008
-    print(f"  Pack Config: 0x{pack_config:04X} -> 0x{pc_safe:04X}")
+    print("  VOLTSEL=0 detected — setting to 1 for best ADC resolution.")
+    new_config = new_config | 0x0008  # Set VOLTSEL
+    config_was_changed = True
+
+# RSNS must be LOW for low-side current sensing (R26).
+if rsns:
+    print("  RSNS=HIGH detected — setting to LOW for low-side sensing.")
+    new_config = new_config & ~0x0080  # Clear RSNS
+    config_was_changed = True
+
+if config_was_changed:
+    print(f"  Pack Config: 0x{pack_config:04X} -> 0x{new_config:04X}")
 
     unseal_fa(handle)
     fresh = read_df_block(handle, 64)
     if fresh is None:
-        print("  Fresh read failed — ABORTING (do NOT power bus voltage!)")
+        print("  Fresh read failed — ABORTING.")
         cleanup(handle)
         sys.exit(1)
 
     ok = write_df_block_and_verify(handle, 64, fresh, [
-        (0, [(pc_safe >> 8) & 0xFF, pc_safe & 0xFF]),
+        (0, [(new_config >> 8) & 0xFF, new_config & 0xFF]),
     ])
     if ok:
-        print("  VOLTSEL cleared and VERIFIED — ADC is safe.")
+        print("  Config written to flash and VERIFIED.")
     else:
-        print("  *** VOLTSEL CLEAR FAILED — do NOT power bus voltage! ***")
+        print("  *** CONFIG WRITE FAILED ***")
         cleanup(handle)
         sys.exit(1)
 else:
-    print("\n  VOLTSEL=0 confirmed — ADC is safe.")
+    print("\n  VOLTSEL=1, RSNS=LOW — config correct, no change needed.")
+
+# ==================================================================
+#  PHASE 3 — RESET + Power Cycle + Re-Verify
+#
+#  Flash commits do NOT update the running firmware.
+#  The chip must be reset so it reloads Pack Config from flash
+#  into RAM.
+# ==================================================================
+print(f"\n--- Phase 3: Reset + Reload + Re-Verify ---")
+
+if config_was_changed:
+    print()
+    print("  Config was changed — reset required for new values to take effect.")
+
+print()
+if not reset_and_power_cycle(handle):
+    print("  *** RESET FAILED ***")
+    print("  Try disconnecting and reconnecting the Aardvark, then re-run.")
+    aa_target_power(handle, AA_TARGET_POWER_NONE)
+    aa_close(handle)
+    sys.exit(1)
+
+# Re-unseal after reboot
+print("  Re-unsealing after reboot...")
+unseal_fa(handle)
+
+# Re-read SC 64 from flash to confirm config survived the reset
+print("  Re-reading Pack Config after reset...")
+blk64_post = read_df_block(handle, 64)
+if blk64_post is None:
+    print("  SC 64 read FAILED after reset")
+    print("  Retrying...")
+    unseal_fa(handle)
+    blk64_post = read_df_block(handle, 64)
+
+if blk64_post is None:
+    print("  *** CANNOT VERIFY CONFIG AFTER RESET ***")
+    cleanup(handle)
+    sys.exit(1)
+
+pc_post = (blk64_post[0] << 8) | blk64_post[1]
+voltsel_post = bool(pc_post & 0x0008)
+rsns_post = bool(pc_post & 0x0080)
+
+print(f"  Pack Config : 0x{pc_post:04X}")
+print(f"  VOLTSEL     : {int(voltsel_post)} ({'EXT (correct)' if voltsel_post else 'INT'})")
+print(f"  RSNS        : {'HIGH' if rsns_post else 'LOW'} side")
+
+if not voltsel_post:
+    print()
+    print("  WARNING: VOLTSEL is still 0 after reset — suboptimal ADC resolution.")
+    print("  Re-run this script to retry.")
+
+# Read voltage to confirm ADC is responding (should be near 0 with divider off)
+v_post = read_u16(handle, BQ, 0x0A)
+print(f"  Voltage()   : {v_post} mV (divider should be off)")
 
 # ==================================================================
 #  Summary
 # ==================================================================
-print("\n" + "=" * 58)
-print("RESULT: BQ34Z100-R2 communication OK, VOLTSEL verified safe")
-print("=" * 58)
+print("\n" + "=" * 62)
+print("RESULT: BQ34Z100-R2 communication OK")
+print(f"  VOLTSEL = {int(voltsel_post)} in flash — {'correct' if voltsel_post else 'suboptimal'}")
+print(f"  RSNS = {'LOW' if not rsns_post else 'HIGH'} — {'correct' if not rsns_post else 'check sensing'}")
+print(f"  Reset completed — firmware reloaded from flash")
+if config_was_changed:
+    print(f"  (Config was auto-corrected)")
+print()
+print("  Voltage divider is safe to enable.")
+print("=" * 62)
 
 cleanup(handle)

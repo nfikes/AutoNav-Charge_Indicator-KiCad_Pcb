@@ -370,14 +370,14 @@ if not recovered:
 
 
 # ---------------------------------------------------------------------------
-#  STRATEGY 5: Toggle VOLTSEL off, RESET, read, toggle VOLTSEL on, RESET
+#  STRATEGY 5: Toggle VOLTSEL, RESET, read
 # ---------------------------------------------------------------------------
 
 if not recovered:
     print("\n" + "=" * 60)
-    print("  STRATEGY 5: VOLTSEL off + RESET + VOLTSEL on + RESET")
+    print("  STRATEGY 5: VOLTSEL toggle + RESET")
     print("=" * 60)
-    print("  Force internal divider mode, reset, then switch back.")
+    print("  Toggle internal divider mode, reset, check voltage.")
     print()
 
     unseal_fa()
@@ -386,15 +386,14 @@ if not recovered:
         pc = (blk64[0] << 8) | blk64[1]
         print(f"  Pack Config: 0x{pc:04X}")
 
-        # Clear VOLTSEL (bit 3) — VOLTSEL must NEVER be 1 on this board.
-        # The external divider puts ~3.8V on BAT; with VOLTSEL=1 the
-        # internal 5:1 divider is bypassed and the ADC (max 1V) is destroyed.
+        # Try toggling VOLTSEL to force analog reconfiguration.
+        # With Rev 4+ divider (R22=6.49kOhm), both modes are safe.
         mod64 = list(blk64)
-        new_pc = pc & ~0x0008
+        new_pc = pc ^ 0x0008  # Toggle VOLTSEL
         mod64[0] = (new_pc >> 8) & 0xFF
         mod64[1] = new_pc & 0xFF
         mod64[7] = 1
-        print(f"  Setting VOLTSEL=0, cells=1 (Pack Config 0x{new_pc:04X})...")
+        print(f"  Toggling VOLTSEL, cells=1 (Pack Config 0x{new_pc:04X})...")
         write_block(64, mod64)
 
         # SHUTDOWN then power cycle
@@ -425,14 +424,14 @@ if not recovered:
             print(f"  Internal divider reads {v_internal} mV — gauge is alive!")
             recovered = True
 
-        # Ensure VOLTSEL stays 0 — NEVER re-enable it on this board.
-        print("\n  Verifying VOLTSEL=0, cells=1...")
+        # Restore VOLTSEL=1 (correct for Rev 4+ divider) + cells=1.
+        print("\n  Restoring VOLTSEL=1, cells=1...")
         unseal_fa()
         blk64 = read_block(64)
         if blk64:
             mod64 = list(blk64)
             restore_pc = (blk64[0] << 8) | blk64[1]
-            restore_pc &= ~0x0008  # Keep VOLTSEL=0 (SAFETY)
+            restore_pc |= 0x0008  # Set VOLTSEL=1
             mod64[0] = (restore_pc >> 8) & 0xFF
             mod64[1] = restore_pc & 0xFF
             mod64[7] = 1
@@ -446,6 +445,16 @@ if not recovered:
         recovered = show_status("After VOLTSEL toggle + power cycle")
         if recovered:
             print("\n  *** RECOVERED via VOLTSEL toggle + power cycle! ***")
+            # Ensure correct VOLTSEL=1 for Rev 4+
+            unseal_fa()
+            blk64 = read_block(64)
+            if blk64:
+                mod64 = list(blk64)
+                pc = (blk64[0] << 8) | blk64[1]
+                pc |= 0x0008  # Set VOLTSEL=1
+                mod64[0] = (pc >> 8) & 0xFF
+                mod64[1] = pc & 0xFF
+                write_block(64, mod64)
     else:
         print("  SC 64 read failed")
 

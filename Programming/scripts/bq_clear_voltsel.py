@@ -1,8 +1,13 @@
-"""Clear VOLTSEL (bit 3 of Pack Config, SC 64) on BQ34Z100-R2.
+"""LEGACY (Rev 2-3 only) — Clear VOLTSEL on BQ34Z100-R2.
 
-VOLTSEL=1 bypasses the internal 5:1 divider and exposes the ADC to >1V,
-destroying analog front-end measurements on this board.  This script
-reads Pack Config, clears bit 3 if set, writes it back, and verifies.
+This script is OBSOLETE for Rev 4+ boards. The Rev 4+ voltage divider
+(R22=6.49kOhm) keeps BAT pin below 1V at 30V max, so VOLTSEL=1 (factory
+default) is now the correct and safe setting. Use bq_comm_test.py instead.
+
+For Rev 2-3 boards (R22=34.8kOhm): VOLTSEL=1 bypasses the internal 5:1
+divider and exposes the ADC to >1V, destroying analog front-end
+measurements. This script reads Pack Config, clears bit 3 if set,
+writes it back, and verifies.
 """
 import sys, os
 sys.path.insert(0, os.path.join(os.path.dirname(__file__),

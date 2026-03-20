@@ -156,19 +156,20 @@ print("Waking...")
 wake()
 print()
 
-# SAFETY: Check VOLTSEL before doing anything
+# Check VOLTSEL status
 unseal_fa()
 blk64_check = read_block(64)
 if blk64_check:
     pc_check = (blk64_check[0] << 8) | blk64_check[1]
-    if pc_check & 0x0008:
-        print("*** WARNING: VOLTSEL=1 detected — DANGEROUS on this board! ***")
-        print("*** Clearing VOLTSEL to protect ADC... ***")
+    voltsel = bool(pc_check & 0x0008)
+    print(f"  PackConfig=0x{pc_check:04X}, VOLTSEL={int(voltsel)} "
+          f"({'EXT (correct)' if voltsel else 'INT (suboptimal)'})")
+    if not voltsel:
+        print("  Setting VOLTSEL=1 for best ADC resolution...")
         mod = list(blk64_check)
-        pc_safe = pc_check & ~0x0008
-        mod[0] = (pc_safe >> 8) & 0xFF
-        mod[1] = pc_safe & 0xFF
-        # Re-issue setup
+        pc_correct = pc_check | 0x0008
+        mod[0] = (pc_correct >> 8) & 0xFF
+        mod[1] = pc_correct & 0xFF
         for reg, val in [(0x61, 0x00), (0x3E, 64), (0x3F, 0x00)]:
             d = array('B', [reg, val])
             aa_i2c_write(handle, BQ, AA_I2C_NO_FLAGS, d)
@@ -183,9 +184,7 @@ if blk64_check:
         d = array('B', [0x60, cksum])
         aa_i2c_write(handle, BQ, AA_I2C_NO_FLAGS, d)
         aa_sleep_ms(2000)
-        print(f"  VOLTSEL cleared (0x{pc_check:04X} -> 0x{pc_safe:04X})")
-    else:
-        print(f"  VOLTSEL=0 confirmed (PackConfig=0x{pc_check:04X})")
+        print(f"  VOLTSEL set (0x{pc_check:04X} -> 0x{pc_correct:04X})")
 print()
 
 # Step 1: Restore VD to 5000 (known default that gave readings before)
@@ -223,7 +222,7 @@ print(f"  Current()    : {c} mA" if c is not None else "  Current(): FAIL")
 if v and v > 0:
     # Calculate the correct VD
     # INA226 reads ~26V. The user has the power supply connected.
-    # We know the divider ratio: (200+34.8)/34.8 = 6.7471
+    # We know the divider ratio: (200+6.49)/6.49 = 31.82
     # But let's use the actual INA226 reading as ground truth.
     # For now, use 26000 mV as the expected pack voltage.
     #

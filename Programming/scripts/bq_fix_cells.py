@@ -1,7 +1,7 @@
 """Fix: restore cell count to 1, verify gauge recovers, then try correct VD+cells combo.
 
-SAFETY: VOLTSEL (bit 3 of Pack Config) must NEVER be set to 1 on this board.
-All SC 64 writes enforce VOLTSEL=0 to protect the ADC from overvoltage.
+All SC 64 writes enforce VOLTSEL=1, which is the correct setting for the
+Rev 4+ voltage divider (R22=6.49kOhm, BAT pin stays below 1V at 30V max).
 """
 from aardvark_py import *
 from array import array
@@ -151,12 +151,12 @@ blk64 = read_block(64)
 if blk64:
     mod64 = list(blk64)
     mod64[7] = 1  # cells = 1
-    # SAFETY: Enforce VOLTSEL=0 (bit 3 of Pack Config at offset 0-1)
+    # Enforce VOLTSEL=1 (correct for Rev 4+ divider)
     pc = (mod64[0] << 8) | mod64[1]
-    pc &= ~0x0008  # Clear VOLTSEL
+    pc |= 0x0008  # Set VOLTSEL
     mod64[0] = (pc >> 8) & 0xFF
     mod64[1] = pc & 0xFF
-    print(f"  Setting cells=1 (was {blk64[7]}), VOLTSEL=0")
+    print(f"  Setting cells=1 (was {blk64[7]}), VOLTSEL=1")
     write_block(64, mod64)
 
 # Confirm VD=5000
@@ -229,9 +229,9 @@ if bq_v and bq_v > 0:
         if blk64:
             mod64 = list(blk64)
             mod64[7] = 8
-            # SAFETY: Enforce VOLTSEL=0
+            # Enforce VOLTSEL=1 (correct for Rev 4+ divider)
             pc = (mod64[0] << 8) | mod64[1]
-            pc &= ~0x0008
+            pc |= 0x0008
             mod64[0] = (pc >> 8) & 0xFF
             mod64[1] = pc & 0xFF
             write_block(64, mod64)
@@ -250,9 +250,9 @@ if bq_v and bq_v > 0:
             if blk64:
                 mod64 = list(blk64)
                 mod64[7] = 1
-                # SAFETY: Enforce VOLTSEL=0
+                # Enforce VOLTSEL=1 (correct for Rev 4+ divider)
                 pc = (mod64[0] << 8) | mod64[1]
-                pc &= ~0x0008
+                pc |= 0x0008
                 mod64[0] = (pc >> 8) & 0xFF
                 mod64[1] = pc & 0xFF
                 write_block(64, mod64)
@@ -273,9 +273,9 @@ if bq_v and bq_v > 0:
             if blk64:
                 mod64 = list(blk64)
                 mod64[7] = 8
-                # SAFETY: Enforce VOLTSEL=0
+                # Enforce VOLTSEL=1 (correct for Rev 4+ divider)
                 pc = (mod64[0] << 8) | mod64[1]
-                pc &= ~0x0008
+                pc |= 0x0008
                 mod64[0] = (pc >> 8) & 0xFF
                 mod64[1] = pc & 0xFF
                 write_block(64, mod64)

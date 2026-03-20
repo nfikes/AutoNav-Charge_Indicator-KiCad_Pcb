@@ -1,4 +1,7 @@
 """BQ34Z100-R2 CC Calibration — write all 32 bytes, check Flash Update OK Voltage."""
+import sys, os
+sys.path.insert(0, os.path.join(os.path.dirname(__file__),
+                                "aardvark-api-macos-arm64-v6.00", "python"))
 from aardvark_py import *
 from array import array
 import struct

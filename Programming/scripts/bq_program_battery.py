@@ -8,16 +8,16 @@ Target Battery: Renogy RBT2425LFP
   - Capacity: 25 Ah (25000 mAh)
   - Energy: 640 Wh (640,000 mWh)
 
-Voltage Divider: R27=200kOhm (top), R22=34.8kOhm (bottom)
-  - Ratio: (200+34.8)/34.8 = 6.7471
-  - DF value: ratio * 1000 / NumCells = 844
+Voltage Divider: R27=200kOhm (top), R22=6.49kOhm (bottom)
+  - Ratio: (200+6.49)/6.49 = 31.82
+  - DF value: calibrate empirically using Ralim method
 
 Parameters programmed:
   SC 48  offset 0-1:   Design Energy    = 64000
   SC 48  offset 11-12: Design Capacity  = 25000 mAh
   SC 64  offset 7:     Series Cells     = 8
   SC 82  offset 0-1:   QMax Cell 0      = 25000 mAh
-  SC 104 offset 14-15: Voltage Divider  = 844
+  SC 104 offset 14-15: Voltage Divider  = 5000 (calibrate with Ralim method)
 """
 from aardvark_py import *
 from array import array
@@ -30,7 +30,7 @@ DESIGN_CAPACITY  = 25000   # mAh
 DESIGN_ENERGY    = 64000   # mWh (needs EnergyScale=10 for correct 640 Wh)
 NUM_CELLS        = 8       # 8S LiFePO4
 QMAX             = 25000   # mAh
-VOLTAGE_DIVIDER  = 844     # (200+34.8)/34.8 * 1000 / 8
+VOLTAGE_DIVIDER  = 5000    # Calibrate empirically with Ralim method
 
 handle = aa_open(0)
 aa_configure(handle, AA_CONFIG_SPI_I2C)
@@ -283,31 +283,30 @@ if blk48:
             results['SC48'] = False
     print()
 
-# --- SC 64: Cell Count + VOLTSEL safety ---
+# --- SC 64: Cell Count + Config ---
 if blk64:
-    print("--- SC 64: Cell Count + VOLTSEL Safety ---")
+    print("--- SC 64: Cell Count + Config ---")
     pc_cur = (blk64[0] << 8) | blk64[1]
     voltsel_set = bool(pc_cur & 0x0008)
-    needs_write = cells_cur != NUM_CELLS or voltsel_set
+    needs_write = cells_cur != NUM_CELLS or not voltsel_set
     if not needs_write:
-        print("    Already correct (VOLTSEL=0), skipping.")
+        print("    Already correct (VOLTSEL=1), skipping.")
         results['SC64'] = True
     else:
         unseal_fa()
         fresh = read_block(64)
         if fresh:
-            # SAFETY: Always enforce VOLTSEL=0 (bit 3 of Pack Config).
-            # VOLTSEL=1 bypasses the internal 5:1 divider and exposes
-            # the ADC to >1 V, destroying analog front-end measurements.
+            # VOLTSEL=1 is the correct setting for Rev 4+ divider.
+            # With R22=6.49kOhm, BAT pin stays below 1V at 30V max.
             pc_fresh = (fresh[0] << 8) | fresh[1]
-            pc_safe = pc_fresh & ~0x0008  # Clear VOLTSEL
+            pc_correct = pc_fresh | 0x0008  # Set VOLTSEL
             mods = [
-                (0, [(pc_safe >> 8) & 0xFF]),
-                (1, [pc_safe & 0xFF]),
+                (0, [(pc_correct >> 8) & 0xFF]),
+                (1, [pc_correct & 0xFF]),
                 (7, [NUM_CELLS]),
             ]
-            if voltsel_set:
-                print(f"    WARNING: VOLTSEL=1 detected! Forcing VOLTSEL=0.")
+            if not voltsel_set:
+                print(f"    VOLTSEL=0 detected — setting to 1.")
             ok = write_block_and_verify(64, fresh, mods)
             results['SC64'] = ok
             print(f"    {'PASS' if ok else 'FAIL'}")

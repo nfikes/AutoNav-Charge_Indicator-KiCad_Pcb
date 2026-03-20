@@ -110,16 +110,18 @@ Contact / Author
 PCB Assembly & Bring-Up Procedure
 ---------------------------------
 
-Follow this procedure exactly when building a new board. The BQ34Z100-R2 fuel
-gauge (U1) ships with VOLTSEL=1 as the factory default, which bypasses the
-internal 5:1 voltage divider and exposes the ADC to destructive overvoltage.
-**Two chips have been permanently damaged by powering the BAT pin before
-clearing VOLTSEL.** The procedure below prevents this.
+Follow this procedure when building a new board.
 
-### Step 1 — Solder everything except U1
+**Rev 4+ voltage divider change:** The external voltage divider was changed
+from R27 = 200 kΩ / R22 = 34.8 kΩ (ratio 6.75) to R27 = 200 kΩ /
+R22 = 6.49 kΩ (ratio 31.82). This keeps the BAT pin below 1 V at maximum
+pack voltage (30 V), making the BQ34Z100-R2 ADC safe **regardless of
+VOLTSEL state**. The factory default VOLTSEL = 1 is now the correct setting.
 
-Populate all components on the board **except** the BQ34Z100-R2 (U1). Leave
-that pad empty for now.
+### Step 1 — Solder all components
+
+Populate all components on the board, including the BQ34Z100-R2 (U1).
+With the new voltage divider, no special precautions are needed for U1.
 
 ### Step 2 — Continuity test (unpowered)
 
@@ -148,21 +150,11 @@ Measure the output of the OP-AMP that connects to the BAT pin:
 - **Divider OFF (MOSFET array disabled):** should read negative millivolts
   (~0 V).
 - **Divider ON (MOSFET array enabled):** should read the divided 10 V input
-  (approximately 10 V / 6.75 ≈ 1.48 V).
+  (approximately 10 V / 31.82 ≈ 0.314 V).
 
-Confirm both states, then **turn the divider OFF** before proceeding.
+### Step 7 — Communication tests
 
-### Step 7 — Solder U1 (BQ34Z100-R2)
-
-With the voltage divider **confirmed OFF**, solder the BQ34Z100-R2 onto the
-board. The MOSFET array must remain disabled throughout this step and the
-next.
-
-### Step 8 — Communication tests and VOLTSEL safety
-
-Connect the Aardvark I2C adapter and run both communication tests. The
-BQ34Z100-R2 will power up parasitically through the I2C pull-ups — no BAT
-pin voltage is needed.
+Connect the Aardvark I2C adapter and run both communication tests:
 
 ```
 cd Programming/scripts
@@ -170,24 +162,14 @@ python3 ina226_comm_test.py
 python3 bq_comm_test.py
 ```
 
-`bq_comm_test.py` will automatically detect and clear VOLTSEL=1 if present.
-**Confirm the output shows VOLTSEL = 0 and that the write was verified.**
+`bq_comm_test.py` will verify that VOLTSEL = 1 (correct for the new divider)
+and that RSNS is set correctly for low-side sensing.
 
-### Step 9 — Enable the voltage divider
+### Step 8 — Enable the voltage divider
 
-**Only** after both conditions are met:
-
-1. VOLTSEL = 0 is **verified** in the BQ34Z100-R2 data flash, AND
-2. The voltage divider has been **confirmed off** (Step 6)
-
-...may the MOSFET array be turned on to connect the voltage divider to the
-BAT pin.
-
-> **WARNING:** If VOLTSEL is 1 when voltage is applied to the BAT pin, the
-> ADC will be **permanently and instantly damaged**. There is no recovery.
-> This has happened on both Rev 2 (3.7 V exposure, fully destroyed) and
-> Rev 3 (2.2 V exposure, partially destroyed). Even brief exposure of
-> seconds is enough to cause irreversible damage.
+Turn on the MOSFET array to connect the voltage divider to the BAT pin.
+With the new divider, the BAT pin will see ≤ 1 V regardless of VOLTSEL
+state — both VOLTSEL = 0 and VOLTSEL = 1 are safe.
 
 Initial Board Programming (BQ34Z100-R2)
 ----------------------------------------
@@ -202,53 +184,53 @@ non-volatile Data Flash and persists across power cycles.
 - Total Phase Aardvark I2C adapter (connected to the board's I2C header)
 - 24 V power supply or the Renogy RBT2425LFP battery pack
 
-### Safety: VOLTSEL and the BAT pin
+### Voltage divider and VOLTSEL
 
 The BQ34Z100-R2 has an internal 5:1 voltage divider on the BAT pin. The
-board's external resistor divider (R27 = 200 kΩ / R22 = 34.8 kΩ) steps the
-~25.6 V pack voltage down to ~3.8 V at the BAT pin. The internal divider
-further reduces this to ~0.76 V, safely within the ADC's 1 V limit.
+board's external resistor divider (R27 = 200 kΩ / R22 = 6.49 kΩ) steps the
+~25.6 V pack voltage down to ~0.8 V at the BAT pin — safely below the ADC's
+1 V limit in **both** VOLTSEL modes:
 
-If **VOLTSEL** (bit 3 of Pack Configuration, SC 64) is set to 1, the internal
-divider is bypassed and the full ~3.8 V reaches the ADC, **permanently
-damaging the analog front-end**. VOLTSEL must always be 0 on this board.
+- **VOLTSEL = 1** (factory default, internal divider bypassed): ADC sees the
+  BAT pin voltage directly (~0.8 V). Best ADC resolution.
+- **VOLTSEL = 0** (internal 5:1 divider active): ADC sees BAT / 5 (~0.16 V).
+  Still safe, but lower resolution.
 
-The BQ34Z100-R2 **ships from the factory with VOLTSEL = 1**. The MOSFET array
-disconnects the external voltage divider from the BAT pin. Use it to protect
-the ADC whenever the chip's VOLTSEL state is unknown (e.g., on a brand-new or
-replacement chip). The chip can be programmed safely with the MOSFET array off
-— it powers up parasitically through the I2C bus pull-ups.
+VOLTSEL = 1 is the **correct and preferred** setting for this board.
+
+> **Historical note (Rev 2–3):** Earlier revisions used R22 = 34.8 kΩ, which
+> put ~3.8 V on the BAT pin. With VOLTSEL = 1 (factory default), the full
+> 3.8 V reached the ADC, permanently destroying the analog front end. Three
+> chips were damaged this way. The Rev 4+ divider eliminates this failure
+> mode entirely.
 
 ### Programming procedure
 
-1. **MOSFET array OFF** — confirm the voltage divider is disconnected from the
-   BAT pin (see assembly Step 6 above).
-2. **Connect the Aardvark** to the board's I2C header with target power
+1. **Connect the Aardvark** to the board's I2C header with target power
    enabled.
-3. **Verify / clear VOLTSEL** — run `bq_comm_test.py` which auto-clears
-   VOLTSEL if set:
+2. **Run communication tests**:
    ```
    cd Programming/scripts
+   python3 ina226_comm_test.py
    python3 bq_comm_test.py
    ```
-4. **Enable the MOSFET array** — the BAT pin now receives the divided pack
-   voltage safely through the internal 5:1 divider.
-5. **Run board diagnostics** to confirm I2C communication with both the
+3. **Enable the MOSFET array** if not already on.
+4. **Run board diagnostics** to confirm I2C communication with both the
    INA226 and BQ34Z100-R2:
    ```
    python3 pcb_diagnostics.py
    ```
-6. **Program battery parameters** (cell count, capacity, voltage divider
+5. **Program battery parameters** (cell count, capacity, voltage divider
    ratio, QMax):
    ```
    python3 bq_program_battery.py
    ```
-7. **Program the LiFePO4 chemistry profile** (R_a resistance tables, design
+6. **Program the LiFePO4 chemistry profile** (R_a resistance tables, design
    parameters, voltage calibration using the INA226 as ground truth):
    ```
    python3 bq_program_chemistry.py
    ```
-8. **Verify final readings** — re-run diagnostics and confirm that
+7. **Verify final readings** — re-run diagnostics and confirm that
    `Voltage()`, SOC, and temperature are reporting sensible values:
    ```
    python3 pcb_diagnostics.py
@@ -260,9 +242,6 @@ replacement chip). The chip can be programmed safely with the MOSFET array off
   operation does not require the device to be unsealed.
 - Configuration survives power cycles indefinitely — no reprogramming is
   needed unless you want to change parameters.
-- The MOSFET array can be left on during normal operation; it only needs to be
-  off as a safety precaution when VOLTSEL state is unknown (e.g., on a
-  brand-new or replacement chip).
 - If voltage reads 0 mV after programming, run `bq_fix_vdivider.py` to
   recalibrate the voltage divider using the INA226 as a reference.
 
@@ -273,9 +252,9 @@ All scripts are located in `Programming/scripts/`.
 | Script                    | Purpose                                          |
 |---------------------------|--------------------------------------------------|
 | `ina226_comm_test.py`    | INA226 communication check (MFG/Die ID + regs)  |
-| `bq_comm_test.py`        | BQ34Z100-R2 comm check + VOLTSEL safety clear    |
+| `bq_comm_test.py`        | BQ34Z100-R2 comm check + config verification     |
 | `i2c_scan.py`            | Full I2C bus scan (all addresses 0x03-0x77)      |
-| `bq_clear_voltsel.py`    | Standalone VOLTSEL=0 enforcer                    |
+| `bq_clear_voltsel.py`    | Standalone VOLTSEL tool (legacy, Rev 2-3 only)   |
 | `pcb_diagnostics.py`     | Full I2C diagnostics for INA226 + BQ34Z100-R2    |
 | `bq_program_battery.py`  | Write design capacity, cell count, VD, QMax      |
 | `bq_program_chemistry.py`| LiFePO4 R_a tables + voltage calibration         |
