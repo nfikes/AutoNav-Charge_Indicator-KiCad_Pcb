@@ -1,9 +1,9 @@
 # BQ34Z100-R2 Debugging History
 
 Complete record of every trial performed to diagnose and recover the
-BQ34Z100-R2 fuel gauge on the AutoNav Charge Indicator board (Rev 2-4).
-Covers the period from initial bringup (Feb 2026) through the decision to
-adopt the INA226 as the primary fuel gauge (Apr 2026).
+BQ34Z100-R2 fuel gauge on the AutoNav Charge Indicator board (Rev 1-4).
+Covers the period from initial hardware validation (Nov 2025) through the
+decision to adopt the INA226 as the primary fuel gauge (Apr 2026).
 
 ---
 
@@ -12,24 +12,25 @@ adopt the INA226 as the primary fuel gauge (Apr 2026).
 1. [Background](#1-background)
 2. [Hardware Evolution](#2-hardware-evolution)
 3. [Chip Inventory](#3-chip-inventory)
-4. [Phase 0A: Board Bringup and First I2C Contact (Feb 6)](#4-phase-0a-board-bringup-and-first-i2c-contact-feb-6)
-5. [Phase 0B: First Data Flash Experiments (Feb 10)](#5-phase-0b-first-data-flash-experiments-feb-10)
-6. [Phase 0C: VOLTSEL Catastrophe and Chip Deaths (Feb 2026)](#6-phase-0c-voltsel-catastrophe-and-chip-deaths-feb-2026)
-7. [Phase 0D: Battery Programming and VD=844 Gauge Lockup (Feb 18)](#7-phase-0d-battery-programming-and-vd844-gauge-lockup-feb-18)
-8. [Phase 0E: Recovery Campaign and Third Chip Death (Feb-Mar 2026)](#8-phase-0e-recovery-campaign-and-third-chip-death-feb-mar-2026)
-9. [Phase 1: Voltage Divider Retrofit (Mar 19)](#9-phase-1-voltage-divider-retrofit-mar-19)
-10. [Phase 2: First Fresh Chip (Defective)](#10-phase-2-first-fresh-chip-defective)
-11. [Phase 3: Old Chip Cross-Validation](#11-phase-3-old-chip-cross-validation)
-12. [Phase 4: Second Fresh Chip (Chip 1G)](#12-phase-4-second-fresh-chip-chip-1g)
-13. [Phase 5: Overnight Recovery Attempts](#13-phase-5-overnight-recovery-attempts)
-14. [Phase 6: Third Fresh Chip -- Incremental Isolation](#14-phase-6-third-fresh-chip----incremental-isolation)
-15. [Phase 7: Multi-Chip Rotation and ADC Mystery](#15-phase-7-multi-chip-rotation-and-adc-mystery)
-16. [Phase 8: Final Recovery Attempts (Chips 2G and 1G)](#16-phase-8-final-recovery-attempts-chips-2g-and-1g)
-17. [Phase 9: LED Test and INA226 Adoption](#17-phase-9-led-test-and-ina226-adoption)
-18. [Theory Tracker](#18-theory-tracker)
-19. [Final Chip Status](#19-final-chip-status)
-20. [Scripts Written](#20-scripts-written)
-21. [Lessons Learned](#21-lessons-learned)
+4. [Pre-Campaign: PCB Hardware Validation (Rev 1-2)](#4-pre-campaign-pcb-hardware-validation-rev-1-2)
+5. [Phase 0A: Board Bringup and First I2C Contact (Feb 6)](#5-phase-0a-board-bringup-and-first-i2c-contact-feb-6)
+6. [Phase 0B: First Data Flash Experiments (Feb 10)](#6-phase-0b-first-data-flash-experiments-feb-10)
+7. [Phase 0C: VOLTSEL Catastrophe and Chip Deaths (Feb 2026)](#7-phase-0c-voltsel-catastrophe-and-chip-deaths-feb-2026)
+8. [Phase 0D: Battery Programming and VD=844 Gauge Lockup (Feb 18)](#8-phase-0d-battery-programming-and-vd844-gauge-lockup-feb-18)
+9. [Phase 0E: Recovery Campaign and Third Chip Death (Feb-Mar 2026)](#9-phase-0e-recovery-campaign-and-third-chip-death-feb-mar-2026)
+10. [Phase 1: Voltage Divider Retrofit (Mar 19)](#10-phase-1-voltage-divider-retrofit-mar-19)
+11. [Phase 2: First Fresh Chip (Defective)](#11-phase-2-first-fresh-chip-defective)
+12. [Phase 3: Old Chip Cross-Validation](#12-phase-3-old-chip-cross-validation)
+13. [Phase 4: Second Fresh Chip (Chip 1G)](#13-phase-4-second-fresh-chip-chip-1g)
+14. [Phase 5: Overnight Recovery Attempts](#14-phase-5-overnight-recovery-attempts)
+15. [Phase 6: Third Fresh Chip -- Incremental Isolation](#15-phase-6-third-fresh-chip----incremental-isolation)
+16. [Phase 7: Multi-Chip Rotation and ADC Mystery](#16-phase-7-multi-chip-rotation-and-adc-mystery)
+17. [Phase 8: Final Recovery Attempts (Chips 2G and 1G)](#17-phase-8-final-recovery-attempts-chips-2g-and-1g)
+18. [Phase 9: LED Test and INA226 Adoption](#18-phase-9-led-test-and-ina226-adoption)
+19. [Theory Tracker](#19-theory-tracker)
+20. [Final Chip Status](#20-final-chip-status)
+21. [Scripts Written](#21-scripts-written)
+22. [Lessons Learned](#22-lessons-learned)
 
 ---
 
@@ -158,7 +159,201 @@ Eight BQ34Z100-R2 chips were involved across all trials:
 
 ---
 
-## 4. Phase 0A: Board Bringup and First I2C Contact (Feb 6)
+## 4. Pre-Campaign: PCB Hardware Validation (Rev 1-2)
+
+*From "PCBA Testing Results Log.docx", documenting hardware validation tests
+conducted before any I2C software development. These tests exposed fundamental
+design errors in Rev 1, validated Rev 2 fixes, and culminated in the first
+robot installation. No dates were recorded for these tests; they span roughly
+Nov 2025 through Jan 2026.*
+
+### Test 1.1.0 -- Rev 1 Overall Performance
+
+**Equipment:** Digital load (500-1000 Ohm), waveform generator (6V DC offset,
+2mVpp, 1kHz), multimeter, oscilloscope, power supply (OCP 0.1A).
+
+**Objective 0 -- Board cleanup:** After hand-soldering, the Rev 1 PCBA was
+cleaned in a digital ultrasonic cleaner with SRA circuit board cleaning
+solution. Post-cleaning inspection revealed:
+- Chip U4 had three raised pins from flux trapped under pads during ultrasound
+- Connectors J1-J4 became loose and required resoldering
+- Plastic on J1, J4, and SW1 had partially melted during soldering
+
+**Objective 1 -- 5V buck validation:** The SGM61410XN6G/TR DC-DC buck was
+tested with inputs from 6V to 10V. Under loading conditions, it produced a
+smooth regulated 5V line. No overheating observed in the 6-10V range.
+(25.6V was not tested -- see below.)
+
+**Objective 2 -- 3.3V regulator validation:** The TPS7A2033PDBVR regulator,
+fed from the 5V buck, held its output closer to target than the buck. I2C
+pull-ups and chip power confirmed safe.
+
+**Objective 3 -- CRITICAL: BQ34Z100-R2 overheating discovered:**
+
+When slowly ramping the supply voltage, power consumption spiked sharply
+around 7.3V. The BQ34Z100-R2 chip became hot enough to cause physical
+discomfort when touched. No other components overheated.
+
+**Root cause:** In the Rev 1 design, the REGIN and BAT nets were **shorted
+together**, connecting the battery voltage directly to both pins. According
+to the TI datasheet, both REGIN and BAT have an absolute maximum rating of
+5.5V. At 7.3V input, the chip was being overstressed on both power and ADC
+input pins simultaneously.
+
+**Fix identified for Rev 2:**
+- Feed REGIN from the 5V DC-DC buck (safe, regulated)
+- Feed BAT through a voltage translator circuit (divider + op-amp buffer)
+  to scale 20-30V pack voltage into the safe range
+
+**Objective 4 -- Rev 2 requirements defined:**
+1. REGIN fed from 5V buck
+2. BAT fed through voltage translation circuit (target 2.7-4.5V range)
+3. Replace 0 Ohm resistors with solder bridges or blank 1206 footprints
+4. Add ON/OFF silkscreen markings for SW1
+5. Better terminal block labeling (power vs load)
+6. Cover C8 (touching it short-circuits the shift register)
+7. Flip BAT- and GND orientation on low-side current sense
+
+### Test 1.2.0 -- Rev 1 INA226 Validation
+
+**Result:** INA226 at address 0x40 confirmed fully functional on Rev 1.
+
+**Readings at ~5V input (manual Aardvark I2C):**
+- Bus voltage (02h): 0x0F09 = 3984 * 1.25mV = 4.98V (supply: 5.000V)
+- Current (04h): 0x0105 = 261 * 1mA = 0.261A (supply: 0.248A)
+- Power (03h): 0x0033 = 51 * 25mW = 1.275W (supply: 1.240W)
+
+**Calibration used:** CAL = 0x01AA (426) with Current_LSB = 1mA/bit,
+Power_LSB = 25mW/bit. (Later revised to CAL=1706 with Current_LSB=250uA
+for better resolution.)
+
+**Alert and address features noted:** A0/A1 pins set to GND giving address
+0x40. Alert pin available for threshold crossing detection (SOL, SUL, BOL,
+BUL, POL modes).
+
+### Test 2.1.0 -- Rev 2 Overall Performance
+
+**Key changes from Rev 1:** REGIN now fed from 5V buck. BAT fed through
+voltage divider (R27=200kOhm / R22=34.8kOhm) and TLV271CW5-7 op-amp buffer.
+SW1 added to disconnect divider from BAT pin.
+
+**Objective 1 -- 5V buck validation:** Two of the three SGM61410 buck ICs were
+defective and had to be desoldered. The third produced 5.05V. Troubleshooting
+involved comparing pad resistance to Rev 1 board -- replacing the buck IC
+resolved the issue.
+
+**Objective 2 -- 3.3V regulator:** Produced 3.29V. Working.
+
+**Objective 3 -- INA226:** Confirmed working on Rev 2 board. Bus voltage
+register (02h) returned correct values at 0x40.
+
+**Objective 4 -- Voltage divider and enable net:**
+- At 8V input, the translated BAT voltage measured 1.15V (divider active)
+- Enable net went to 4.2V instead of expected 5.05V (0.8V loss attributed
+  to the 1MOhm resistor and VEN pin loading)
+- With switch OFF, enable net dropped to -40mV and translated voltage
+  disappeared, but the BQ LEDs remained on -- revealing that VEN was not
+  properly controlling the chip power state
+
+**Objective 5 -- 9V battery drain test (Jan 14, 2026):**
+
+Drained a 9V Rayovac alkaline battery through a 50 Ohm digital load for 1
+hour to evaluate BQ34Z100-R2 fuel gauge performance.
+
+| Metric | Before | After |
+|--------|--------|-------|
+| Unloaded voltage | 9.3V | 7.7V |
+| Loaded voltage | 8.2V | 6.1V |
+| Load current | 0.165A | 0.130A |
+| Load power | 1.35W | 0.80W |
+
+**Result:** Despite significant battery drain, the BQ LED indicator remained
+at 100% for the entire test. LED behavior was inconsistent -- sometimes one
+LED lit, sometimes all five, without clear pattern. The fuel gauge was not
+properly calibrated for this battery chemistry or configuration.
+
+### Test 2.2.0 -- Rev 2 High Voltage and Current Draw
+
+**Goal:** Determine if Rev 2 can handle the full 25.6V battery voltage.
+
+**Method:** Ramped supply from 7V to 30V in 1V increments with OCP at 0.15A.
+Monitored 5V and 3.3V regulated lines.
+
+**Key observations:**
+- Voltage divider draws ~2mA when enabled (SW1 ON)
+- Each LED draws ~5mA
+- Board current at 7V: 29mA (divider ON), 27mA (divider OFF)
+- At higher voltages, current draw changes diminished
+- 5V regulated line sagged slightly at higher input voltages
+- **Board survived operation up to 30V** without component damage
+
+### Test 2.3.0 -- Rev 2 Robot Installation (R4 Blowup)
+
+**Action:** Rev 2 PCBA mounted directly to the AutoNav robot with leads
+connected to the Renogy RBT2425LFP LiFePO4 battery (24V 25Ah).
+
+**Result:** FAIL. Upon connecting the battery and turning it on, a large
+inrush/surge current **blew up the R4 sense resistor** (12mOhm, RL1206FR
+package). The resistor failed as an open circuit.
+
+**Post-mortem component analysis:**
+
+| Component | Status | Evidence |
+|-----------|--------|---------|
+| R4 12mOhm sense resistor | DESTROYED | Visible blast damage, OL resistance measurement |
+| INA226 (U3) | SURVIVED | 0x40 ACKed, bus voltage read 9.9888V with 10V supply |
+| BSS84 P-FET + 2N7002 N-FET | SURVIVED | Voltage divider functioned normally (1.482V ON, 2.0mV OFF) |
+| TLV271CW5-7 op-amp | SURVIVED | Output matched divider: 1.486V ON, 0.5mV OFF |
+| LEDs + SN74HC164 shift register | SURVIVED | All 5 LEDs functional |
+| SGM61410 5V buck | SURVIVED | 5.046V measured |
+| TPS7A2033 3.3V regulator | SURVIVED | 3.305V measured |
+| BQ34Z100-R2 (U1) | SURVIVED | 0x55 ACKed, SOC register (02h) returned 100% |
+
+**Safety assessment:** The open-circuit failure mode of R4 protected the robot
+from any harm. The robot functioned normally when re-wired to bypass the
+PCBA. No fire hazards -- the surge was contained to the sense resistor area,
+far from any flammable materials.
+
+**Lesson:** The RL1206FR-070R012L resistor (rated for steady-state current)
+could not withstand the inrush surge from the 25Ah LiFePO4 battery. A
+pulse-rated shunt resistor was needed.
+
+### Test 2.4.0 -- Rev 2 New Shunt Resistor and Robot Reinstallation
+
+**Action:** Replaced the destroyed R4 with a pulse-rated sense resistor.
+Reinstalled PCBA on the robot.
+
+**Result:** PASS. Board operated successfully on the robot without blowing up.
+
+**INA226 readings on the live robot:**
+- Bus voltage: 25.565V (close to 25.6V nominal)
+- Current: 1.4303A (acceptable for idle robot)
+- Power: 36.5688W
+
+**Issues identified during robot operation:**
+
+1. **BQ34Z100-R2 "bound up":** The chip was non-functional, likely from
+   VOLTSEL being set to 1 at some point. With VOLTSEL=1 and the external
+   divider outputting ~3.8V, the ADC would have been exposed to destructive
+   overvoltage. This was the first identification of the VOLTSEL problem that
+   would go on to destroy multiple chips.
+
+2. **Thermistor wiring error:** The thermistor circuit was connected to the
+   5V regulated line instead of REG25 (2.5V). The BQ datasheet recommends
+   connection to REG25.
+
+3. **Inconsistent LED behavior:** LEDs did not reliably all light up on
+   power-on, sometimes requiring multiple power cycles.
+
+**Rev 3 requirements generated:**
+- Decouple REG25 from VCC (separate power domains)
+- Star-point ground all AGND points on the BQ34Z100-R2
+- Reconnect thermistor circuit from 5V to REG25
+- Tie VEN to REG25 through a 1kOhm resistor for persistent LED operation
+
+---
+
+## 5. Phase 0A: Board Bringup and First I2C Contact (Feb 6)
 
 *Reconstructed from git commit 9d376e2 (Feb 6, 2026) and script contents.*
 
@@ -195,7 +390,7 @@ commands (SLUUCO5A). Byte helpers for big-endian (INA226) and little-endian
 
 ---
 
-## 5. Phase 0B: First Data Flash Experiments (Feb 10)
+## 6. Phase 0B: First Data Flash Experiments (Feb 10)
 
 *Reconstructed from git commit 34951ea (Feb 10, 2026) and script contents.*
 
@@ -236,7 +431,7 @@ future scripts.
 
 ---
 
-## 6. Phase 0C: VOLTSEL Catastrophe and Chip Deaths (Feb 2026)
+## 7. Phase 0C: VOLTSEL Catastrophe and Chip Deaths (Feb 2026)
 
 *Reconstructed from git commits 0d897fd and 68075b4 (Feb 18, 2026), script
 docstrings (`bq_clear_voltsel.py`, `bq_recover.py`, `bq_fix_cells.py`), and
@@ -316,7 +511,7 @@ applied to the BAT pin, the ADC will be permanently and instantly damaged."
 
 ---
 
-## 7. Phase 0D: Battery Programming and VD=844 Gauge Lockup (Feb 18)
+## 8. Phase 0D: Battery Programming and VD=844 Gauge Lockup (Feb 18)
 
 *Reconstructed from git commit 0d897fd (Feb 18, 2026). Scripts
 `bq_program_battery.py`, `bq_fix_vdivider.py`, `bq_fix_cells.py`,
@@ -418,7 +613,7 @@ safety latch that can be cleared via control commands.
 
 ---
 
-## 8. Phase 0E: Recovery Campaign and Third Chip Death (Feb-Mar 2026)
+## 9. Phase 0E: Recovery Campaign and Third Chip Death (Feb-Mar 2026)
 
 *Reconstructed from scripts `bq_recover.py`, `bq_debug_voltage.py`,
 `bq_test_no_tgtpower.py` (commit 0d897fd, Feb 18, 2026), `bq_comm_test.py`
@@ -543,7 +738,7 @@ values take effect."
 
 ---
 
-## 9. Phase 1: Voltage Divider Retrofit (Mar 19)
+## 10. Phase 1: Voltage Divider Retrofit (Mar 19)
 
 **Goal:** Protect the BQ BAT pin ADC by reducing the divider output voltage.
 
@@ -562,7 +757,7 @@ provides additional overvoltage protection.
 
 ---
 
-## 10. Phase 2: First Fresh Chip (Defective)
+## 11. Phase 2: First Fresh Chip (Defective)
 
 **Goal:** Bring up a fresh BQ34Z100-R2 on the board with the new safe divider.
 
@@ -684,7 +879,7 @@ I2C interface runs from REGIN/REG25, independent of BAT.
 
 ---
 
-## 11. Phase 3: Old Chip Cross-Validation
+## 12. Phase 3: Old Chip Cross-Validation
 
 **Goal:** Confirm the board itself is functional by testing with a known chip.
 
@@ -708,7 +903,7 @@ entirely off REGIN/REG25.
 
 ---
 
-## 12. Phase 4: Second Fresh Chip (Chip 1G)
+## 13. Phase 4: Second Fresh Chip (Chip 1G)
 
 **Goal:** Try another fresh chip, learn from the defective one.
 
@@ -791,7 +986,7 @@ has a 36V maximum bus voltage rating and would be damaged.
 
 ---
 
-## 13. Phase 5: Overnight Recovery Attempts
+## 14. Phase 5: Overnight Recovery Attempts
 
 **Goal:** Attempt full recovery of Chip 1G after overnight power-off.
 
@@ -830,7 +1025,7 @@ permanently stuck."
 
 ---
 
-## 14. Phase 6: Third Fresh Chip -- Incremental Isolation
+## 15. Phase 6: Third Fresh Chip -- Incremental Isolation
 
 **Goal:** Use a fresh chip with a carefully staged bringup to identify exactly
 which operation kills the gauge.
@@ -930,7 +1125,7 @@ eliminated.
 
 ---
 
-## 15. Phase 7: Multi-Chip Rotation and ADC Mystery
+## 16. Phase 7: Multi-Chip Rotation and ADC Mystery
 
 **Goal:** Investigate the ADC mystery across different chips.
 
@@ -980,7 +1175,7 @@ unpowered for several hours.
 
 ---
 
-## 16. Phase 8: Final Recovery Attempts (Chips 2G and 1G)
+## 17. Phase 8: Final Recovery Attempts (Chips 2G and 1G)
 
 ### Trial 35: Chip 2G after extended rest
 
@@ -1080,7 +1275,7 @@ source.
 
 ---
 
-## 17. Phase 9: LED Test and INA226 Adoption
+## 18. Phase 9: LED Test and INA226 Adoption
 
 ### Trial 40: Send All-LEDs-ON command (0x0030)
 
@@ -1126,12 +1321,15 @@ support forums.
 
 ---
 
-## 18. Theory Tracker
+## 19. Theory Tracker
 
 Complete list of every theory proposed and its final status:
 
 | # | Theory | Phase | Status | Evidence |
 |---|--------|-------|--------|----------|
+| 0a | Rev 1 BAT/REGIN short causes BQ overheat | Pre | **CONFIRMED** | BQ chip overheated at 7.3V; REGIN and BAT were shorted to battery in Rev 1 design |
+| 0b | Standard shunt resistor cannot survive battery inrush | Pre | **CONFIRMED** | R4 (12mOhm RL1206FR) blew up on robot connection; replaced with pulse-rated resistor |
+| 0c | BQ fuel gauge uncalibrated for test battery | Pre | **CONFIRMED** | LEDs stuck at 100% for entire 9V drain test; inconsistent LED states |
 | 1 | VOLTSEL=1 + old divider destroys ADC | 0C | **CONFIRMED (3 chips)** | Three chips permanently damaged by ~3.8V on ADC (max 1.0V) |
 | 2 | VD=844 + cells=8 causes IT algorithm lockup | 0D | **CONFIRMED** | Per-cell voltage ~80mV triggered unrecoverable error state |
 | 3 | Writing to Control reg 0x00 disrupts DF context | 0B | **CONFIRMED** | DF reads return stale data after 0x00 write; use 0x61 instead |
@@ -1156,7 +1354,7 @@ Complete list of every theory proposed and its final status:
 
 ---
 
-## 19. Final Chip Status
+## 20. Final Chip Status
 
 | Chip | I2C | ADC | Destroyed By | DF Writes | LEDs | Usability |
 |------|-----|-----|--------------|-----------|------|-----------|
@@ -1171,7 +1369,7 @@ Complete list of every theory proposed and its final status:
 
 ---
 
-## 20. Scripts Written
+## 21. Scripts Written
 
 Every script created during the entire debugging campaign, in chronological
 order of creation:
@@ -1216,7 +1414,29 @@ order of creation:
 
 ---
 
-## 21. Lessons Learned
+## 22. Lessons Learned
+
+### Hardware Design Lessons (Rev 1-2)
+
+0a. **Never short REGIN and BAT together.** Rev 1 connected both pins
+    directly to the battery. At 7.3V+ the BQ chip overheated dangerously.
+    REGIN must be fed from a regulated 5V source; BAT must go through a
+    voltage translator circuit.
+
+0b. **Sense resistors must be pulse-rated for battery applications.** The
+    standard RL1206FR-070R012L (12mOhm) exploded from the LiFePO4 battery's
+    inrush surge current. It failed safely as an open circuit, protecting
+    the robot, but required replacement with a pulse-rated part
+    (WSL25125L000FEA).
+
+0c. **BQ fuel gauge requires proper calibration before readings are
+    meaningful.** Without configuring VD, cell count, chemistry profile,
+    and CC calibration, the BQ LED indicator showed 100% SOC regardless of
+    actual battery state during a 1-hour drain test.
+
+0d. **Two defective buck ICs out of three.** Component quality issues on
+    the SGM61410XN6G/TR required desoldering and replacement on Rev 2.
+    Pad resistance comparison between boards helped identify the failures.
 
 ### Confirmed Root Causes (Pre-Divider Era)
 
