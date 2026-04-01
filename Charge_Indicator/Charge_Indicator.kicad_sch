@@ -9358,6 +9358,18 @@
 		)
 		(uuid "4dda46b4-0afa-4fd0-bbdb-264c42c88e2e")
 	)
+	(text "Notes:	\nOn Rev3 R5 and R6 are 10kΩ Pullups\nbecause the BQ34Z100-R2 might need\na smaller sink current"
+		(exclude_from_sim no)
+		(at 91.948 18.542 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(color 0 16 255 1)
+			)
+			(justify left)
+		)
+		(uuid "5b5c2f4f-8771-44ee-9329-7f26ed934659")
+	)
 	(text "5V DC-DC Buck Block"
 		(exclude_from_sim no)
 		(at 144.526 131.826 0)
