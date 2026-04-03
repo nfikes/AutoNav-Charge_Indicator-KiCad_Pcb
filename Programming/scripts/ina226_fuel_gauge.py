@@ -74,24 +74,27 @@ R_INTERNAL_MOHM = 40.0        # <= 40 mOhm (from datasheet)
 
 # LiFePO4 voltage-to-SOC lookup table (per-cell, mV)
 # LFP has a very flat discharge curve — voltage is a poor SOC indicator
-# in the 20-80% region but useful at endpoints. From Renogy discharge curves.
+# in the 20-80% region but useful at endpoints.
+# Calibrated against Renogy RBT2425LFP charger readings:
+#   - 3252 mV/cell under 1.2A load ≈ 60% SOC (charger confirmed)
+# The Renogy pack plateau sits lower than generic LFP curves.
 LFP_SOC_TABLE = [
     # (cell_mV, SOC%)
     (3650, 100),   # Fully charged (CV phase complete)
     (3450, 99),    # Just off charger
-    (3380, 95),    # Settling after charge
-    (3350, 90),
-    (3340, 80),
-    (3330, 70),    # LFP plateau region begins
-    (3320, 60),
-    (3310, 50),
-    (3300, 40),
-    (3280, 30),    # LFP plateau region ends
-    (3200, 20),
-    (3100, 14),    # Knee — voltage starts dropping faster
-    (3000, 9),
-    (2900, 5),
-    (2800, 3),
+    (3400, 95),    # Settling after charge
+    (3380, 90),
+    (3350, 80),
+    (3300, 70),    # LFP plateau region
+    (3260, 60),    # Calibrated: 3252mV under load ≈ 60%
+    (3240, 50),
+    (3220, 40),
+    (3200, 30),    # Plateau ends
+    (3150, 20),
+    (3050, 14),    # Knee — voltage drops faster
+    (2950, 9),
+    (2850, 5),
+    (2750, 3),
     (2600, 1),
     (2500, 0),     # BMS cutoff
 ]
@@ -172,11 +175,14 @@ def ina_read_bus_mv():
 
 
 def ina_read_current_ma():
-    """Read current in mA. LSB = CURRENT_LSB = 0.25 mA."""
+    """Read current in mA. LSB = CURRENT_LSB = 0.25 mA.
+    Negated to match convention: positive = charging, negative = discharging.
+    (R4 shunt on PCB is oriented so discharge current reads positive from INA226.)
+    """
     raw = ina_read_reg(0x04, signed=True)
     if raw is None:
         return None
-    return raw * CURRENT_LSB * 1000  # convert to mA
+    return -raw * CURRENT_LSB * 1000  # negate: discharge should be negative
 
 
 def ina_read_power_mw():
