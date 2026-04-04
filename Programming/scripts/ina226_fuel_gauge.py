@@ -43,7 +43,8 @@ CAL_REG = 1706        # 0.00512 / (CURRENT_LSB * SHUNT_R)
 # ============================================================================
 #  Renogy RBT2425LFP — LiFePO4 8S7P 25Ah (from datasheet)
 # ============================================================================
-PACK_CAPACITY_MAH = 25000.0   # 25Ah rated at 0.2C (5A)
+RATED_CAPACITY_MAH = 25000.0  # 25Ah rated at 0.2C (5A) — nameplate
+PACK_CAPACITY_MAH = 20476.0   # 20.476Ah usable before BMS cutoff (~82% of rated)
 CELLS_SERIES = 8
 CELLS_PARALLEL = 7
 RATED_C_RATE = 0.2            # Capacity rated at 0.2C = 5A
@@ -72,31 +73,38 @@ PEUKERT_REF_I_MA = 5000.0     # Reference rate: 0.2C = 5A
 # Internal resistance
 R_INTERNAL_MOHM = 40.0        # <= 40 mOhm (from datasheet)
 
-# LiFePO4 voltage-to-SOC lookup table (per-cell, mV)
-# LFP has a very flat discharge curve — voltage is a poor SOC indicator
-# in the 20-80% region but useful at endpoints.
-# Calibrated against Renogy RBT2425LFP charger readings:
-#   - 3252 mV/cell under 1.2A load ≈ 60% SOC (charger confirmed)
-# The Renogy pack plateau sits lower than generic LFP curves.
+# LiFePO4 voltage-to-SOC lookup table (per-cell OCV, mV)
+# Empirically measured from Battery A full discharge (20.476 Ah, 4 sessions).
+# IR-compensated OCV values (R_path = 254 mOhm), median at each 5% SOC step.
+# 0% = BMS cutoff (usable capacity = 20.476 Ah, 82% of 25 Ah rated).
+# NOTE: 80-100% SOC spans only 4 mV — voltage cannot distinguish in this range.
+#       Use coulomb counting as primary SOC method; this table is for initial estimate.
 LFP_SOC_TABLE = [
-    # (cell_mV, SOC%)
-    (3650, 100),   # Fully charged (CV phase complete)
-    (3450, 99),    # Just off charger
-    (3400, 95),    # Settling after charge
-    (3380, 90),
-    (3350, 80),
-    (3300, 70),    # LFP plateau region
-    (3260, 60),    # Calibrated: 3252mV under load ≈ 60%
-    (3240, 50),
-    (3220, 40),
-    (3200, 30),    # Plateau ends
-    (3150, 20),
-    (3050, 14),    # Knee — voltage drops faster
-    (2950, 9),
-    (2850, 5),
-    (2750, 3),
-    (2600, 1),
-    (2500, 0),     # BMS cutoff
+    # (cell_mV, SOC%)  —  2.5% steps at endpoints, 5% in plateau
+    (3323, 100),
+    (3322, 97.5),
+    (3321, 95),
+    (3320, 90),
+    (3319, 85),
+    (3318, 80),
+    (3313, 75),
+    (3307, 70),
+    (3290, 65),
+    (3288, 60),
+    (3287, 55),
+    (3284, 50),
+    (3281, 45),
+    (3276, 40),
+    (3269, 35),
+    (3260, 30),
+    (3248, 25),
+    (3232, 20),
+    (3211, 15),
+    (3196, 10),
+    (3179, 7.5),
+    (3138, 5),
+    (3044, 2.5),
+    (2922, 0),     # BMS cutoff (~2815 mV under load)
 ]
 
 

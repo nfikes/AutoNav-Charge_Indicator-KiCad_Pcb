@@ -26,15 +26,15 @@ POWER_LSB = CURRENT_LSB * 25
 CAL_REG = 1706
 
 # Battery specs
-PACK_CAPACITY_AH = 25.0
+PACK_CAPACITY_AH = 20.476  # Usable capacity before BMS cutoff (82% of 25Ah rated)
 CELLS_SERIES = 8
 V_BMS_CUTOFF = 20.0  # BMS undervoltage protection
 
 # Sampling interval (seconds)
 SAMPLE_INTERVAL_S = 2.5  # 0.4 Hz
 
-# Session 1 carryover (Battery A idle discharge 2h, 2026-04-01)
-AH_OFFSET = 2.395
+# Session 1+2+3 carryover (Battery A, 10h total, 2026-04-01/02/03)
+AH_OFFSET = 19.852
 
 
 # === I2C Setup ===
