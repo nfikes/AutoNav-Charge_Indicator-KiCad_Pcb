@@ -9302,12 +9302,14 @@
 		)
 		(uuid f6fcfa1c-bdce-4b7f-9c80-bb4b5f156655)
 	)
-	(text "Voltage Translation Togglable"
+	(text "Togglable Voltage Translation Block"
 		(exclude_from_sim no)
-		(at 150.622 15.24 0)
+		(at 165.354 15.748 0)
 		(effects
 			(font
-				(size 1.27 1.27)
+				(size 2.54 2.54)
+				(thickness 0.508)
+				(bold yes)
 				(color 0 16 255 1)
 			)
 		)
@@ -9338,10 +9340,12 @@
 	)
 	(text "Peripheral Connections Block"
 		(exclude_from_sim no)
-		(at 27.178 171.958 0)
+		(at 38.354 173.736 0)
 		(effects
 			(font
-				(size 1.27 1.27)
+				(size 2.54 2.54)
+				(thickness 0.508)
+				(bold yes)
 				(color 0 16 255 1)
 			)
 		)
@@ -9349,10 +9353,12 @@
 	)
 	(text "LED Driver Block"
 		(exclude_from_sim no)
-		(at 143.002 77.724 0)
+		(at 150.114 79.502 0)
 		(effects
 			(font
-				(size 1.27 1.27)
+				(size 2.54 2.54)
+				(thickness 0.508)
+				(bold yes)
 				(color 0 16 255 1)
 			)
 		)
@@ -9372,10 +9378,12 @@
 	)
 	(text "5V DC-DC Buck Block"
 		(exclude_from_sim no)
-		(at 144.526 131.826 0)
+		(at 153.67 132.842 0)
 		(effects
 			(font
-				(size 1.27 1.27)
+				(size 2.54 2.54)
+				(thickness 0.508)
+				(bold yes)
 				(color 0 16 255 1)
 			)
 		)
@@ -9431,10 +9439,12 @@
 	)
 	(text "Battery Gauge Block"
 		(exclude_from_sim no)
-		(at 23.622 78.232 0)
+		(at 30.734 79.248 0)
 		(effects
 			(font
-				(size 1.27 1.27)
+				(size 2.54 2.54)
+				(thickness 0.508)
+				(bold yes)
 				(color 0 16 255 1)
 			)
 		)
@@ -9451,23 +9461,28 @@
 		)
 		(uuid "b2514d07-e29f-4480-80d9-6d4674aedcde")
 	)
-	(text "Front End Current, Voltage, Power Sensor Block"
+	(text "Front End Current, Voltage,and\nPower Sensor Block"
 		(exclude_from_sim no)
-		(at 36.576 14.986 0)
+		(at 13.716 18.288 0)
 		(effects
 			(font
-				(size 1.27 1.27)
+				(size 2.54 2.54)
+				(thickness 0.508)
+				(bold yes)
 				(color 0 16 255 1)
 			)
+			(justify left)
 		)
 		(uuid "c73b25b6-8a9a-48a1-a358-0051d9e8c948")
 	)
 	(text "3.3V DC-DC Regulator Block"
 		(exclude_from_sim no)
-		(at 95.758 169.418 0)
+		(at 105.918 170.688 0)
 		(effects
 			(font
-				(size 1.27 1.27)
+				(size 2.54 2.54)
+				(thickness 0.508)
+				(bold yes)
 				(color 0 16 255 1)
 			)
 		)
@@ -19413,10 +19428,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "9d5c1dc6-022c-43ab-a13a-b6e12fd1894a")
 		(property "Reference" "U2"
-			(at 162.56 132.08 0)
+			(at 162.814 159.512 0)
 			(effects
 				(font
 					(face "Arial")
@@ -19426,7 +19440,7 @@
 			)
 		)
 		(property "Value" "SGM61410XN6G_TR"
-			(at 162.56 134.62 0)
+			(at 162.814 162.56 0)
 			(effects
 				(font
 					(face "Arial")
