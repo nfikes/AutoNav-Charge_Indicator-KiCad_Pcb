@@ -1,0 +1,149 @@
+[
+  {
+    "name": "FID1",
+    "kicad_x": 131.5,
+    "kicad_y": 72.5,
+    "pixel_x": 144,
+    "pixel_y": 291
+  },
+  {
+    "name": "FID3",
+    "kicad_x": 131.5,
+    "kicad_y": 115.0,
+    "pixel_x": 142,
+    "pixel_y": 1181
+  },
+  {
+    "name": "FID2",
+    "kicad_x": 183.0,
+    "kicad_y": 124.0,
+    "pixel_x": 1225,
+    "pixel_y": 1371
+  },
+  {
+    "name": "M1",
+    "kicad_x": 189.5,
+    "kicad_y": 66.0,
+    "pixel_x": 1360,
+    "pixel_y": 153
+  },
+  {
+    "name": "M4",
+    "kicad_x": 143.5,
+    "kicad_y": 65.0,
+    "pixel_x": 395,
+    "pixel_y": 131
+  },
+  {
+    "name": "M3",
+    "kicad_x": 135.5,
+    "kicad_y": 120.0,
+    "pixel_x": 227,
+    "pixel_y": 1287
+  },
+  {
+    "name": "M2",
+    "kicad_x": 190.5,
+    "kicad_y": 112.0,
+    "pixel_x": 1382,
+    "pixel_y": 1120
+  },
+  {
+    "name": "R26",
+    "kicad_x": 145.1,
+    "kicad_y": 76.55,
+    "pixel_x": 694,
+    "pixel_y": 206
+  },
+  {
+    "name": "J2",
+    "kicad_x": 168.46,
+    "kicad_y": 66.5,
+    "pixel_x": 917,
+    "pixel_y": 162
+  },
+  {
+    "name": "J3",
+    "kicad_x": 178.96,
+    "kicad_y": 66.5,
+    "pixel_x": 1137,
+    "pixel_y": 162
+  },
+  {
+    "name": "U4",
+    "kicad_x": 155.5,
+    "kicad_y": 87.5,
+    "pixel_x": 659,
+    "pixel_y": 497
+  },
+  {
+    "name": "U1",
+    "kicad_x": 149.5,
+    "kicad_y": 101.5,
+    "pixel_x": 850,
+    "pixel_y": 677
+  },
+  {
+    "name": "U3",
+    "kicad_x": 177.5,
+    "kicad_y": 95.25,
+    "pixel_x": 1106,
+    "pixel_y": 766
+  },
+  {
+    "name": "U2",
+    "kicad_x": 176.5,
+    "kicad_y": 103.5,
+    "pixel_x": 1084,
+    "pixel_y": 938
+  },
+  {
+    "name": "SW1",
+    "kicad_x": 139.5,
+    "kicad_y": 106.0,
+    "pixel_x": 176,
+    "pixel_y": 1031
+  },
+  {
+    "name": "L2",
+    "kicad_x": 162.0,
+    "kicad_y": 110.0,
+    "pixel_x": 666,
+    "pixel_y": 1067
+  },
+  {
+    "name": "J1",
+    "kicad_x": 137.23,
+    "kicad_y": 91.5,
+    "pixel_x": 179,
+    "pixel_y": 690
+  },
+  {
+    "name": "U6",
+    "kicad_x": 172.0,
+    "kicad_y": 99.5,
+    "pixel_x": 936,
+    "pixel_y": 814
+  },
+  {
+    "name": "Q1",
+    "kicad_x": 175.5,
+    "kicad_y": 105.5,
+    "pixel_x": 1002,
+    "pixel_y": 906
+  },
+  {
+    "name": "Q2",
+    "kicad_x": 171.0,
+    "kicad_y": 103.0,
+    "pixel_x": 810,
+    "pixel_y": 813
+  },
+  {
+    "name": "D1",
+    "kicad_x": 179.0,
+    "kicad_y": 108.5,
+    "pixel_x": 947,
+    "pixel_y": 1002
+  }
+]

@@ -1,19 +1,10 @@
 """BQ34Z100-R2 CC Calibration — write all 32 bytes, check Flash Update OK Voltage."""
-import sys, os
-sys.path.insert(0, os.path.join(os.path.dirname(__file__),
-                                "aardvark-api-macos-arm64-v6.00", "python"))
-from aardvark_py import *
-from array import array
 import struct
+from hw_common import *
 
-BQ = 0x55
 SENSE_R_MOHM = 5
 
-handle = aa_open(0)
-aa_configure(handle, AA_CONFIG_SPI_I2C)
-aa_i2c_bitrate(handle, 100)
-aa_target_power(handle, AA_TARGET_POWER_BOTH)
-aa_sleep_ms(500)
+handle = aardvark_init()
 
 print("=" * 60)
 print("  BQ34Z100-R2 CC Calibration")

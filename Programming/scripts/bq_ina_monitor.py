@@ -3,20 +3,10 @@
 Shows both readings continuously so we can check linearity
 as the supply voltage changes. Press Ctrl+C to stop.
 """
-import sys, os
-sys.path.insert(0, os.path.join(os.path.dirname(__file__),
-                                "aardvark-api-macos-arm64-v6.00", "python"))
-from aardvark_py import *
-from array import array
 import time
+from hw_common import *
 
-BQ = 0x55
-INA = 0x40
-handle = aa_open(0)
-aa_configure(handle, AA_CONFIG_SPI_I2C)
-aa_i2c_bitrate(handle, 100)
-aa_target_power(handle, AA_TARGET_POWER_BOTH)
-aa_sleep_ms(500)
+handle = aardvark_init()
 
 
 def read_std(addr, cmd, n=2, signed=False):

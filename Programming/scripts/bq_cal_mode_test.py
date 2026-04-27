@@ -3,19 +3,9 @@
 Enter calibration mode to see if the raw ADC reads the true BAT pin voltage
 (~786mV at 25V supply) rather than the IT algorithm's processed ~45mV.
 """
-import sys, os
-sys.path.insert(0, os.path.join(os.path.dirname(__file__),
-                                "aardvark-api-macos-arm64-v6.00", "python"))
-from aardvark_py import *
-from array import array
+from hw_common import *
 
-BQ = 0x55
-INA = 0x40
-handle = aa_open(0)
-aa_configure(handle, AA_CONFIG_SPI_I2C)
-aa_i2c_bitrate(handle, 100)
-aa_target_power(handle, AA_TARGET_POWER_BOTH)
-aa_sleep_ms(500)
+handle = aardvark_init()
 
 
 def unseal_fa():

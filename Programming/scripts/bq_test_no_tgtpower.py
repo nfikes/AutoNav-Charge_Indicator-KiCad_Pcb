@@ -5,22 +5,10 @@ through internal protection diodes, overriding the 2.5V regulator
 and corrupting the ADC reference. Running with target power OFF lets
 the IC power itself from BAT alone.
 """
-import sys, os
-sys.path.insert(0, os.path.join(os.path.dirname(__file__),
-                                "aardvark-api-macos-arm64-v6.00", "python"))
-from aardvark_py import *
-from array import array
-
-BQ = 0x55
-INA = 0x40
-
-handle = aa_open(0)
-aa_configure(handle, AA_CONFIG_SPI_I2C)
-aa_i2c_bitrate(handle, 100)
+from hw_common import *
 
 # CRITICAL: No target power — let the IC power from BAT only
-aa_target_power(handle, AA_TARGET_POWER_NONE)
-aa_sleep_ms(2000)
+handle = aardvark_init(target_power=False)
 
 print("=" * 60)
 print("  BQ34Z100-R2 — No Aardvark Target Power Test")

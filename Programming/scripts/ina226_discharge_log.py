@@ -7,19 +7,12 @@ voltage-vs-Ah-discharged curve for calibrating the fuel gauge SOC table.
 Output: discharge_log_YYYYMMDD_HHMMSS.csv in the same directory.
 Press Ctrl+C to stop. Stops automatically at 20.0V (BMS cutoff).
 
-Hardware: INA226 at 0x40, 12mOhm shunt (R4), Aardvark I2C adapter
+Hardware: INA226 at 0x45, 12mOhm shunt (R4), Aardvark I2C adapter
 Battery: Renogy RBT2425LFP — LiFePO4 8S7P, 25Ah, 25.6V nom, 29.0V charge
 """
-import sys, os, time, csv
+import time, csv
 from datetime import datetime
-from array import array
-
-sys.path.insert(0, os.path.join(os.path.dirname(__file__),
-                                "aardvark-api-macos-arm64-v6.00", "python"))
-from aardvark_py import *
-
-# INA226 config
-INA = 0x40
+from hw_common import *
 SHUNT_R = 0.012
 CURRENT_LSB = 250e-6
 POWER_LSB = CURRENT_LSB * 25
@@ -38,14 +31,7 @@ AH_OFFSET = 19.852
 
 
 # === I2C Setup ===
-handle = aa_open(0)
-if handle < 0:
-    print(f"Aardvark open failed: {handle}")
-    exit(1)
-aa_configure(handle, AA_CONFIG_SPI_I2C)
-aa_i2c_bitrate(handle, 100)
-aa_target_power(handle, AA_TARGET_POWER_BOTH)
-aa_sleep_ms(500)
+handle = aardvark_init()
 
 
 def ina_write_reg(reg, value):

@@ -13,13 +13,7 @@ bypasses the internal 5:1 divider for best ADC resolution.
 
 Does NOT calibrate or modify any other parameters.
 """
-import sys, os
-sys.path.insert(0, os.path.join(os.path.dirname(__file__),
-                                "aardvark-api-macos-arm64-v6.00", "python"))
-from aardvark_py import *
-from array import array
-
-BQ = 0x55
+from hw_common import *
 
 # Standard command registers (read 2 bytes, little-endian)
 REGS = [
@@ -199,17 +193,7 @@ print("=" * 62)
 print("  BQ34Z100-R2 Comm Test + Config Verification")
 print("=" * 62)
 
-handle = aa_open(0)
-if handle <= 0:
-    print(f"\nFAIL: Cannot open Aardvark adapter (error {handle})")
-    sys.exit(1)
-print(f"Aardvark opened (handle={handle})")
-
-aa_configure(handle, AA_CONFIG_SPI_I2C)
-bitrate = aa_i2c_bitrate(handle, 100)
-print(f"I2C bitrate: {bitrate} kHz")
-aa_target_power(handle, AA_TARGET_POWER_BOTH)
-aa_sleep_ms(500)
+handle = aardvark_init()
 
 print(f"\n--- Phase 1: Standard Register Read (0x{BQ:02X}) ---")
 

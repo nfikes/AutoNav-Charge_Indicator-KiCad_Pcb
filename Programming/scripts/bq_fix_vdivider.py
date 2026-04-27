@@ -4,20 +4,10 @@ The VD=844 value caused per-cell voltage below gauge minimum threshold.
 Need to find the correct VD empirically using the Ralim calibration approach:
   newVD = (actualVoltage / reportedVoltage) * currentVD
 """
-import sys, os
-sys.path.insert(0, os.path.join(os.path.dirname(__file__),
-                                "aardvark-api-macos-arm64-v6.00", "python"))
-from aardvark_py import *
-from array import array
 import struct
+from hw_common import *
 
-BQ = 0x55
-
-handle = aa_open(0)
-aa_configure(handle, AA_CONFIG_SPI_I2C)
-aa_i2c_bitrate(handle, 100)
-aa_target_power(handle, AA_TARGET_POWER_BOTH)
-aa_sleep_ms(500)
+handle = aardvark_init()
 
 print("=" * 60)
 print("  BQ34Z100-R2 Voltage Divider Fix")
@@ -233,7 +223,6 @@ if v and v > 0:
     #   newVD = (actualVoltage / reportedVoltage) * currentVD
     #
     # But we need the ACTUAL pack voltage. Let's read the INA226.
-    INA = 0x40
     ina_d = array('B', [0x02])
     aa_i2c_write(handle, INA, AA_I2C_NO_STOP, ina_d)
     (rc, ina_data) = aa_i2c_read(handle, INA, AA_I2C_NO_FLAGS, 2)

@@ -8,21 +8,10 @@ Plan:
 2. Commit + RESET
 3. Try 0x0030 (All LEDs ON)
 """
-import sys, os, time
-sys.path.insert(0, os.path.join(os.path.dirname(__file__),
-                                "aardvark-api-macos-arm64-v6.00", "python"))
-from aardvark_py import *
-from array import array
+import time
+from hw_common import *
 
-BQ = 0x55
-handle = aa_open(0)
-if handle < 0:
-    print(f"Aardvark open failed: {handle}")
-    exit(1)
-aa_configure(handle, AA_CONFIG_SPI_I2C)
-aa_i2c_bitrate(handle, 100)
-aa_target_power(handle, AA_TARGET_POWER_BOTH)
-aa_sleep_ms(500)
+handle = aardvark_init()
 
 
 def wake():

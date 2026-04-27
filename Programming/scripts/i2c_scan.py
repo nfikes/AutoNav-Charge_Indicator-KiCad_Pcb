@@ -1,19 +1,7 @@
 """I2C Bus Scan — probe known addresses + full range with register reads."""
-import sys, os
-sys.path.insert(0, os.path.join(os.path.dirname(__file__),
-                                "aardvark-api-macos-arm64-v6.00", "python"))
-from aardvark_py import *
-from array import array
+from hw_common import *
 
-handle = aa_open(0)
-if handle <= 0:
-    print(f"FAIL: Cannot open Aardvark (error {handle})")
-    sys.exit(1)
-
-aa_configure(handle, AA_CONFIG_SPI_I2C)
-aa_i2c_bitrate(handle, 100)
-aa_target_power(handle, AA_TARGET_POWER_BOTH)
-aa_sleep_ms(500)
+handle = aardvark_init()
 
 def probe(addr):
     """Try to read 1 byte from register 0x00. Returns True if device ACKs."""
@@ -25,8 +13,8 @@ def probe(addr):
 print("I2C Bus Probe")
 print("=" * 45)
 known = [
-    (0x40, "INA226 (U3)"),
-    (0x55, "BQ34Z100-R2 (U1)"),
+    (INA, "INA226 (U3)"),
+    (BQ,  "BQ34Z100-R2 (U1)"),
 ]
 for addr, desc in known:
     ok = probe(addr)

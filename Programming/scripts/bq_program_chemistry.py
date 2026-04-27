@@ -18,15 +18,8 @@ LiFePO4 Cell Characteristics (per cell):
   - Empty:    2.5 V
   - Flat discharge curve 3.2-3.3 V across 20-80% SOC
 """
-import sys, os
-sys.path.insert(0, os.path.join(os.path.dirname(__file__),
-                                "aardvark-api-macos-arm64-v6.00", "python"))
-from aardvark_py import *
-from array import array
 import struct
-
-BQ  = 0x55
-INA = 0x40
+from hw_common import *
 
 # === Target Battery: Renogy RBT2425LFP ===
 NUM_CELLS        = 8
@@ -51,14 +44,7 @@ RA1_N5C = [15, 15, 15, 15, 15, 15, 15, 18, 20, 25, 30, 40, 55, 85, 140]  # -5 de
 # ===========================================================================
 
 def open_aardvark():
-    handle = aa_open(0)
-    if handle <= 0:
-        print(f"ERROR: Cannot open Aardvark (error {handle})")
-        sys.exit(1)
-    aa_configure(handle, AA_CONFIG_SPI_I2C)
-    aa_i2c_bitrate(handle, 100)
-    aa_target_power(handle, AA_TARGET_POWER_BOTH)
-    aa_sleep_ms(500)
+    handle = aardvark_init()
     print("Aardvark opened, target power on.")
     return handle
 

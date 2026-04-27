@@ -2,25 +2,7 @@
 Quick check: open Aardvark, read INA226 ID registers & config,
 report pass/fail.
 """
-import sys, os
-sys.path.insert(0, os.path.join(os.path.dirname(__file__),
-                                "aardvark-api-macos-arm64-v6.00", "python"))
-from aardvark_py import *
-from array import array
-
-INA = 0x40
-
-# INA226 register addresses
-REG_CONFIG   = 0x00
-REG_SHUNT_V  = 0x01
-REG_BUS_V    = 0x02
-REG_POWER    = 0x03
-REG_CURRENT  = 0x04
-REG_CAL      = 0x05
-REG_MASK_EN  = 0x06
-REG_ALERT    = 0x07
-REG_MFG_ID   = 0xFE   # Should read 0x5449 ("TI")
-REG_DIE_ID   = 0xFF   # Should read 0x2260
+from hw_common import *
 
 def read_u16(handle, addr, reg):
     aa_i2c_write(handle, addr, AA_I2C_NO_STOP, array('B', [reg]))
@@ -40,17 +22,7 @@ print("=" * 50)
 print("INA226 Communication Test — Rev 3 PCB")
 print("=" * 50)
 
-handle = aa_open(0)
-if handle <= 0:
-    print(f"\nFAIL: Cannot open Aardvark adapter (error {handle})")
-    sys.exit(1)
-print(f"Aardvark opened (handle={handle})")
-
-aa_configure(handle, AA_CONFIG_SPI_I2C)
-bitrate = aa_i2c_bitrate(handle, 100)  # 100 kHz standard mode
-print(f"I2C bitrate: {bitrate} kHz")
-aa_target_power(handle, AA_TARGET_POWER_BOTH)
-aa_sleep_ms(200)
+handle = aardvark_init()
 
 # ---- Read identification registers ----
 print(f"\nTarget address: 0x{INA:02X}")

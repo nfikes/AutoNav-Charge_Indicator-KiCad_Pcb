@@ -7,80 +7,16 @@ INA226 Datasheet:  https://www.ti.com/lit/ds/symlink/ina226.pdf
 BQ34Z100-R2 TRM:   https://www.ti.com/lit/pdf/sluuco5
 
 Hardware:
-  - INA226 (U3) at slave address 0x40
+  - INA226 (U3) at slave address 0x45
   - BQ34Z100-R2 (U1) at slave address 0x55
   - Shunt resistor R4 = 10 mOhm (WSL1206R0100JEA) — INA226 current sense
   - Sense resistor R26 = 5 mOhm (WSL25125L000FEA) — BQ34Z100-R2 low-side sense
   - Thermistor: Murata NCP18XH103D03RB — 10kΩ NTC, B25/85 = 3434K
 """
 
-import sys, os
 import time
-from array import array
 import struct
-
-sys.path.insert(0, os.path.join(os.path.dirname(__file__),
-                                "aardvark-api-macos-arm64-v6.00", "python"))
-try:
-    from aardvark_py import *
-except ImportError:
-    print("ERROR: aardvark_py not installed.")
-    print("Install via:  pip install aardvark_py")
-    print("Or download from: https://www.totalphase.com/products/aardvark-software-api/")
-    sys.exit(1)
-
-# ---------------------------------------------------------------------------
-# I2C slave addresses
-# ---------------------------------------------------------------------------
-INA226_ADDR   = 0x40
-BQ34Z100_ADDR = 0x55
-
-# ---------------------------------------------------------------------------
-# INA226 register pointer addresses (Table 2, datasheet SBOS547B)
-# All registers are 16-bit, big-endian (MSB first).
-# ---------------------------------------------------------------------------
-INA226_REG_CONFIG   = 0x00  # Configuration
-INA226_REG_SHUNT_V  = 0x01  # Shunt Voltage   (LSB = 2.5 uV, signed)
-INA226_REG_BUS_V    = 0x02  # Bus Voltage      (LSB = 1.25 mV, unsigned)
-INA226_REG_POWER    = 0x03  # Power            (LSB = 25 * Current_LSB, unsigned)
-INA226_REG_CURRENT  = 0x04  # Current          (LSB = Current_LSB, signed)
-INA226_REG_CAL      = 0x05  # Calibration
-INA226_REG_MASK_EN  = 0x06  # Mask / Enable
-INA226_REG_ALERT    = 0x07  # Alert Limit
-INA226_REG_MFR_ID   = 0xFE  # Manufacturer ID  (expect 0x5449 = "TI")
-INA226_REG_DIE_ID   = 0xFF  # Die ID           (expect 0x2260)
-
-# ---------------------------------------------------------------------------
-# BQ34Z100-R2 standard command addresses (TRM SLUUCO5A)
-# All standard commands return 16-bit little-endian (LSB first).
-# ---------------------------------------------------------------------------
-BQ_CMD_STATE_OF_CHARGE   = 0x03  # % (SOC byte at pointer 0x03)
-BQ_CMD_MAX_ERROR         = 0x04  # %
-BQ_CMD_REMAINING_CAP     = 0x06  # mAh
-BQ_CMD_FULL_CHARGE_CAP   = 0x08  # mAh
-BQ_CMD_VOLTAGE           = 0x0A  # mV
-BQ_CMD_AVG_CURRENT       = 0x0C  # mA  (signed)
-BQ_CMD_TEMPERATURE       = 0x0E  # 0.1 K
-BQ_CMD_FLAGS             = 0x10
-BQ_CMD_FLAGS_B           = 0x12
-BQ_CMD_CURRENT           = 0x14  # mA  (signed, instantaneous)
-
-# ---------------------------------------------------------------------------
-# BQ34Z100-R2 Data Flash access registers and subclass IDs
-# ---------------------------------------------------------------------------
-BQ_BLOCK_DATA_CONTROL = 0x61
-BQ_DATA_FLASH_CLASS   = 0x3E
-BQ_DATA_FLASH_BLOCK   = 0x3F
-BQ_BLOCK_DATA_BASE    = 0x40
-BQ_BLOCK_DATA_CKSUM   = 0x60
-BQ_SUBCLASS_PACK_CFG  = 64    # Pack Configuration (RSNS bit)
-BQ_SUBCLASS_CC_CAL    = 104   # CC Gain and CC Delta
-BQ_UNSEAL_KEY1        = 0x0414
-BQ_UNSEAL_KEY2        = 0x3672
-BQ_FULL_ACCESS_KEY1   = 0xFFFF
-BQ_FULL_ACCESS_KEY2   = 0xFFFF
-BQ_SUBCMD_SEALED      = 0x0020
-BQ_SUBCMD_CONTROL_STATUS = 0x0000
+from hw_common import *
 
 # ---------------------------------------------------------------------------
 # Shunt resistor value (R4 on schematic, WSL1206R0100JEA — INA226)

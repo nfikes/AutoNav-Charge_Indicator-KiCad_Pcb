@@ -3,20 +3,10 @@
 If no thermistor is connected, TEMPS=1 may cause the ADC to get stuck
 trying to measure the TS pin, locking up voltage measurement too.
 """
-import sys, os, time
-sys.path.insert(0, os.path.join(os.path.dirname(__file__),
-                                "aardvark-api-macos-arm64-v6.00", "python"))
-from aardvark_py import *
-from array import array
-import struct
+import time, struct
+from hw_common import *
 
-BQ = 0x55
-INA = 0x40
-handle = aa_open(0)
-aa_configure(handle, AA_CONFIG_SPI_I2C)
-aa_i2c_bitrate(handle, 100)
-aa_target_power(handle, AA_TARGET_POWER_BOTH)
-aa_sleep_ms(500)
+handle = aardvark_init()
 
 
 def unseal_fa():

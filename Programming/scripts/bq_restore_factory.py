@@ -13,26 +13,15 @@ Strategy:
   5. RESET and check if voltage recovers
   6. If that fails, try SHUTDOWN + full power cycle
 """
-import sys, os
-sys.path.insert(0, os.path.join(os.path.dirname(__file__),
-                                "aardvark-api-macos-arm64-v6.00", "python"))
-from aardvark_py import *
-from array import array
 import struct
-
-BQ = 0x55
-INA = 0x40
+from hw_common import *
 
 # Factory default values
 FACTORY_PACK_CONFIG = 0x41D9   # VOLTSEL=1/EXT, RSNS=HIGH
 FACTORY_CC_GAIN = 0.4768       # 4.768 / 10mOhm default
 FACTORY_CC_DELTA = 567744.5    # 5677445.3 / 10mOhm default
 
-handle = aa_open(0)
-aa_configure(handle, AA_CONFIG_SPI_I2C)
-aa_i2c_bitrate(handle, 100)
-aa_target_power(handle, AA_TARGET_POWER_BOTH)
-aa_sleep_ms(1000)
+handle = aardvark_init()
 
 print("=" * 60)
 print("  BQ34Z100-R2 Factory Default Restore")

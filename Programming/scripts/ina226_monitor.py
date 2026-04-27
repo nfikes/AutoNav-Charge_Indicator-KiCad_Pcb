@@ -7,22 +7,11 @@ Sampling runs in a dedicated thread at maximum I2C speed (~500+ Hz at
 HISTORY samples.  Every sample is logged to a timestamped CSV in
 the outputs/ folder.
 """
-import sys, os, csv, time, threading
+import csv, time, threading
 from datetime import datetime
-sys.path.insert(0, os.path.join(os.path.dirname(__file__),
-                                "aardvark-api-macos-arm64-v6.00", "python"))
-from aardvark_py import *
-from array import array
+from hw_common import *
 import tkinter as tk
 from collections import deque
-
-# --- INA226 constants ---
-INA  = 0x40
-REG_CONFIG  = 0x00
-REG_BUS_V   = 0x02
-REG_POWER   = 0x03
-REG_CURRENT = 0x04
-REG_CAL     = 0x05
 
 R_SHUNT      = 0.010        # 10 mOhm
 CURRENT_LSB  = 0.00025      # 250 uA/bit
@@ -32,6 +21,34 @@ CAL_VALUE    = int(0.00512 / (CURRENT_LSB * R_SHUNT))  # 2048
 # INA226 config: AVG=1, VBUSCT=140us, VSHCT=140us, continuous shunt+bus
 # Bits: 0 100 000 000 000 111 = 0x4007
 CONFIG_FAST  = 0x4007
+
+CELLS_SERIES = 8
+
+# LiFePO4 voltage-to-SOC lookup table (per-cell OCV, mV)
+# Empirically measured from Battery A full discharge (20.476 Ah, 4 sessions).
+LFP_SOC_TABLE = [
+    (3323, 100), (3322, 97.5), (3321, 95), (3320, 90), (3319, 85),
+    (3318, 80), (3313, 75), (3307, 70), (3290, 65), (3288, 60),
+    (3287, 55), (3284, 50), (3281, 45), (3276, 40), (3269, 35),
+    (3260, 30), (3248, 25), (3232, 20), (3211, 15), (3196, 10),
+    (3179, 7.5), (3138, 5), (3044, 2.5), (2922, 0),
+]
+
+
+def voltage_to_soc(bus_v):
+    """Estimate SOC% from bus voltage (in volts) using LFP lookup table."""
+    cell_mv = (bus_v * 1000) / CELLS_SERIES
+    if cell_mv >= LFP_SOC_TABLE[0][0]:
+        return 100.0
+    if cell_mv <= LFP_SOC_TABLE[-1][0]:
+        return 0.0
+    for i in range(len(LFP_SOC_TABLE) - 1):
+        v_hi, soc_hi = LFP_SOC_TABLE[i]
+        v_lo, soc_lo = LFP_SOC_TABLE[i + 1]
+        if v_lo <= cell_mv <= v_hi:
+            frac = (cell_mv - v_lo) / (v_hi - v_lo)
+            return soc_lo + frac * (soc_hi - soc_lo)
+    return 50.0
 
 GUI_MS     = 50    # GUI refresh interval (ms) — 20 Hz display
 HISTORY    = 500   # samples shown on plot (~1 s at 500 Hz)
@@ -64,15 +81,7 @@ def read_s16(handle, addr, reg):
 
 
 # --- Open Aardvark & configure INA226 ---
-handle = aa_open(0)
-if handle <= 0:
-    print(f"ERROR: Cannot open Aardvark (error {handle})")
-    sys.exit(1)
-aa_configure(handle, AA_CONFIG_SPI_I2C)
-actual_bitrate = aa_i2c_bitrate(handle, 400)   # 400 kHz fast-mode
-print(f"I2C bitrate set to {actual_bitrate} kHz")
-aa_target_power(handle, AA_TARGET_POWER_BOTH)
-aa_sleep_ms(200)
+handle = aardvark_init(bitrate=400)
 
 # Configure for fastest conversion (140us bus + shunt, no averaging)
 cfg_msb = (CONFIG_FAST >> 8) & 0xFF
@@ -80,45 +89,60 @@ cfg_lsb = CONFIG_FAST & 0xFF
 aa_i2c_write(handle, INA, AA_I2C_NO_FLAGS,
              array('B', [REG_CONFIG, cfg_msb, cfg_lsb]))
 
+# Write calibration register so current & power registers give real values
 cal_msb = (CAL_VALUE >> 8) & 0xFF
 cal_lsb = CAL_VALUE & 0xFF
 aa_i2c_write(handle, INA, AA_I2C_NO_FLAGS,
              array('B', [REG_CAL, cal_msb, cal_lsb]))
 
-# --- CSV logging (deferred until sample rate is measured) ---
-out_base = os.path.join(os.path.dirname(__file__), "..", "outputs")
-csv_file   = None
-csv_writer = None
-csv_path   = None
-t_start    = time.time()
+# --- CSV recording (toggled by Record button, 10 Hz) ---
+out_base = os.path.join(os.path.dirname(__file__), "..", "empirical_results")
+csv_file     = None
+csv_writer   = None
+csv_path     = None
+recording    = False
+t_start      = time.time()
+REC_INTERVAL = 100   # ms between CSV rows (10 Hz)
 
 # --- Shared state between sampling thread and GUI ---
 buf_lock   = threading.Lock()
-buf_samples = []        # list of (v, i, p) accumulated between GUI frames
+buf_samples = []        # list of (v, i, p, soc) accumulated between GUI frames
 sample_count = 0        # total samples taken (for rate calc)
 sampling   = True       # flag to stop the thread
+latest      = [None, None, None, None]  # most recent (v, i, p, soc) for CSV
 
 
-def _open_csv(rate_hz):
-    """Create the rate-named subfolder and open the CSV file."""
-    global csv_file, csv_writer, csv_path
-    folder = os.path.join(out_base, f"{rate_hz}hz")
-    os.makedirs(folder, exist_ok=True)
-    csv_name = datetime.now().strftime("ina226_%Y%m%d_%H%M%S.csv")
-    csv_path = os.path.join(folder, csv_name)
+def _start_recording():
+    """Open a new CSV file using the AutoNav naming convention."""
+    global csv_file, csv_writer, csv_path, recording
+    test_id = "ina226"
+    stamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    run_stem = f"{test_id}_{stamp}"
+    run_dir = os.path.join(out_base, run_stem)
+    os.makedirs(run_dir, exist_ok=True)
+    csv_path = os.path.join(run_dir, f"{run_stem}.csv")
     csv_file = open(csv_path, "w", newline="")
     csv_writer = csv.writer(csv_file)
-    csv_writer.writerow(["timestamp", "voltage_V", "current_A", "power_W"])
-    print(f"Logging to {csv_path}")
+    csv_writer.writerow(["ROS2_Clock", "Topic_Name", "Data_Keys",
+                         "Value_0", "Value_1", "Value_2", "Value_3"])
+    recording = True
+    print(f"Recording to {csv_path}")
+
+
+def _stop_recording():
+    """Close the CSV file."""
+    global csv_file, csv_writer, recording
+    recording = False
+    if csv_file is not None:
+        csv_file.close()
+        print(f"CSV saved: {csv_path}")
+        csv_file = None
+        csv_writer = None
 
 
 def sample_loop():
-    """Tight loop — reads all 3 registers back-to-back, writes CSV."""
+    """Tight loop — reads all 3 registers back-to-back, feeds GUI buffer."""
     global sample_count
-    warmup_start = time.time()
-    warmup_count = 0
-    csv_ready = False
-    pending_rows = []      # buffer rows during warm-up
 
     while sampling:
         raw_v = read_u16(handle, INA, REG_BUS_V)
@@ -128,29 +152,12 @@ def sample_loop():
         v = raw_v * 1.25e-3 if raw_v is not None else None
         i = raw_i * CURRENT_LSB if raw_i is not None else None
         p = raw_p * POWER_LSB if raw_p is not None else None
-
-        ts = time.time() - t_start
-        row = [f"{ts:.4f}",
-               f"{v:.4f}" if v is not None else "",
-               f"{i:.5f}" if i is not None else "",
-               f"{p:.3f}" if p is not None else ""]
-
-        if not csv_ready:
-            pending_rows.append(row)
-            warmup_count += 1
-            if time.time() - warmup_start >= 1.0:
-                rate = int(round(warmup_count / (time.time() - warmup_start)))
-                _open_csv(rate)
-                for r in pending_rows:
-                    csv_writer.writerow(r)
-                pending_rows = None
-                csv_ready = True
-        else:
-            csv_writer.writerow(row)
+        soc = voltage_to_soc(v) if v is not None else None
 
         with buf_lock:
-            buf_samples.append((v, i, p))
+            buf_samples.append((v, i, p, soc))
             sample_count += 1
+            latest[:] = [v, i, p, soc]
 
 
 # --- GUI ---
@@ -259,13 +266,91 @@ class Trace:
 frame = tk.Frame(root, bg=BG)
 frame.pack(padx=0, pady=(0, 10))
 
-tr_v = Trace(frame, 0, "Voltage", "V",  "#4fc3f7", 20.0, 30.0, ".2f")
-tr_i = Trace(frame, 1, "Current", "A",  "#aed581",  0.0,  3.0, ".3f")
-tr_p = Trace(frame, 2, "Power",   "W",  "#ffb74d",  0.0, 80.0, ".1f")
+# --- Oscilloscope traces (left column) ---
+trace_frame = tk.Frame(frame, bg=BG)
+trace_frame.grid(row=0, column=0, sticky="nsew")
 
-# sample-rate label at the bottom
-rate_lbl = tk.Label(frame, text="0 Hz", font=FONT_RATE, fg=FGDM, bg=BG)
-rate_lbl.grid(row=6, column=0, sticky="e", padx=(0, 18), pady=(6, 0))
+tr_v = Trace(trace_frame, 0, "Voltage", "V",  "#4fc3f7", 20.0, 30.0, ".2f")
+tr_i = Trace(trace_frame, 1, "Current", "A",  "#aed581",  0.0,  3.0, ".3f")
+tr_p = Trace(trace_frame, 2, "Power",   "W",  "#ffb74d",  0.0, 80.0, ".1f")
+
+# bottom bar: sample rate + record button
+bot_frame = tk.Frame(trace_frame, bg=BG)
+bot_frame.grid(row=6, column=0, sticky="ew", padx=(8, 8), pady=(6, 0))
+
+FONT_REC = ("Menlo", 11, "bold")
+
+rate_lbl = tk.Label(bot_frame, text="0 Hz", font=FONT_RATE, fg=FGDM, bg=BG)
+rate_lbl.pack(side="left")
+
+
+def toggle_record():
+    global recording
+    if recording:
+        _stop_recording()
+        rec_btn.config(text="Record", fg="#aed581", activeforeground="#aed581")
+    else:
+        _start_recording()
+        rec_btn.config(text="Stop", fg="#f44336", activeforeground="#f44336")
+
+
+rec_btn = tk.Button(bot_frame, text="Record", font=FONT_REC,
+                    fg="#aed581", bg="#333333", activebackground="#444444",
+                    activeforeground="#aed581", highlightthickness=0,
+                    bd=0, padx=12, pady=2, command=toggle_record)
+rec_btn.pack(side="right")
+
+# --- SOC battery bar (right column) ---
+BAR_W      = 60    # bar width (px)
+BAR_H      = 360   # bar height (px) — spans the 3 traces
+BAR_PAD    = 16    # internal padding from canvas edge to bar rect
+FONT_SOC   = ("Menlo", 28, "bold")
+FONT_SOC_S = ("Menlo", 11)
+
+soc_frame = tk.Frame(frame, bg=BG)
+soc_frame.grid(row=0, column=1, sticky="ns", padx=(4, 12), pady=(10, 0))
+
+soc_lbl = tk.Label(soc_frame, text="---%", font=FONT_SOC, fg="#ce93d8", bg=BG)
+soc_lbl.pack(pady=(0, 6))
+
+soc_canvas = tk.Canvas(soc_frame, width=BAR_W, height=BAR_H,
+                        bg=BG, highlightthickness=0)
+soc_canvas.pack()
+
+soc_sub_lbl = tk.Label(soc_frame, text="Charge", font=FONT_SOC_S, fg=FGDM, bg=BG)
+soc_sub_lbl.pack(pady=(4, 0))
+
+# Draw the static bar outline
+soc_canvas.create_rectangle(0, 0, BAR_W, BAR_H, outline="#444444", width=2, tags="outline")
+
+soc_history = deque(maxlen=HISTORY)  # rolling window matching the trace plots
+
+
+def soc_color(pct):
+    """Return fill color based on SOC level."""
+    if pct >= 60:
+        return "#4caf50"   # green
+    elif pct >= 30:
+        return "#ff9800"   # amber
+    else:
+        return "#f44336"   # red
+
+
+def redraw_soc_bar():
+    """Redraw the filled portion of the SOC bar (averaged over window)."""
+    soc = sum(soc_history) / len(soc_history) if soc_history else 0.0
+    soc_canvas.delete("fill")
+    frac = max(0.0, min(1.0, soc / 100.0))
+    fill_h = int(frac * BAR_H)
+    if fill_h > 0:
+        soc_canvas.create_rectangle(
+            1, BAR_H - fill_h, BAR_W - 1, BAR_H,
+            fill=soc_color(soc), outline="", tags="fill")
+    # re-draw outline on top
+    soc_canvas.delete("outline")
+    soc_canvas.create_rectangle(0, 0, BAR_W, BAR_H,
+                                 outline="#444444", width=2, tags="outline")
+    soc_lbl.config(text=f"{soc:.0f}%", fg=soc_color(soc))
 
 last_rate_time  = time.time()
 last_rate_count = 0
@@ -280,14 +365,17 @@ def update_gui():
         buf_samples.clear()
         total = sample_count
 
-    for v, i, p in new_samples:
+    for v, i, p, soc in new_samples:
         tr_v.push(v)
         tr_i.push(i)
         tr_p.push(p)
+        if soc is not None:
+            soc_history.append(soc)
 
     tr_v.redraw()
     tr_i.redraw()
     tr_p.redraw()
+    redraw_soc_bar()
 
     # Update rate display every ~1 s
     now = time.time()
@@ -301,16 +389,29 @@ def update_gui():
     root.after(GUI_MS, update_gui)
 
 
+def csv_tick():
+    """Write one row to CSV at 10 Hz when recording."""
+    if recording and csv_writer is not None:
+        with buf_lock:
+            v, i, p, soc = latest
+        ts = int((time.time() - t_start) * 1e9)  # nanoseconds like ROS2_Clock
+        if v is not None:
+            csv_writer.writerow([ts, "/electrical/voltage", "voltage_V", f"{v:.4f}"])
+        if i is not None:
+            csv_writer.writerow([ts, "/electrical/current", "current_A", f"{i:.5f}"])
+        if p is not None:
+            csv_writer.writerow([ts, "/electrical/power", "power_W", f"{p:.3f}"])
+        if soc is not None:
+            csv_writer.writerow([ts, "/electrical/soc", "soc_pct", f"{soc:.1f}"])
+    root.after(REC_INTERVAL, csv_tick)
+
+
 def on_close():
     global sampling
     sampling = False
     sample_thread.join(timeout=1.0)
-    elapsed = time.time() - t_start
-    if csv_file is not None:
-        csv_file.close()
-        print(f"CSV saved: {csv_path}")
-        print(f"  {sample_count} samples in {elapsed:.1f}s "
-              f"({sample_count/elapsed:.0f} Hz avg)")
+    if recording:
+        _stop_recording()
     aa_target_power(handle, AA_TARGET_POWER_NONE)
     aa_close(handle)
     root.destroy()
@@ -322,4 +423,5 @@ root.protocol("WM_DELETE_WINDOW", on_close)
 sample_thread = threading.Thread(target=sample_loop, daemon=True)
 sample_thread.start()
 update_gui()
+csv_tick()
 root.mainloop()

@@ -264,6 +264,77 @@ All scripts are located in `Programming/scripts/`.
 | `bq_full_reset.py`       | Factory reset the gauge                          |
 | `ina226_monitor.py`      | Real-time GUI monitor (voltage/current/power)    |
 
+Revision 2 Board Failure Report (Bowser → Shogi Transfer)
+----------------------------------------------------------
+
+**Date:** 2026-04-23
+**Board:** Revision 2, serial originally deployed on robot Bowser
+**Status:** Declared dead
+
+### Background
+
+The R2 board was transferred from robot Bowser to robot Shogi. It was
+fully functional on Bowser. After installation on Shogi, I2C
+communication failed completely.
+
+### Suspected Root Cause
+
+Metal shavings from the robot chassis are suspected to have landed on
+the board, creating transient shorts across exposed traces and
+component pads. This triggered cascading failures in multiple ICs.
+
+### Failure 1 — INA226 (U3) CMOS Latch-Up
+
+**Symptom:** SCL held at ~3 ohms to ground. No I2C devices responded.
+
+**Diagnosis:** With U3 removed, SCL-to-GND resistance rose from 3 ohms
+to 200 kohms. Using the parallel resistance formula:
+
+    1/R_total = 1/R_ina + 1/R_board
+    R_ina ≈ 5.0 ohms
+
+The INA226 had a ~5 ohm internal short from SCL to ground — consistent
+with CMOS latch-up, where a parasitic PNPN thyristor (SCR) structure
+activates and creates a self-sustaining low-impedance path. A metal
+shaving shorting an I/O pin above or below the supply rails would
+forward-bias the internal ESD protection diodes, injecting substrate
+current and triggering the parasitic SCR.
+
+**Resolution:** Replaced U3 (INA226). SCL impedance restored to normal.
+
+### Failure 2 — SGM61410 (U2) DC-DC Buck Converter
+
+**Symptom:** 5 V buck output only produced ~1.15 V from a 20 V input.
+The downstream 3.3 V LDO (U5, TPS7A2033) also showed only ~1 V output.
+
+**Diagnosis:**
+- U2 pin 5 (VIN): 19.99 V — input is fine
+- U2 pin 6 (SW): 1.15 V — not switching properly
+- U2 pin 3 (FB): 1.144 V — essentially equal to the output
+
+The feedback pin reading the full output voltage indicates the feedback
+divider network is broken. The bottom resistor (FB to GND) is likely
+open, causing FB to float to the output voltage through the top
+resistor. The converter sees FB above its 0.6 V reference and
+throttles switching to minimum duty cycle.
+
+**Resolution:** None — board declared dead. The feedback network damage
+combined with potential internal U2 damage makes further rework
+impractical.
+
+### Lessons Learned
+
+1. Metal shavings from robot chassis work can cause catastrophic
+   multi-IC failures through transient shorts and CMOS latch-up.
+2. The INA226 SCL pin is particularly vulnerable — its absolute maximum
+   is only VS + 0.3 V, and the 5.6 V zener ESD clamps (D8/D9) on this
+   board clamp above that threshold.
+3. **All future PCBs mandate a protective housing.** Bare boards must
+   not be deployed on robots without an enclosure to prevent metallic
+   debris from reaching exposed components and traces.
+4. When one IC fails from an external short event, inspect all ICs on
+   the board — cascading damage is likely.
+
 Battery Datasheets
 ------------------
 Reference documentation for the RBT2425LFP LiFePO4 battery:
