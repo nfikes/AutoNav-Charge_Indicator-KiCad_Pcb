@@ -141,9 +141,16 @@ def _stop_recording():
         csv_writer = None
 
 
+R_INTERNAL   = 0.060        # estimated pack internal resistance (ohms)
+CAPACITY_AS  = CAPACITY_AH * 3600  # capacity in amp-seconds
+coulomb_soc  = None         # coulomb-counted SOC (%), initialized on first sample
+_last_sample_time = None    # timestamp of previous sample for dt calculation
+
 def sample_loop():
-    """Tight loop — reads all 3 registers back-to-back, feeds GUI buffer."""
-    global sample_count
+    """Tight loop — reads all 3 registers back-to-back, feeds GUI buffer.
+    SOC is computed via coulomb counting (integrating current over time),
+    initialized from IR-compensated OCV on first sample."""
+    global sample_count, coulomb_soc, _last_sample_time
 
     while sampling:
         raw_v = read_u16(handle, INA, REG_BUS_V)
@@ -153,7 +160,21 @@ def sample_loop():
         v = raw_v * 1.25e-3 if raw_v is not None else None
         i = raw_i * CURRENT_LSB if raw_i is not None else None
         p = raw_p * POWER_LSB if raw_p is not None else None
-        soc = voltage_to_soc(v) if v is not None else None
+
+        now = time.time()
+        if v is not None and i is not None:
+            if coulomb_soc is None:
+                # Initialize SOC from IR-compensated OCV estimate
+                ocv = v + abs(i) * R_INTERNAL
+                coulomb_soc = voltage_to_soc(ocv)
+                _last_sample_time = now
+            else:
+                dt = now - _last_sample_time
+                _last_sample_time = now
+                # Subtract consumed charge
+                coulomb_soc -= (abs(i) * dt / CAPACITY_AS) * 100.0
+                coulomb_soc = max(0.0, min(100.0, coulomb_soc))
+        soc = coulomb_soc
 
         with buf_lock:
             buf_samples.append((v, i, p, soc))
