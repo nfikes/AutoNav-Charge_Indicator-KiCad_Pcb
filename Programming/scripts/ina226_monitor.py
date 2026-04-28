@@ -23,6 +23,7 @@ CAL_VALUE    = int(0.00512 / (CURRENT_LSB * R_SHUNT))  # 2048
 CONFIG_FAST  = 0x4007
 
 CELLS_SERIES = 8
+CAPACITY_AH  = 20.476       # Battery A measured full capacity
 
 # LiFePO4 voltage-to-SOC lookup table (per-cell OCV, mV)
 # Empirically measured from Battery A full discharge (20.476 Ah, 4 sessions).
@@ -311,7 +312,11 @@ soc_frame = tk.Frame(frame, bg=BG)
 soc_frame.grid(row=0, column=1, sticky="ns", padx=(4, 12), pady=(10, 0))
 
 soc_lbl = tk.Label(soc_frame, text="---%", font=FONT_SOC, fg="#ce93d8", bg=BG)
-soc_lbl.pack(pady=(0, 6))
+soc_lbl.pack(pady=(0, 2))
+
+FONT_ETA = ("Menlo", 13)
+eta_lbl = tk.Label(soc_frame, text="--:--", font=FONT_ETA, fg=FGDM, bg=BG)
+eta_lbl.pack(pady=(0, 6))
 
 soc_canvas = tk.Canvas(soc_frame, width=BAR_W, height=BAR_H,
                         bg=BG, highlightthickness=0)
@@ -324,6 +329,7 @@ soc_sub_lbl.pack(pady=(4, 0))
 soc_canvas.create_rectangle(0, 0, BAR_W, BAR_H, outline="#444444", width=2, tags="outline")
 
 soc_history = deque(maxlen=HISTORY)  # rolling window matching the trace plots
+cur_history = deque(maxlen=HISTORY)  # rolling current for smoothed ETA
 
 
 def soc_color(pct):
@@ -336,7 +342,7 @@ def soc_color(pct):
         return "#f44336"   # red
 
 
-def redraw_soc_bar():
+def redraw_soc_bar(now):
     """Redraw the filled portion of the SOC bar (averaged over window)."""
     soc = sum(soc_history) / len(soc_history) if soc_history else 0.0
     soc_canvas.delete("fill")
@@ -352,8 +358,27 @@ def redraw_soc_bar():
                                  outline="#444444", width=2, tags="outline")
     soc_lbl.config(text=f"{soc:.0f}%", fg=soc_color(soc))
 
+    # Estimated time remaining — EMA-smoothed, monotonically decreasing
+    global ema_eta_hours
+    avg_i = sum(cur_history) / len(cur_history) if cur_history else 0.0
+    if avg_i > 0.01:
+        raw_hours = (soc / 100.0) * CAPACITY_AH / avg_i
+        if ema_eta_hours is None:
+            ema_eta_hours = raw_hours
+        else:
+            smoothed = ETA_ALPHA * raw_hours + (1 - ETA_ALPHA) * ema_eta_hours
+            # Monotonic: only allow the displayed estimate to decrease
+            ema_eta_hours = min(ema_eta_hours, smoothed)
+        h = int(ema_eta_hours)
+        m = int((ema_eta_hours - h) * 60)
+        eta_lbl.config(text=f"{h}h {m:02d}m")
+    else:
+        eta_lbl.config(text="--:--")
+
 last_rate_time  = time.time()
 last_rate_count = 0
+ETA_ALPHA       = 0.05          # EMA smoothing factor (lower = smoother)
+ema_eta_hours   = None          # smoothed time-remaining estimate
 
 
 def update_gui():
@@ -371,14 +396,17 @@ def update_gui():
         tr_p.push(p)
         if soc is not None:
             soc_history.append(soc)
+        if i is not None:
+            cur_history.append(i)
 
     tr_v.redraw()
     tr_i.redraw()
     tr_p.redraw()
-    redraw_soc_bar()
+
+    now = time.time()
+    redraw_soc_bar(now)
 
     # Update rate display every ~1 s
-    now = time.time()
     dt = now - last_rate_time
     if dt >= 1.0:
         rate = (total - last_rate_count) / dt
