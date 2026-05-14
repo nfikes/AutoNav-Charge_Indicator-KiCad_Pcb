@@ -47,7 +47,15 @@ domain: "tenant" = top-level customer org; "workspace" = sub-unit per tenant
    - Preserve any existing user-written entries. Do not delete or reorder them.
    - Sort within each topic alphabetically by subject for stable diffs.
 
-4. **Report back to the user** with: total lines added, total skipped as duplicates, and any topic where the agents disagreed (e.g., two different answers for the same fact). Do not silently pick a winner — surface the conflict.
+4. **Record conflicts durably.** If two agents returned contradictory facts for the same subject, append a section to RESEARCH.md titled `## Conflicts surfaced by /populate-research` (create it if missing) and add one line per conflict in this format:
+
+   ```
+   <topic>: <subject> — source A says X (path:line); source B says Y (path:line). <one-line note on how to resolve>
+   ```
+
+   Do not silently pick a winner. Conflicts belong in the file so they remain visible across sessions, not only in chat.
+
+5. **Report back to the user** with: total lines added, total skipped as duplicates, and a count of conflicts written to the conflicts section. Point the user at the conflicts section if any were recorded.
 
 ## Constraints
 
