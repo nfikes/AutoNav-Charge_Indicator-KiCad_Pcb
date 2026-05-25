@@ -1162,10 +1162,22 @@
 		(uuid "25b9178e-d57c-41f0-b758-0f418b6124eb")
 	)
 	(junction
+		(at 116.84 66.04)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "00bcec30-bbc5-4e08-973c-1d627f224a6b")
+	)
+	(junction
 		(at 134.62 99.06)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "4817a78c-c361-47f6-90b5-dc5ff49801c2")
+	)
+	(junction
+		(at 106.68 76.2)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "62960181-f22d-44d4-b118-035b377cb44d")
 	)
 	(junction
 		(at 127 66.04)
@@ -1197,6 +1209,16 @@
 	)
 	(wire
 		(pts
+			(xy 106.68 66.04) (xy 116.84 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "14eac7cc-ca8a-4257-8881-d131c511282b")
+	)
+	(wire
+		(pts
 			(xy 124.46 86.36) (xy 127 86.36)
 		)
 		(stroke
@@ -1217,16 +1239,6 @@
 	)
 	(wire
 		(pts
-			(xy 111.76 66.04) (xy 106.68 66.04)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1d17de1c-57c6-49ed-80d8-f8d19cb77de9")
-	)
-	(wire
-		(pts
 			(xy 134.62 78.74) (xy 134.62 81.28)
 		)
 		(stroke
@@ -1234,16 +1246,6 @@
 			(type default)
 		)
 		(uuid "2c9bec58-1594-403d-8856-da03cfde6b20")
-	)
-	(wire
-		(pts
-			(xy 119.38 66.04) (xy 127 66.04)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "35891b44-56d7-4fbc-8e46-0e9732b81453")
 	)
 	(wire
 		(pts
@@ -1277,6 +1279,16 @@
 	)
 	(wire
 		(pts
+			(xy 106.68 76.2) (xy 116.84 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "57ca5c08-bed0-4c0d-9365-86de1e4364d5")
+	)
+	(wire
+		(pts
 			(xy 111.76 86.36) (xy 114.3 86.36)
 		)
 		(stroke
@@ -1287,6 +1299,16 @@
 	)
 	(wire
 		(pts
+			(xy 116.84 66.04) (xy 127 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7372784b-a3ee-4fa1-bc82-9f9dadbf3d11")
+	)
+	(wire
+		(pts
 			(xy 127 99.06) (xy 134.62 99.06)
 		)
 		(stroke
@@ -1294,6 +1316,16 @@
 			(type default)
 		)
 		(uuid "ba7b7abf-bb6b-422d-b0b9-c090f3e5ca9a")
+	)
+	(wire
+		(pts
+			(xy 116.84 66.04) (xy 116.84 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c70ae026-7c3e-4446-93f0-cf5fdcf10612")
 	)
 	(wire
 		(pts
@@ -1867,7 +1899,7 @@
 	(symbol
 		(lib_name "C_2P_NP_1")
 		(lib_id "wn__wavenumber:C_2P_NP")
-		(at 119.38 66.04 180)
+		(at 116.84 68.58 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1876,7 +1908,7 @@
 		(fields_autoplaced yes)
 		(uuid "94ed2272-0e17-4669-8b4e-df436367ddf7")
 		(property "Reference" "C2"
-			(at 115.443 58.42 0)
+			(at 119.38 71.247 90)
 			(effects
 				(font
 					(face "Arial")
@@ -1884,20 +1916,22 @@
 					(thickness 0.15)
 					(bold yes)
 				)
+				(justify left)
 			)
 		)
 		(property "Value" "10µF"
-			(at 115.443 62.23 0)
+			(at 119.38 74.422 90)
 			(effects
 				(font
 					(face "Arial")
 					(size 1.524 1.524)
 					(thickness 0.15)
 				)
+				(justify left)
 			)
 		)
 		(property "Footprint" "wavenumber:C0603_0.90MM_MD"
-			(at 119.38 66.04 0)
+			(at 116.84 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1907,7 +1941,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 119.38 66.04 0)
+			(at 116.84 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1916,7 +1950,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 119.38 66.04 0)
+			(at 116.84 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1925,7 +1959,7 @@
 			)
 		)
 		(property "Internal Part Number" ""
-			(at 119.38 66.04 0)
+			(at 116.84 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1934,7 +1968,7 @@
 			)
 		)
 		(property "Manufacturer" "Murata Electronics"
-			(at 119.38 66.04 0)
+			(at 116.84 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1943,7 +1977,7 @@
 			)
 		)
 		(property "Manufacturer Part Number" "GRT188R61E106ME13D"
-			(at 119.38 66.04 0)
+			(at 116.84 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1952,7 +1986,7 @@
 			)
 		)
 		(property "cad-reference" "GRT188R61E106ME13D"
-			(at 119.38 66.04 0)
+			(at 116.84 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1961,7 +1995,7 @@
 			)
 		)
 		(property "flags" ""
-			(at 119.38 66.04 0)
+			(at 116.84 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
