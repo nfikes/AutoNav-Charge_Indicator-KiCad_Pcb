@@ -1,0 +1,1267 @@
+{
+  "schema": "kicad_monkey.design.a0",
+  "generator": "kicad_monkey",
+  "project": {
+    "name": "SBUS Inverter",
+    "filename": "SBUS Inverter.kicad_pro",
+    "path": "/Users/nathanfikes/Projects/GitHub/AutoNav-Charge_Indicator-KiCad_Pcb/SBUS Inverter/SBUS Inverter.kicad_pro",
+    "text_variables": {}
+  },
+  "variants": [],
+  "options": {
+    "net_identifier_scope": "KICAD_PROJECT",
+    "allow_ports_to_name_nets": true,
+    "allow_sheet_entries_to_name_nets": true,
+    "allow_single_pin_nets": true,
+    "append_sheet_numbers_to_local_nets": false,
+    "power_port_names_take_priority": true,
+    "higher_level_names_take_priority": true,
+    "auto_sheet_numbering": true,
+    "kicad_schematic_format": "sexpr",
+    "kicad_supported_oracle_versions": [
+      "9",
+      "10"
+    ],
+    "kicad_subpart_first_id": 65,
+    "kicad_subpart_id_separator": 0
+  },
+  "sheets": [
+    {
+      "filename": "SBUS Inverter.kicad_sch",
+      "path": "/Users/nathanfikes/Projects/GitHub/AutoNav-Charge_Indicator-KiCad_Pcb/SBUS Inverter/SBUS Inverter.kicad_sch",
+      "sheet_number": 1,
+      "sheet_path": "/",
+      "sheet_path_uuids": "/",
+      "title": "",
+      "company": "",
+      "revision": "",
+      "date": ""
+    }
+  ],
+  "components": [
+    {
+      "designator": "R3",
+      "svg_id": "08fcd6ec-de80-40a7-92d0-e9acb297b720",
+      "value": "1kΩ",
+      "footprint": "wavenumber:R2010_0.70MM_MD",
+      "library_ref": "wn__wavenumber:R_2P",
+      "description": "",
+      "hierarchy": {
+        "base_designator": "R3",
+        "channel": null,
+        "channel_index": null,
+        "sheet": "/",
+        "sheet_path": "/",
+        "sheet_path_uuids": "/"
+      },
+      "classification": {
+        "prefix": "R",
+        "type": "passive_2pin",
+        "pin_count": 2
+      },
+      "parameters": {
+        "Description": "",
+        "Internal Part Number": "",
+        "Manufacturer": "Panasonic Electronic Components",
+        "Manufacturer Part Number": "ERJ-12SF1001U",
+        "_source_cad": "kicad",
+        "cad-reference": "ERJ-12SF1001U",
+        "flags": "",
+        "kicad_dnp": "false",
+        "kicad_in_bom": "true",
+        "kicad_instance_uuid": "08fcd6ec-de80-40a7-92d0-e9acb297b720",
+        "kicad_libsource_lib": "wn__wavenumber",
+        "kicad_libsource_part": "R_2P",
+        "kicad_on_board": "true",
+        "kicad_sheet_path_names": "/",
+        "kicad_sheet_path_uuids": "/"
+      }
+    },
+    {
+      "designator": "C1",
+      "svg_id": "1c581290-ae5c-4318-a399-ec0fa704aea4",
+      "value": "0.1µF",
+      "footprint": "wavenumber:C1812_MD",
+      "library_ref": "wn__wavenumber:C_2P_NP",
+      "description": "",
+      "hierarchy": {
+        "base_designator": "C1",
+        "channel": null,
+        "channel_index": null,
+        "sheet": "/",
+        "sheet_path": "/",
+        "sheet_path_uuids": "/"
+      },
+      "classification": {
+        "prefix": "C",
+        "type": "passive_2pin",
+        "pin_count": 2
+      },
+      "parameters": {
+        "Description": "",
+        "Internal Part Number": "",
+        "Manufacturer": "Murata Electronics",
+        "Manufacturer Part Number": "GCJ43DR72J104KXJ1L",
+        "_source_cad": "kicad",
+        "cad-reference": "GCJ43DR72J104KXJ1L",
+        "flags": "",
+        "kicad_dnp": "false",
+        "kicad_in_bom": "true",
+        "kicad_instance_uuid": "1c581290-ae5c-4318-a399-ec0fa704aea4",
+        "kicad_libsource_lib": "wn__wavenumber",
+        "kicad_libsource_part": "C_2P_NP",
+        "kicad_on_board": "true",
+        "kicad_sheet_path_names": "/",
+        "kicad_sheet_path_uuids": "/"
+      }
+    },
+    {
+      "designator": "R4",
+      "svg_id": "9416f86a-ce95-4af4-aaa5-4deb9d637e7b",
+      "value": "1kΩ",
+      "footprint": "wavenumber:R2010_0.70MM_MD",
+      "library_ref": "wn__wavenumber:R_2P",
+      "description": "",
+      "hierarchy": {
+        "base_designator": "R4",
+        "channel": null,
+        "channel_index": null,
+        "sheet": "/",
+        "sheet_path": "/",
+        "sheet_path_uuids": "/"
+      },
+      "classification": {
+        "prefix": "R",
+        "type": "passive_2pin",
+        "pin_count": 2
+      },
+      "parameters": {
+        "Description": "",
+        "Internal Part Number": "",
+        "Manufacturer": "Panasonic Electronic Components",
+        "Manufacturer Part Number": "ERJ-12SF1001U",
+        "_source_cad": "kicad",
+        "cad-reference": "ERJ-12SF1001U",
+        "flags": "",
+        "kicad_dnp": "false",
+        "kicad_in_bom": "true",
+        "kicad_instance_uuid": "9416f86a-ce95-4af4-aaa5-4deb9d637e7b",
+        "kicad_libsource_lib": "wn__wavenumber",
+        "kicad_libsource_part": "R_2P",
+        "kicad_on_board": "true",
+        "kicad_sheet_path_names": "/",
+        "kicad_sheet_path_uuids": "/"
+      }
+    },
+    {
+      "designator": "C2",
+      "svg_id": "94ed2272-0e17-4669-8b4e-df436367ddf7",
+      "value": "10µF",
+      "footprint": "wavenumber:C0603_0.90MM_MD",
+      "library_ref": "wn__wavenumber:C_2P_NP",
+      "description": "",
+      "hierarchy": {
+        "base_designator": "C2",
+        "channel": null,
+        "channel_index": null,
+        "sheet": "/",
+        "sheet_path": "/",
+        "sheet_path_uuids": "/"
+      },
+      "classification": {
+        "prefix": "C",
+        "type": "passive_2pin",
+        "pin_count": 2
+      },
+      "parameters": {
+        "Description": "",
+        "Internal Part Number": "",
+        "Manufacturer": "Murata Electronics",
+        "Manufacturer Part Number": "GRT188R61E106ME13D",
+        "_source_cad": "kicad",
+        "cad-reference": "GRT188R61E106ME13D",
+        "flags": "",
+        "kicad_dnp": "false",
+        "kicad_in_bom": "true",
+        "kicad_instance_uuid": "94ed2272-0e17-4669-8b4e-df436367ddf7",
+        "kicad_libsource_lib": "wn__wavenumber",
+        "kicad_libsource_part": "C_2P_NP",
+        "kicad_on_board": "true",
+        "kicad_sheet_path_names": "/",
+        "kicad_sheet_path_uuids": "/"
+      }
+    },
+    {
+      "designator": "R1",
+      "svg_id": "b749e82a-cc12-46f9-8281-7d2e388b1057",
+      "value": "1kΩ",
+      "footprint": "wavenumber:R2010_0.70MM_MD",
+      "library_ref": "wn__wavenumber:R_2P",
+      "description": "",
+      "hierarchy": {
+        "base_designator": "R1",
+        "channel": null,
+        "channel_index": null,
+        "sheet": "/",
+        "sheet_path": "/",
+        "sheet_path_uuids": "/"
+      },
+      "classification": {
+        "prefix": "R",
+        "type": "passive_2pin",
+        "pin_count": 2
+      },
+      "parameters": {
+        "Description": "",
+        "Internal Part Number": "",
+        "Manufacturer": "Panasonic Electronic Components",
+        "Manufacturer Part Number": "ERJ-12SF1001U",
+        "_source_cad": "kicad",
+        "cad-reference": "ERJ-12SF1001U",
+        "flags": "",
+        "kicad_dnp": "false",
+        "kicad_in_bom": "true",
+        "kicad_instance_uuid": "b749e82a-cc12-46f9-8281-7d2e388b1057",
+        "kicad_libsource_lib": "wn__wavenumber",
+        "kicad_libsource_part": "R_2P",
+        "kicad_on_board": "true",
+        "kicad_sheet_path_names": "/",
+        "kicad_sheet_path_uuids": "/"
+      }
+    },
+    {
+      "designator": "Q1",
+      "svg_id": "c4a7f4c1-1f1d-4e24-9df8-a9860a7c1234",
+      "value": "2N2222",
+      "footprint": "Package_TO_SOT_THT:TO-39-3",
+      "library_ref": "Transistor_BJT:2N2219",
+      "description": "800mA Ic, 50V Vce, NPN Transistor, TO-39",
+      "hierarchy": {
+        "base_designator": "Q1",
+        "channel": null,
+        "channel_index": null,
+        "sheet": "/",
+        "sheet_path": "/",
+        "sheet_path_uuids": "/"
+      },
+      "classification": {
+        "prefix": "Q",
+        "type": "transistor",
+        "pin_count": 3
+      },
+      "parameters": {
+        "Description": "800mA Ic, 50V Vce, NPN Transistor, TO-39",
+        "_source_cad": "kicad",
+        "kicad_dnp": "false",
+        "kicad_in_bom": "true",
+        "kicad_instance_uuid": "c4a7f4c1-1f1d-4e24-9df8-a9860a7c1234",
+        "kicad_libsource_lib": "Transistor_BJT",
+        "kicad_libsource_part": "2N2219",
+        "kicad_on_board": "true",
+        "kicad_sheet_path_names": "/",
+        "kicad_sheet_path_uuids": "/"
+      }
+    },
+    {
+      "designator": "D1",
+      "svg_id": "e1e5cf48-8a20-4e01-bf47-28cea276cfa1",
+      "value": "SR260",
+      "footprint": "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal",
+      "library_ref": "Diode:1N5712",
+      "description": "20V 75mA Schottky diode, DO-35",
+      "hierarchy": {
+        "base_designator": "D1",
+        "channel": null,
+        "channel_index": null,
+        "sheet": "/",
+        "sheet_path": "/",
+        "sheet_path_uuids": "/"
+      },
+      "classification": {
+        "prefix": "D",
+        "type": "passive_2pin",
+        "pin_count": 2
+      },
+      "parameters": {
+        "Description": "20V 75mA Schottky diode, DO-35",
+        "_source_cad": "kicad",
+        "kicad_dnp": "false",
+        "kicad_in_bom": "true",
+        "kicad_instance_uuid": "e1e5cf48-8a20-4e01-bf47-28cea276cfa1",
+        "kicad_libsource_lib": "Diode",
+        "kicad_libsource_part": "1N5712",
+        "kicad_on_board": "true",
+        "kicad_sheet_path_names": "/",
+        "kicad_sheet_path_uuids": "/"
+      }
+    }
+  ],
+  "schematic_hierarchy": {
+    "schema": "kicad_monkey.schematic_hierarchy.a0",
+    "requested_scope": "KICAD_PROJECT",
+    "effective_scope": "GLOBAL",
+    "documents": [
+      {
+        "sheet_index": 1,
+        "filename": "SBUS Inverter.kicad_sch",
+        "path": "/Users/nathanfikes/Projects/GitHub/AutoNav-Charge_Indicator-KiCad_Pcb/SBUS Inverter/SBUS Inverter.kicad_sch",
+        "is_top_level": true,
+        "sheet_path": "/",
+        "sheet_path_uuids": "/",
+        "metadata": {
+          "uuid": "a953040e-b95c-429e-af03-51e692dfc295",
+          "version": 20250114,
+          "generator": "eeschema",
+          "generator_version": "9.0"
+        }
+      }
+    ],
+    "sheet_symbols": [],
+    "hierarchy_paths": [],
+    "channels": [],
+    "links": [],
+    "unresolved": []
+  },
+  "nets": [
+    {
+      "uid": "000000000001",
+      "name": "+5v",
+      "auto_named": false,
+      "source_sheets": [
+        "/"
+      ],
+      "terminals": [
+        {
+          "designator": "C1",
+          "pin": "1",
+          "pin_name": "1",
+          "pin_type": "PASSIVE"
+        },
+        {
+          "designator": "C2",
+          "pin": "1",
+          "pin_name": "1",
+          "pin_type": "PASSIVE"
+        },
+        {
+          "designator": "R3",
+          "pin": "2",
+          "pin_name": "2",
+          "pin_type": "PASSIVE"
+        }
+      ],
+      "graphical": {
+        "wires": [
+          "14eac7cc-ca8a-4257-8881-d131c511282b",
+          "3dedf2ad-d82e-40f9-a2b6-5e38a8230b4b",
+          "43c8cf00-76f3-43da-b7b1-65409ded8ac7",
+          "7372784b-a3ee-4fa1-bc82-9f9dadbf3d11",
+          "c70ae026-7c3e-4446-93f0-cf5fdcf10612"
+        ],
+        "junctions": [
+          "00bcec30-bbc5-4e08-973c-1d627f224a6b",
+          "ba9b3f11-632f-4125-8473-33016c02b75c"
+        ],
+        "labels": [],
+        "power_ports": [
+          "b4961a56-b6c7-4b19-a2a1-c1c06b5869a3"
+        ],
+        "ports": [],
+        "sheet_entries": [],
+        "pins": [
+          {
+            "designator": "C1",
+            "pin": "1",
+            "svg_id": "3e622e08-1741-4b04-9bc3-1cda89caad44"
+          },
+          {
+            "designator": "C2",
+            "pin": "1",
+            "svg_id": "bdf19dc5-2d30-4f5f-823e-c007bc7baf83"
+          },
+          {
+            "designator": "R3",
+            "pin": "2",
+            "svg_id": "6b584e0c-4b99-457c-8094-7a7fa9cd75c3"
+          }
+        ]
+      },
+      "aliases": [],
+      "endpoints": [
+        {
+          "endpoint_id": "pin:C1:1",
+          "role": "pin",
+          "element_id": "3e622e08-1741-4b04-9bc3-1cda89caad44",
+          "object_id": "3e622e08-1741-4b04-9bc3-1cda89caad44",
+          "name": "1",
+          "source_sheet": "/",
+          "designator": "C1",
+          "pin": "1",
+          "pin_type": "PASSIVE",
+          "pin_name": "1"
+        },
+        {
+          "endpoint_id": "pin:C2:1",
+          "role": "pin",
+          "element_id": "bdf19dc5-2d30-4f5f-823e-c007bc7baf83",
+          "object_id": "bdf19dc5-2d30-4f5f-823e-c007bc7baf83",
+          "name": "1",
+          "source_sheet": "/",
+          "designator": "C2",
+          "pin": "1",
+          "pin_type": "PASSIVE",
+          "pin_name": "1"
+        },
+        {
+          "endpoint_id": "pin:R3:2",
+          "role": "pin",
+          "element_id": "6b584e0c-4b99-457c-8094-7a7fa9cd75c3",
+          "object_id": "6b584e0c-4b99-457c-8094-7a7fa9cd75c3",
+          "name": "2",
+          "source_sheet": "/",
+          "designator": "R3",
+          "pin": "2",
+          "pin_type": "PASSIVE",
+          "pin_name": "2"
+        },
+        {
+          "endpoint_id": "power_port:e4c23cea-8f5d-4521-92fd-f93592ecaf38",
+          "role": "power_port",
+          "element_id": "b4961a56-b6c7-4b19-a2a1-c1c06b5869a3",
+          "object_id": "e4c23cea-8f5d-4521-92fd-f93592ecaf38",
+          "name": "+5v",
+          "source_sheet": "/",
+          "connection_point": {
+            "x": 127.0,
+            "y": 66.04,
+            "units": "mm"
+          }
+        }
+      ],
+      "driver_priority": 6,
+      "driver_kind": "global_power_pin",
+      "net_class": "Default"
+    },
+    {
+      "uid": "000000000002",
+      "name": "Net-(D1-A)",
+      "auto_named": true,
+      "source_sheets": [
+        "/"
+      ],
+      "terminals": [
+        {
+          "designator": "D1",
+          "pin": "2",
+          "pin_name": "A",
+          "pin_type": "PASSIVE"
+        },
+        {
+          "designator": "Q1",
+          "pin": "2",
+          "pin_name": "B",
+          "pin_type": "INPUT"
+        },
+        {
+          "designator": "R1",
+          "pin": "2",
+          "pin_name": "2",
+          "pin_type": "PASSIVE"
+        },
+        {
+          "designator": "R4",
+          "pin": "2",
+          "pin_name": "2",
+          "pin_type": "PASSIVE"
+        }
+      ],
+      "graphical": {
+        "wires": [
+          "09aa2444-fe81-4988-8cfe-463d1d21806c",
+          "18f7456a-b24e-4aca-82af-ce2a379bc8a8",
+          "c9cfb496-0df0-4753-a76b-e1ea005b9c6c"
+        ],
+        "junctions": [
+          "dda9f243-f610-4a64-894d-c0ffe2f2a771"
+        ],
+        "labels": [],
+        "power_ports": [],
+        "ports": [],
+        "sheet_entries": [],
+        "pins": [
+          {
+            "designator": "D1",
+            "pin": "2",
+            "svg_id": "b0f1ac7e-7971-4697-ae6c-34dda6fe8100"
+          },
+          {
+            "designator": "Q1",
+            "pin": "2",
+            "svg_id": "76a3bbee-c5c7-4b6a-bbf4-c957ef1191c7"
+          },
+          {
+            "designator": "R1",
+            "pin": "2",
+            "svg_id": "18d2b249-a598-4d39-acf3-d8e2afbbf739"
+          },
+          {
+            "designator": "R4",
+            "pin": "2",
+            "svg_id": "a094d372-f49c-43ec-8467-9c05a72db2dd"
+          }
+        ]
+      },
+      "aliases": [],
+      "endpoints": [
+        {
+          "endpoint_id": "pin:D1:2",
+          "role": "pin",
+          "element_id": "b0f1ac7e-7971-4697-ae6c-34dda6fe8100",
+          "object_id": "b0f1ac7e-7971-4697-ae6c-34dda6fe8100",
+          "name": "A",
+          "source_sheet": "/",
+          "designator": "D1",
+          "pin": "2",
+          "pin_type": "PASSIVE",
+          "pin_name": "A"
+        },
+        {
+          "endpoint_id": "pin:Q1:2",
+          "role": "pin",
+          "element_id": "76a3bbee-c5c7-4b6a-bbf4-c957ef1191c7",
+          "object_id": "76a3bbee-c5c7-4b6a-bbf4-c957ef1191c7",
+          "name": "B",
+          "source_sheet": "/",
+          "designator": "Q1",
+          "pin": "2",
+          "pin_type": "INPUT",
+          "pin_name": "B"
+        },
+        {
+          "endpoint_id": "pin:R1:2",
+          "role": "pin",
+          "element_id": "18d2b249-a598-4d39-acf3-d8e2afbbf739",
+          "object_id": "18d2b249-a598-4d39-acf3-d8e2afbbf739",
+          "name": "2",
+          "source_sheet": "/",
+          "designator": "R1",
+          "pin": "2",
+          "pin_type": "PASSIVE",
+          "pin_name": "2"
+        },
+        {
+          "endpoint_id": "pin:R4:2",
+          "role": "pin",
+          "element_id": "a094d372-f49c-43ec-8467-9c05a72db2dd",
+          "object_id": "a094d372-f49c-43ec-8467-9c05a72db2dd",
+          "name": "2",
+          "source_sheet": "/",
+          "designator": "R4",
+          "pin": "2",
+          "pin_type": "PASSIVE",
+          "pin_name": "2"
+        }
+      ],
+      "driver_priority": 1,
+      "driver_kind": "pin",
+      "net_class": "Default"
+    },
+    {
+      "uid": "000000000003",
+      "name": "GND",
+      "auto_named": false,
+      "source_sheets": [
+        "/"
+      ],
+      "terminals": [
+        {
+          "designator": "C1",
+          "pin": "2",
+          "pin_name": "1",
+          "pin_type": "PASSIVE"
+        },
+        {
+          "designator": "C2",
+          "pin": "2",
+          "pin_name": "1",
+          "pin_type": "PASSIVE"
+        },
+        {
+          "designator": "Q1",
+          "pin": "1",
+          "pin_name": "E",
+          "pin_type": "PASSIVE"
+        },
+        {
+          "designator": "R4",
+          "pin": "1",
+          "pin_name": "1",
+          "pin_type": "PASSIVE"
+        }
+      ],
+      "graphical": {
+        "wires": [
+          "57ca5c08-bed0-4c0d-9365-86de1e4364d5",
+          "ba7b7abf-bb6b-422d-b0b9-c090f3e5ca9a",
+          "ebe17755-ab58-46e0-8ffe-2bdd644c4f6d"
+        ],
+        "junctions": [
+          "4817a78c-c361-47f6-90b5-dc5ff49801c2",
+          "62960181-f22d-44d4-b118-035b377cb44d"
+        ],
+        "labels": [],
+        "power_ports": [
+          "1c815af8-b5dd-43ad-8cd6-9824af1c2ecd",
+          "60bfc3e0-3f3d-4e3e-8dc8-39234f585d48"
+        ],
+        "ports": [],
+        "sheet_entries": [],
+        "pins": [
+          {
+            "designator": "C1",
+            "pin": "2",
+            "svg_id": "d57a367f-6006-432f-8489-28da333b52fa"
+          },
+          {
+            "designator": "C2",
+            "pin": "2",
+            "svg_id": "bb59cbb6-f840-40f4-939e-bec35b74137c"
+          },
+          {
+            "designator": "Q1",
+            "pin": "1",
+            "svg_id": "ec726adb-2ce2-4994-92d4-148c18f1c70d"
+          },
+          {
+            "designator": "R4",
+            "pin": "1",
+            "svg_id": "407f4740-4fa3-444f-b526-3160f868fb71"
+          }
+        ]
+      },
+      "aliases": [],
+      "endpoints": [
+        {
+          "endpoint_id": "pin:C1:2",
+          "role": "pin",
+          "element_id": "d57a367f-6006-432f-8489-28da333b52fa",
+          "object_id": "d57a367f-6006-432f-8489-28da333b52fa",
+          "name": "1",
+          "source_sheet": "/",
+          "designator": "C1",
+          "pin": "2",
+          "pin_type": "PASSIVE",
+          "pin_name": "1"
+        },
+        {
+          "endpoint_id": "pin:C2:2",
+          "role": "pin",
+          "element_id": "bb59cbb6-f840-40f4-939e-bec35b74137c",
+          "object_id": "bb59cbb6-f840-40f4-939e-bec35b74137c",
+          "name": "1",
+          "source_sheet": "/",
+          "designator": "C2",
+          "pin": "2",
+          "pin_type": "PASSIVE",
+          "pin_name": "1"
+        },
+        {
+          "endpoint_id": "pin:Q1:1",
+          "role": "pin",
+          "element_id": "ec726adb-2ce2-4994-92d4-148c18f1c70d",
+          "object_id": "ec726adb-2ce2-4994-92d4-148c18f1c70d",
+          "name": "E",
+          "source_sheet": "/",
+          "designator": "Q1",
+          "pin": "1",
+          "pin_type": "PASSIVE",
+          "pin_name": "E"
+        },
+        {
+          "endpoint_id": "pin:R4:1",
+          "role": "pin",
+          "element_id": "407f4740-4fa3-444f-b526-3160f868fb71",
+          "object_id": "407f4740-4fa3-444f-b526-3160f868fb71",
+          "name": "1",
+          "source_sheet": "/",
+          "designator": "R4",
+          "pin": "1",
+          "pin_type": "PASSIVE",
+          "pin_name": "1"
+        },
+        {
+          "endpoint_id": "power_port:090fae54-b9ef-4560-91db-71829040611c",
+          "role": "power_port",
+          "element_id": "1c815af8-b5dd-43ad-8cd6-9824af1c2ecd",
+          "object_id": "090fae54-b9ef-4560-91db-71829040611c",
+          "name": "GND",
+          "source_sheet": "/",
+          "connection_point": {
+            "x": 106.68,
+            "y": 76.2,
+            "units": "mm"
+          }
+        },
+        {
+          "endpoint_id": "power_port:a61f8761-aff4-4c2f-aa15-cfb320a335d3",
+          "role": "power_port",
+          "element_id": "60bfc3e0-3f3d-4e3e-8dc8-39234f585d48",
+          "object_id": "a61f8761-aff4-4c2f-aa15-cfb320a335d3",
+          "name": "GND",
+          "source_sheet": "/",
+          "connection_point": {
+            "x": 134.62,
+            "y": 99.06,
+            "units": "mm"
+          }
+        }
+      ],
+      "driver_priority": 6,
+      "driver_kind": "global_power_pin",
+      "net_class": "Default"
+    },
+    {
+      "uid": "000000000004",
+      "name": "INPUT",
+      "auto_named": false,
+      "source_sheets": [
+        "/"
+      ],
+      "terminals": [
+        {
+          "designator": "R1",
+          "pin": "1",
+          "pin_name": "1",
+          "pin_type": "PASSIVE"
+        }
+      ],
+      "graphical": {
+        "wires": [
+          "677b2b9a-a0b5-47e7-b97f-74745cf61fc7"
+        ],
+        "junctions": [],
+        "labels": [
+          "de33cf34-90ff-4651-8448-5139f8f043a5"
+        ],
+        "power_ports": [],
+        "ports": [],
+        "sheet_entries": [],
+        "pins": [
+          {
+            "designator": "R1",
+            "pin": "1",
+            "svg_id": "1efbe317-a4ac-47c7-9aed-60f0bb53f10f"
+          }
+        ]
+      },
+      "aliases": [],
+      "endpoints": [
+        {
+          "endpoint_id": "pin:R1:1",
+          "role": "pin",
+          "element_id": "1efbe317-a4ac-47c7-9aed-60f0bb53f10f",
+          "object_id": "1efbe317-a4ac-47c7-9aed-60f0bb53f10f",
+          "name": "1",
+          "source_sheet": "/",
+          "designator": "R1",
+          "pin": "1",
+          "pin_type": "PASSIVE",
+          "pin_name": "1"
+        }
+      ],
+      "driver_priority": 7,
+      "driver_kind": "global_label",
+      "net_class": "Default"
+    },
+    {
+      "uid": "000000000005",
+      "name": "OUTPUT",
+      "auto_named": false,
+      "source_sheets": [
+        "/"
+      ],
+      "terminals": [
+        {
+          "designator": "D1",
+          "pin": "1",
+          "pin_name": "K",
+          "pin_type": "PASSIVE"
+        },
+        {
+          "designator": "Q1",
+          "pin": "3",
+          "pin_name": "C",
+          "pin_type": "PASSIVE"
+        },
+        {
+          "designator": "R3",
+          "pin": "1",
+          "pin_name": "1",
+          "pin_type": "PASSIVE"
+        }
+      ],
+      "graphical": {
+        "wires": [
+          "191f3aaa-9cfe-4208-b69e-e9a89e100d9c",
+          "2c9bec58-1594-403d-8856-da03cfde6b20",
+          "5090afbd-a721-4fde-a397-3decc17718fe"
+        ],
+        "junctions": [
+          "bc55681f-fd5a-4a34-ad12-2d411cef8ad1"
+        ],
+        "labels": [
+          "04343e41-03d4-411a-9d19-cced2121ec17"
+        ],
+        "power_ports": [],
+        "ports": [],
+        "sheet_entries": [],
+        "pins": [
+          {
+            "designator": "D1",
+            "pin": "1",
+            "svg_id": "271ab780-11b8-49fc-a2be-8fa3d011f139"
+          },
+          {
+            "designator": "Q1",
+            "pin": "3",
+            "svg_id": "eb2b0099-753c-4b58-8e5e-a46e37c19d3b"
+          },
+          {
+            "designator": "R3",
+            "pin": "1",
+            "svg_id": "1bee5897-3c29-47ab-b2ed-5415369340c8"
+          }
+        ]
+      },
+      "aliases": [],
+      "endpoints": [
+        {
+          "endpoint_id": "pin:D1:1",
+          "role": "pin",
+          "element_id": "271ab780-11b8-49fc-a2be-8fa3d011f139",
+          "object_id": "271ab780-11b8-49fc-a2be-8fa3d011f139",
+          "name": "K",
+          "source_sheet": "/",
+          "designator": "D1",
+          "pin": "1",
+          "pin_type": "PASSIVE",
+          "pin_name": "K"
+        },
+        {
+          "endpoint_id": "pin:Q1:3",
+          "role": "pin",
+          "element_id": "eb2b0099-753c-4b58-8e5e-a46e37c19d3b",
+          "object_id": "eb2b0099-753c-4b58-8e5e-a46e37c19d3b",
+          "name": "C",
+          "source_sheet": "/",
+          "designator": "Q1",
+          "pin": "3",
+          "pin_type": "PASSIVE",
+          "pin_name": "C"
+        },
+        {
+          "endpoint_id": "pin:R3:1",
+          "role": "pin",
+          "element_id": "1bee5897-3c29-47ab-b2ed-5415369340c8",
+          "object_id": "1bee5897-3c29-47ab-b2ed-5415369340c8",
+          "name": "1",
+          "source_sheet": "/",
+          "designator": "R3",
+          "pin": "1",
+          "pin_type": "PASSIVE",
+          "pin_name": "1"
+        }
+      ],
+      "driver_priority": 7,
+      "driver_kind": "global_label",
+      "net_class": "Default"
+    }
+  ],
+  "net_classes": [
+    {
+      "name": "Default",
+      "description": "",
+      "nets": [
+        "+5v",
+        "GND",
+        "INPUT",
+        "Net-(D1-A)",
+        "OUTPUT"
+      ]
+    }
+  ],
+  "net_name_to_classes": {
+    "+5v": [
+      "Default"
+    ],
+    "Net-(D1-A)": [
+      "Default"
+    ],
+    "GND": [
+      "Default"
+    ],
+    "INPUT": [
+      "Default"
+    ],
+    "OUTPUT": [
+      "Default"
+    ]
+  },
+  "indexes": {
+    "svg_to_component": {
+      "08fcd6ec-de80-40a7-92d0-e9acb297b720": "R3",
+      "1c581290-ae5c-4318-a399-ec0fa704aea4": "C1",
+      "9416f86a-ce95-4af4-aaa5-4deb9d637e7b": "R4",
+      "94ed2272-0e17-4669-8b4e-df436367ddf7": "C2",
+      "b749e82a-cc12-46f9-8281-7d2e388b1057": "R1",
+      "c4a7f4c1-1f1d-4e24-9df8-a9860a7c1234": "Q1",
+      "e1e5cf48-8a20-4e01-bf47-28cea276cfa1": "D1"
+    },
+    "component_to_nets": {
+      "C1": [
+        "+5v",
+        "GND"
+      ],
+      "C2": [
+        "+5v",
+        "GND"
+      ],
+      "D1": [
+        "Net-(D1-A)",
+        "OUTPUT"
+      ],
+      "Q1": [
+        "GND",
+        "Net-(D1-A)",
+        "OUTPUT"
+      ],
+      "R1": [
+        "INPUT",
+        "Net-(D1-A)"
+      ],
+      "R3": [
+        "+5v",
+        "OUTPUT"
+      ],
+      "R4": [
+        "GND",
+        "Net-(D1-A)"
+      ]
+    },
+    "net_to_components": {
+      "+5v": [
+        "C1",
+        "C2",
+        "R3"
+      ],
+      "GND": [
+        "C1",
+        "C2",
+        "Q1",
+        "R4"
+      ],
+      "INPUT": [
+        "R1"
+      ],
+      "Net-(D1-A)": [
+        "D1",
+        "Q1",
+        "R1",
+        "R4"
+      ],
+      "OUTPUT": [
+        "D1",
+        "Q1",
+        "R3"
+      ]
+    },
+    "svg_to_net": {
+      "00bcec30-bbc5-4e08-973c-1d627f224a6b": "+5v",
+      "04343e41-03d4-411a-9d19-cced2121ec17": "OUTPUT",
+      "09aa2444-fe81-4988-8cfe-463d1d21806c": "Net-(D1-A)",
+      "14eac7cc-ca8a-4257-8881-d131c511282b": "+5v",
+      "18d2b249-a598-4d39-acf3-d8e2afbbf739": "Net-(D1-A)",
+      "18f7456a-b24e-4aca-82af-ce2a379bc8a8": "Net-(D1-A)",
+      "191f3aaa-9cfe-4208-b69e-e9a89e100d9c": "OUTPUT",
+      "1bee5897-3c29-47ab-b2ed-5415369340c8": "OUTPUT",
+      "1c815af8-b5dd-43ad-8cd6-9824af1c2ecd": "GND",
+      "1efbe317-a4ac-47c7-9aed-60f0bb53f10f": "INPUT",
+      "271ab780-11b8-49fc-a2be-8fa3d011f139": "OUTPUT",
+      "2c9bec58-1594-403d-8856-da03cfde6b20": "OUTPUT",
+      "3dedf2ad-d82e-40f9-a2b6-5e38a8230b4b": "+5v",
+      "3e622e08-1741-4b04-9bc3-1cda89caad44": "+5v",
+      "407f4740-4fa3-444f-b526-3160f868fb71": "GND",
+      "43c8cf00-76f3-43da-b7b1-65409ded8ac7": "+5v",
+      "4817a78c-c361-47f6-90b5-dc5ff49801c2": "GND",
+      "5090afbd-a721-4fde-a397-3decc17718fe": "OUTPUT",
+      "57ca5c08-bed0-4c0d-9365-86de1e4364d5": "GND",
+      "60bfc3e0-3f3d-4e3e-8dc8-39234f585d48": "GND",
+      "62960181-f22d-44d4-b118-035b377cb44d": "GND",
+      "677b2b9a-a0b5-47e7-b97f-74745cf61fc7": "INPUT",
+      "6b584e0c-4b99-457c-8094-7a7fa9cd75c3": "+5v",
+      "7372784b-a3ee-4fa1-bc82-9f9dadbf3d11": "+5v",
+      "76a3bbee-c5c7-4b6a-bbf4-c957ef1191c7": "Net-(D1-A)",
+      "a094d372-f49c-43ec-8467-9c05a72db2dd": "Net-(D1-A)",
+      "b0f1ac7e-7971-4697-ae6c-34dda6fe8100": "Net-(D1-A)",
+      "b4961a56-b6c7-4b19-a2a1-c1c06b5869a3": "+5v",
+      "ba7b7abf-bb6b-422d-b0b9-c090f3e5ca9a": "GND",
+      "ba9b3f11-632f-4125-8473-33016c02b75c": "+5v",
+      "bb59cbb6-f840-40f4-939e-bec35b74137c": "GND",
+      "bc55681f-fd5a-4a34-ad12-2d411cef8ad1": "OUTPUT",
+      "bdf19dc5-2d30-4f5f-823e-c007bc7baf83": "+5v",
+      "c70ae026-7c3e-4446-93f0-cf5fdcf10612": "+5v",
+      "c9cfb496-0df0-4753-a76b-e1ea005b9c6c": "Net-(D1-A)",
+      "d57a367f-6006-432f-8489-28da333b52fa": "GND",
+      "dda9f243-f610-4a64-894d-c0ffe2f2a771": "Net-(D1-A)",
+      "de33cf34-90ff-4651-8448-5139f8f043a5": "INPUT",
+      "eb2b0099-753c-4b58-8e5e-a46e37c19d3b": "OUTPUT",
+      "ebe17755-ab58-46e0-8ffe-2bdd644c4f6d": "GND",
+      "ec726adb-2ce2-4994-92d4-148c18f1c70d": "GND"
+    },
+    "svg_to_nets": {
+      "00bcec30-bbc5-4e08-973c-1d627f224a6b": [
+        "+5v"
+      ],
+      "04343e41-03d4-411a-9d19-cced2121ec17": [
+        "OUTPUT"
+      ],
+      "09aa2444-fe81-4988-8cfe-463d1d21806c": [
+        "Net-(D1-A)"
+      ],
+      "14eac7cc-ca8a-4257-8881-d131c511282b": [
+        "+5v"
+      ],
+      "18d2b249-a598-4d39-acf3-d8e2afbbf739": [
+        "Net-(D1-A)"
+      ],
+      "18f7456a-b24e-4aca-82af-ce2a379bc8a8": [
+        "Net-(D1-A)"
+      ],
+      "191f3aaa-9cfe-4208-b69e-e9a89e100d9c": [
+        "OUTPUT"
+      ],
+      "1bee5897-3c29-47ab-b2ed-5415369340c8": [
+        "OUTPUT"
+      ],
+      "1c815af8-b5dd-43ad-8cd6-9824af1c2ecd": [
+        "GND"
+      ],
+      "1efbe317-a4ac-47c7-9aed-60f0bb53f10f": [
+        "INPUT"
+      ],
+      "271ab780-11b8-49fc-a2be-8fa3d011f139": [
+        "OUTPUT"
+      ],
+      "2c9bec58-1594-403d-8856-da03cfde6b20": [
+        "OUTPUT"
+      ],
+      "3dedf2ad-d82e-40f9-a2b6-5e38a8230b4b": [
+        "+5v"
+      ],
+      "3e622e08-1741-4b04-9bc3-1cda89caad44": [
+        "+5v"
+      ],
+      "407f4740-4fa3-444f-b526-3160f868fb71": [
+        "GND"
+      ],
+      "43c8cf00-76f3-43da-b7b1-65409ded8ac7": [
+        "+5v"
+      ],
+      "4817a78c-c361-47f6-90b5-dc5ff49801c2": [
+        "GND"
+      ],
+      "5090afbd-a721-4fde-a397-3decc17718fe": [
+        "OUTPUT"
+      ],
+      "57ca5c08-bed0-4c0d-9365-86de1e4364d5": [
+        "GND"
+      ],
+      "60bfc3e0-3f3d-4e3e-8dc8-39234f585d48": [
+        "GND"
+      ],
+      "62960181-f22d-44d4-b118-035b377cb44d": [
+        "GND"
+      ],
+      "677b2b9a-a0b5-47e7-b97f-74745cf61fc7": [
+        "INPUT"
+      ],
+      "6b584e0c-4b99-457c-8094-7a7fa9cd75c3": [
+        "+5v"
+      ],
+      "7372784b-a3ee-4fa1-bc82-9f9dadbf3d11": [
+        "+5v"
+      ],
+      "76a3bbee-c5c7-4b6a-bbf4-c957ef1191c7": [
+        "Net-(D1-A)"
+      ],
+      "a094d372-f49c-43ec-8467-9c05a72db2dd": [
+        "Net-(D1-A)"
+      ],
+      "b0f1ac7e-7971-4697-ae6c-34dda6fe8100": [
+        "Net-(D1-A)"
+      ],
+      "b4961a56-b6c7-4b19-a2a1-c1c06b5869a3": [
+        "+5v"
+      ],
+      "ba7b7abf-bb6b-422d-b0b9-c090f3e5ca9a": [
+        "GND"
+      ],
+      "ba9b3f11-632f-4125-8473-33016c02b75c": [
+        "+5v"
+      ],
+      "bb59cbb6-f840-40f4-939e-bec35b74137c": [
+        "GND"
+      ],
+      "bc55681f-fd5a-4a34-ad12-2d411cef8ad1": [
+        "OUTPUT"
+      ],
+      "bdf19dc5-2d30-4f5f-823e-c007bc7baf83": [
+        "+5v"
+      ],
+      "c70ae026-7c3e-4446-93f0-cf5fdcf10612": [
+        "+5v"
+      ],
+      "c9cfb496-0df0-4753-a76b-e1ea005b9c6c": [
+        "Net-(D1-A)"
+      ],
+      "d57a367f-6006-432f-8489-28da333b52fa": [
+        "GND"
+      ],
+      "dda9f243-f610-4a64-894d-c0ffe2f2a771": [
+        "Net-(D1-A)"
+      ],
+      "de33cf34-90ff-4651-8448-5139f8f043a5": [
+        "INPUT"
+      ],
+      "eb2b0099-753c-4b58-8e5e-a46e37c19d3b": [
+        "OUTPUT"
+      ],
+      "ebe17755-ab58-46e0-8ffe-2bdd644c4f6d": [
+        "GND"
+      ],
+      "ec726adb-2ce2-4994-92d4-148c18f1c70d": [
+        "GND"
+      ]
+    },
+    "sheet_svg_to_nets": {
+      "/": {
+        "090fae54-b9ef-4560-91db-71829040611c": [
+          "GND"
+        ],
+        "18d2b249-a598-4d39-acf3-d8e2afbbf739": [
+          "Net-(D1-A)"
+        ],
+        "1bee5897-3c29-47ab-b2ed-5415369340c8": [
+          "OUTPUT"
+        ],
+        "1c815af8-b5dd-43ad-8cd6-9824af1c2ecd": [
+          "GND"
+        ],
+        "1efbe317-a4ac-47c7-9aed-60f0bb53f10f": [
+          "INPUT"
+        ],
+        "271ab780-11b8-49fc-a2be-8fa3d011f139": [
+          "OUTPUT"
+        ],
+        "3e622e08-1741-4b04-9bc3-1cda89caad44": [
+          "+5v"
+        ],
+        "407f4740-4fa3-444f-b526-3160f868fb71": [
+          "GND"
+        ],
+        "60bfc3e0-3f3d-4e3e-8dc8-39234f585d48": [
+          "GND"
+        ],
+        "6b584e0c-4b99-457c-8094-7a7fa9cd75c3": [
+          "+5v"
+        ],
+        "76a3bbee-c5c7-4b6a-bbf4-c957ef1191c7": [
+          "Net-(D1-A)"
+        ],
+        "a094d372-f49c-43ec-8467-9c05a72db2dd": [
+          "Net-(D1-A)"
+        ],
+        "a61f8761-aff4-4c2f-aa15-cfb320a335d3": [
+          "GND"
+        ],
+        "b0f1ac7e-7971-4697-ae6c-34dda6fe8100": [
+          "Net-(D1-A)"
+        ],
+        "b4961a56-b6c7-4b19-a2a1-c1c06b5869a3": [
+          "+5v"
+        ],
+        "bb59cbb6-f840-40f4-939e-bec35b74137c": [
+          "GND"
+        ],
+        "bdf19dc5-2d30-4f5f-823e-c007bc7baf83": [
+          "+5v"
+        ],
+        "d57a367f-6006-432f-8489-28da333b52fa": [
+          "GND"
+        ],
+        "e4c23cea-8f5d-4521-92fd-f93592ecaf38": [
+          "+5v"
+        ],
+        "eb2b0099-753c-4b58-8e5e-a46e37c19d3b": [
+          "OUTPUT"
+        ],
+        "ec726adb-2ce2-4994-92d4-148c18f1c70d": [
+          "GND"
+        ]
+      }
+    },
+    "net_to_graphics": {
+      "+5v": [
+        "00bcec30-bbc5-4e08-973c-1d627f224a6b",
+        "14eac7cc-ca8a-4257-8881-d131c511282b",
+        "3dedf2ad-d82e-40f9-a2b6-5e38a8230b4b",
+        "3e622e08-1741-4b04-9bc3-1cda89caad44",
+        "43c8cf00-76f3-43da-b7b1-65409ded8ac7",
+        "6b584e0c-4b99-457c-8094-7a7fa9cd75c3",
+        "7372784b-a3ee-4fa1-bc82-9f9dadbf3d11",
+        "b4961a56-b6c7-4b19-a2a1-c1c06b5869a3",
+        "ba9b3f11-632f-4125-8473-33016c02b75c",
+        "bdf19dc5-2d30-4f5f-823e-c007bc7baf83",
+        "c70ae026-7c3e-4446-93f0-cf5fdcf10612"
+      ],
+      "GND": [
+        "1c815af8-b5dd-43ad-8cd6-9824af1c2ecd",
+        "407f4740-4fa3-444f-b526-3160f868fb71",
+        "4817a78c-c361-47f6-90b5-dc5ff49801c2",
+        "57ca5c08-bed0-4c0d-9365-86de1e4364d5",
+        "60bfc3e0-3f3d-4e3e-8dc8-39234f585d48",
+        "62960181-f22d-44d4-b118-035b377cb44d",
+        "ba7b7abf-bb6b-422d-b0b9-c090f3e5ca9a",
+        "bb59cbb6-f840-40f4-939e-bec35b74137c",
+        "d57a367f-6006-432f-8489-28da333b52fa",
+        "ebe17755-ab58-46e0-8ffe-2bdd644c4f6d",
+        "ec726adb-2ce2-4994-92d4-148c18f1c70d"
+      ],
+      "INPUT": [
+        "1efbe317-a4ac-47c7-9aed-60f0bb53f10f",
+        "677b2b9a-a0b5-47e7-b97f-74745cf61fc7",
+        "de33cf34-90ff-4651-8448-5139f8f043a5"
+      ],
+      "Net-(D1-A)": [
+        "09aa2444-fe81-4988-8cfe-463d1d21806c",
+        "18d2b249-a598-4d39-acf3-d8e2afbbf739",
+        "18f7456a-b24e-4aca-82af-ce2a379bc8a8",
+        "76a3bbee-c5c7-4b6a-bbf4-c957ef1191c7",
+        "a094d372-f49c-43ec-8467-9c05a72db2dd",
+        "b0f1ac7e-7971-4697-ae6c-34dda6fe8100",
+        "c9cfb496-0df0-4753-a76b-e1ea005b9c6c",
+        "dda9f243-f610-4a64-894d-c0ffe2f2a771"
+      ],
+      "OUTPUT": [
+        "04343e41-03d4-411a-9d19-cced2121ec17",
+        "191f3aaa-9cfe-4208-b69e-e9a89e100d9c",
+        "1bee5897-3c29-47ab-b2ed-5415369340c8",
+        "271ab780-11b8-49fc-a2be-8fa3d011f139",
+        "2c9bec58-1594-403d-8856-da03cfde6b20",
+        "5090afbd-a721-4fde-a397-3decc17718fe",
+        "bc55681f-fd5a-4a34-ad12-2d411cef8ad1",
+        "eb2b0099-753c-4b58-8e5e-a46e37c19d3b"
+      ]
+    }
+  }
+}

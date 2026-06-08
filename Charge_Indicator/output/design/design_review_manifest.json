@@ -1,0 +1,38 @@
+{
+  "schema": "kicad_cruncher.design_review_manifest.a0",
+  "input": "/Users/nathanfikes/Projects/GitHub/AutoNav-Charge_Indicator-KiCad_Pcb/Charge_Indicator/Charge_Indicator.kicad_pro",
+  "design_json": "Charge_Indicator_design.json",
+  "schematic_svgs": [
+    {
+      "file": "schematics/01_Charge_Indicator.svg",
+      "sheet_number": 1,
+      "sheet_count": 1,
+      "sheet_name": "Charge_Indicator",
+      "sheet_path": "/",
+      "sheet_path_uuids": "/",
+      "sheet_instance_path": "/ce5a45ab-8fc2-45f1-907f-8e7f414ac528",
+      "source": "/Users/nathanfikes/Projects/GitHub/AutoNav-Charge_Indicator-KiCad_Pcb/Charge_Indicator/Charge_Indicator.kicad_sch"
+    }
+  ],
+  "pcb_svgs": [
+    {
+      "file": "pcb/copper_layers/Charge_Indicator__F.Cu__review.svg",
+      "layer": "F.Cu",
+      "included_layers": [
+        "F.Cu",
+        "Edge.Cuts"
+      ],
+      "drill_slot_record_count": 114
+    },
+    {
+      "file": "pcb/copper_layers/Charge_Indicator__B.Cu__review.svg",
+      "layer": "B.Cu",
+      "included_layers": [
+        "B.Cu",
+        "Edge.Cuts"
+      ],
+      "drill_slot_record_count": 114
+    }
+  ],
+  "readme": "README.md"
+}

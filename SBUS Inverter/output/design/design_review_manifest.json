@@ -1,0 +1,19 @@
+{
+  "schema": "kicad_cruncher.design_review_manifest.a0",
+  "input": "/Users/nathanfikes/Projects/GitHub/AutoNav-Charge_Indicator-KiCad_Pcb/SBUS Inverter/SBUS Inverter.kicad_pro",
+  "design_json": "SBUS Inverter_design.json",
+  "schematic_svgs": [
+    {
+      "file": "schematics/01_SBUS_Inverter.svg",
+      "sheet_number": 1,
+      "sheet_count": 1,
+      "sheet_name": "SBUS Inverter",
+      "sheet_path": "/",
+      "sheet_path_uuids": "/",
+      "sheet_instance_path": "/a953040e-b95c-429e-af03-51e692dfc295",
+      "source": "/Users/nathanfikes/Projects/GitHub/AutoNav-Charge_Indicator-KiCad_Pcb/SBUS Inverter/SBUS Inverter.kicad_sch"
+    }
+  ],
+  "pcb_svgs": [],
+  "readme": "README.md"
+}

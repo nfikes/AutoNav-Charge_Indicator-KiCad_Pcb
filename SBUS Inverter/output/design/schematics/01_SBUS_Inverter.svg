@@ -1,0 +1,1970 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="297.0022mm" height="210.0072mm" viewBox="0 0 297.0022 210.0072" data-enrichment-schema="kicad_monkey.schematic.svg.enrichment.a0" data-view-kind="schematic_sheet" data-profile="enriched" data-source="/Users/nathanfikes/Projects/GitHub/AutoNav-Charge_Indicator-KiCad_Pcb/SBUS Inverter/SBUS Inverter.kicad_sch" data-sheet-name="SBUS Inverter" data-sheet-path="/" data-review-theme="kicad_cruncher.design_review.schematic_svg.a0">
+<metadata id="schematic-enrichment-a0" data-schema="kicad_monkey.schematic.svg.enrichment.a0">
+{
+  "design": {
+    "components": [
+      {
+        "classification": {
+          "pin_count": 2,
+          "prefix": "R",
+          "type": "passive_2pin"
+        },
+        "description": "",
+        "designator": "R3",
+        "footprint": "wavenumber:R2010_0.70MM_MD",
+        "hierarchy": {
+          "base_designator": "R3",
+          "channel": null,
+          "channel_index": null,
+          "sheet": "/",
+          "sheet_path": "/",
+          "sheet_path_uuids": "/"
+        },
+        "library_ref": "wn__wavenumber:R_2P",
+        "parameters": {
+          "Description": "",
+          "Internal Part Number": "",
+          "Manufacturer": "Panasonic Electronic Components",
+          "Manufacturer Part Number": "ERJ-12SF1001U",
+          "_source_cad": "kicad",
+          "cad-reference": "ERJ-12SF1001U",
+          "flags": "",
+          "kicad_dnp": "false",
+          "kicad_in_bom": "true",
+          "kicad_instance_uuid": "08fcd6ec-de80-40a7-92d0-e9acb297b720",
+          "kicad_libsource_lib": "wn__wavenumber",
+          "kicad_libsource_part": "R_2P",
+          "kicad_on_board": "true",
+          "kicad_sheet_path_names": "/",
+          "kicad_sheet_path_uuids": "/"
+        },
+        "svg_id": "08fcd6ec-de80-40a7-92d0-e9acb297b720",
+        "value": "1k\u03a9"
+      },
+      {
+        "classification": {
+          "pin_count": 2,
+          "prefix": "C",
+          "type": "passive_2pin"
+        },
+        "description": "",
+        "designator": "C1",
+        "footprint": "wavenumber:C1812_MD",
+        "hierarchy": {
+          "base_designator": "C1",
+          "channel": null,
+          "channel_index": null,
+          "sheet": "/",
+          "sheet_path": "/",
+          "sheet_path_uuids": "/"
+        },
+        "library_ref": "wn__wavenumber:C_2P_NP",
+        "parameters": {
+          "Description": "",
+          "Internal Part Number": "",
+          "Manufacturer": "Murata Electronics",
+          "Manufacturer Part Number": "GCJ43DR72J104KXJ1L",
+          "_source_cad": "kicad",
+          "cad-reference": "GCJ43DR72J104KXJ1L",
+          "flags": "",
+          "kicad_dnp": "false",
+          "kicad_in_bom": "true",
+          "kicad_instance_uuid": "1c581290-ae5c-4318-a399-ec0fa704aea4",
+          "kicad_libsource_lib": "wn__wavenumber",
+          "kicad_libsource_part": "C_2P_NP",
+          "kicad_on_board": "true",
+          "kicad_sheet_path_names": "/",
+          "kicad_sheet_path_uuids": "/"
+        },
+        "svg_id": "1c581290-ae5c-4318-a399-ec0fa704aea4",
+        "value": "0.1\u00b5F"
+      },
+      {
+        "classification": {
+          "pin_count": 2,
+          "prefix": "R",
+          "type": "passive_2pin"
+        },
+        "description": "",
+        "designator": "R4",
+        "footprint": "wavenumber:R2010_0.70MM_MD",
+        "hierarchy": {
+          "base_designator": "R4",
+          "channel": null,
+          "channel_index": null,
+          "sheet": "/",
+          "sheet_path": "/",
+          "sheet_path_uuids": "/"
+        },
+        "library_ref": "wn__wavenumber:R_2P",
+        "parameters": {
+          "Description": "",
+          "Internal Part Number": "",
+          "Manufacturer": "Panasonic Electronic Components",
+          "Manufacturer Part Number": "ERJ-12SF1001U",
+          "_source_cad": "kicad",
+          "cad-reference": "ERJ-12SF1001U",
+          "flags": "",
+          "kicad_dnp": "false",
+          "kicad_in_bom": "true",
+          "kicad_instance_uuid": "9416f86a-ce95-4af4-aaa5-4deb9d637e7b",
+          "kicad_libsource_lib": "wn__wavenumber",
+          "kicad_libsource_part": "R_2P",
+          "kicad_on_board": "true",
+          "kicad_sheet_path_names": "/",
+          "kicad_sheet_path_uuids": "/"
+        },
+        "svg_id": "9416f86a-ce95-4af4-aaa5-4deb9d637e7b",
+        "value": "1k\u03a9"
+      },
+      {
+        "classification": {
+          "pin_count": 2,
+          "prefix": "C",
+          "type": "passive_2pin"
+        },
+        "description": "",
+        "designator": "C2",
+        "footprint": "wavenumber:C0603_0.90MM_MD",
+        "hierarchy": {
+          "base_designator": "C2",
+          "channel": null,
+          "channel_index": null,
+          "sheet": "/",
+          "sheet_path": "/",
+          "sheet_path_uuids": "/"
+        },
+        "library_ref": "wn__wavenumber:C_2P_NP",
+        "parameters": {
+          "Description": "",
+          "Internal Part Number": "",
+          "Manufacturer": "Murata Electronics",
+          "Manufacturer Part Number": "GRT188R61E106ME13D",
+          "_source_cad": "kicad",
+          "cad-reference": "GRT188R61E106ME13D",
+          "flags": "",
+          "kicad_dnp": "false",
+          "kicad_in_bom": "true",
+          "kicad_instance_uuid": "94ed2272-0e17-4669-8b4e-df436367ddf7",
+          "kicad_libsource_lib": "wn__wavenumber",
+          "kicad_libsource_part": "C_2P_NP",
+          "kicad_on_board": "true",
+          "kicad_sheet_path_names": "/",
+          "kicad_sheet_path_uuids": "/"
+        },
+        "svg_id": "94ed2272-0e17-4669-8b4e-df436367ddf7",
+        "value": "10\u00b5F"
+      },
+      {
+        "classification": {
+          "pin_count": 2,
+          "prefix": "R",
+          "type": "passive_2pin"
+        },
+        "description": "",
+        "designator": "R1",
+        "footprint": "wavenumber:R2010_0.70MM_MD",
+        "hierarchy": {
+          "base_designator": "R1",
+          "channel": null,
+          "channel_index": null,
+          "sheet": "/",
+          "sheet_path": "/",
+          "sheet_path_uuids": "/"
+        },
+        "library_ref": "wn__wavenumber:R_2P",
+        "parameters": {
+          "Description": "",
+          "Internal Part Number": "",
+          "Manufacturer": "Panasonic Electronic Components",
+          "Manufacturer Part Number": "ERJ-12SF1001U",
+          "_source_cad": "kicad",
+          "cad-reference": "ERJ-12SF1001U",
+          "flags": "",
+          "kicad_dnp": "false",
+          "kicad_in_bom": "true",
+          "kicad_instance_uuid": "b749e82a-cc12-46f9-8281-7d2e388b1057",
+          "kicad_libsource_lib": "wn__wavenumber",
+          "kicad_libsource_part": "R_2P",
+          "kicad_on_board": "true",
+          "kicad_sheet_path_names": "/",
+          "kicad_sheet_path_uuids": "/"
+        },
+        "svg_id": "b749e82a-cc12-46f9-8281-7d2e388b1057",
+        "value": "1k\u03a9"
+      },
+      {
+        "classification": {
+          "pin_count": 3,
+          "prefix": "Q",
+          "type": "transistor"
+        },
+        "description": "800mA Ic, 50V Vce, NPN Transistor, TO-39",
+        "designator": "Q1",
+        "footprint": "Package_TO_SOT_THT:TO-39-3",
+        "hierarchy": {
+          "base_designator": "Q1",
+          "channel": null,
+          "channel_index": null,
+          "sheet": "/",
+          "sheet_path": "/",
+          "sheet_path_uuids": "/"
+        },
+        "library_ref": "Transistor_BJT:2N2219",
+        "parameters": {
+          "Description": "800mA Ic, 50V Vce, NPN Transistor, TO-39",
+          "_source_cad": "kicad",
+          "kicad_dnp": "false",
+          "kicad_in_bom": "true",
+          "kicad_instance_uuid": "c4a7f4c1-1f1d-4e24-9df8-a9860a7c1234",
+          "kicad_libsource_lib": "Transistor_BJT",
+          "kicad_libsource_part": "2N2219",
+          "kicad_on_board": "true",
+          "kicad_sheet_path_names": "/",
+          "kicad_sheet_path_uuids": "/"
+        },
+        "svg_id": "c4a7f4c1-1f1d-4e24-9df8-a9860a7c1234",
+        "value": "2N2222"
+      },
+      {
+        "classification": {
+          "pin_count": 2,
+          "prefix": "D",
+          "type": "passive_2pin"
+        },
+        "description": "20V 75mA Schottky diode, DO-35",
+        "designator": "D1",
+        "footprint": "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal",
+        "hierarchy": {
+          "base_designator": "D1",
+          "channel": null,
+          "channel_index": null,
+          "sheet": "/",
+          "sheet_path": "/",
+          "sheet_path_uuids": "/"
+        },
+        "library_ref": "Diode:1N5712",
+        "parameters": {
+          "Description": "20V 75mA Schottky diode, DO-35",
+          "_source_cad": "kicad",
+          "kicad_dnp": "false",
+          "kicad_in_bom": "true",
+          "kicad_instance_uuid": "e1e5cf48-8a20-4e01-bf47-28cea276cfa1",
+          "kicad_libsource_lib": "Diode",
+          "kicad_libsource_part": "1N5712",
+          "kicad_on_board": "true",
+          "kicad_sheet_path_names": "/",
+          "kicad_sheet_path_uuids": "/"
+        },
+        "svg_id": "e1e5cf48-8a20-4e01-bf47-28cea276cfa1",
+        "value": "SR260"
+      }
+    ],
+    "generator": "kicad_monkey",
+    "indexes": {
+      "component_to_nets": {
+        "C1": [
+          "+5v",
+          "GND"
+        ],
+        "C2": [
+          "+5v",
+          "GND"
+        ],
+        "D1": [
+          "Net-(D1-A)",
+          "OUTPUT"
+        ],
+        "Q1": [
+          "GND",
+          "Net-(D1-A)",
+          "OUTPUT"
+        ],
+        "R1": [
+          "INPUT",
+          "Net-(D1-A)"
+        ],
+        "R3": [
+          "+5v",
+          "OUTPUT"
+        ],
+        "R4": [
+          "GND",
+          "Net-(D1-A)"
+        ]
+      },
+      "net_to_components": {
+        "+5v": [
+          "C1",
+          "C2",
+          "R3"
+        ],
+        "GND": [
+          "C1",
+          "C2",
+          "Q1",
+          "R4"
+        ],
+        "INPUT": [
+          "R1"
+        ],
+        "Net-(D1-A)": [
+          "D1",
+          "Q1",
+          "R1",
+          "R4"
+        ],
+        "OUTPUT": [
+          "D1",
+          "Q1",
+          "R3"
+        ]
+      },
+      "net_to_graphics": {
+        "+5v": [
+          "00bcec30-bbc5-4e08-973c-1d627f224a6b",
+          "14eac7cc-ca8a-4257-8881-d131c511282b",
+          "3dedf2ad-d82e-40f9-a2b6-5e38a8230b4b",
+          "3e622e08-1741-4b04-9bc3-1cda89caad44",
+          "43c8cf00-76f3-43da-b7b1-65409ded8ac7",
+          "6b584e0c-4b99-457c-8094-7a7fa9cd75c3",
+          "7372784b-a3ee-4fa1-bc82-9f9dadbf3d11",
+          "b4961a56-b6c7-4b19-a2a1-c1c06b5869a3",
+          "ba9b3f11-632f-4125-8473-33016c02b75c",
+          "bdf19dc5-2d30-4f5f-823e-c007bc7baf83",
+          "c70ae026-7c3e-4446-93f0-cf5fdcf10612"
+        ],
+        "GND": [
+          "1c815af8-b5dd-43ad-8cd6-9824af1c2ecd",
+          "407f4740-4fa3-444f-b526-3160f868fb71",
+          "4817a78c-c361-47f6-90b5-dc5ff49801c2",
+          "57ca5c08-bed0-4c0d-9365-86de1e4364d5",
+          "60bfc3e0-3f3d-4e3e-8dc8-39234f585d48",
+          "62960181-f22d-44d4-b118-035b377cb44d",
+          "ba7b7abf-bb6b-422d-b0b9-c090f3e5ca9a",
+          "bb59cbb6-f840-40f4-939e-bec35b74137c",
+          "d57a367f-6006-432f-8489-28da333b52fa",
+          "ebe17755-ab58-46e0-8ffe-2bdd644c4f6d",
+          "ec726adb-2ce2-4994-92d4-148c18f1c70d"
+        ],
+        "INPUT": [
+          "1efbe317-a4ac-47c7-9aed-60f0bb53f10f",
+          "677b2b9a-a0b5-47e7-b97f-74745cf61fc7",
+          "de33cf34-90ff-4651-8448-5139f8f043a5"
+        ],
+        "Net-(D1-A)": [
+          "09aa2444-fe81-4988-8cfe-463d1d21806c",
+          "18d2b249-a598-4d39-acf3-d8e2afbbf739",
+          "18f7456a-b24e-4aca-82af-ce2a379bc8a8",
+          "76a3bbee-c5c7-4b6a-bbf4-c957ef1191c7",
+          "a094d372-f49c-43ec-8467-9c05a72db2dd",
+          "b0f1ac7e-7971-4697-ae6c-34dda6fe8100",
+          "c9cfb496-0df0-4753-a76b-e1ea005b9c6c",
+          "dda9f243-f610-4a64-894d-c0ffe2f2a771"
+        ],
+        "OUTPUT": [
+          "04343e41-03d4-411a-9d19-cced2121ec17",
+          "191f3aaa-9cfe-4208-b69e-e9a89e100d9c",
+          "1bee5897-3c29-47ab-b2ed-5415369340c8",
+          "271ab780-11b8-49fc-a2be-8fa3d011f139",
+          "2c9bec58-1594-403d-8856-da03cfde6b20",
+          "5090afbd-a721-4fde-a397-3decc17718fe",
+          "bc55681f-fd5a-4a34-ad12-2d411cef8ad1",
+          "eb2b0099-753c-4b58-8e5e-a46e37c19d3b"
+        ]
+      },
+      "sheet_svg_to_nets": {
+        "/": {
+          "090fae54-b9ef-4560-91db-71829040611c": [
+            "GND"
+          ],
+          "18d2b249-a598-4d39-acf3-d8e2afbbf739": [
+            "Net-(D1-A)"
+          ],
+          "1bee5897-3c29-47ab-b2ed-5415369340c8": [
+            "OUTPUT"
+          ],
+          "1c815af8-b5dd-43ad-8cd6-9824af1c2ecd": [
+            "GND"
+          ],
+          "1efbe317-a4ac-47c7-9aed-60f0bb53f10f": [
+            "INPUT"
+          ],
+          "271ab780-11b8-49fc-a2be-8fa3d011f139": [
+            "OUTPUT"
+          ],
+          "3e622e08-1741-4b04-9bc3-1cda89caad44": [
+            "+5v"
+          ],
+          "407f4740-4fa3-444f-b526-3160f868fb71": [
+            "GND"
+          ],
+          "60bfc3e0-3f3d-4e3e-8dc8-39234f585d48": [
+            "GND"
+          ],
+          "6b584e0c-4b99-457c-8094-7a7fa9cd75c3": [
+            "+5v"
+          ],
+          "76a3bbee-c5c7-4b6a-bbf4-c957ef1191c7": [
+            "Net-(D1-A)"
+          ],
+          "a094d372-f49c-43ec-8467-9c05a72db2dd": [
+            "Net-(D1-A)"
+          ],
+          "a61f8761-aff4-4c2f-aa15-cfb320a335d3": [
+            "GND"
+          ],
+          "b0f1ac7e-7971-4697-ae6c-34dda6fe8100": [
+            "Net-(D1-A)"
+          ],
+          "b4961a56-b6c7-4b19-a2a1-c1c06b5869a3": [
+            "+5v"
+          ],
+          "bb59cbb6-f840-40f4-939e-bec35b74137c": [
+            "GND"
+          ],
+          "bdf19dc5-2d30-4f5f-823e-c007bc7baf83": [
+            "+5v"
+          ],
+          "d57a367f-6006-432f-8489-28da333b52fa": [
+            "GND"
+          ],
+          "e4c23cea-8f5d-4521-92fd-f93592ecaf38": [
+            "+5v"
+          ],
+          "eb2b0099-753c-4b58-8e5e-a46e37c19d3b": [
+            "OUTPUT"
+          ],
+          "ec726adb-2ce2-4994-92d4-148c18f1c70d": [
+            "GND"
+          ]
+        }
+      },
+      "svg_to_component": {
+        "08fcd6ec-de80-40a7-92d0-e9acb297b720": "R3",
+        "1c581290-ae5c-4318-a399-ec0fa704aea4": "C1",
+        "9416f86a-ce95-4af4-aaa5-4deb9d637e7b": "R4",
+        "94ed2272-0e17-4669-8b4e-df436367ddf7": "C2",
+        "b749e82a-cc12-46f9-8281-7d2e388b1057": "R1",
+        "c4a7f4c1-1f1d-4e24-9df8-a9860a7c1234": "Q1",
+        "e1e5cf48-8a20-4e01-bf47-28cea276cfa1": "D1"
+      },
+      "svg_to_net": {
+        "00bcec30-bbc5-4e08-973c-1d627f224a6b": "+5v",
+        "04343e41-03d4-411a-9d19-cced2121ec17": "OUTPUT",
+        "09aa2444-fe81-4988-8cfe-463d1d21806c": "Net-(D1-A)",
+        "14eac7cc-ca8a-4257-8881-d131c511282b": "+5v",
+        "18d2b249-a598-4d39-acf3-d8e2afbbf739": "Net-(D1-A)",
+        "18f7456a-b24e-4aca-82af-ce2a379bc8a8": "Net-(D1-A)",
+        "191f3aaa-9cfe-4208-b69e-e9a89e100d9c": "OUTPUT",
+        "1bee5897-3c29-47ab-b2ed-5415369340c8": "OUTPUT",
+        "1c815af8-b5dd-43ad-8cd6-9824af1c2ecd": "GND",
+        "1efbe317-a4ac-47c7-9aed-60f0bb53f10f": "INPUT",
+        "271ab780-11b8-49fc-a2be-8fa3d011f139": "OUTPUT",
+        "2c9bec58-1594-403d-8856-da03cfde6b20": "OUTPUT",
+        "3dedf2ad-d82e-40f9-a2b6-5e38a8230b4b": "+5v",
+        "3e622e08-1741-4b04-9bc3-1cda89caad44": "+5v",
+        "407f4740-4fa3-444f-b526-3160f868fb71": "GND",
+        "43c8cf00-76f3-43da-b7b1-65409ded8ac7": "+5v",
+        "4817a78c-c361-47f6-90b5-dc5ff49801c2": "GND",
+        "5090afbd-a721-4fde-a397-3decc17718fe": "OUTPUT",
+        "57ca5c08-bed0-4c0d-9365-86de1e4364d5": "GND",
+        "60bfc3e0-3f3d-4e3e-8dc8-39234f585d48": "GND",
+        "62960181-f22d-44d4-b118-035b377cb44d": "GND",
+        "677b2b9a-a0b5-47e7-b97f-74745cf61fc7": "INPUT",
+        "6b584e0c-4b99-457c-8094-7a7fa9cd75c3": "+5v",
+        "7372784b-a3ee-4fa1-bc82-9f9dadbf3d11": "+5v",
+        "76a3bbee-c5c7-4b6a-bbf4-c957ef1191c7": "Net-(D1-A)",
+        "a094d372-f49c-43ec-8467-9c05a72db2dd": "Net-(D1-A)",
+        "b0f1ac7e-7971-4697-ae6c-34dda6fe8100": "Net-(D1-A)",
+        "b4961a56-b6c7-4b19-a2a1-c1c06b5869a3": "+5v",
+        "ba7b7abf-bb6b-422d-b0b9-c090f3e5ca9a": "GND",
+        "ba9b3f11-632f-4125-8473-33016c02b75c": "+5v",
+        "bb59cbb6-f840-40f4-939e-bec35b74137c": "GND",
+        "bc55681f-fd5a-4a34-ad12-2d411cef8ad1": "OUTPUT",
+        "bdf19dc5-2d30-4f5f-823e-c007bc7baf83": "+5v",
+        "c70ae026-7c3e-4446-93f0-cf5fdcf10612": "+5v",
+        "c9cfb496-0df0-4753-a76b-e1ea005b9c6c": "Net-(D1-A)",
+        "d57a367f-6006-432f-8489-28da333b52fa": "GND",
+        "dda9f243-f610-4a64-894d-c0ffe2f2a771": "Net-(D1-A)",
+        "de33cf34-90ff-4651-8448-5139f8f043a5": "INPUT",
+        "eb2b0099-753c-4b58-8e5e-a46e37c19d3b": "OUTPUT",
+        "ebe17755-ab58-46e0-8ffe-2bdd644c4f6d": "GND",
+        "ec726adb-2ce2-4994-92d4-148c18f1c70d": "GND"
+      },
+      "svg_to_nets": {
+        "00bcec30-bbc5-4e08-973c-1d627f224a6b": [
+          "+5v"
+        ],
+        "04343e41-03d4-411a-9d19-cced2121ec17": [
+          "OUTPUT"
+        ],
+        "09aa2444-fe81-4988-8cfe-463d1d21806c": [
+          "Net-(D1-A)"
+        ],
+        "14eac7cc-ca8a-4257-8881-d131c511282b": [
+          "+5v"
+        ],
+        "18d2b249-a598-4d39-acf3-d8e2afbbf739": [
+          "Net-(D1-A)"
+        ],
+        "18f7456a-b24e-4aca-82af-ce2a379bc8a8": [
+          "Net-(D1-A)"
+        ],
+        "191f3aaa-9cfe-4208-b69e-e9a89e100d9c": [
+          "OUTPUT"
+        ],
+        "1bee5897-3c29-47ab-b2ed-5415369340c8": [
+          "OUTPUT"
+        ],
+        "1c815af8-b5dd-43ad-8cd6-9824af1c2ecd": [
+          "GND"
+        ],
+        "1efbe317-a4ac-47c7-9aed-60f0bb53f10f": [
+          "INPUT"
+        ],
+        "271ab780-11b8-49fc-a2be-8fa3d011f139": [
+          "OUTPUT"
+        ],
+        "2c9bec58-1594-403d-8856-da03cfde6b20": [
+          "OUTPUT"
+        ],
+        "3dedf2ad-d82e-40f9-a2b6-5e38a8230b4b": [
+          "+5v"
+        ],
+        "3e622e08-1741-4b04-9bc3-1cda89caad44": [
+          "+5v"
+        ],
+        "407f4740-4fa3-444f-b526-3160f868fb71": [
+          "GND"
+        ],
+        "43c8cf00-76f3-43da-b7b1-65409ded8ac7": [
+          "+5v"
+        ],
+        "4817a78c-c361-47f6-90b5-dc5ff49801c2": [
+          "GND"
+        ],
+        "5090afbd-a721-4fde-a397-3decc17718fe": [
+          "OUTPUT"
+        ],
+        "57ca5c08-bed0-4c0d-9365-86de1e4364d5": [
+          "GND"
+        ],
+        "60bfc3e0-3f3d-4e3e-8dc8-39234f585d48": [
+          "GND"
+        ],
+        "62960181-f22d-44d4-b118-035b377cb44d": [
+          "GND"
+        ],
+        "677b2b9a-a0b5-47e7-b97f-74745cf61fc7": [
+          "INPUT"
+        ],
+        "6b584e0c-4b99-457c-8094-7a7fa9cd75c3": [
+          "+5v"
+        ],
+        "7372784b-a3ee-4fa1-bc82-9f9dadbf3d11": [
+          "+5v"
+        ],
+        "76a3bbee-c5c7-4b6a-bbf4-c957ef1191c7": [
+          "Net-(D1-A)"
+        ],
+        "a094d372-f49c-43ec-8467-9c05a72db2dd": [
+          "Net-(D1-A)"
+        ],
+        "b0f1ac7e-7971-4697-ae6c-34dda6fe8100": [
+          "Net-(D1-A)"
+        ],
+        "b4961a56-b6c7-4b19-a2a1-c1c06b5869a3": [
+          "+5v"
+        ],
+        "ba7b7abf-bb6b-422d-b0b9-c090f3e5ca9a": [
+          "GND"
+        ],
+        "ba9b3f11-632f-4125-8473-33016c02b75c": [
+          "+5v"
+        ],
+        "bb59cbb6-f840-40f4-939e-bec35b74137c": [
+          "GND"
+        ],
+        "bc55681f-fd5a-4a34-ad12-2d411cef8ad1": [
+          "OUTPUT"
+        ],
+        "bdf19dc5-2d30-4f5f-823e-c007bc7baf83": [
+          "+5v"
+        ],
+        "c70ae026-7c3e-4446-93f0-cf5fdcf10612": [
+          "+5v"
+        ],
+        "c9cfb496-0df0-4753-a76b-e1ea005b9c6c": [
+          "Net-(D1-A)"
+        ],
+        "d57a367f-6006-432f-8489-28da333b52fa": [
+          "GND"
+        ],
+        "dda9f243-f610-4a64-894d-c0ffe2f2a771": [
+          "Net-(D1-A)"
+        ],
+        "de33cf34-90ff-4651-8448-5139f8f043a5": [
+          "INPUT"
+        ],
+        "eb2b0099-753c-4b58-8e5e-a46e37c19d3b": [
+          "OUTPUT"
+        ],
+        "ebe17755-ab58-46e0-8ffe-2bdd644c4f6d": [
+          "GND"
+        ],
+        "ec726adb-2ce2-4994-92d4-148c18f1c70d": [
+          "GND"
+        ]
+      }
+    },
+    "net_classes": [
+      {
+        "description": "",
+        "name": "Default",
+        "nets": [
+          "+5v",
+          "GND",
+          "INPUT",
+          "Net-(D1-A)",
+          "OUTPUT"
+        ]
+      }
+    ],
+    "net_name_to_classes": {
+      "+5v": [
+        "Default"
+      ],
+      "GND": [
+        "Default"
+      ],
+      "INPUT": [
+        "Default"
+      ],
+      "Net-(D1-A)": [
+        "Default"
+      ],
+      "OUTPUT": [
+        "Default"
+      ]
+    },
+    "nets": [
+      {
+        "aliases": [],
+        "auto_named": false,
+        "driver_kind": "global_power_pin",
+        "driver_priority": 6,
+        "endpoints": [
+          {
+            "designator": "C1",
+            "element_id": "3e622e08-1741-4b04-9bc3-1cda89caad44",
+            "endpoint_id": "pin:C1:1",
+            "name": "1",
+            "object_id": "3e622e08-1741-4b04-9bc3-1cda89caad44",
+            "pin": "1",
+            "pin_name": "1",
+            "pin_type": "PASSIVE",
+            "role": "pin",
+            "source_sheet": "/"
+          },
+          {
+            "designator": "C2",
+            "element_id": "bdf19dc5-2d30-4f5f-823e-c007bc7baf83",
+            "endpoint_id": "pin:C2:1",
+            "name": "1",
+            "object_id": "bdf19dc5-2d30-4f5f-823e-c007bc7baf83",
+            "pin": "1",
+            "pin_name": "1",
+            "pin_type": "PASSIVE",
+            "role": "pin",
+            "source_sheet": "/"
+          },
+          {
+            "designator": "R3",
+            "element_id": "6b584e0c-4b99-457c-8094-7a7fa9cd75c3",
+            "endpoint_id": "pin:R3:2",
+            "name": "2",
+            "object_id": "6b584e0c-4b99-457c-8094-7a7fa9cd75c3",
+            "pin": "2",
+            "pin_name": "2",
+            "pin_type": "PASSIVE",
+            "role": "pin",
+            "source_sheet": "/"
+          },
+          {
+            "connection_point": {
+              "units": "mm",
+              "x": 127.0,
+              "y": 66.04
+            },
+            "element_id": "b4961a56-b6c7-4b19-a2a1-c1c06b5869a3",
+            "endpoint_id": "power_port:e4c23cea-8f5d-4521-92fd-f93592ecaf38",
+            "name": "+5v",
+            "object_id": "e4c23cea-8f5d-4521-92fd-f93592ecaf38",
+            "role": "power_port",
+            "source_sheet": "/"
+          }
+        ],
+        "graphical": {
+          "junctions": [
+            "00bcec30-bbc5-4e08-973c-1d627f224a6b",
+            "ba9b3f11-632f-4125-8473-33016c02b75c"
+          ],
+          "labels": [],
+          "pins": [
+            {
+              "designator": "C1",
+              "pin": "1",
+              "svg_id": "3e622e08-1741-4b04-9bc3-1cda89caad44"
+            },
+            {
+              "designator": "C2",
+              "pin": "1",
+              "svg_id": "bdf19dc5-2d30-4f5f-823e-c007bc7baf83"
+            },
+            {
+              "designator": "R3",
+              "pin": "2",
+              "svg_id": "6b584e0c-4b99-457c-8094-7a7fa9cd75c3"
+            }
+          ],
+          "ports": [],
+          "power_ports": [
+            "b4961a56-b6c7-4b19-a2a1-c1c06b5869a3"
+          ],
+          "sheet_entries": [],
+          "wires": [
+            "14eac7cc-ca8a-4257-8881-d131c511282b",
+            "3dedf2ad-d82e-40f9-a2b6-5e38a8230b4b",
+            "43c8cf00-76f3-43da-b7b1-65409ded8ac7",
+            "7372784b-a3ee-4fa1-bc82-9f9dadbf3d11",
+            "c70ae026-7c3e-4446-93f0-cf5fdcf10612"
+          ]
+        },
+        "name": "+5v",
+        "net_class": "Default",
+        "source_sheets": [
+          "/"
+        ],
+        "terminals": [
+          {
+            "designator": "C1",
+            "pin": "1",
+            "pin_name": "1",
+            "pin_type": "PASSIVE"
+          },
+          {
+            "designator": "C2",
+            "pin": "1",
+            "pin_name": "1",
+            "pin_type": "PASSIVE"
+          },
+          {
+            "designator": "R3",
+            "pin": "2",
+            "pin_name": "2",
+            "pin_type": "PASSIVE"
+          }
+        ],
+        "uid": "000000000001"
+      },
+      {
+        "aliases": [],
+        "auto_named": true,
+        "driver_kind": "pin",
+        "driver_priority": 1,
+        "endpoints": [
+          {
+            "designator": "D1",
+            "element_id": "b0f1ac7e-7971-4697-ae6c-34dda6fe8100",
+            "endpoint_id": "pin:D1:2",
+            "name": "A",
+            "object_id": "b0f1ac7e-7971-4697-ae6c-34dda6fe8100",
+            "pin": "2",
+            "pin_name": "A",
+            "pin_type": "PASSIVE",
+            "role": "pin",
+            "source_sheet": "/"
+          },
+          {
+            "designator": "Q1",
+            "element_id": "76a3bbee-c5c7-4b6a-bbf4-c957ef1191c7",
+            "endpoint_id": "pin:Q1:2",
+            "name": "B",
+            "object_id": "76a3bbee-c5c7-4b6a-bbf4-c957ef1191c7",
+            "pin": "2",
+            "pin_name": "B",
+            "pin_type": "INPUT",
+            "role": "pin",
+            "source_sheet": "/"
+          },
+          {
+            "designator": "R1",
+            "element_id": "18d2b249-a598-4d39-acf3-d8e2afbbf739",
+            "endpoint_id": "pin:R1:2",
+            "name": "2",
+            "object_id": "18d2b249-a598-4d39-acf3-d8e2afbbf739",
+            "pin": "2",
+            "pin_name": "2",
+            "pin_type": "PASSIVE",
+            "role": "pin",
+            "source_sheet": "/"
+          },
+          {
+            "designator": "R4",
+            "element_id": "a094d372-f49c-43ec-8467-9c05a72db2dd",
+            "endpoint_id": "pin:R4:2",
+            "name": "2",
+            "object_id": "a094d372-f49c-43ec-8467-9c05a72db2dd",
+            "pin": "2",
+            "pin_name": "2",
+            "pin_type": "PASSIVE",
+            "role": "pin",
+            "source_sheet": "/"
+          }
+        ],
+        "graphical": {
+          "junctions": [
+            "dda9f243-f610-4a64-894d-c0ffe2f2a771"
+          ],
+          "labels": [],
+          "pins": [
+            {
+              "designator": "D1",
+              "pin": "2",
+              "svg_id": "b0f1ac7e-7971-4697-ae6c-34dda6fe8100"
+            },
+            {
+              "designator": "Q1",
+              "pin": "2",
+              "svg_id": "76a3bbee-c5c7-4b6a-bbf4-c957ef1191c7"
+            },
+            {
+              "designator": "R1",
+              "pin": "2",
+              "svg_id": "18d2b249-a598-4d39-acf3-d8e2afbbf739"
+            },
+            {
+              "designator": "R4",
+              "pin": "2",
+              "svg_id": "a094d372-f49c-43ec-8467-9c05a72db2dd"
+            }
+          ],
+          "ports": [],
+          "power_ports": [],
+          "sheet_entries": [],
+          "wires": [
+            "09aa2444-fe81-4988-8cfe-463d1d21806c",
+            "18f7456a-b24e-4aca-82af-ce2a379bc8a8",
+            "c9cfb496-0df0-4753-a76b-e1ea005b9c6c"
+          ]
+        },
+        "name": "Net-(D1-A)",
+        "net_class": "Default",
+        "source_sheets": [
+          "/"
+        ],
+        "terminals": [
+          {
+            "designator": "D1",
+            "pin": "2",
+            "pin_name": "A",
+            "pin_type": "PASSIVE"
+          },
+          {
+            "designator": "Q1",
+            "pin": "2",
+            "pin_name": "B",
+            "pin_type": "INPUT"
+          },
+          {
+            "designator": "R1",
+            "pin": "2",
+            "pin_name": "2",
+            "pin_type": "PASSIVE"
+          },
+          {
+            "designator": "R4",
+            "pin": "2",
+            "pin_name": "2",
+            "pin_type": "PASSIVE"
+          }
+        ],
+        "uid": "000000000002"
+      },
+      {
+        "aliases": [],
+        "auto_named": false,
+        "driver_kind": "global_power_pin",
+        "driver_priority": 6,
+        "endpoints": [
+          {
+            "designator": "C1",
+            "element_id": "d57a367f-6006-432f-8489-28da333b52fa",
+            "endpoint_id": "pin:C1:2",
+            "name": "1",
+            "object_id": "d57a367f-6006-432f-8489-28da333b52fa",
+            "pin": "2",
+            "pin_name": "1",
+            "pin_type": "PASSIVE",
+            "role": "pin",
+            "source_sheet": "/"
+          },
+          {
+            "designator": "C2",
+            "element_id": "bb59cbb6-f840-40f4-939e-bec35b74137c",
+            "endpoint_id": "pin:C2:2",
+            "name": "1",
+            "object_id": "bb59cbb6-f840-40f4-939e-bec35b74137c",
+            "pin": "2",
+            "pin_name": "1",
+            "pin_type": "PASSIVE",
+            "role": "pin",
+            "source_sheet": "/"
+          },
+          {
+            "designator": "Q1",
+            "element_id": "ec726adb-2ce2-4994-92d4-148c18f1c70d",
+            "endpoint_id": "pin:Q1:1",
+            "name": "E",
+            "object_id": "ec726adb-2ce2-4994-92d4-148c18f1c70d",
+            "pin": "1",
+            "pin_name": "E",
+            "pin_type": "PASSIVE",
+            "role": "pin",
+            "source_sheet": "/"
+          },
+          {
+            "designator": "R4",
+            "element_id": "407f4740-4fa3-444f-b526-3160f868fb71",
+            "endpoint_id": "pin:R4:1",
+            "name": "1",
+            "object_id": "407f4740-4fa3-444f-b526-3160f868fb71",
+            "pin": "1",
+            "pin_name": "1",
+            "pin_type": "PASSIVE",
+            "role": "pin",
+            "source_sheet": "/"
+          },
+          {
+            "connection_point": {
+              "units": "mm",
+              "x": 106.68,
+              "y": 76.2
+            },
+            "element_id": "1c815af8-b5dd-43ad-8cd6-9824af1c2ecd",
+            "endpoint_id": "power_port:090fae54-b9ef-4560-91db-71829040611c",
+            "name": "GND",
+            "object_id": "090fae54-b9ef-4560-91db-71829040611c",
+            "role": "power_port",
+            "source_sheet": "/"
+          },
+          {
+            "connection_point": {
+              "units": "mm",
+              "x": 134.62,
+              "y": 99.06
+            },
+            "element_id": "60bfc3e0-3f3d-4e3e-8dc8-39234f585d48",
+            "endpoint_id": "power_port:a61f8761-aff4-4c2f-aa15-cfb320a335d3",
+            "name": "GND",
+            "object_id": "a61f8761-aff4-4c2f-aa15-cfb320a335d3",
+            "role": "power_port",
+            "source_sheet": "/"
+          }
+        ],
+        "graphical": {
+          "junctions": [
+            "4817a78c-c361-47f6-90b5-dc5ff49801c2",
+            "62960181-f22d-44d4-b118-035b377cb44d"
+          ],
+          "labels": [],
+          "pins": [
+            {
+              "designator": "C1",
+              "pin": "2",
+              "svg_id": "d57a367f-6006-432f-8489-28da333b52fa"
+            },
+            {
+              "designator": "C2",
+              "pin": "2",
+              "svg_id": "bb59cbb6-f840-40f4-939e-bec35b74137c"
+            },
+            {
+              "designator": "Q1",
+              "pin": "1",
+              "svg_id": "ec726adb-2ce2-4994-92d4-148c18f1c70d"
+            },
+            {
+              "designator": "R4",
+              "pin": "1",
+              "svg_id": "407f4740-4fa3-444f-b526-3160f868fb71"
+            }
+          ],
+          "ports": [],
+          "power_ports": [
+            "1c815af8-b5dd-43ad-8cd6-9824af1c2ecd",
+            "60bfc3e0-3f3d-4e3e-8dc8-39234f585d48"
+          ],
+          "sheet_entries": [],
+          "wires": [
+            "57ca5c08-bed0-4c0d-9365-86de1e4364d5",
+            "ba7b7abf-bb6b-422d-b0b9-c090f3e5ca9a",
+            "ebe17755-ab58-46e0-8ffe-2bdd644c4f6d"
+          ]
+        },
+        "name": "GND",
+        "net_class": "Default",
+        "source_sheets": [
+          "/"
+        ],
+        "terminals": [
+          {
+            "designator": "C1",
+            "pin": "2",
+            "pin_name": "1",
+            "pin_type": "PASSIVE"
+          },
+          {
+            "designator": "C2",
+            "pin": "2",
+            "pin_name": "1",
+            "pin_type": "PASSIVE"
+          },
+          {
+            "designator": "Q1",
+            "pin": "1",
+            "pin_name": "E",
+            "pin_type": "PASSIVE"
+          },
+          {
+            "designator": "R4",
+            "pin": "1",
+            "pin_name": "1",
+            "pin_type": "PASSIVE"
+          }
+        ],
+        "uid": "000000000003"
+      },
+      {
+        "aliases": [],
+        "auto_named": false,
+        "driver_kind": "global_label",
+        "driver_priority": 7,
+        "endpoints": [
+          {
+            "designator": "R1",
+            "element_id": "1efbe317-a4ac-47c7-9aed-60f0bb53f10f",
+            "endpoint_id": "pin:R1:1",
+            "name": "1",
+            "object_id": "1efbe317-a4ac-47c7-9aed-60f0bb53f10f",
+            "pin": "1",
+            "pin_name": "1",
+            "pin_type": "PASSIVE",
+            "role": "pin",
+            "source_sheet": "/"
+          }
+        ],
+        "graphical": {
+          "junctions": [],
+          "labels": [
+            "de33cf34-90ff-4651-8448-5139f8f043a5"
+          ],
+          "pins": [
+            {
+              "designator": "R1",
+              "pin": "1",
+              "svg_id": "1efbe317-a4ac-47c7-9aed-60f0bb53f10f"
+            }
+          ],
+          "ports": [],
+          "power_ports": [],
+          "sheet_entries": [],
+          "wires": [
+            "677b2b9a-a0b5-47e7-b97f-74745cf61fc7"
+          ]
+        },
+        "name": "INPUT",
+        "net_class": "Default",
+        "source_sheets": [
+          "/"
+        ],
+        "terminals": [
+          {
+            "designator": "R1",
+            "pin": "1",
+            "pin_name": "1",
+            "pin_type": "PASSIVE"
+          }
+        ],
+        "uid": "000000000004"
+      },
+      {
+        "aliases": [],
+        "auto_named": false,
+        "driver_kind": "global_label",
+        "driver_priority": 7,
+        "endpoints": [
+          {
+            "designator": "D1",
+            "element_id": "271ab780-11b8-49fc-a2be-8fa3d011f139",
+            "endpoint_id": "pin:D1:1",
+            "name": "K",
+            "object_id": "271ab780-11b8-49fc-a2be-8fa3d011f139",
+            "pin": "1",
+            "pin_name": "K",
+            "pin_type": "PASSIVE",
+            "role": "pin",
+            "source_sheet": "/"
+          },
+          {
+            "designator": "Q1",
+            "element_id": "eb2b0099-753c-4b58-8e5e-a46e37c19d3b",
+            "endpoint_id": "pin:Q1:3",
+            "name": "C",
+            "object_id": "eb2b0099-753c-4b58-8e5e-a46e37c19d3b",
+            "pin": "3",
+            "pin_name": "C",
+            "pin_type": "PASSIVE",
+            "role": "pin",
+            "source_sheet": "/"
+          },
+          {
+            "designator": "R3",
+            "element_id": "1bee5897-3c29-47ab-b2ed-5415369340c8",
+            "endpoint_id": "pin:R3:1",
+            "name": "1",
+            "object_id": "1bee5897-3c29-47ab-b2ed-5415369340c8",
+            "pin": "1",
+            "pin_name": "1",
+            "pin_type": "PASSIVE",
+            "role": "pin",
+            "source_sheet": "/"
+          }
+        ],
+        "graphical": {
+          "junctions": [
+            "bc55681f-fd5a-4a34-ad12-2d411cef8ad1"
+          ],
+          "labels": [
+            "04343e41-03d4-411a-9d19-cced2121ec17"
+          ],
+          "pins": [
+            {
+              "designator": "D1",
+              "pin": "1",
+              "svg_id": "271ab780-11b8-49fc-a2be-8fa3d011f139"
+            },
+            {
+              "designator": "Q1",
+              "pin": "3",
+              "svg_id": "eb2b0099-753c-4b58-8e5e-a46e37c19d3b"
+            },
+            {
+              "designator": "R3",
+              "pin": "1",
+              "svg_id": "1bee5897-3c29-47ab-b2ed-5415369340c8"
+            }
+          ],
+          "ports": [],
+          "power_ports": [],
+          "sheet_entries": [],
+          "wires": [
+            "191f3aaa-9cfe-4208-b69e-e9a89e100d9c",
+            "2c9bec58-1594-403d-8856-da03cfde6b20",
+            "5090afbd-a721-4fde-a397-3decc17718fe"
+          ]
+        },
+        "name": "OUTPUT",
+        "net_class": "Default",
+        "source_sheets": [
+          "/"
+        ],
+        "terminals": [
+          {
+            "designator": "D1",
+            "pin": "1",
+            "pin_name": "K",
+            "pin_type": "PASSIVE"
+          },
+          {
+            "designator": "Q1",
+            "pin": "3",
+            "pin_name": "C",
+            "pin_type": "PASSIVE"
+          },
+          {
+            "designator": "R3",
+            "pin": "1",
+            "pin_name": "1",
+            "pin_type": "PASSIVE"
+          }
+        ],
+        "uid": "000000000005"
+      }
+    ],
+    "options": {
+      "allow_ports_to_name_nets": true,
+      "allow_sheet_entries_to_name_nets": true,
+      "allow_single_pin_nets": true,
+      "append_sheet_numbers_to_local_nets": false,
+      "auto_sheet_numbering": true,
+      "higher_level_names_take_priority": true,
+      "kicad_schematic_format": "sexpr",
+      "kicad_subpart_first_id": 65,
+      "kicad_subpart_id_separator": 0,
+      "kicad_supported_oracle_versions": [
+        "9",
+        "10"
+      ],
+      "net_identifier_scope": "KICAD_PROJECT",
+      "power_port_names_take_priority": true
+    },
+    "project": {
+      "filename": "SBUS Inverter.kicad_pro",
+      "name": "SBUS Inverter",
+      "path": "/Users/nathanfikes/Projects/GitHub/AutoNav-Charge_Indicator-KiCad_Pcb/SBUS Inverter/SBUS Inverter.kicad_pro",
+      "text_variables": {}
+    },
+    "schema": "kicad_monkey.design.a0",
+    "schematic_hierarchy": {
+      "channels": [],
+      "documents": [
+        {
+          "filename": "SBUS Inverter.kicad_sch",
+          "is_top_level": true,
+          "metadata": {
+            "generator": "eeschema",
+            "generator_version": "9.0",
+            "uuid": "a953040e-b95c-429e-af03-51e692dfc295",
+            "version": 20250114
+          },
+          "path": "/Users/nathanfikes/Projects/GitHub/AutoNav-Charge_Indicator-KiCad_Pcb/SBUS Inverter/SBUS Inverter.kicad_sch",
+          "sheet_index": 1,
+          "sheet_path": "/",
+          "sheet_path_uuids": "/"
+        }
+      ],
+      "effective_scope": "GLOBAL",
+      "hierarchy_paths": [],
+      "links": [],
+      "requested_scope": "KICAD_PROJECT",
+      "schema": "kicad_monkey.schematic_hierarchy.a0",
+      "sheet_symbols": [],
+      "unresolved": []
+    },
+    "sheets": [
+      {
+        "company": "",
+        "date": "",
+        "filename": "SBUS Inverter.kicad_sch",
+        "path": "/Users/nathanfikes/Projects/GitHub/AutoNav-Charge_Indicator-KiCad_Pcb/SBUS Inverter/SBUS Inverter.kicad_sch",
+        "revision": "",
+        "sheet_number": 1,
+        "sheet_path": "/",
+        "sheet_path_uuids": "/",
+        "title": ""
+      }
+    ],
+    "variants": []
+  },
+  "schema": "kicad_monkey.schematic.svg.enrichment.a0",
+  "source": {
+    "kicad_sch_file": "/Users/nathanfikes/Projects/GitHub/AutoNav-Charge_Indicator-KiCad_Pcb/SBUS Inverter/SBUS Inverter.kicad_sch"
+  },
+  "view": {
+    "kind": "schematic_sheet",
+    "profile": "enriched",
+    "sheet_instance_path": "/a953040e-b95c-429e-af03-51e692dfc295",
+    "sheet_name": "SBUS Inverter",
+    "sheet_path": "/"
+  },
+  "view_indexes": {
+    "net_to_svg": {
+      "+5v": [
+        "3e622e08-1741-4b04-9bc3-1cda89caad44",
+        "6b584e0c-4b99-457c-8094-7a7fa9cd75c3",
+        "b4961a56-b6c7-4b19-a2a1-c1c06b5869a3",
+        "bdf19dc5-2d30-4f5f-823e-c007bc7baf83",
+        "e4c23cea-8f5d-4521-92fd-f93592ecaf38"
+      ],
+      "GND": [
+        "090fae54-b9ef-4560-91db-71829040611c",
+        "1c815af8-b5dd-43ad-8cd6-9824af1c2ecd",
+        "407f4740-4fa3-444f-b526-3160f868fb71",
+        "60bfc3e0-3f3d-4e3e-8dc8-39234f585d48",
+        "a61f8761-aff4-4c2f-aa15-cfb320a335d3",
+        "bb59cbb6-f840-40f4-939e-bec35b74137c",
+        "d57a367f-6006-432f-8489-28da333b52fa",
+        "ec726adb-2ce2-4994-92d4-148c18f1c70d"
+      ],
+      "INPUT": [
+        "1efbe317-a4ac-47c7-9aed-60f0bb53f10f"
+      ],
+      "Net-(D1-A)": [
+        "18d2b249-a598-4d39-acf3-d8e2afbbf739",
+        "76a3bbee-c5c7-4b6a-bbf4-c957ef1191c7",
+        "a094d372-f49c-43ec-8467-9c05a72db2dd",
+        "b0f1ac7e-7971-4697-ae6c-34dda6fe8100"
+      ],
+      "OUTPUT": [
+        "1bee5897-3c29-47ab-b2ed-5415369340c8",
+        "271ab780-11b8-49fc-a2be-8fa3d011f139",
+        "eb2b0099-753c-4b58-8e5e-a46e37c19d3b"
+      ]
+    },
+    "net_uid_to_svg": {
+      "000000000001": [
+        "3e622e08-1741-4b04-9bc3-1cda89caad44",
+        "6b584e0c-4b99-457c-8094-7a7fa9cd75c3",
+        "b4961a56-b6c7-4b19-a2a1-c1c06b5869a3",
+        "bdf19dc5-2d30-4f5f-823e-c007bc7baf83",
+        "e4c23cea-8f5d-4521-92fd-f93592ecaf38"
+      ],
+      "000000000002": [
+        "18d2b249-a598-4d39-acf3-d8e2afbbf739",
+        "76a3bbee-c5c7-4b6a-bbf4-c957ef1191c7",
+        "a094d372-f49c-43ec-8467-9c05a72db2dd",
+        "b0f1ac7e-7971-4697-ae6c-34dda6fe8100"
+      ],
+      "000000000003": [
+        "090fae54-b9ef-4560-91db-71829040611c",
+        "1c815af8-b5dd-43ad-8cd6-9824af1c2ecd",
+        "407f4740-4fa3-444f-b526-3160f868fb71",
+        "60bfc3e0-3f3d-4e3e-8dc8-39234f585d48",
+        "a61f8761-aff4-4c2f-aa15-cfb320a335d3",
+        "bb59cbb6-f840-40f4-939e-bec35b74137c",
+        "d57a367f-6006-432f-8489-28da333b52fa",
+        "ec726adb-2ce2-4994-92d4-148c18f1c70d"
+      ],
+      "000000000004": [
+        "1efbe317-a4ac-47c7-9aed-60f0bb53f10f"
+      ],
+      "000000000005": [
+        "1bee5897-3c29-47ab-b2ed-5415369340c8",
+        "271ab780-11b8-49fc-a2be-8fa3d011f139",
+        "eb2b0099-753c-4b58-8e5e-a46e37c19d3b"
+      ]
+    },
+    "sheet_lookup_keys": [
+      "/a953040e-b95c-429e-af03-51e692dfc295",
+      "/a953040e-b95c-429e-af03-51e692dfc295/",
+      "/"
+    ],
+    "svg_to_net": {
+      "090fae54-b9ef-4560-91db-71829040611c": {
+        "auto_named": false,
+        "name": "GND",
+        "net_class": "Default",
+        "uid": "000000000003"
+      },
+      "18d2b249-a598-4d39-acf3-d8e2afbbf739": {
+        "auto_named": true,
+        "name": "Net-(D1-A)",
+        "net_class": "Default",
+        "uid": "000000000002"
+      },
+      "1bee5897-3c29-47ab-b2ed-5415369340c8": {
+        "auto_named": false,
+        "name": "OUTPUT",
+        "net_class": "Default",
+        "uid": "000000000005"
+      },
+      "1c815af8-b5dd-43ad-8cd6-9824af1c2ecd": {
+        "auto_named": false,
+        "name": "GND",
+        "net_class": "Default",
+        "uid": "000000000003"
+      },
+      "1efbe317-a4ac-47c7-9aed-60f0bb53f10f": {
+        "auto_named": false,
+        "name": "INPUT",
+        "net_class": "Default",
+        "uid": "000000000004"
+      },
+      "271ab780-11b8-49fc-a2be-8fa3d011f139": {
+        "auto_named": false,
+        "name": "OUTPUT",
+        "net_class": "Default",
+        "uid": "000000000005"
+      },
+      "3e622e08-1741-4b04-9bc3-1cda89caad44": {
+        "auto_named": false,
+        "name": "+5v",
+        "net_class": "Default",
+        "uid": "000000000001"
+      },
+      "407f4740-4fa3-444f-b526-3160f868fb71": {
+        "auto_named": false,
+        "name": "GND",
+        "net_class": "Default",
+        "uid": "000000000003"
+      },
+      "60bfc3e0-3f3d-4e3e-8dc8-39234f585d48": {
+        "auto_named": false,
+        "name": "GND",
+        "net_class": "Default",
+        "uid": "000000000003"
+      },
+      "6b584e0c-4b99-457c-8094-7a7fa9cd75c3": {
+        "auto_named": false,
+        "name": "+5v",
+        "net_class": "Default",
+        "uid": "000000000001"
+      },
+      "76a3bbee-c5c7-4b6a-bbf4-c957ef1191c7": {
+        "auto_named": true,
+        "name": "Net-(D1-A)",
+        "net_class": "Default",
+        "uid": "000000000002"
+      },
+      "a094d372-f49c-43ec-8467-9c05a72db2dd": {
+        "auto_named": true,
+        "name": "Net-(D1-A)",
+        "net_class": "Default",
+        "uid": "000000000002"
+      },
+      "a61f8761-aff4-4c2f-aa15-cfb320a335d3": {
+        "auto_named": false,
+        "name": "GND",
+        "net_class": "Default",
+        "uid": "000000000003"
+      },
+      "b0f1ac7e-7971-4697-ae6c-34dda6fe8100": {
+        "auto_named": true,
+        "name": "Net-(D1-A)",
+        "net_class": "Default",
+        "uid": "000000000002"
+      },
+      "b4961a56-b6c7-4b19-a2a1-c1c06b5869a3": {
+        "auto_named": false,
+        "name": "+5v",
+        "net_class": "Default",
+        "uid": "000000000001"
+      },
+      "bb59cbb6-f840-40f4-939e-bec35b74137c": {
+        "auto_named": false,
+        "name": "GND",
+        "net_class": "Default",
+        "uid": "000000000003"
+      },
+      "bdf19dc5-2d30-4f5f-823e-c007bc7baf83": {
+        "auto_named": false,
+        "name": "+5v",
+        "net_class": "Default",
+        "uid": "000000000001"
+      },
+      "d57a367f-6006-432f-8489-28da333b52fa": {
+        "auto_named": false,
+        "name": "GND",
+        "net_class": "Default",
+        "uid": "000000000003"
+      },
+      "e4c23cea-8f5d-4521-92fd-f93592ecaf38": {
+        "auto_named": false,
+        "name": "+5v",
+        "net_class": "Default",
+        "uid": "000000000001"
+      },
+      "eb2b0099-753c-4b58-8e5e-a46e37c19d3b": {
+        "auto_named": false,
+        "name": "OUTPUT",
+        "net_class": "Default",
+        "uid": "000000000005"
+      },
+      "ec726adb-2ce2-4994-92d4-148c18f1c70d": {
+        "auto_named": false,
+        "name": "GND",
+        "net_class": "Default",
+        "uid": "000000000003"
+      }
+    },
+    "svg_to_nets": {
+      "090fae54-b9ef-4560-91db-71829040611c": [
+        {
+          "auto_named": false,
+          "name": "GND",
+          "net_class": "Default",
+          "uid": "000000000003"
+        }
+      ],
+      "18d2b249-a598-4d39-acf3-d8e2afbbf739": [
+        {
+          "auto_named": true,
+          "name": "Net-(D1-A)",
+          "net_class": "Default",
+          "uid": "000000000002"
+        }
+      ],
+      "1bee5897-3c29-47ab-b2ed-5415369340c8": [
+        {
+          "auto_named": false,
+          "name": "OUTPUT",
+          "net_class": "Default",
+          "uid": "000000000005"
+        }
+      ],
+      "1c815af8-b5dd-43ad-8cd6-9824af1c2ecd": [
+        {
+          "auto_named": false,
+          "name": "GND",
+          "net_class": "Default",
+          "uid": "000000000003"
+        }
+      ],
+      "1efbe317-a4ac-47c7-9aed-60f0bb53f10f": [
+        {
+          "auto_named": false,
+          "name": "INPUT",
+          "net_class": "Default",
+          "uid": "000000000004"
+        }
+      ],
+      "271ab780-11b8-49fc-a2be-8fa3d011f139": [
+        {
+          "auto_named": false,
+          "name": "OUTPUT",
+          "net_class": "Default",
+          "uid": "000000000005"
+        }
+      ],
+      "3e622e08-1741-4b04-9bc3-1cda89caad44": [
+        {
+          "auto_named": false,
+          "name": "+5v",
+          "net_class": "Default",
+          "uid": "000000000001"
+        }
+      ],
+      "407f4740-4fa3-444f-b526-3160f868fb71": [
+        {
+          "auto_named": false,
+          "name": "GND",
+          "net_class": "Default",
+          "uid": "000000000003"
+        }
+      ],
+      "60bfc3e0-3f3d-4e3e-8dc8-39234f585d48": [
+        {
+          "auto_named": false,
+          "name": "GND",
+          "net_class": "Default",
+          "uid": "000000000003"
+        }
+      ],
+      "6b584e0c-4b99-457c-8094-7a7fa9cd75c3": [
+        {
+          "auto_named": false,
+          "name": "+5v",
+          "net_class": "Default",
+          "uid": "000000000001"
+        }
+      ],
+      "76a3bbee-c5c7-4b6a-bbf4-c957ef1191c7": [
+        {
+          "auto_named": true,
+          "name": "Net-(D1-A)",
+          "net_class": "Default",
+          "uid": "000000000002"
+        }
+      ],
+      "a094d372-f49c-43ec-8467-9c05a72db2dd": [
+        {
+          "auto_named": true,
+          "name": "Net-(D1-A)",
+          "net_class": "Default",
+          "uid": "000000000002"
+        }
+      ],
+      "a61f8761-aff4-4c2f-aa15-cfb320a335d3": [
+        {
+          "auto_named": false,
+          "name": "GND",
+          "net_class": "Default",
+          "uid": "000000000003"
+        }
+      ],
+      "b0f1ac7e-7971-4697-ae6c-34dda6fe8100": [
+        {
+          "auto_named": true,
+          "name": "Net-(D1-A)",
+          "net_class": "Default",
+          "uid": "000000000002"
+        }
+      ],
+      "b4961a56-b6c7-4b19-a2a1-c1c06b5869a3": [
+        {
+          "auto_named": false,
+          "name": "+5v",
+          "net_class": "Default",
+          "uid": "000000000001"
+        }
+      ],
+      "bb59cbb6-f840-40f4-939e-bec35b74137c": [
+        {
+          "auto_named": false,
+          "name": "GND",
+          "net_class": "Default",
+          "uid": "000000000003"
+        }
+      ],
+      "bdf19dc5-2d30-4f5f-823e-c007bc7baf83": [
+        {
+          "auto_named": false,
+          "name": "+5v",
+          "net_class": "Default",
+          "uid": "000000000001"
+        }
+      ],
+      "d57a367f-6006-432f-8489-28da333b52fa": [
+        {
+          "auto_named": false,
+          "name": "GND",
+          "net_class": "Default",
+          "uid": "000000000003"
+        }
+      ],
+      "e4c23cea-8f5d-4521-92fd-f93592ecaf38": [
+        {
+          "auto_named": false,
+          "name": "+5v",
+          "net_class": "Default",
+          "uid": "000000000001"
+        }
+      ],
+      "eb2b0099-753c-4b58-8e5e-a46e37c19d3b": [
+        {
+          "auto_named": false,
+          "name": "OUTPUT",
+          "net_class": "Default",
+          "uid": "000000000005"
+        }
+      ],
+      "ec726adb-2ce2-4994-92d4-148c18f1c70d": [
+        {
+          "auto_named": false,
+          "name": "GND",
+          "net_class": "Default",
+          "uid": "000000000003"
+        }
+      ]
+    }
+  }
+}
+</metadata>
+  <rect x="0" y="0" width="297.0022" height="210.0072" fill="#FFFFFF" />
+<g id="a953040e-b95c-429e-af03-51e692dfc295:background" data-uuid="a953040e-b95c-429e-af03-51e692dfc295:background" data-ref="sheet_header_background" data-primitive="drawing-sheet-background" data-source-kind="schematic" data-element-key="a953040e-b95c-429e-af03-51e692dfc295:background">
+<g style="fill:#FFFFFF; stroke:#FFFFFF; stroke-width:0.0001; stroke-linecap:round; stroke-linejoin:round"><rect x="0" y="0" width="297.0022" height="210.0072" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0.0001" stroke-linecap="round" stroke-linejoin="round" /></g>
+</g>
+<g id="09aa2444-fe81-4988-8cfe-463d1d21806c" data-uuid="09aa2444-fe81-4988-8cfe-463d1d21806c" data-ref="wire" data-primitive="wire" data-source-kind="schematic" data-element-key="09aa2444-fe81-4988-8cfe-463d1d21806c">
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polyline points="127,86.36 127,88.9" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+</g>
+<g id="14eac7cc-ca8a-4257-8881-d131c511282b" data-uuid="14eac7cc-ca8a-4257-8881-d131c511282b" data-ref="wire" data-primitive="wire" data-source-kind="schematic" data-element-key="14eac7cc-ca8a-4257-8881-d131c511282b">
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polyline points="106.68,66.04 116.84,66.04" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+</g>
+<g id="18f7456a-b24e-4aca-82af-ce2a379bc8a8" data-uuid="18f7456a-b24e-4aca-82af-ce2a379bc8a8" data-ref="wire" data-primitive="wire" data-source-kind="schematic" data-element-key="18f7456a-b24e-4aca-82af-ce2a379bc8a8">
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polyline points="124.46,86.36 127,86.36" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+</g>
+<g id="191f3aaa-9cfe-4208-b69e-e9a89e100d9c" data-uuid="191f3aaa-9cfe-4208-b69e-e9a89e100d9c" data-ref="wire" data-primitive="wire" data-source-kind="schematic" data-element-key="191f3aaa-9cfe-4208-b69e-e9a89e100d9c">
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polyline points="134.62,78.74 139.7,78.74" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+</g>
+<g id="2c9bec58-1594-403d-8856-da03cfde6b20" data-uuid="2c9bec58-1594-403d-8856-da03cfde6b20" data-ref="wire" data-primitive="wire" data-source-kind="schematic" data-element-key="2c9bec58-1594-403d-8856-da03cfde6b20">
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polyline points="134.62,78.74 134.62,81.28" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+</g>
+<g id="3dedf2ad-d82e-40f9-a2b6-5e38a8230b4b" data-uuid="3dedf2ad-d82e-40f9-a2b6-5e38a8230b4b" data-ref="wire" data-primitive="wire" data-source-kind="schematic" data-element-key="3dedf2ad-d82e-40f9-a2b6-5e38a8230b4b">
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polyline points="127,66.04 134.62,66.04" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+</g>
+<g id="43c8cf00-76f3-43da-b7b1-65409ded8ac7" data-uuid="43c8cf00-76f3-43da-b7b1-65409ded8ac7" data-ref="wire" data-primitive="wire" data-source-kind="schematic" data-element-key="43c8cf00-76f3-43da-b7b1-65409ded8ac7">
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polyline points="106.68,66.04 106.68,68.58" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+</g>
+<g id="5090afbd-a721-4fde-a397-3decc17718fe" data-uuid="5090afbd-a721-4fde-a397-3decc17718fe" data-ref="wire" data-primitive="wire" data-source-kind="schematic" data-element-key="5090afbd-a721-4fde-a397-3decc17718fe">
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polyline points="134.62,76.2 134.62,78.74" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+</g>
+<g id="57ca5c08-bed0-4c0d-9365-86de1e4364d5" data-uuid="57ca5c08-bed0-4c0d-9365-86de1e4364d5" data-ref="wire" data-primitive="wire" data-source-kind="schematic" data-element-key="57ca5c08-bed0-4c0d-9365-86de1e4364d5">
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polyline points="106.68,76.2 116.84,76.2" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+</g>
+<g id="677b2b9a-a0b5-47e7-b97f-74745cf61fc7" data-uuid="677b2b9a-a0b5-47e7-b97f-74745cf61fc7" data-ref="wire" data-primitive="wire" data-source-kind="schematic" data-element-key="677b2b9a-a0b5-47e7-b97f-74745cf61fc7">
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polyline points="111.76,86.36 114.3,86.36" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+</g>
+<g id="7372784b-a3ee-4fa1-bc82-9f9dadbf3d11" data-uuid="7372784b-a3ee-4fa1-bc82-9f9dadbf3d11" data-ref="wire" data-primitive="wire" data-source-kind="schematic" data-element-key="7372784b-a3ee-4fa1-bc82-9f9dadbf3d11">
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polyline points="116.84,66.04 127,66.04" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+</g>
+<g id="ba7b7abf-bb6b-422d-b0b9-c090f3e5ca9a" data-uuid="ba7b7abf-bb6b-422d-b0b9-c090f3e5ca9a" data-ref="wire" data-primitive="wire" data-source-kind="schematic" data-element-key="ba7b7abf-bb6b-422d-b0b9-c090f3e5ca9a">
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polyline points="127,99.06 134.62,99.06" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+</g>
+<g id="c70ae026-7c3e-4446-93f0-cf5fdcf10612" data-uuid="c70ae026-7c3e-4446-93f0-cf5fdcf10612" data-ref="wire" data-primitive="wire" data-source-kind="schematic" data-element-key="c70ae026-7c3e-4446-93f0-cf5fdcf10612">
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polyline points="116.84,66.04 116.84,68.58" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+</g>
+<g id="c9cfb496-0df0-4753-a76b-e1ea005b9c6c" data-uuid="c9cfb496-0df0-4753-a76b-e1ea005b9c6c" data-ref="wire" data-primitive="wire" data-source-kind="schematic" data-element-key="c9cfb496-0df0-4753-a76b-e1ea005b9c6c">
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polyline points="127,78.74 127,86.36" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+</g>
+<g id="ebe17755-ab58-46e0-8ffe-2bdd644c4f6d" data-uuid="ebe17755-ab58-46e0-8ffe-2bdd644c4f6d" data-ref="wire" data-primitive="wire" data-source-kind="schematic" data-element-key="ebe17755-ab58-46e0-8ffe-2bdd644c4f6d">
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polyline points="134.62,91.44 134.62,99.06" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+</g>
+<g id="00bcec30-bbc5-4e08-973c-1d627f224a6b" data-uuid="00bcec30-bbc5-4e08-973c-1d627f224a6b" data-ref="junction" data-primitive="junction" data-source-kind="schematic" data-element-key="00bcec30-bbc5-4e08-973c-1d627f224a6b">
+<g style="fill:#000000; stroke:none; stroke-linecap:round; stroke-linejoin:round"><circle cx="116.84" cy="66.04" r="0.4572" fill="#000000" stroke="#000000" stroke-width="0" stroke-linecap="round" stroke-linejoin="round" /></g>
+</g>
+<g id="4817a78c-c361-47f6-90b5-dc5ff49801c2" data-uuid="4817a78c-c361-47f6-90b5-dc5ff49801c2" data-ref="junction" data-primitive="junction" data-source-kind="schematic" data-element-key="4817a78c-c361-47f6-90b5-dc5ff49801c2">
+<g style="fill:#000000; stroke:none; stroke-linecap:round; stroke-linejoin:round"><circle cx="134.62" cy="99.06" r="0.4572" fill="#000000" stroke="#000000" stroke-width="0" stroke-linecap="round" stroke-linejoin="round" /></g>
+</g>
+<g id="62960181-f22d-44d4-b118-035b377cb44d" data-uuid="62960181-f22d-44d4-b118-035b377cb44d" data-ref="junction" data-primitive="junction" data-source-kind="schematic" data-element-key="62960181-f22d-44d4-b118-035b377cb44d">
+<g style="fill:#000000; stroke:none; stroke-linecap:round; stroke-linejoin:round"><circle cx="106.68" cy="76.2" r="0.4572" fill="#000000" stroke="#000000" stroke-width="0" stroke-linecap="round" stroke-linejoin="round" /></g>
+</g>
+<g id="ba9b3f11-632f-4125-8473-33016c02b75c" data-uuid="ba9b3f11-632f-4125-8473-33016c02b75c" data-ref="junction" data-primitive="junction" data-source-kind="schematic" data-element-key="ba9b3f11-632f-4125-8473-33016c02b75c">
+<g style="fill:#000000; stroke:none; stroke-linecap:round; stroke-linejoin:round"><circle cx="127" cy="66.04" r="0.4572" fill="#000000" stroke="#000000" stroke-width="0" stroke-linecap="round" stroke-linejoin="round" /></g>
+</g>
+<g id="bc55681f-fd5a-4a34-ad12-2d411cef8ad1" data-uuid="bc55681f-fd5a-4a34-ad12-2d411cef8ad1" data-ref="junction" data-primitive="junction" data-source-kind="schematic" data-element-key="bc55681f-fd5a-4a34-ad12-2d411cef8ad1">
+<g style="fill:#000000; stroke:none; stroke-linecap:round; stroke-linejoin:round"><circle cx="134.62" cy="78.74" r="0.4572" fill="#000000" stroke="#000000" stroke-width="0" stroke-linecap="round" stroke-linejoin="round" /></g>
+</g>
+<g id="dda9f243-f610-4a64-894d-c0ffe2f2a771" data-uuid="dda9f243-f610-4a64-894d-c0ffe2f2a771" data-ref="junction" data-primitive="junction" data-source-kind="schematic" data-element-key="dda9f243-f610-4a64-894d-c0ffe2f2a771">
+<g style="fill:#000000; stroke:none; stroke-linecap:round; stroke-linejoin:round"><circle cx="127" cy="86.36" r="0.4572" fill="#000000" stroke="#000000" stroke-width="0" stroke-linecap="round" stroke-linejoin="round" /></g>
+</g>
+<g id="04343e41-03d4-411a-9d19-cced2121ec17" data-uuid="04343e41-03d4-411a-9d19-cced2121ec17" data-ref="global_label" data-primitive="global-label" data-source-kind="schematic" data-element-key="04343e41-03d4-411a-9d19-cced2121ec17" data-text="OUTPUT" data-shape="input">
+<text x="141.12875" y="79.465804" font-size="1.6933" fill="#000000" textLength="7.3043" lengthAdjust="spacingAndGlyphs" text-anchor="start" style="font-family: &quot;Arial&quot;">OUTPUT</text>
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polyline points="139.7,78.74 140.81125,80.003653 149.220453,80.003653 149.220453,78.74 149.220453,77.476347 140.81125,77.476347 139.7,78.74" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+</g>
+<g id="de33cf34-90ff-4651-8448-5139f8f043a5" data-uuid="de33cf34-90ff-4651-8448-5139f8f043a5" data-ref="global_label" data-primitive="global-label" data-source-kind="schematic" data-element-key="de33cf34-90ff-4651-8448-5139f8f043a5" data-text="INPUT" data-shape="input">
+<text x="110.33125" y="87.085804" font-size="1.6933" fill="#000000" textLength="5.3302" lengthAdjust="spacingAndGlyphs" text-anchor="end" style="font-family: &quot;Arial&quot;">INPUT</text>
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polyline points="111.76,86.36 110.64875,85.096347 104.213647,85.096347 104.213647,86.36 104.213647,87.623653 110.64875,87.623653 111.76,86.36" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+</g>
+<g id="25b9178e-d57c-41f0-b758-0f418b6124eb" data-uuid="25b9178e-d57c-41f0-b758-0f418b6124eb" data-ref="text_box" data-primitive="text-box" data-source-kind="schematic" data-element-key="25b9178e-d57c-41f0-b758-0f418b6124eb" data-text="SBUS inverter designed for 100000 baud rate">
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><rect x="104.14" y="88.9" width="20.32" height="10.16" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+<text x="105.0925" y="91.1225" font-size="1.6933" fill="#000000" textLength="11.2548" lengthAdjust="spacingAndGlyphs" text-anchor="start" style="font-family: &quot;Arial&quot;">SBUS inverter</text>
+<text x="105.0925" y="93.2561" font-size="1.6933" fill="#000000" textLength="16.1955" lengthAdjust="spacingAndGlyphs" text-anchor="start" style="font-family: &quot;Arial&quot;">designed for 100000</text>
+<text x="105.0925" y="95.3897" font-size="1.6933" fill="#000000" textLength="7.5053" lengthAdjust="spacingAndGlyphs" text-anchor="start" style="font-family: &quot;Arial&quot;">baud rate</text>
+</g>
+<g id="08fcd6ec-de80-40a7-92d0-e9acb297b720" data-uuid="08fcd6ec-de80-40a7-92d0-e9acb297b720" data-ref="symbol_instance" data-primitive="symbol" data-source-kind="schematic" data-element-key="08fcd6ec-de80-40a7-92d0-e9acb297b720" data-component="R3" data-designator="R3" data-component-uid="08fcd6ec-de80-40a7-92d0-e9acb297b720" data-component-uuid="08fcd6ec-de80-40a7-92d0-e9acb297b720" data-symbol-library-ref="wn__wavenumber:R_2P" data-symbol-unit="1" data-symbol-convert="1" data-symbol-role="component" data-in-bom="true" data-on-board="true" data-dnp="false" data-exclude-from-sim="false" data-in-pos-files="true">
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polyline points="134.62,68.58 134.62,69.596 135.128,69.85 134.112,70.358 135.128,70.866 134.112,71.374 135.128,71.882 134.112,72.39 134.62,72.644 134.62,73.66" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+<g id="1bee5897-3c29-47ab-b2ed-5415369340c8" data-uuid="1bee5897-3c29-47ab-b2ed-5415369340c8" data-ref="symbol_pin" data-object-id="1bee5897-3c29-47ab-b2ed-5415369340c8" data-primitive="pin" data-object-type="pin" data-pin="1" data-symbol-uuid="08fcd6ec-de80-40a7-92d0-e9acb297b720" data-designator="R3">
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polyline points="134.62,73.66 134.62,76.2" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+</g>
+<g id="6b584e0c-4b99-457c-8094-7a7fa9cd75c3" data-uuid="6b584e0c-4b99-457c-8094-7a7fa9cd75c3" data-ref="symbol_pin" data-object-id="6b584e0c-4b99-457c-8094-7a7fa9cd75c3" data-primitive="pin" data-object-type="pin" data-pin="2" data-symbol-uuid="08fcd6ec-de80-40a7-92d0-e9acb297b720" data-designator="R3">
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polyline points="134.62,68.58 134.62,66.04" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+</g>
+<text x="137.8426" y="70.9422" font-size="2.9125" fill="#000000" textLength="3.9053" lengthAdjust="spacingAndGlyphs" text-anchor="middle" style="font-weight: bold; font-family: &quot;Arial&quot;">R3</text>
+<text x="137.8129" y="73.787" font-size="2.032" fill="#000000" textLength="3.8458" lengthAdjust="spacingAndGlyphs" text-anchor="middle" style="font-family: &quot;Arial&quot;">1kΩ</text>
+</g>
+<g id="1c581290-ae5c-4318-a399-ec0fa704aea4" data-uuid="1c581290-ae5c-4318-a399-ec0fa704aea4" data-ref="symbol_instance" data-primitive="symbol" data-source-kind="schematic" data-element-key="1c581290-ae5c-4318-a399-ec0fa704aea4" data-component="C1" data-designator="C1" data-component-uid="1c581290-ae5c-4318-a399-ec0fa704aea4" data-component-uuid="1c581290-ae5c-4318-a399-ec0fa704aea4" data-symbol-library-ref="wn__wavenumber:C_2P_NP" data-symbol-unit="1" data-symbol-convert="1" data-symbol-role="component" data-in-bom="true" data-on-board="true" data-dnp="false" data-exclude-from-sim="false" data-in-pos-files="true">
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polyline points="106.68,71.12 106.68,71.882" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polyline points="108.458,71.882 104.902,71.882" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polyline points="108.458,72.898 104.902,72.898" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polyline points="106.68,73.914 106.68,72.898" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+<g id="3e622e08-1741-4b04-9bc3-1cda89caad44" data-uuid="3e622e08-1741-4b04-9bc3-1cda89caad44" data-ref="symbol_pin" data-object-id="3e622e08-1741-4b04-9bc3-1cda89caad44" data-primitive="pin" data-object-type="pin" data-pin="1" data-symbol-uuid="1c581290-ae5c-4318-a399-ec0fa704aea4" data-designator="C1">
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polyline points="106.68,71.12 106.68,68.58" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+</g>
+<g id="d57a367f-6006-432f-8489-28da333b52fa" data-uuid="d57a367f-6006-432f-8489-28da333b52fa" data-ref="symbol_pin" data-object-id="d57a367f-6006-432f-8489-28da333b52fa" data-primitive="pin" data-object-type="pin" data-pin="2" data-symbol-uuid="1c581290-ae5c-4318-a399-ec0fa704aea4" data-designator="C1">
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polyline points="106.68,73.66 106.68,76.2" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+</g>
+<text x="111.1726" y="72.3392" font-size="2.9125" fill="#000000" textLength="3.9053" lengthAdjust="spacingAndGlyphs" text-anchor="middle" style="font-weight: bold; font-family: &quot;Arial&quot;">C1</text>
+<text x="111.967" y="75.184" font-size="2.032" fill="#000000" textLength="5.494" lengthAdjust="spacingAndGlyphs" text-anchor="middle" style="font-family: &quot;Arial&quot;">0.1µF</text>
+</g>
+<g id="1c815af8-b5dd-43ad-8cd6-9824af1c2ecd" data-uuid="1c815af8-b5dd-43ad-8cd6-9824af1c2ecd" data-ref="symbol_instance" data-primitive="power-symbol" data-source-kind="schematic" data-element-key="1c815af8-b5dd-43ad-8cd6-9824af1c2ecd" data-component="#PWR03" data-designator="#PWR03" data-component-uid="1c815af8-b5dd-43ad-8cd6-9824af1c2ecd" data-component-uuid="1c815af8-b5dd-43ad-8cd6-9824af1c2ecd" data-symbol-library-ref="wn_pwr:GND" data-symbol-unit="1" data-symbol-convert="1" data-symbol-role="power" data-in-bom="true" data-on-board="true" data-dnp="false" data-exclude-from-sim="false" data-in-pos-files="true">
+<g style="fill:none; stroke:#000000; stroke-width:0.254; stroke-linecap:round; stroke-linejoin:round"><polyline points="105.41,78.74 107.95,78.74" fill="none" stroke="#000000" stroke-width="0.254" stroke-linecap="round" stroke-linejoin="round" /></g>
+<g style="fill:none; stroke:#000000; stroke-width:0.254; stroke-linecap:round; stroke-linejoin:round"><polyline points="106.68,76.2 106.68,78.74" fill="none" stroke="#000000" stroke-width="0.254" stroke-linecap="round" stroke-linejoin="round" /></g>
+<text x="106.68" y="81.1525" font-size="2.54" fill="#000000" textLength="5.9221" lengthAdjust="spacingAndGlyphs" text-anchor="middle" style="font-weight: bold; font-family: &quot;Arial&quot;">GND</text>
+</g>
+<g id="60bfc3e0-3f3d-4e3e-8dc8-39234f585d48" data-uuid="60bfc3e0-3f3d-4e3e-8dc8-39234f585d48" data-ref="symbol_instance" data-primitive="power-symbol" data-source-kind="schematic" data-element-key="60bfc3e0-3f3d-4e3e-8dc8-39234f585d48" data-component="#PWR01" data-designator="#PWR01" data-component-uid="60bfc3e0-3f3d-4e3e-8dc8-39234f585d48" data-component-uuid="60bfc3e0-3f3d-4e3e-8dc8-39234f585d48" data-symbol-library-ref="wn_pwr:GND" data-symbol-unit="1" data-symbol-convert="1" data-symbol-role="power" data-in-bom="true" data-on-board="true" data-dnp="false" data-exclude-from-sim="false" data-in-pos-files="true">
+<g style="fill:none; stroke:#000000; stroke-width:0.254; stroke-linecap:round; stroke-linejoin:round"><polyline points="133.35,101.6 135.89,101.6" fill="none" stroke="#000000" stroke-width="0.254" stroke-linecap="round" stroke-linejoin="round" /></g>
+<g style="fill:none; stroke:#000000; stroke-width:0.254; stroke-linecap:round; stroke-linejoin:round"><polyline points="134.62,99.06 134.62,101.6" fill="none" stroke="#000000" stroke-width="0.254" stroke-linecap="round" stroke-linejoin="round" /></g>
+<text x="134.62" y="104.0125" font-size="2.54" fill="#000000" textLength="5.9221" lengthAdjust="spacingAndGlyphs" text-anchor="middle" style="font-weight: bold; font-family: &quot;Arial&quot;">GND</text>
+</g>
+<g id="9416f86a-ce95-4af4-aaa5-4deb9d637e7b" data-uuid="9416f86a-ce95-4af4-aaa5-4deb9d637e7b" data-ref="symbol_instance" data-primitive="symbol" data-source-kind="schematic" data-element-key="9416f86a-ce95-4af4-aaa5-4deb9d637e7b" data-component="R4" data-designator="R4" data-component-uid="9416f86a-ce95-4af4-aaa5-4deb9d637e7b" data-component-uuid="9416f86a-ce95-4af4-aaa5-4deb9d637e7b" data-symbol-library-ref="wn__wavenumber:R_2P" data-symbol-unit="1" data-symbol-convert="1" data-symbol-role="component" data-in-bom="true" data-on-board="true" data-dnp="false" data-exclude-from-sim="false" data-in-pos-files="true">
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polyline points="127,91.44 127,92.456 127.508,92.71 126.492,93.218 127.508,93.726 126.492,94.234 127.508,94.742 126.492,95.25 127,95.504 127,96.52" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+<g id="407f4740-4fa3-444f-b526-3160f868fb71" data-uuid="407f4740-4fa3-444f-b526-3160f868fb71" data-ref="symbol_pin" data-object-id="407f4740-4fa3-444f-b526-3160f868fb71" data-primitive="pin" data-object-type="pin" data-pin="1" data-symbol-uuid="9416f86a-ce95-4af4-aaa5-4deb9d637e7b" data-designator="R4">
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polyline points="127,96.52 127,99.06" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+</g>
+<g id="a094d372-f49c-43ec-8467-9c05a72db2dd" data-uuid="a094d372-f49c-43ec-8467-9c05a72db2dd" data-ref="symbol_pin" data-object-id="a094d372-f49c-43ec-8467-9c05a72db2dd" data-primitive="pin" data-object-type="pin" data-pin="2" data-symbol-uuid="9416f86a-ce95-4af4-aaa5-4deb9d637e7b" data-designator="R4">
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polyline points="127,91.44 127,88.9" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+</g>
+<text x="130.2226" y="93.8022" font-size="2.9125" fill="#000000" textLength="3.9053" lengthAdjust="spacingAndGlyphs" text-anchor="middle" style="font-weight: bold; font-family: &quot;Arial&quot;">R4</text>
+<text x="130.1929" y="96.647" font-size="2.032" fill="#000000" textLength="3.8458" lengthAdjust="spacingAndGlyphs" text-anchor="middle" style="font-family: &quot;Arial&quot;">1kΩ</text>
+</g>
+<g id="94ed2272-0e17-4669-8b4e-df436367ddf7" data-uuid="94ed2272-0e17-4669-8b4e-df436367ddf7" data-ref="symbol_instance" data-primitive="symbol" data-source-kind="schematic" data-element-key="94ed2272-0e17-4669-8b4e-df436367ddf7" data-component="C2" data-designator="C2" data-component-uid="94ed2272-0e17-4669-8b4e-df436367ddf7" data-component-uuid="94ed2272-0e17-4669-8b4e-df436367ddf7" data-symbol-library-ref="wn__wavenumber:C_2P_NP" data-symbol-library-name="C_2P_NP_1" data-symbol-unit="1" data-symbol-convert="1" data-symbol-role="component" data-in-bom="true" data-on-board="true" data-dnp="false" data-exclude-from-sim="false" data-in-pos-files="true">
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polyline points="116.84,71.12 116.84,71.882" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polyline points="118.618,71.882 115.062,71.882" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polyline points="118.618,72.898 115.062,72.898" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polyline points="116.84,73.914 116.84,72.898" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+<g id="bdf19dc5-2d30-4f5f-823e-c007bc7baf83" data-uuid="bdf19dc5-2d30-4f5f-823e-c007bc7baf83" data-ref="symbol_pin" data-object-id="bdf19dc5-2d30-4f5f-823e-c007bc7baf83" data-primitive="pin" data-object-type="pin" data-pin="1" data-symbol-uuid="94ed2272-0e17-4669-8b4e-df436367ddf7" data-designator="C2">
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polyline points="116.84,71.12 116.84,68.58" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+</g>
+<g id="bb59cbb6-f840-40f4-939e-bec35b74137c" data-uuid="bb59cbb6-f840-40f4-939e-bec35b74137c" data-ref="symbol_pin" data-object-id="bb59cbb6-f840-40f4-939e-bec35b74137c" data-primitive="pin" data-object-type="pin" data-pin="2" data-symbol-uuid="94ed2272-0e17-4669-8b4e-df436367ddf7" data-designator="C2">
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polyline points="116.84,73.66 116.84,76.2" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+</g>
+<text x="121.3326" y="72.3392" font-size="2.9125" fill="#000000" textLength="3.9053" lengthAdjust="spacingAndGlyphs" text-anchor="middle" style="font-weight: bold; font-family: &quot;Arial&quot;">C2</text>
+<text x="121.8307" y="75.184" font-size="2.032" fill="#000000" textLength="4.9014" lengthAdjust="spacingAndGlyphs" text-anchor="middle" style="font-family: &quot;Arial&quot;">10µF</text>
+</g>
+<g id="b4961a56-b6c7-4b19-a2a1-c1c06b5869a3" data-uuid="b4961a56-b6c7-4b19-a2a1-c1c06b5869a3" data-ref="symbol_instance" data-primitive="power-symbol" data-source-kind="schematic" data-element-key="b4961a56-b6c7-4b19-a2a1-c1c06b5869a3" data-component="#PWR02" data-designator="#PWR02" data-component-uid="b4961a56-b6c7-4b19-a2a1-c1c06b5869a3" data-component-uuid="b4961a56-b6c7-4b19-a2a1-c1c06b5869a3" data-symbol-library-ref="wn_pwr:+5v" data-symbol-unit="1" data-symbol-convert="1" data-symbol-role="power" data-in-bom="true" data-on-board="true" data-dnp="false" data-exclude-from-sim="false" data-in-pos-files="true">
+<g style="fill:none; stroke:#000000; stroke-width:0.254; stroke-linecap:round; stroke-linejoin:round"><polyline points="127,66.04 127,63.5" fill="none" stroke="#000000" stroke-width="0.254" stroke-linecap="round" stroke-linejoin="round" /></g>
+<g style="fill:none; stroke:#000000; stroke-width:0.254; stroke-linecap:round; stroke-linejoin:round"><polyline points="128.27,63.5 125.73,63.5" fill="none" stroke="#000000" stroke-width="0.254" stroke-linecap="round" stroke-linejoin="round" /></g>
+<text x="127" y="63.1925" font-size="2.54" fill="#000000" textLength="4.5188" lengthAdjust="spacingAndGlyphs" text-anchor="middle" style="font-weight: bold; font-family: &quot;Arial&quot;">+5v</text>
+</g>
+<g id="b749e82a-cc12-46f9-8281-7d2e388b1057" data-uuid="b749e82a-cc12-46f9-8281-7d2e388b1057" data-ref="symbol_instance" data-primitive="symbol" data-source-kind="schematic" data-element-key="b749e82a-cc12-46f9-8281-7d2e388b1057" data-component="R1" data-designator="R1" data-component-uid="b749e82a-cc12-46f9-8281-7d2e388b1057" data-component-uuid="b749e82a-cc12-46f9-8281-7d2e388b1057" data-symbol-library-ref="wn__wavenumber:R_2P" data-symbol-unit="1" data-symbol-convert="1" data-symbol-role="component" data-in-bom="true" data-on-board="true" data-dnp="false" data-exclude-from-sim="false" data-in-pos-files="true">
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polyline points="121.92,86.36 120.904,86.36 120.65,86.868 120.142,85.852 119.634,86.868 119.126,85.852 118.618,86.868 118.11,85.852 117.856,86.36 116.84,86.36" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+<g id="1efbe317-a4ac-47c7-9aed-60f0bb53f10f" data-uuid="1efbe317-a4ac-47c7-9aed-60f0bb53f10f" data-ref="symbol_pin" data-object-id="1efbe317-a4ac-47c7-9aed-60f0bb53f10f" data-primitive="pin" data-object-type="pin" data-pin="1" data-symbol-uuid="b749e82a-cc12-46f9-8281-7d2e388b1057" data-designator="R1">
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polyline points="116.84,86.36 114.3,86.36" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+</g>
+<g id="18d2b249-a598-4d39-acf3-d8e2afbbf739" data-uuid="18d2b249-a598-4d39-acf3-d8e2afbbf739" data-ref="symbol_pin" data-object-id="18d2b249-a598-4d39-acf3-d8e2afbbf739" data-primitive="pin" data-object-type="pin" data-pin="2" data-symbol-uuid="b749e82a-cc12-46f9-8281-7d2e388b1057" data-designator="R1">
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polyline points="121.92,86.36 124.46,86.36" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+</g>
+<text x="119.38" y="81.1022" font-size="2.9125" fill="#000000" textLength="3.9053" lengthAdjust="spacingAndGlyphs" text-anchor="middle" style="font-weight: bold; font-family: &quot;Arial&quot;">R1</text>
+<text x="119.38" y="84.582" font-size="2.032" fill="#000000" textLength="3.8458" lengthAdjust="spacingAndGlyphs" text-anchor="middle" style="font-family: &quot;Arial&quot;">1kΩ</text>
+</g>
+<g id="c4a7f4c1-1f1d-4e24-9df8-a9860a7c1234" data-uuid="c4a7f4c1-1f1d-4e24-9df8-a9860a7c1234" data-ref="symbol_instance" data-primitive="symbol" data-source-kind="schematic" data-element-key="c4a7f4c1-1f1d-4e24-9df8-a9860a7c1234" data-component="Q1" data-designator="Q1" data-component-uid="c4a7f4c1-1f1d-4e24-9df8-a9860a7c1234" data-component-uuid="c4a7f4c1-1f1d-4e24-9df8-a9860a7c1234" data-symbol-library-ref="Transistor_BJT:2N2219" data-symbol-unit="1" data-symbol-convert="1" data-symbol-role="component" data-in-bom="true" data-on-board="true" data-dnp="false" data-exclude-from-sim="false" data-in-pos-files="true">
+<g style="fill:none; stroke:#000000; stroke-width:0.254; stroke-linecap:round; stroke-linejoin:round"><circle cx="133.35" cy="86.36" r="2.8194" fill="none" stroke="#000000" stroke-width="0.254" stroke-linecap="round" stroke-linejoin="round" /></g>
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polyline points="129.54,86.36 132.715,86.36" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+<g style="fill:none; stroke:#000000; stroke-width:0.508; stroke-linecap:round; stroke-linejoin:round"><polyline points="132.715,84.455 132.715,88.265" fill="none" stroke="#000000" stroke-width="0.508" stroke-linecap="round" stroke-linejoin="round" /></g>
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polyline points="132.715,85.725 134.62,83.82" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polyline points="132.715,86.995 134.62,88.9" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+<g style="fill:#000000; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polygon points="133.35,88.138 133.858,87.63 134.366,88.646 133.35,88.138" fill="#000000" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+<g id="76a3bbee-c5c7-4b6a-bbf4-c957ef1191c7" data-uuid="76a3bbee-c5c7-4b6a-bbf4-c957ef1191c7" data-ref="symbol_pin" data-object-id="76a3bbee-c5c7-4b6a-bbf4-c957ef1191c7" data-primitive="pin" data-object-type="pin" data-pin="2" data-symbol-uuid="c4a7f4c1-1f1d-4e24-9df8-a9860a7c1234" data-designator="Q1">
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polyline points="129.54,86.36 127,86.36" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+<text x="128.27" y="86.106" font-size="1.6933" fill="#000000" textLength="0.9876" lengthAdjust="spacingAndGlyphs" text-anchor="middle" style="font-family: &quot;Arial&quot;">2</text>
+</g>
+<g id="eb2b0099-753c-4b58-8e5e-a46e37c19d3b" data-uuid="eb2b0099-753c-4b58-8e5e-a46e37c19d3b" data-ref="symbol_pin" data-object-id="eb2b0099-753c-4b58-8e5e-a46e37c19d3b" data-primitive="pin" data-object-type="pin" data-pin="3" data-symbol-uuid="c4a7f4c1-1f1d-4e24-9df8-a9860a7c1234" data-designator="Q1">
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polyline points="134.62,83.82 134.62,81.28" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+<text x="134.366" y="82.55" font-size="1.6933" fill="#000000" textLength="0.9876" lengthAdjust="spacingAndGlyphs" text-anchor="middle" transform="rotate(-90 134.366 82.55)" style="font-family: &quot;Arial&quot;">3</text>
+</g>
+<g id="ec726adb-2ce2-4994-92d4-148c18f1c70d" data-uuid="ec726adb-2ce2-4994-92d4-148c18f1c70d" data-ref="symbol_pin" data-object-id="ec726adb-2ce2-4994-92d4-148c18f1c70d" data-primitive="pin" data-object-type="pin" data-pin="1" data-symbol-uuid="c4a7f4c1-1f1d-4e24-9df8-a9860a7c1234" data-designator="Q1">
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polyline points="134.62,88.9 134.62,91.44" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+<text x="134.366" y="90.17" font-size="1.6933" fill="#000000" textLength="0.9876" lengthAdjust="spacingAndGlyphs" text-anchor="middle" transform="rotate(-90 134.366 90.17)" style="font-family: &quot;Arial&quot;">1</text>
+</g>
+<text x="138.3449" y="85.7249" font-size="1.6933" fill="#000000" textLength="2.3698" lengthAdjust="spacingAndGlyphs" text-anchor="middle" style="font-family: &quot;Arial&quot;">Q1</text>
+<text x="138.176" y="90.2345" font-size="1.6933" fill="#000000" textLength="6.2211" lengthAdjust="spacingAndGlyphs" text-anchor="middle" transform="rotate(-90 138.176 89.5995)" style="font-family: &quot;Arial&quot;">2N2222</text>
+</g>
+<g id="e1e5cf48-8a20-4e01-bf47-28cea276cfa1" data-uuid="e1e5cf48-8a20-4e01-bf47-28cea276cfa1" data-ref="symbol_instance" data-primitive="symbol" data-source-kind="schematic" data-element-key="e1e5cf48-8a20-4e01-bf47-28cea276cfa1" data-component="D1" data-designator="D1" data-component-uid="e1e5cf48-8a20-4e01-bf47-28cea276cfa1" data-component-uuid="e1e5cf48-8a20-4e01-bf47-28cea276cfa1" data-symbol-library-ref="Diode:1N5712" data-symbol-unit="1" data-symbol-convert="1" data-symbol-role="component" data-in-bom="true" data-on-board="true" data-dnp="false" data-exclude-from-sim="false" data-in-pos-files="true">
+<g style="fill:none; stroke:#000000; stroke-width:0.254; stroke-linecap:round; stroke-linejoin:round"><polyline points="132.715,79.375 132.715,80.01 132.08,80.01 132.08,77.47 131.445,77.47 131.445,78.105" fill="none" stroke="#000000" stroke-width="0.254" stroke-linecap="round" stroke-linejoin="round" /></g>
+<g style="fill:none; stroke:#000000; stroke-width:0.254; stroke-linecap:round; stroke-linejoin:round"><polyline points="129.54,80.01 129.54,77.47 132.08,78.74 129.54,80.01" fill="none" stroke="#000000" stroke-width="0.254" stroke-linecap="round" stroke-linejoin="round" /></g>
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polyline points="129.54,78.74 132.08,78.74" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+<g id="271ab780-11b8-49fc-a2be-8fa3d011f139" data-uuid="271ab780-11b8-49fc-a2be-8fa3d011f139" data-ref="symbol_pin" data-object-id="271ab780-11b8-49fc-a2be-8fa3d011f139" data-primitive="pin" data-object-type="pin" data-pin="1" data-symbol-uuid="e1e5cf48-8a20-4e01-bf47-28cea276cfa1" data-designator="D1">
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polyline points="132.08,78.74 134.62,78.74" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+</g>
+<g id="b0f1ac7e-7971-4697-ae6c-34dda6fe8100" data-uuid="b0f1ac7e-7971-4697-ae6c-34dda6fe8100" data-ref="symbol_pin" data-object-id="b0f1ac7e-7971-4697-ae6c-34dda6fe8100" data-primitive="pin" data-object-type="pin" data-pin="2" data-symbol-uuid="e1e5cf48-8a20-4e01-bf47-28cea276cfa1" data-designator="D1">
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polyline points="129.54,78.74 127,78.74" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+</g>
+<text x="131.1275" y="73.025" font-size="1.6933" fill="#000000" textLength="2.2705" lengthAdjust="spacingAndGlyphs" text-anchor="middle" style="font-family: &quot;Arial&quot;">D1</text>
+<text x="131.1275" y="75.565" font-size="1.6933" fill="#000000" textLength="5.4307" lengthAdjust="spacingAndGlyphs" text-anchor="middle" style="font-family: &quot;Arial&quot;">SR260</text>
+</g>
+<g id="08fcd6ec-de80-40a7-92d0-e9acb297b720:overplot" data-uuid="08fcd6ec-de80-40a7-92d0-e9acb297b720:overplot" data-ref="symbol_overplot" data-primitive="symbol-overplot" data-source-kind="schematic" data-element-key="08fcd6ec-de80-40a7-92d0-e9acb297b720:overplot" data-component-uid="08fcd6ec-de80-40a7-92d0-e9acb297b720:overplot" data-component-uuid="08fcd6ec-de80-40a7-92d0-e9acb297b720:overplot" data-symbol-library-ref="wn__wavenumber:R_2P" data-symbol-role="component">
+<text x="137.8426" y="70.9422" font-size="2.9125" fill="#000000" textLength="3.9053" lengthAdjust="spacingAndGlyphs" text-anchor="middle" style="font-weight: bold; font-family: &quot;Arial&quot;">R3</text>
+<text x="137.8129" y="73.787" font-size="2.032" fill="#000000" textLength="3.8458" lengthAdjust="spacingAndGlyphs" text-anchor="middle" style="font-family: &quot;Arial&quot;">1kΩ</text>
+<g id="1bee5897-3c29-47ab-b2ed-5415369340c8" data-uuid="1bee5897-3c29-47ab-b2ed-5415369340c8" data-ref="symbol_pin" data-object-id="1bee5897-3c29-47ab-b2ed-5415369340c8" data-primitive="pin" data-object-type="pin" data-pin="1" data-symbol-uuid="08fcd6ec-de80-40a7-92d0-e9acb297b720" data-designator="R3">
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polyline points="134.62,73.66 134.62,76.2" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+</g>
+<g id="6b584e0c-4b99-457c-8094-7a7fa9cd75c3" data-uuid="6b584e0c-4b99-457c-8094-7a7fa9cd75c3" data-ref="symbol_pin" data-object-id="6b584e0c-4b99-457c-8094-7a7fa9cd75c3" data-primitive="pin" data-object-type="pin" data-pin="2" data-symbol-uuid="08fcd6ec-de80-40a7-92d0-e9acb297b720" data-designator="R3">
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polyline points="134.62,68.58 134.62,66.04" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+</g>
+</g>
+<g id="1c581290-ae5c-4318-a399-ec0fa704aea4:overplot" data-uuid="1c581290-ae5c-4318-a399-ec0fa704aea4:overplot" data-ref="symbol_overplot" data-primitive="symbol-overplot" data-source-kind="schematic" data-element-key="1c581290-ae5c-4318-a399-ec0fa704aea4:overplot" data-component-uid="1c581290-ae5c-4318-a399-ec0fa704aea4:overplot" data-component-uuid="1c581290-ae5c-4318-a399-ec0fa704aea4:overplot" data-symbol-library-ref="wn__wavenumber:C_2P_NP" data-symbol-role="component">
+<text x="111.1726" y="72.3392" font-size="2.9125" fill="#000000" textLength="3.9053" lengthAdjust="spacingAndGlyphs" text-anchor="middle" style="font-weight: bold; font-family: &quot;Arial&quot;">C1</text>
+<text x="111.967" y="75.184" font-size="2.032" fill="#000000" textLength="5.494" lengthAdjust="spacingAndGlyphs" text-anchor="middle" style="font-family: &quot;Arial&quot;">0.1µF</text>
+<g id="3e622e08-1741-4b04-9bc3-1cda89caad44" data-uuid="3e622e08-1741-4b04-9bc3-1cda89caad44" data-ref="symbol_pin" data-object-id="3e622e08-1741-4b04-9bc3-1cda89caad44" data-primitive="pin" data-object-type="pin" data-pin="1" data-symbol-uuid="1c581290-ae5c-4318-a399-ec0fa704aea4" data-designator="C1">
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polyline points="106.68,71.12 106.68,68.58" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+</g>
+<g id="d57a367f-6006-432f-8489-28da333b52fa" data-uuid="d57a367f-6006-432f-8489-28da333b52fa" data-ref="symbol_pin" data-object-id="d57a367f-6006-432f-8489-28da333b52fa" data-primitive="pin" data-object-type="pin" data-pin="2" data-symbol-uuid="1c581290-ae5c-4318-a399-ec0fa704aea4" data-designator="C1">
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polyline points="106.68,73.66 106.68,76.2" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+</g>
+</g>
+<g id="1c815af8-b5dd-43ad-8cd6-9824af1c2ecd:overplot" data-uuid="1c815af8-b5dd-43ad-8cd6-9824af1c2ecd:overplot" data-ref="symbol_overplot" data-primitive="symbol-overplot" data-source-kind="schematic" data-element-key="1c815af8-b5dd-43ad-8cd6-9824af1c2ecd:overplot" data-component-uid="1c815af8-b5dd-43ad-8cd6-9824af1c2ecd:overplot" data-component-uuid="1c815af8-b5dd-43ad-8cd6-9824af1c2ecd:overplot" data-symbol-library-ref="wn_pwr:GND" data-symbol-role="component">
+<text x="106.68" y="81.1525" font-size="2.54" fill="#000000" textLength="5.9221" lengthAdjust="spacingAndGlyphs" text-anchor="middle" style="font-weight: bold; font-family: &quot;Arial&quot;">GND</text>
+</g>
+<g id="60bfc3e0-3f3d-4e3e-8dc8-39234f585d48:overplot" data-uuid="60bfc3e0-3f3d-4e3e-8dc8-39234f585d48:overplot" data-ref="symbol_overplot" data-primitive="symbol-overplot" data-source-kind="schematic" data-element-key="60bfc3e0-3f3d-4e3e-8dc8-39234f585d48:overplot" data-component-uid="60bfc3e0-3f3d-4e3e-8dc8-39234f585d48:overplot" data-component-uuid="60bfc3e0-3f3d-4e3e-8dc8-39234f585d48:overplot" data-symbol-library-ref="wn_pwr:GND" data-symbol-role="component">
+<text x="134.62" y="104.0125" font-size="2.54" fill="#000000" textLength="5.9221" lengthAdjust="spacingAndGlyphs" text-anchor="middle" style="font-weight: bold; font-family: &quot;Arial&quot;">GND</text>
+</g>
+<g id="9416f86a-ce95-4af4-aaa5-4deb9d637e7b:overplot" data-uuid="9416f86a-ce95-4af4-aaa5-4deb9d637e7b:overplot" data-ref="symbol_overplot" data-primitive="symbol-overplot" data-source-kind="schematic" data-element-key="9416f86a-ce95-4af4-aaa5-4deb9d637e7b:overplot" data-component-uid="9416f86a-ce95-4af4-aaa5-4deb9d637e7b:overplot" data-component-uuid="9416f86a-ce95-4af4-aaa5-4deb9d637e7b:overplot" data-symbol-library-ref="wn__wavenumber:R_2P" data-symbol-role="component">
+<text x="130.2226" y="93.8022" font-size="2.9125" fill="#000000" textLength="3.9053" lengthAdjust="spacingAndGlyphs" text-anchor="middle" style="font-weight: bold; font-family: &quot;Arial&quot;">R4</text>
+<text x="130.1929" y="96.647" font-size="2.032" fill="#000000" textLength="3.8458" lengthAdjust="spacingAndGlyphs" text-anchor="middle" style="font-family: &quot;Arial&quot;">1kΩ</text>
+<g id="407f4740-4fa3-444f-b526-3160f868fb71" data-uuid="407f4740-4fa3-444f-b526-3160f868fb71" data-ref="symbol_pin" data-object-id="407f4740-4fa3-444f-b526-3160f868fb71" data-primitive="pin" data-object-type="pin" data-pin="1" data-symbol-uuid="9416f86a-ce95-4af4-aaa5-4deb9d637e7b" data-designator="R4">
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polyline points="127,96.52 127,99.06" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+</g>
+<g id="a094d372-f49c-43ec-8467-9c05a72db2dd" data-uuid="a094d372-f49c-43ec-8467-9c05a72db2dd" data-ref="symbol_pin" data-object-id="a094d372-f49c-43ec-8467-9c05a72db2dd" data-primitive="pin" data-object-type="pin" data-pin="2" data-symbol-uuid="9416f86a-ce95-4af4-aaa5-4deb9d637e7b" data-designator="R4">
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polyline points="127,91.44 127,88.9" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+</g>
+</g>
+<g id="c4a7f4c1-1f1d-4e24-9df8-a9860a7c1234:overplot" data-uuid="c4a7f4c1-1f1d-4e24-9df8-a9860a7c1234:overplot" data-ref="symbol_overplot" data-primitive="symbol-overplot" data-source-kind="schematic" data-element-key="c4a7f4c1-1f1d-4e24-9df8-a9860a7c1234:overplot" data-component-uid="c4a7f4c1-1f1d-4e24-9df8-a9860a7c1234:overplot" data-component-uuid="c4a7f4c1-1f1d-4e24-9df8-a9860a7c1234:overplot" data-symbol-library-ref="Transistor_BJT:2N2219" data-symbol-role="component">
+<text x="138.3449" y="85.7249" font-size="1.6933" fill="#000000" textLength="2.3698" lengthAdjust="spacingAndGlyphs" text-anchor="middle" style="font-family: &quot;Arial&quot;">Q1</text>
+<text x="138.176" y="90.2345" font-size="1.6933" fill="#000000" textLength="6.2211" lengthAdjust="spacingAndGlyphs" text-anchor="middle" transform="rotate(-90 138.176 89.5995)" style="font-family: &quot;Arial&quot;">2N2222</text>
+<g id="76a3bbee-c5c7-4b6a-bbf4-c957ef1191c7" data-uuid="76a3bbee-c5c7-4b6a-bbf4-c957ef1191c7" data-ref="symbol_pin" data-object-id="76a3bbee-c5c7-4b6a-bbf4-c957ef1191c7" data-primitive="pin" data-object-type="pin" data-pin="2" data-symbol-uuid="c4a7f4c1-1f1d-4e24-9df8-a9860a7c1234" data-designator="Q1">
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polyline points="129.54,86.36 127,86.36" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+<text x="128.27" y="86.106" font-size="1.6933" fill="#000000" textLength="0.9876" lengthAdjust="spacingAndGlyphs" text-anchor="middle" style="font-family: &quot;Arial&quot;">2</text>
+</g>
+<g id="eb2b0099-753c-4b58-8e5e-a46e37c19d3b" data-uuid="eb2b0099-753c-4b58-8e5e-a46e37c19d3b" data-ref="symbol_pin" data-object-id="eb2b0099-753c-4b58-8e5e-a46e37c19d3b" data-primitive="pin" data-object-type="pin" data-pin="3" data-symbol-uuid="c4a7f4c1-1f1d-4e24-9df8-a9860a7c1234" data-designator="Q1">
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polyline points="134.62,83.82 134.62,81.28" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+<text x="134.366" y="82.55" font-size="1.6933" fill="#000000" textLength="0.9876" lengthAdjust="spacingAndGlyphs" text-anchor="middle" transform="rotate(-90 134.366 82.55)" style="font-family: &quot;Arial&quot;">3</text>
+</g>
+<g id="ec726adb-2ce2-4994-92d4-148c18f1c70d" data-uuid="ec726adb-2ce2-4994-92d4-148c18f1c70d" data-ref="symbol_pin" data-object-id="ec726adb-2ce2-4994-92d4-148c18f1c70d" data-primitive="pin" data-object-type="pin" data-pin="1" data-symbol-uuid="c4a7f4c1-1f1d-4e24-9df8-a9860a7c1234" data-designator="Q1">
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polyline points="134.62,88.9 134.62,91.44" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+<text x="134.366" y="90.17" font-size="1.6933" fill="#000000" textLength="0.9876" lengthAdjust="spacingAndGlyphs" text-anchor="middle" transform="rotate(-90 134.366 90.17)" style="font-family: &quot;Arial&quot;">1</text>
+</g>
+</g>
+<g id="e1e5cf48-8a20-4e01-bf47-28cea276cfa1:overplot" data-uuid="e1e5cf48-8a20-4e01-bf47-28cea276cfa1:overplot" data-ref="symbol_overplot" data-primitive="symbol-overplot" data-source-kind="schematic" data-element-key="e1e5cf48-8a20-4e01-bf47-28cea276cfa1:overplot" data-component-uid="e1e5cf48-8a20-4e01-bf47-28cea276cfa1:overplot" data-component-uuid="e1e5cf48-8a20-4e01-bf47-28cea276cfa1:overplot" data-symbol-library-ref="Diode:1N5712" data-symbol-role="component">
+<text x="131.1275" y="73.025" font-size="1.6933" fill="#000000" textLength="2.2705" lengthAdjust="spacingAndGlyphs" text-anchor="middle" style="font-family: &quot;Arial&quot;">D1</text>
+<text x="131.1275" y="75.565" font-size="1.6933" fill="#000000" textLength="5.4307" lengthAdjust="spacingAndGlyphs" text-anchor="middle" style="font-family: &quot;Arial&quot;">SR260</text>
+<g id="271ab780-11b8-49fc-a2be-8fa3d011f139" data-uuid="271ab780-11b8-49fc-a2be-8fa3d011f139" data-ref="symbol_pin" data-object-id="271ab780-11b8-49fc-a2be-8fa3d011f139" data-primitive="pin" data-object-type="pin" data-pin="1" data-symbol-uuid="e1e5cf48-8a20-4e01-bf47-28cea276cfa1" data-designator="D1">
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polyline points="132.08,78.74 134.62,78.74" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+</g>
+<g id="b0f1ac7e-7971-4697-ae6c-34dda6fe8100" data-uuid="b0f1ac7e-7971-4697-ae6c-34dda6fe8100" data-ref="symbol_pin" data-object-id="b0f1ac7e-7971-4697-ae6c-34dda6fe8100" data-primitive="pin" data-object-type="pin" data-pin="2" data-symbol-uuid="e1e5cf48-8a20-4e01-bf47-28cea276cfa1" data-designator="D1">
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polyline points="129.54,78.74 127,78.74" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+</g>
+</g>
+<g id="a953040e-b95c-429e-af03-51e692dfc295" data-uuid="a953040e-b95c-429e-af03-51e692dfc295" data-ref="sheet_header" data-primitive="drawing-sheet" data-source-kind="schematic" data-element-key="a953040e-b95c-429e-af03-51e692dfc295">
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><rect x="177.0022" y="166.0072" width="108" height="32" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><rect x="10" y="10" width="277.0022" height="190.0072" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><rect x="12" y="12" width="273.0022" height="186.0072" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polyline points="60,12 60,10" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polyline points="110,12 110,10" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polyline points="160,12 160,10" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polyline points="210,12 210,10" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polyline points="260,12 260,10" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+<text x="35" y="11.65" font-size="1.7333" fill="#000000" textLength="1.0109" lengthAdjust="spacingAndGlyphs" text-anchor="start" style="font-family: &quot;Arial&quot;">1</text>
+<text x="85" y="11.65" font-size="1.7333" fill="#000000" textLength="1.0109" lengthAdjust="spacingAndGlyphs" text-anchor="start" style="font-family: &quot;Arial&quot;">2</text>
+<text x="135" y="11.65" font-size="1.7333" fill="#000000" textLength="1.0109" lengthAdjust="spacingAndGlyphs" text-anchor="start" style="font-family: &quot;Arial&quot;">3</text>
+<text x="185" y="11.65" font-size="1.7333" fill="#000000" textLength="1.0109" lengthAdjust="spacingAndGlyphs" text-anchor="start" style="font-family: &quot;Arial&quot;">4</text>
+<text x="235" y="11.65" font-size="1.7333" fill="#000000" textLength="1.0109" lengthAdjust="spacingAndGlyphs" text-anchor="start" style="font-family: &quot;Arial&quot;">5</text>
+<text x="285" y="11.65" font-size="1.7333" fill="#000000" textLength="1.0109" lengthAdjust="spacingAndGlyphs" text-anchor="start" style="font-family: &quot;Arial&quot;">6</text>
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polyline points="60,198.0072 60,200.0072" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polyline points="110,198.0072 110,200.0072" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polyline points="160,198.0072 160,200.0072" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polyline points="210,198.0072 210,200.0072" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polyline points="260,198.0072 260,200.0072" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+<text x="35" y="199.6572" font-size="1.7333" fill="#000000" textLength="1.0109" lengthAdjust="spacingAndGlyphs" text-anchor="start" style="font-family: &quot;Arial&quot;">1</text>
+<text x="85" y="199.6572" font-size="1.7333" fill="#000000" textLength="1.0109" lengthAdjust="spacingAndGlyphs" text-anchor="start" style="font-family: &quot;Arial&quot;">2</text>
+<text x="135" y="199.6572" font-size="1.7333" fill="#000000" textLength="1.0109" lengthAdjust="spacingAndGlyphs" text-anchor="start" style="font-family: &quot;Arial&quot;">3</text>
+<text x="185" y="199.6572" font-size="1.7333" fill="#000000" textLength="1.0109" lengthAdjust="spacingAndGlyphs" text-anchor="start" style="font-family: &quot;Arial&quot;">4</text>
+<text x="235" y="199.6572" font-size="1.7333" fill="#000000" textLength="1.0109" lengthAdjust="spacingAndGlyphs" text-anchor="start" style="font-family: &quot;Arial&quot;">5</text>
+<text x="285" y="199.6572" font-size="1.7333" fill="#000000" textLength="1.0109" lengthAdjust="spacingAndGlyphs" text-anchor="start" style="font-family: &quot;Arial&quot;">6</text>
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polyline points="10,60 12,60" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polyline points="10,110 12,110" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polyline points="10,160 12,160" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+<text x="11" y="35.65" font-size="1.7333" fill="#000000" textLength="1.2129" lengthAdjust="spacingAndGlyphs" text-anchor="middle" style="font-family: &quot;Arial&quot;">A</text>
+<text x="11" y="85.65" font-size="1.7333" fill="#000000" textLength="1.2129" lengthAdjust="spacingAndGlyphs" text-anchor="middle" style="font-family: &quot;Arial&quot;">B</text>
+<text x="11" y="135.65" font-size="1.7333" fill="#000000" textLength="1.3132" lengthAdjust="spacingAndGlyphs" text-anchor="middle" style="font-family: &quot;Arial&quot;">C</text>
+<text x="11" y="185.65" font-size="1.7333" fill="#000000" textLength="1.3132" lengthAdjust="spacingAndGlyphs" text-anchor="middle" style="font-family: &quot;Arial&quot;">D</text>
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polyline points="287.0022,60 285.0022,60" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polyline points="287.0022,110 285.0022,110" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polyline points="287.0022,160 285.0022,160" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+<text x="286.0022" y="35.65" font-size="1.7333" fill="#000000" textLength="1.2129" lengthAdjust="spacingAndGlyphs" text-anchor="middle" style="font-family: &quot;Arial&quot;">A</text>
+<text x="286.0022" y="85.65" font-size="1.7333" fill="#000000" textLength="1.2129" lengthAdjust="spacingAndGlyphs" text-anchor="middle" style="font-family: &quot;Arial&quot;">B</text>
+<text x="286.0022" y="135.65" font-size="1.7333" fill="#000000" textLength="1.3132" lengthAdjust="spacingAndGlyphs" text-anchor="middle" style="font-family: &quot;Arial&quot;">C</text>
+<text x="286.0022" y="185.65" font-size="1.7333" fill="#000000" textLength="1.3132" lengthAdjust="spacingAndGlyphs" text-anchor="middle" style="font-family: &quot;Arial&quot;">D</text>
+<text x="200.0022" y="193.8572" font-size="2" fill="#000000" textLength="5.598" lengthAdjust="spacingAndGlyphs" text-anchor="start" style="font-family: &quot;Arial&quot;">Date: </text>
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polyline points="177.0022,194.5072 285.0022,194.5072" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+<text x="178.0022" y="196.6572" font-size="2" fill="#000000" textLength="40.4304" lengthAdjust="spacingAndGlyphs" text-anchor="start" style="font-family: &quot;Arial&quot;">KiCad E.D.A. 10.0.0-912-gf11d3da677-dirty</text>
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polyline points="177.0022,191.5072 285.0022,191.5072" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+<text x="263.0022" y="193.8572" font-size="2" fill="#000000" textLength="5.1305" lengthAdjust="spacingAndGlyphs" text-anchor="start" style="font-weight: bold; font-family: &quot;Arial&quot;">Rev: </text>
+<text x="178.0022" y="193.8572" font-size="2" fill="#000000" textLength="7.698" lengthAdjust="spacingAndGlyphs" text-anchor="start" style="font-family: &quot;Arial&quot;">Size: A4</text>
+<text x="263.0022" y="196.6572" font-size="2" fill="#000000" textLength="5.8325" lengthAdjust="spacingAndGlyphs" text-anchor="start" style="font-family: &quot;Arial&quot;">Id: 1/1</text>
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polyline points="177.0022,187.5072 285.0022,187.5072" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+<text x="178.0022" y="190.3072" font-size="2.6666" fill="#000000" textLength="7.4113" lengthAdjust="spacingAndGlyphs" text-anchor="start" style="font-style: italic; font-weight: bold; font-family: &quot;Arial&quot;">Title: </text>
+<text x="178.0022" y="186.4572" font-size="2" fill="#000000" textLength="27.7542" lengthAdjust="spacingAndGlyphs" text-anchor="start" style="font-family: &quot;Arial&quot;">File: SBUS Inverter.kicad_sch</text>
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polyline points="177.0022,181.5072 285.0022,181.5072" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+<text x="178.0022" y="183.7572" font-size="2" fill="#000000" textLength="7.232" lengthAdjust="spacingAndGlyphs" text-anchor="start" style="font-family: &quot;Arial&quot;">Sheet: /</text>
+<text x="178.0022" y="180.7572" font-size="2" fill="#000000" text-anchor="start" style="font-weight: bold; font-family: &quot;Arial&quot;"></text>
+<text x="178.0022" y="177.7572" font-size="2" fill="#000000" text-anchor="start" style="font-family: &quot;Arial&quot;"></text>
+<text x="178.0022" y="174.7572" font-size="2" fill="#000000" text-anchor="start" style="font-family: &quot;Arial&quot;"></text>
+<text x="178.0022" y="171.7572" font-size="2" fill="#000000" text-anchor="start" style="font-family: &quot;Arial&quot;"></text>
+<text x="178.0022" y="168.7572" font-size="2" fill="#000000" text-anchor="start" style="font-family: &quot;Arial&quot;"></text>
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polyline points="197.0022,191.5072 197.0022,194.5072" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+<g style="fill:none; stroke:#000000; stroke-width:0.1524; stroke-linecap:round; stroke-linejoin:round"><polyline points="261.0022,191.5072 261.0022,198.0072" fill="none" stroke="#000000" stroke-width="0.1524" stroke-linecap="round" stroke-linejoin="round" /></g>
+</g>
+</svg>

@@ -1,0 +1,712 @@
+{
+  "schema": "kicad_monkey.design.a0",
+  "generator": "kicad_monkey",
+  "project": {
+    "name": "Wireless E-Stop",
+    "filename": "Wireless E-Stop.kicad_pro",
+    "path": "/Users/nathanfikes/Projects/GitHub/AutoNav-Charge_Indicator-KiCad_Pcb/Wireless E-Stop/Wireless E-Stop.kicad_pro",
+    "text_variables": {}
+  },
+  "variants": [],
+  "options": {
+    "net_identifier_scope": "KICAD_PROJECT",
+    "allow_ports_to_name_nets": true,
+    "allow_sheet_entries_to_name_nets": true,
+    "allow_single_pin_nets": true,
+    "append_sheet_numbers_to_local_nets": false,
+    "power_port_names_take_priority": true,
+    "higher_level_names_take_priority": true,
+    "auto_sheet_numbering": true,
+    "kicad_schematic_format": "sexpr",
+    "kicad_supported_oracle_versions": [
+      "9",
+      "10"
+    ],
+    "kicad_subpart_first_id": 65,
+    "kicad_subpart_id_separator": 0
+  },
+  "sheets": [
+    {
+      "filename": "Wireless E-Stop.kicad_sch",
+      "path": "/Users/nathanfikes/Projects/GitHub/AutoNav-Charge_Indicator-KiCad_Pcb/Wireless E-Stop/Wireless E-Stop.kicad_sch",
+      "sheet_number": 1,
+      "sheet_path": "/",
+      "sheet_path_uuids": "/",
+      "title": "",
+      "company": "",
+      "revision": "",
+      "date": ""
+    }
+  ],
+  "components": [
+    {
+      "designator": "R2",
+      "svg_id": "0d5c3a2e-e96f-493f-805d-f409e66831ed",
+      "value": "10kΩ",
+      "footprint": "wavenumber:R1206_0.70MM_HD",
+      "library_ref": "wn__wavenumber:R_2P",
+      "description": "",
+      "hierarchy": {
+        "base_designator": "R2",
+        "channel": null,
+        "channel_index": null,
+        "sheet": "/",
+        "sheet_path": "/",
+        "sheet_path_uuids": "/"
+      },
+      "classification": {
+        "prefix": "R",
+        "type": "passive_2pin",
+        "pin_count": 2
+      },
+      "parameters": {
+        "Description": "",
+        "Internal Part Number": "",
+        "Manufacturer": "Panasonic Electronic Components",
+        "Manufacturer Part Number": "ERJ-8ENF1002V",
+        "_source_cad": "kicad",
+        "cad-reference": "ERJ-8ENF1002V",
+        "flags": "",
+        "kicad_dnp": "false",
+        "kicad_in_bom": "true",
+        "kicad_instance_uuid": "0d5c3a2e-e96f-493f-805d-f409e66831ed",
+        "kicad_libsource_lib": "wn__wavenumber",
+        "kicad_libsource_part": "R_2P",
+        "kicad_on_board": "true",
+        "kicad_sheet_path_names": "/",
+        "kicad_sheet_path_uuids": "/"
+      }
+    }
+  ],
+  "schematic_hierarchy": {
+    "schema": "kicad_monkey.schematic_hierarchy.a0",
+    "requested_scope": "KICAD_PROJECT",
+    "effective_scope": "GLOBAL",
+    "documents": [
+      {
+        "sheet_index": 1,
+        "filename": "Wireless E-Stop.kicad_sch",
+        "path": "/Users/nathanfikes/Projects/GitHub/AutoNav-Charge_Indicator-KiCad_Pcb/Wireless E-Stop/Wireless E-Stop.kicad_sch",
+        "is_top_level": true,
+        "sheet_path": "/",
+        "sheet_path_uuids": "/",
+        "metadata": {
+          "uuid": "f735cb90-c129-4e62-b97c-0850bd889294",
+          "version": 20250114,
+          "generator": "eeschema",
+          "generator_version": "9.0"
+        }
+      }
+    ],
+    "sheet_symbols": [],
+    "hierarchy_paths": [],
+    "channels": [],
+    "links": [],
+    "unresolved": []
+  },
+  "nets": [
+    {
+      "uid": "000000000001",
+      "name": "1_GND",
+      "auto_named": false,
+      "source_sheets": [
+        "/"
+      ],
+      "terminals": [
+        {
+          "designator": "R2",
+          "pin": "2",
+          "pin_name": "2",
+          "pin_type": "PASSIVE"
+        }
+      ],
+      "graphical": {
+        "wires": [
+          "01bafa10-6fad-46c8-ad14-daf20018979d",
+          "10aa3139-c03b-4d7a-825e-6b6dca84d737",
+          "154cb71b-f5d1-4a6c-8f9c-6f3103f5c7da",
+          "18ce7049-8804-48ce-a401-88d8ad7ec0f1",
+          "1b71df4e-a673-4665-b827-a0f096210461",
+          "20b89e78-a773-4205-88db-efe98773e02c",
+          "2ca99c9b-14bb-4ef2-b00b-88a6ad9f2c91",
+          "2d7db7f1-d221-465d-8b8e-5f00a1f3c1ae",
+          "3586993d-9489-40e4-a1fa-0aa00bfdc629",
+          "3ef241ae-b851-413c-824c-061a5887a4a8",
+          "42dd6483-eb11-431f-a77c-a2f8b675f383",
+          "7bff04ea-9598-4525-9c22-8155c8022471",
+          "870cdf75-625a-49a6-8f50-de7493a76b2c",
+          "89a45e41-198e-4e7f-8c06-ee3909d05cec",
+          "9376e257-14ca-4790-a9fc-14286d938fcc",
+          "9ca1b4de-7d1c-465b-94e3-9d5ec6b040db",
+          "a4114489-cd05-4e83-9829-64619c254c70",
+          "b2c483b1-4ef0-4a0d-ad55-a6bdfbe06141",
+          "b8c3b5bd-2803-4c57-8063-32a021c9d6c9",
+          "b993102e-0667-4655-a7e0-6ab8b32b0c2c",
+          "c06c8ed6-ff86-49eb-9441-ed9b9e4209cf",
+          "c3813c81-bd54-407b-8b31-5a616c1d6f0b",
+          "e2651ac8-e895-4142-a0cd-c5d8e1425059",
+          "e30ff11c-37bc-40f8-8ae5-c345fd23e3f8",
+          "ebe5c351-4ddd-40a7-8cc7-d6270afb25f6",
+          "f2565f60-e245-4939-8d7c-871f72062628",
+          "f46fb9e1-1575-4706-8d0e-461461dd3f8c",
+          "f6efdde4-ac7b-48aa-aa42-9ec7f6d1ac1a",
+          "f7895992-ba54-4aca-a5aa-a6ac7debcf4d",
+          "fb8c2717-7556-4cf4-a1ef-0502ab7b9a45"
+        ],
+        "junctions": [
+          "01352107-8599-4b39-bc0f-889f72e1393c",
+          "1e0e2fb3-b0ef-4181-8567-10675c102508",
+          "3c2b78f6-f6ed-417b-b4a2-1a2c83ea14dc",
+          "4f8c70c7-1455-4e55-99f3-059d04b0aeb7",
+          "76fbba4c-8223-4566-a1bf-03888df35f54",
+          "aa3fdb59-8c6a-4273-8014-e22d39a13a3c",
+          "b449d721-3724-4dd9-bce0-be844f89e0fe",
+          "c6ca8e21-674e-4e3e-825c-ff2ffe536028"
+        ],
+        "labels": [
+          "1cad8fab-d948-49c3-a435-4ee82356b0a5",
+          "1d4a79f5-b51d-4213-804c-d3ec2efd343c",
+          "4361d8fa-81bb-47da-a845-cd7174468990",
+          "486a8486-60f3-4e5f-b781-b867f54d0b22",
+          "7e7a973d-0c06-41bc-8913-e24fab559667",
+          "7fb764f4-72ec-4288-bce1-4cd2787a57e0",
+          "83e7b7db-a11d-4d7b-bac8-49a1dd6fe73b",
+          "bb004afd-f7be-45e6-9aa4-e434b1ddc5ee",
+          "d60e38a1-8988-4d80-bafa-135f718a06a9",
+          "f5ae16eb-8cb3-4c8d-a1fc-e256fef0ec56",
+          "f72e4408-99c8-482c-877e-c4f9bdb8747a",
+          "f78ab83d-182b-4800-838b-42415fc771d9",
+          "f813fa6f-18e4-450d-b8cb-dbf4aab10b9f"
+        ],
+        "power_ports": [],
+        "ports": [],
+        "sheet_entries": [],
+        "pins": [
+          {
+            "designator": "R2",
+            "pin": "2",
+            "svg_id": "9ebcc66c-a40f-4918-aba7-8dcb793af826"
+          }
+        ]
+      },
+      "aliases": [],
+      "endpoints": [
+        {
+          "endpoint_id": "pin:R2:2",
+          "role": "pin",
+          "element_id": "9ebcc66c-a40f-4918-aba7-8dcb793af826",
+          "object_id": "9ebcc66c-a40f-4918-aba7-8dcb793af826",
+          "name": "2",
+          "source_sheet": "/",
+          "designator": "R2",
+          "pin": "2",
+          "pin_type": "PASSIVE",
+          "pin_name": "2"
+        }
+      ],
+      "driver_priority": 7,
+      "driver_kind": "global_label",
+      "net_class": "Default"
+    },
+    {
+      "uid": "000000000002",
+      "name": "2_SCI_CH1",
+      "auto_named": false,
+      "source_sheets": [
+        "/"
+      ],
+      "terminals": [
+        {
+          "designator": "R2",
+          "pin": "1",
+          "pin_name": "1",
+          "pin_type": "PASSIVE"
+        }
+      ],
+      "graphical": {
+        "wires": [
+          "11a5f89a-8db9-4091-998b-a02acc1767ff",
+          "12c2d114-dd50-4b3d-8452-333ab5d4401a",
+          "18be4250-2f66-4491-9bb4-80f8c6a9a266",
+          "631bf889-6902-4801-9b54-b723c39a13d0",
+          "6970b28e-ea9d-4b6f-b730-7bc97d858397",
+          "82440e69-90ae-4c92-93d8-b5166dfe3eeb",
+          "9eed2701-4999-461b-aed8-9f93ef8c4bb2",
+          "a5b1c81c-babf-4c06-aa22-09240837b6f9",
+          "d1175ce5-8ff4-452d-9a89-129c6ee268df",
+          "d2fa5ee7-63ef-4689-9dbd-848c28c4e7cc",
+          "e8d09563-74a0-4980-91ca-3013e03354a6",
+          "ed5d6e25-f768-4127-860a-833fe03c504b"
+        ],
+        "junctions": [
+          "16cff067-279b-4ced-9e45-600700865ad4",
+          "3cf7e242-0a5b-42ec-bc9b-32a48e3cbbd6",
+          "b42bd17d-1977-44a9-9076-652fc1de20cf",
+          "f6bc1af5-0dbc-4913-91e9-9aea983cc36c"
+        ],
+        "labels": [
+          "068f9de4-9762-4c92-b645-0083bc78d39f",
+          "1b99d815-9446-43ff-b8cb-cc66616e3bd2",
+          "24a05baa-e2f8-4541-bef5-780024c156be",
+          "8a692354-de02-4290-a5ba-455c6c99afab",
+          "ef9c38b2-c455-4cbf-ba67-49cfdb54d078"
+        ],
+        "power_ports": [],
+        "ports": [],
+        "sheet_entries": [],
+        "pins": [
+          {
+            "designator": "R2",
+            "pin": "1",
+            "svg_id": "7fb23209-52f1-4739-9201-a07b4842eb6b"
+          }
+        ]
+      },
+      "aliases": [],
+      "endpoints": [
+        {
+          "endpoint_id": "pin:R2:1",
+          "role": "pin",
+          "element_id": "7fb23209-52f1-4739-9201-a07b4842eb6b",
+          "object_id": "7fb23209-52f1-4739-9201-a07b4842eb6b",
+          "name": "1",
+          "source_sheet": "/",
+          "designator": "R2",
+          "pin": "1",
+          "pin_type": "PASSIVE",
+          "pin_name": "1"
+        }
+      ],
+      "driver_priority": 7,
+      "driver_kind": "global_label",
+      "net_class": "Default"
+    }
+  ],
+  "net_classes": [
+    {
+      "name": "Default",
+      "description": "",
+      "nets": [
+        "1_GND",
+        "2_SCI_CH1"
+      ]
+    }
+  ],
+  "net_name_to_classes": {
+    "1_GND": [
+      "Default"
+    ],
+    "2_SCI_CH1": [
+      "Default"
+    ]
+  },
+  "indexes": {
+    "svg_to_component": {
+      "0d5c3a2e-e96f-493f-805d-f409e66831ed": "R2"
+    },
+    "component_to_nets": {
+      "R2": [
+        "1_GND",
+        "2_SCI_CH1"
+      ]
+    },
+    "net_to_components": {
+      "1_GND": [
+        "R2"
+      ],
+      "2_SCI_CH1": [
+        "R2"
+      ]
+    },
+    "svg_to_net": {
+      "01352107-8599-4b39-bc0f-889f72e1393c": "1_GND",
+      "01bafa10-6fad-46c8-ad14-daf20018979d": "1_GND",
+      "068f9de4-9762-4c92-b645-0083bc78d39f": "2_SCI_CH1",
+      "10aa3139-c03b-4d7a-825e-6b6dca84d737": "1_GND",
+      "11a5f89a-8db9-4091-998b-a02acc1767ff": "2_SCI_CH1",
+      "12c2d114-dd50-4b3d-8452-333ab5d4401a": "2_SCI_CH1",
+      "154cb71b-f5d1-4a6c-8f9c-6f3103f5c7da": "1_GND",
+      "16cff067-279b-4ced-9e45-600700865ad4": "2_SCI_CH1",
+      "18be4250-2f66-4491-9bb4-80f8c6a9a266": "2_SCI_CH1",
+      "18ce7049-8804-48ce-a401-88d8ad7ec0f1": "1_GND",
+      "1b71df4e-a673-4665-b827-a0f096210461": "1_GND",
+      "1b99d815-9446-43ff-b8cb-cc66616e3bd2": "2_SCI_CH1",
+      "1cad8fab-d948-49c3-a435-4ee82356b0a5": "1_GND",
+      "1d4a79f5-b51d-4213-804c-d3ec2efd343c": "1_GND",
+      "1e0e2fb3-b0ef-4181-8567-10675c102508": "1_GND",
+      "20b89e78-a773-4205-88db-efe98773e02c": "1_GND",
+      "24a05baa-e2f8-4541-bef5-780024c156be": "2_SCI_CH1",
+      "2ca99c9b-14bb-4ef2-b00b-88a6ad9f2c91": "1_GND",
+      "2d7db7f1-d221-465d-8b8e-5f00a1f3c1ae": "1_GND",
+      "3586993d-9489-40e4-a1fa-0aa00bfdc629": "1_GND",
+      "3c2b78f6-f6ed-417b-b4a2-1a2c83ea14dc": "1_GND",
+      "3cf7e242-0a5b-42ec-bc9b-32a48e3cbbd6": "2_SCI_CH1",
+      "3ef241ae-b851-413c-824c-061a5887a4a8": "1_GND",
+      "42dd6483-eb11-431f-a77c-a2f8b675f383": "1_GND",
+      "4361d8fa-81bb-47da-a845-cd7174468990": "1_GND",
+      "486a8486-60f3-4e5f-b781-b867f54d0b22": "1_GND",
+      "4f8c70c7-1455-4e55-99f3-059d04b0aeb7": "1_GND",
+      "631bf889-6902-4801-9b54-b723c39a13d0": "2_SCI_CH1",
+      "6970b28e-ea9d-4b6f-b730-7bc97d858397": "2_SCI_CH1",
+      "76fbba4c-8223-4566-a1bf-03888df35f54": "1_GND",
+      "7bff04ea-9598-4525-9c22-8155c8022471": "1_GND",
+      "7e7a973d-0c06-41bc-8913-e24fab559667": "1_GND",
+      "7fb23209-52f1-4739-9201-a07b4842eb6b": "2_SCI_CH1",
+      "7fb764f4-72ec-4288-bce1-4cd2787a57e0": "1_GND",
+      "82440e69-90ae-4c92-93d8-b5166dfe3eeb": "2_SCI_CH1",
+      "83e7b7db-a11d-4d7b-bac8-49a1dd6fe73b": "1_GND",
+      "870cdf75-625a-49a6-8f50-de7493a76b2c": "1_GND",
+      "89a45e41-198e-4e7f-8c06-ee3909d05cec": "1_GND",
+      "8a692354-de02-4290-a5ba-455c6c99afab": "2_SCI_CH1",
+      "9376e257-14ca-4790-a9fc-14286d938fcc": "1_GND",
+      "9ca1b4de-7d1c-465b-94e3-9d5ec6b040db": "1_GND",
+      "9ebcc66c-a40f-4918-aba7-8dcb793af826": "1_GND",
+      "9eed2701-4999-461b-aed8-9f93ef8c4bb2": "2_SCI_CH1",
+      "a4114489-cd05-4e83-9829-64619c254c70": "1_GND",
+      "a5b1c81c-babf-4c06-aa22-09240837b6f9": "2_SCI_CH1",
+      "aa3fdb59-8c6a-4273-8014-e22d39a13a3c": "1_GND",
+      "b2c483b1-4ef0-4a0d-ad55-a6bdfbe06141": "1_GND",
+      "b42bd17d-1977-44a9-9076-652fc1de20cf": "2_SCI_CH1",
+      "b449d721-3724-4dd9-bce0-be844f89e0fe": "1_GND",
+      "b8c3b5bd-2803-4c57-8063-32a021c9d6c9": "1_GND",
+      "b993102e-0667-4655-a7e0-6ab8b32b0c2c": "1_GND",
+      "bb004afd-f7be-45e6-9aa4-e434b1ddc5ee": "1_GND",
+      "c06c8ed6-ff86-49eb-9441-ed9b9e4209cf": "1_GND",
+      "c3813c81-bd54-407b-8b31-5a616c1d6f0b": "1_GND",
+      "c6ca8e21-674e-4e3e-825c-ff2ffe536028": "1_GND",
+      "d1175ce5-8ff4-452d-9a89-129c6ee268df": "2_SCI_CH1",
+      "d2fa5ee7-63ef-4689-9dbd-848c28c4e7cc": "2_SCI_CH1",
+      "d60e38a1-8988-4d80-bafa-135f718a06a9": "1_GND",
+      "e2651ac8-e895-4142-a0cd-c5d8e1425059": "1_GND",
+      "e30ff11c-37bc-40f8-8ae5-c345fd23e3f8": "1_GND",
+      "e8d09563-74a0-4980-91ca-3013e03354a6": "2_SCI_CH1",
+      "ebe5c351-4ddd-40a7-8cc7-d6270afb25f6": "1_GND",
+      "ed5d6e25-f768-4127-860a-833fe03c504b": "2_SCI_CH1",
+      "ef9c38b2-c455-4cbf-ba67-49cfdb54d078": "2_SCI_CH1",
+      "f2565f60-e245-4939-8d7c-871f72062628": "1_GND",
+      "f46fb9e1-1575-4706-8d0e-461461dd3f8c": "1_GND",
+      "f5ae16eb-8cb3-4c8d-a1fc-e256fef0ec56": "1_GND",
+      "f6bc1af5-0dbc-4913-91e9-9aea983cc36c": "2_SCI_CH1",
+      "f6efdde4-ac7b-48aa-aa42-9ec7f6d1ac1a": "1_GND",
+      "f72e4408-99c8-482c-877e-c4f9bdb8747a": "1_GND",
+      "f7895992-ba54-4aca-a5aa-a6ac7debcf4d": "1_GND",
+      "f78ab83d-182b-4800-838b-42415fc771d9": "1_GND",
+      "f813fa6f-18e4-450d-b8cb-dbf4aab10b9f": "1_GND",
+      "fb8c2717-7556-4cf4-a1ef-0502ab7b9a45": "1_GND"
+    },
+    "svg_to_nets": {
+      "01352107-8599-4b39-bc0f-889f72e1393c": [
+        "1_GND"
+      ],
+      "01bafa10-6fad-46c8-ad14-daf20018979d": [
+        "1_GND"
+      ],
+      "068f9de4-9762-4c92-b645-0083bc78d39f": [
+        "2_SCI_CH1"
+      ],
+      "10aa3139-c03b-4d7a-825e-6b6dca84d737": [
+        "1_GND"
+      ],
+      "11a5f89a-8db9-4091-998b-a02acc1767ff": [
+        "2_SCI_CH1"
+      ],
+      "12c2d114-dd50-4b3d-8452-333ab5d4401a": [
+        "2_SCI_CH1"
+      ],
+      "154cb71b-f5d1-4a6c-8f9c-6f3103f5c7da": [
+        "1_GND"
+      ],
+      "16cff067-279b-4ced-9e45-600700865ad4": [
+        "2_SCI_CH1"
+      ],
+      "18be4250-2f66-4491-9bb4-80f8c6a9a266": [
+        "2_SCI_CH1"
+      ],
+      "18ce7049-8804-48ce-a401-88d8ad7ec0f1": [
+        "1_GND"
+      ],
+      "1b71df4e-a673-4665-b827-a0f096210461": [
+        "1_GND"
+      ],
+      "1b99d815-9446-43ff-b8cb-cc66616e3bd2": [
+        "2_SCI_CH1"
+      ],
+      "1cad8fab-d948-49c3-a435-4ee82356b0a5": [
+        "1_GND"
+      ],
+      "1d4a79f5-b51d-4213-804c-d3ec2efd343c": [
+        "1_GND"
+      ],
+      "1e0e2fb3-b0ef-4181-8567-10675c102508": [
+        "1_GND"
+      ],
+      "20b89e78-a773-4205-88db-efe98773e02c": [
+        "1_GND"
+      ],
+      "24a05baa-e2f8-4541-bef5-780024c156be": [
+        "2_SCI_CH1"
+      ],
+      "2ca99c9b-14bb-4ef2-b00b-88a6ad9f2c91": [
+        "1_GND"
+      ],
+      "2d7db7f1-d221-465d-8b8e-5f00a1f3c1ae": [
+        "1_GND"
+      ],
+      "3586993d-9489-40e4-a1fa-0aa00bfdc629": [
+        "1_GND"
+      ],
+      "3c2b78f6-f6ed-417b-b4a2-1a2c83ea14dc": [
+        "1_GND"
+      ],
+      "3cf7e242-0a5b-42ec-bc9b-32a48e3cbbd6": [
+        "2_SCI_CH1"
+      ],
+      "3ef241ae-b851-413c-824c-061a5887a4a8": [
+        "1_GND"
+      ],
+      "42dd6483-eb11-431f-a77c-a2f8b675f383": [
+        "1_GND"
+      ],
+      "4361d8fa-81bb-47da-a845-cd7174468990": [
+        "1_GND"
+      ],
+      "486a8486-60f3-4e5f-b781-b867f54d0b22": [
+        "1_GND"
+      ],
+      "4f8c70c7-1455-4e55-99f3-059d04b0aeb7": [
+        "1_GND"
+      ],
+      "631bf889-6902-4801-9b54-b723c39a13d0": [
+        "2_SCI_CH1"
+      ],
+      "6970b28e-ea9d-4b6f-b730-7bc97d858397": [
+        "2_SCI_CH1"
+      ],
+      "76fbba4c-8223-4566-a1bf-03888df35f54": [
+        "1_GND"
+      ],
+      "7bff04ea-9598-4525-9c22-8155c8022471": [
+        "1_GND"
+      ],
+      "7e7a973d-0c06-41bc-8913-e24fab559667": [
+        "1_GND"
+      ],
+      "7fb23209-52f1-4739-9201-a07b4842eb6b": [
+        "2_SCI_CH1"
+      ],
+      "7fb764f4-72ec-4288-bce1-4cd2787a57e0": [
+        "1_GND"
+      ],
+      "82440e69-90ae-4c92-93d8-b5166dfe3eeb": [
+        "2_SCI_CH1"
+      ],
+      "83e7b7db-a11d-4d7b-bac8-49a1dd6fe73b": [
+        "1_GND"
+      ],
+      "870cdf75-625a-49a6-8f50-de7493a76b2c": [
+        "1_GND"
+      ],
+      "89a45e41-198e-4e7f-8c06-ee3909d05cec": [
+        "1_GND"
+      ],
+      "8a692354-de02-4290-a5ba-455c6c99afab": [
+        "2_SCI_CH1"
+      ],
+      "9376e257-14ca-4790-a9fc-14286d938fcc": [
+        "1_GND"
+      ],
+      "9ca1b4de-7d1c-465b-94e3-9d5ec6b040db": [
+        "1_GND"
+      ],
+      "9ebcc66c-a40f-4918-aba7-8dcb793af826": [
+        "1_GND"
+      ],
+      "9eed2701-4999-461b-aed8-9f93ef8c4bb2": [
+        "2_SCI_CH1"
+      ],
+      "a4114489-cd05-4e83-9829-64619c254c70": [
+        "1_GND"
+      ],
+      "a5b1c81c-babf-4c06-aa22-09240837b6f9": [
+        "2_SCI_CH1"
+      ],
+      "aa3fdb59-8c6a-4273-8014-e22d39a13a3c": [
+        "1_GND"
+      ],
+      "b2c483b1-4ef0-4a0d-ad55-a6bdfbe06141": [
+        "1_GND"
+      ],
+      "b42bd17d-1977-44a9-9076-652fc1de20cf": [
+        "2_SCI_CH1"
+      ],
+      "b449d721-3724-4dd9-bce0-be844f89e0fe": [
+        "1_GND"
+      ],
+      "b8c3b5bd-2803-4c57-8063-32a021c9d6c9": [
+        "1_GND"
+      ],
+      "b993102e-0667-4655-a7e0-6ab8b32b0c2c": [
+        "1_GND"
+      ],
+      "bb004afd-f7be-45e6-9aa4-e434b1ddc5ee": [
+        "1_GND"
+      ],
+      "c06c8ed6-ff86-49eb-9441-ed9b9e4209cf": [
+        "1_GND"
+      ],
+      "c3813c81-bd54-407b-8b31-5a616c1d6f0b": [
+        "1_GND"
+      ],
+      "c6ca8e21-674e-4e3e-825c-ff2ffe536028": [
+        "1_GND"
+      ],
+      "d1175ce5-8ff4-452d-9a89-129c6ee268df": [
+        "2_SCI_CH1"
+      ],
+      "d2fa5ee7-63ef-4689-9dbd-848c28c4e7cc": [
+        "2_SCI_CH1"
+      ],
+      "d60e38a1-8988-4d80-bafa-135f718a06a9": [
+        "1_GND"
+      ],
+      "e2651ac8-e895-4142-a0cd-c5d8e1425059": [
+        "1_GND"
+      ],
+      "e30ff11c-37bc-40f8-8ae5-c345fd23e3f8": [
+        "1_GND"
+      ],
+      "e8d09563-74a0-4980-91ca-3013e03354a6": [
+        "2_SCI_CH1"
+      ],
+      "ebe5c351-4ddd-40a7-8cc7-d6270afb25f6": [
+        "1_GND"
+      ],
+      "ed5d6e25-f768-4127-860a-833fe03c504b": [
+        "2_SCI_CH1"
+      ],
+      "ef9c38b2-c455-4cbf-ba67-49cfdb54d078": [
+        "2_SCI_CH1"
+      ],
+      "f2565f60-e245-4939-8d7c-871f72062628": [
+        "1_GND"
+      ],
+      "f46fb9e1-1575-4706-8d0e-461461dd3f8c": [
+        "1_GND"
+      ],
+      "f5ae16eb-8cb3-4c8d-a1fc-e256fef0ec56": [
+        "1_GND"
+      ],
+      "f6bc1af5-0dbc-4913-91e9-9aea983cc36c": [
+        "2_SCI_CH1"
+      ],
+      "f6efdde4-ac7b-48aa-aa42-9ec7f6d1ac1a": [
+        "1_GND"
+      ],
+      "f72e4408-99c8-482c-877e-c4f9bdb8747a": [
+        "1_GND"
+      ],
+      "f7895992-ba54-4aca-a5aa-a6ac7debcf4d": [
+        "1_GND"
+      ],
+      "f78ab83d-182b-4800-838b-42415fc771d9": [
+        "1_GND"
+      ],
+      "f813fa6f-18e4-450d-b8cb-dbf4aab10b9f": [
+        "1_GND"
+      ],
+      "fb8c2717-7556-4cf4-a1ef-0502ab7b9a45": [
+        "1_GND"
+      ]
+    },
+    "sheet_svg_to_nets": {
+      "/": {
+        "7fb23209-52f1-4739-9201-a07b4842eb6b": [
+          "2_SCI_CH1"
+        ],
+        "9ebcc66c-a40f-4918-aba7-8dcb793af826": [
+          "1_GND"
+        ]
+      }
+    },
+    "net_to_graphics": {
+      "1_GND": [
+        "01352107-8599-4b39-bc0f-889f72e1393c",
+        "01bafa10-6fad-46c8-ad14-daf20018979d",
+        "10aa3139-c03b-4d7a-825e-6b6dca84d737",
+        "154cb71b-f5d1-4a6c-8f9c-6f3103f5c7da",
+        "18ce7049-8804-48ce-a401-88d8ad7ec0f1",
+        "1b71df4e-a673-4665-b827-a0f096210461",
+        "1cad8fab-d948-49c3-a435-4ee82356b0a5",
+        "1d4a79f5-b51d-4213-804c-d3ec2efd343c",
+        "1e0e2fb3-b0ef-4181-8567-10675c102508",
+        "20b89e78-a773-4205-88db-efe98773e02c",
+        "2ca99c9b-14bb-4ef2-b00b-88a6ad9f2c91",
+        "2d7db7f1-d221-465d-8b8e-5f00a1f3c1ae",
+        "3586993d-9489-40e4-a1fa-0aa00bfdc629",
+        "3c2b78f6-f6ed-417b-b4a2-1a2c83ea14dc",
+        "3ef241ae-b851-413c-824c-061a5887a4a8",
+        "42dd6483-eb11-431f-a77c-a2f8b675f383",
+        "4361d8fa-81bb-47da-a845-cd7174468990",
+        "486a8486-60f3-4e5f-b781-b867f54d0b22",
+        "4f8c70c7-1455-4e55-99f3-059d04b0aeb7",
+        "76fbba4c-8223-4566-a1bf-03888df35f54",
+        "7bff04ea-9598-4525-9c22-8155c8022471",
+        "7e7a973d-0c06-41bc-8913-e24fab559667",
+        "7fb764f4-72ec-4288-bce1-4cd2787a57e0",
+        "83e7b7db-a11d-4d7b-bac8-49a1dd6fe73b",
+        "870cdf75-625a-49a6-8f50-de7493a76b2c",
+        "89a45e41-198e-4e7f-8c06-ee3909d05cec",
+        "9376e257-14ca-4790-a9fc-14286d938fcc",
+        "9ca1b4de-7d1c-465b-94e3-9d5ec6b040db",
+        "9ebcc66c-a40f-4918-aba7-8dcb793af826",
+        "a4114489-cd05-4e83-9829-64619c254c70",
+        "aa3fdb59-8c6a-4273-8014-e22d39a13a3c",
+        "b2c483b1-4ef0-4a0d-ad55-a6bdfbe06141",
+        "b449d721-3724-4dd9-bce0-be844f89e0fe",
+        "b8c3b5bd-2803-4c57-8063-32a021c9d6c9",
+        "b993102e-0667-4655-a7e0-6ab8b32b0c2c",
+        "bb004afd-f7be-45e6-9aa4-e434b1ddc5ee",
+        "c06c8ed6-ff86-49eb-9441-ed9b9e4209cf",
+        "c3813c81-bd54-407b-8b31-5a616c1d6f0b",
+        "c6ca8e21-674e-4e3e-825c-ff2ffe536028",
+        "d60e38a1-8988-4d80-bafa-135f718a06a9",
+        "e2651ac8-e895-4142-a0cd-c5d8e1425059",
+        "e30ff11c-37bc-40f8-8ae5-c345fd23e3f8",
+        "ebe5c351-4ddd-40a7-8cc7-d6270afb25f6",
+        "f2565f60-e245-4939-8d7c-871f72062628",
+        "f46fb9e1-1575-4706-8d0e-461461dd3f8c",
+        "f5ae16eb-8cb3-4c8d-a1fc-e256fef0ec56",
+        "f6efdde4-ac7b-48aa-aa42-9ec7f6d1ac1a",
+        "f72e4408-99c8-482c-877e-c4f9bdb8747a",
+        "f7895992-ba54-4aca-a5aa-a6ac7debcf4d",
+        "f78ab83d-182b-4800-838b-42415fc771d9",
+        "f813fa6f-18e4-450d-b8cb-dbf4aab10b9f",
+        "fb8c2717-7556-4cf4-a1ef-0502ab7b9a45"
+      ],
+      "2_SCI_CH1": [
+        "068f9de4-9762-4c92-b645-0083bc78d39f",
+        "11a5f89a-8db9-4091-998b-a02acc1767ff",
+        "12c2d114-dd50-4b3d-8452-333ab5d4401a",
+        "16cff067-279b-4ced-9e45-600700865ad4",
+        "18be4250-2f66-4491-9bb4-80f8c6a9a266",
+        "1b99d815-9446-43ff-b8cb-cc66616e3bd2",
+        "24a05baa-e2f8-4541-bef5-780024c156be",
+        "3cf7e242-0a5b-42ec-bc9b-32a48e3cbbd6",
+        "631bf889-6902-4801-9b54-b723c39a13d0",
+        "6970b28e-ea9d-4b6f-b730-7bc97d858397",
+        "7fb23209-52f1-4739-9201-a07b4842eb6b",
+        "82440e69-90ae-4c92-93d8-b5166dfe3eeb",
+        "8a692354-de02-4290-a5ba-455c6c99afab",
+        "9eed2701-4999-461b-aed8-9f93ef8c4bb2",
+        "a5b1c81c-babf-4c06-aa22-09240837b6f9",
+        "b42bd17d-1977-44a9-9076-652fc1de20cf",
+        "d1175ce5-8ff4-452d-9a89-129c6ee268df",
+        "d2fa5ee7-63ef-4689-9dbd-848c28c4e7cc",
+        "e8d09563-74a0-4980-91ca-3013e03354a6",
+        "ed5d6e25-f768-4127-860a-833fe03c504b",
+        "ef9c38b2-c455-4cbf-ba67-49cfdb54d078",
+        "f6bc1af5-0dbc-4913-91e9-9aea983cc36c"
+      ]
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "schema": "kicad_cruncher.design_review_manifest.a0",
+  "input": "/Users/nathanfikes/Projects/GitHub/AutoNav-Charge_Indicator-KiCad_Pcb/Wireless E-Stop/Wireless E-Stop.kicad_pro",
+  "design_json": "Wireless E-Stop_design.json",
+  "schematic_svgs": [
+    {
+      "file": "schematics/01_Wireless_E-Stop.svg",
+      "sheet_number": 1,
+      "sheet_count": 1,
+      "sheet_name": "Wireless E-Stop",
+      "sheet_path": "/",
+      "sheet_path_uuids": "/",
+      "sheet_instance_path": "/f735cb90-c129-4e62-b97c-0850bd889294",
+      "source": "/Users/nathanfikes/Projects/GitHub/AutoNav-Charge_Indicator-KiCad_Pcb/Wireless E-Stop/Wireless E-Stop.kicad_sch"
+    }
+  ],
+  "pcb_svgs": [],
+  "readme": "README.md"
+}
